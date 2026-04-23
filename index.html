@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYS-2325 University Physics I — Course Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #f0f2f5;
+            color: #222;
+        }
+        .site-header {
+            background: #1d2757;
+            color: #fff;
+            padding: 2.5rem 2rem 2rem;
+        }
+        .site-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0;
+        }
+        .site-header p {
+            margin: 0.4rem 0 0;
+            opacity: 0.8;
+            font-size: 1.05rem;
+        }
+        .module-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .module-header {
+            background: #1d2757;
+            color: #fff;
+            padding: 0.85rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        .module-header span.badge-pending {
+            background: #d13138;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 2px 8px;
+            margin-left: 0.75rem;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .module-header span.badge-done {
+            background: #28a745;
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 2px 8px;
+            margin-left: 0.75rem;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .lesson-list {
+            list-style: none;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+        .lesson-list li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .lesson-list li:last-child {
+            border-bottom: none;
+        }
+        .lesson-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            color: #1d2757;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .lesson-list a:hover {
+            background: #f0f4ff;
+            color: #d13138;
+        }
+        .lesson-list a .lesson-num {
+            background: #1d2757;
+            color: #fff;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .lesson-list li.pending a {
+            color: #999;
+            cursor: default;
+            pointer-events: none;
+        }
+        .lesson-list li.pending a .lesson-num {
+            background: #ccc;
+        }
+        .lesson-list li.pending .status-tag {
+            margin-left: auto;
+            font-size: 0.72rem;
+            color: #aaa;
+            font-weight: 400;
+            font-style: italic;
+        }
+        .lesson-list a .status-tag {
+            margin-left: auto;
+            font-size: 0.75rem;
+            color: #28a745;
+            font-weight: 700;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <p style="font-size:0.85rem; opacity:0.6; margin-bottom:0.25rem;">TSTC · Fall 2026</p>
+        <h1><i class="fas fa-atom me-2"></i>PHYS-2325 University Physics I</h1>
+        <p>Calculus-based · OpenStax University Physics Vol. 1 · Lesson Development Overview</p>
+    </div>
+</header>
+
+<main class="container py-4">
+
+    <!-- MODULE 1 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-ruler-combined me-2"></i>Module 1: Measurements and Motion in 1D
+            <span class="badge-done">✓ Complete</span>
+        </div>
+        <ul class="lesson-list">
+            <li>
+                <a href="module1/m1l1-measurement/new-lesson-output/m1l1-measurement.html">
+                    <span class="lesson-num">1</span>
+                    M1L1 · Measurement
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li>
+                <a href="module1/m1l2-instantaneous-velocity-and-speed/new-lesson-output/m2l2-instantaneous-velocity-and-speed.html">
+                    <span class="lesson-num">2</span>
+                    M1L2 · Instantaneous Velocity and Speed
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li>
+                <a href="module1/m1l3-acceleration/new-lesson-output/m1l3-acceleration.html">
+                    <span class="lesson-num">3</span>
+                    M1L3 · Acceleration
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li>
+                <a href="module1/m1l4-constant-acceleration/new-lesson-output/m1l4-constant-acceleration.html">
+                    <span class="lesson-num">4</span>
+                    M1L4 · Motion with Constant Acceleration
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li>
+                <a href="module1/m1l5-free-fall/new-lesson-output/m1l5-free-fall.html">
+                    <span class="lesson-num">5</span>
+                    M1L5 · Free Fall
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li>
+                <a href="module1/m1l6-graphical-integration-in-motion-analysis/new-lesson-output/m1l6-graphical-integration-in-motion-analysis.html">
+                    <span class="lesson-num">6</span>
+                    M1L6 · Graphical Integration in Motion Analysis
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MODULE 2 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-arrows-alt me-2"></i>Module 2: Vectors and Motion in 2D/3D
+            <span class="badge-pending">In Progress</span>
+        </div>
+        <ul class="lesson-list">
+            <li>
+                <a href="module2/m2l1-vectors/new-lesson-output/m2l1-vectors.html">
+                    <span class="lesson-num">1</span>
+                    M2L1 · Vectors
+                    <span class="status-tag">✓ Built</span>
+                </a>
+            </li>
+            <li class="pending">
+                <a href="#">
+                    <span class="lesson-num">2</span>
+                    M2L2 · 2D and 3D Motion
+                    <span class="status-tag">Pending</span>
+                </a>
+            </li>
+            <li class="pending">
+                <a href="#">
+                    <span class="lesson-num">3</span>
+                    M2L3 · Newton's Laws / Force
+                    <span class="status-tag">Pending</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MODULE 3 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-circle-notch me-2"></i>Module 3: Forces and Newton's Laws
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MODULE 4 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-bolt me-2"></i>Module 4: Work, Energy, and Power
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MODULE 5 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-exchange-alt me-2"></i>Module 5: Momentum and Collisions
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MODULE 6 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-sync-alt me-2"></i>Module 6: Rotation and Torque
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MODULE 7 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-wave-square me-2"></i>Module 7: Gravitation and Oscillations
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+    <!-- MODULE 8 -->
+    <div class="module-card">
+        <div class="module-header">
+            <i class="fas fa-wind me-2"></i>Module 8: Fluids and Thermodynamics
+            <span class="badge-pending">Not Started</span>
+        </div>
+        <ul class="lesson-list">
+            <li class="pending"><a href="#"><span class="lesson-num">1</span>Lessons coming soon<span class="status-tag">Pending</span></a></li>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    PHYS-2325 University Physics I · TSTC · Fall 2026 · Development Build
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
