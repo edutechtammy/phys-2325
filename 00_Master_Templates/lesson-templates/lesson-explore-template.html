@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[MODULE] [TYPE]: [TOPIC]</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+         PLACEHOLDERS:
+           [MODULE_NAME]   – e.g. "Module 1: Measurements and Motion in 1D"
+           [COURSE_CODE]   – e.g. "PHYS-2325"
+           [LESSON_TITLE]  – e.g. "M2L3 Newton's Second Law"
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">[MODULE_NAME]</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">[COURSE_CODE]</span></span> <span class="dp-header-title">[LESSON_TITLE]</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION (Quote + Intro Paragraph + Image)
+         PLACEHOLDERS:
+           [QUOTE_TEXT]      – Inspirational quote for the lesson
+           [QUOTE_AUTHOR]    – Author of the quote (include em-dash)
+           [INTRO_PARAGRAPH] – 3-5 sentence "hook" paragraph using
+                               class="lead". Introduce the topic,
+                               connect to real-world relevance, and
+                               preview key calculus/physics concepts.
+           [CANVAS_IMAGE_URL]– Full Canvas file embed URL or
+                               placeholder "CANVAS_IMAGE_URL"
+           [IMAGE_ALT]       – Descriptive alt text for the image
+           [IMAGE_CAPTION]   – Short caption below the image
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"[QUOTE_TEXT]"</em></span><br /><span>&mdash;&nbsp;[QUOTE_AUTHOR]</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">[INTRO_PARAGRAPH]</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="[CANVAS_IMAGE_URL]" alt="[IMAGE_ALT]" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">[IMAGE_CAPTION]</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES (Accordion)
+         PLACEHOLDERS:
+           [COMPETENCY_CODE]  – e.g. "CC1.1"
+           [COMPETENCY_TITLE] – e.g. "Solve problems of motion in one dimension"
+           [LO_LIST]          – Copy the full list of LOs below.
+                                Prefix starred LOs with ★ to indicate
+                                this page addresses that objective.
+                                Format each as a <p> with padding-left.
+         EXAMPLE LO LINE:
+           <p style="padding-left: 40px;">★ LO1.1.3 Investigate the quantities that define motion</p>
+           <p style="padding-left: 40px;">LO1.1.4 Analyze a problem in one dimension</p>
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>[COMPETENCY_CODE] [COMPETENCY_TITLE]</strong></p>
+                    <!-- Repeat the <p> pattern below for each LO. Add ★ to addressed LOs. -->
+                    <p style="padding-left: 40px;">[★ or blank] [LO_CODE] [LO_DESCRIPTION]</p>
+                    <p style="padding-left: 40px;">[★ or blank] [LO_CODE] [LO_DESCRIPTION]</p>
+                    <p style="padding-left: 40px;">[★ or blank] [LO_CODE] [LO_DESCRIPTION]</p>
+                    <p style="padding-left: 40px;">[★ or blank] [LO_CODE] [LO_DESCRIPTION]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING (OpenStax Button Links)
+         PLACEHOLDERS:
+           [READING_N_URL]   – Full URL to the OpenStax section
+           [READING_N_LABEL] – Button label, e.g. "3.1 Position, Displacement, and Average Velocity"
+         NOTE: Include as many reading buttons as needed.
+               Remove this entire section if no required reading.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="[READING_1_URL]" target="_blank" rel="noopener">[READING_1_LABEL]</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="[READING_2_URL]" target="_blank" rel="noopener">[READING_2_LABEL]</a>
+            <!-- Add or remove <a> buttons as needed -->
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING / SUPPLEMENTAL RESOURCES
+         PLACEHOLDERS:
+           [OPT_READING_INTRO] – 1-2 sentence intro inviting deeper exploration
+           [OPT_LINK_N_URL]    – URL for supplemental resource
+           [OPT_LINK_N_LABEL]  – Hyperlink display text
+           [OPT_LINK_N_DESC]   – Short description after the link (after em-dash)
+         NOTE: Can also use blue button links (same style as Required Reading)
+               instead of a bulleted list, for external professional resources.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">[OPT_READING_INTRO]</p>
+                <ul>
+                    <li><a class="inline_disabled" href="[OPT_LINK_1_URL]" target="_blank" rel="noopener">[OPT_LINK_1_LABEL]</a> &ndash; [OPT_LINK_1_DESC]</li>
+                    <li><a class="inline_disabled" href="[OPT_LINK_2_URL]" target="_blank" rel="noopener">[OPT_LINK_2_LABEL]</a> &ndash; [OPT_LINK_2_DESC]</li>
+                    <!-- Add or remove list items as needed -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA (Vertical Tab Video Panels)
+         PLACEHOLDERS:
+           [MEDIA_INTRO]       – 1-2 sentence instruction for students
+                                 telling them what to watch for
+           [VIDEO_N_TAB_TITLE] – Short tab label (left sidebar), e.g. "Video 1: Limits"
+           [VIDEO_N_TITLE]     – Full h4 title inside the panel
+           [VIDEO_N_DESC]      – 1-2 sentence description of video content
+           [VIDEO_N_BULLETS]   – 3-5 <li> items: key topics covered
+           [VIDEO_N_TIME]      – Duration, e.g. "6:30"
+         NOTE: Add or remove dp-panel-group blocks for more/fewer videos.
+               Each panel gets a "Video N:" prefix in its tab title.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">[MEDIA_INTRO]</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: [VIDEO_1_TAB_TITLE]</h3>
+                <div class="dp-panel-content">
+                    <h4>[VIDEO_1_TITLE]</h4>
+                    <p>[VIDEO_1_DESC]</p>
+                    <ul>
+                        <li>[VIDEO_1_BULLET_1]</li>
+                        <li>[VIDEO_1_BULLET_2]</li>
+                        <li>[VIDEO_1_BULLET_3]</li>
+                        <li>[VIDEO_1_BULLET_4]</li>
+                    </ul>
+                    <p>Time: [VIDEO_1_TIME]</p>
+                    <div class="dp-embed-wrapper"><!-- Paste Canvas media embed code here --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: [VIDEO_2_TAB_TITLE]</h3>
+                <div class="dp-panel-content">
+                    <h4>[VIDEO_2_TITLE]</h4>
+                    <p>[VIDEO_2_DESC]</p>
+                    <ul>
+                        <li>[VIDEO_2_BULLET_1]</li>
+                        <li>[VIDEO_2_BULLET_2]</li>
+                        <li>[VIDEO_2_BULLET_3]</li>
+                        <li>[VIDEO_2_BULLET_4]</li>
+                    </ul>
+                    <p>Time: [VIDEO_2_TIME]</p>
+                    <div class="dp-embed-wrapper"><!-- Paste Canvas media embed code here --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 (optional – remove if not needed) -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: [VIDEO_3_TAB_TITLE]</h3>
+                <div class="dp-panel-content">
+                    <h4>[VIDEO_3_TITLE]</h4>
+                    <p>[VIDEO_3_DESC]</p>
+                    <ul>
+                        <li>[VIDEO_3_BULLET_1]</li>
+                        <li>[VIDEO_3_BULLET_2]</li>
+                        <li>[VIDEO_3_BULLET_3]</li>
+                        <li>[VIDEO_3_BULLET_4]</li>
+                    </ul>
+                    <p>Time: [VIDEO_3_TIME]</p>
+                    <div class="dp-embed-wrapper"><!-- Paste Canvas media embed code here --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+         Contains three activity types. Keep or remove as needed.
+
+         7A. ORDER ACTIVITY
+           [ORDER_TITLE]       – Short title for the ordering task
+           [ORDER_PROMPT]      – 1-2 sentence instructions
+           [ORDER_ITEM_N]      – Each step/item to be ordered (6 items typical)
+           [ORDER_CORRECT_FB]  – Feedback shown when correct
+           [ORDER_WRONG_FB]    – Feedback shown when incorrect
+
+         7B. SORT ACTIVITY
+           [SORT_TITLE]        – Short title for the sorting task
+           [SORT_PROMPT]       – 1-2 sentence instructions
+           [SORT_ITEM_N]       – Items in the answer bank
+           [SORT_BUCKET_N]     – Category/bucket header
+           [SORT_BUCKET_N_ITEMS] – Correct items for that bucket
+
+         7C. FLIP CARDS (Knowledge Check)
+           [FLIP_INTRO]        – 1 sentence prompting students to click cards
+           [FLIP_Q_N]          – Question on the front of card N
+           [FLIP_A_N]          – Answer on the back of card N
+         NOTE: Use 4-6 flip cards arranged in a 2-column layout.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <div class="dp-order-wrapper" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> [ORDER_TITLE]</h4>
+            <p>[ORDER_PROMPT]</p>
+            <ol class="dp-order dp-order-text">
+                <li class="">[ORDER_ITEM_1]</li>
+                <li class="">[ORDER_ITEM_2]</li>
+                <li class="">[ORDER_ITEM_3]</li>
+                <li class="">[ORDER_ITEM_4]</li>
+                <li class="">[ORDER_ITEM_5]</li>
+                <li class="">[ORDER_ITEM_6]</li>
+            </ol>
+            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>[ORDER_CORRECT_FB]</p></div>
+            </div>
+            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>[ORDER_WRONG_FB]</p></div>
+            </div>
+        </div>
+
+        <!-- 7B: SORT ACTIVITY -->
+        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> [SORT_TITLE]</h4>
+            <p>[SORT_PROMPT]</p>
+            <div class="dp-si-sort-content">
+                <!-- Answer bank: list ALL items here -->
+                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                    <div class="dp-si-sort-bucket-content">
+                        <h4 class="dp-si-sort-bucket-header">[SORT_BANK_HEADER]</h4>
+                        <ul>
+                            <li class="dp-si-item-text">[SORT_ITEM_1]</li>
+                            <li class="dp-si-item-text">[SORT_ITEM_2]</li>
+                            <li class="dp-si-item-text">[SORT_ITEM_3]</li>
+                            <li class="dp-si-item-text">[SORT_ITEM_4]</li>
+                            <li class="dp-si-item-text">[SORT_ITEM_5]</li>
+                            <li class="dp-si-item-text">[SORT_ITEM_6]</li>
+                            <!-- Add or remove items as needed -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- Destination buckets (use col-md-4 for 3 columns, col-md-6 for 2) -->
+                <div class="container-fluid pt-3 px-0">
+                    <div class="row gy-3">
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">[SORT_BUCKET_1]</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_1_ITEM_1]</li>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_1_ITEM_2]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">[SORT_BUCKET_2]</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_2_ITEM_1]</li>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_2_ITEM_2]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">[SORT_BUCKET_3]</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_3_ITEM_1]</li>
+                                    <li class="dp-si-item-text">[SORT_BUCKET_3_ITEM_2]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Add more bucket divs as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7C: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Test Your Knowledge</h4>
+        <p>[FLIP_INTRO]</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">[FLIP_Q_1]</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>[FLIP_A_1]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">[FLIP_Q_2]</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>[FLIP_A_2]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">[FLIP_Q_3]</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>[FLIP_A_3]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">[FLIP_Q_4]</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>[FLIP_A_4]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+         Contains a formatting callout + accordion solution panels.
+         PLACEHOLDERS:
+           [COMP_FORMAT_TIPS] – Bullet list of answer-format rules
+                                specific to this lesson's problems
+           [PROB_N_QUESTION]  – Full problem statement (use <sup> for
+                                exponents, sub for subscripts, etc.)
+           [PROB_N_SOLUTION]  – Step-by-step worked solution HTML
+         NOTE: 3-4 problems is standard. Each problem is an h4 + p
+               followed by a "Show Solution" accordion panel.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <!-- Formatting callout -->
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Answer Formatting</h3>
+                <p>Follow these formatting rules when entering answers:</p>
+                <!-- Example format tip items to replace the li placeholders below:
+                     Scientific Notation: Write as 1.2*10^6
+                     Units: Always include correct SI units
+                     Sig Figs: Round to 3 significant figures unless stated
+                -->
+                <ul>
+                    <li>[COMP_FORMAT_TIP_1]</li>
+                    <li>[COMP_FORMAT_TIP_2]</li>
+                    <li>[COMP_FORMAT_TIP_3]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1</h4>
+        <p><strong>[PROB_1_QUESTION]</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>[PROB_1_QUESTION]</strong></p>
+                    [PROB_1_SOLUTION]
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2</h4>
+        <p><strong>[PROB_2_QUESTION]</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>[PROB_2_QUESTION]</strong></p>
+                    [PROB_2_SOLUTION]
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3</h4>
+        <p><strong>[PROB_3_QUESTION]</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>[PROB_3_QUESTION]</strong></p>
+                    [PROB_3_SOLUTION]
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 4 (optional – remove if not needed) -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 4</h4>
+        <p><strong>[PROB_4_QUESTION]</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>[PROB_4_QUESTION]</strong></p>
+                    [PROB_4_SOLUTION]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST / READY TO MOVE ON
+         PLACEHOLDERS:
+           [CHECKLIST_ITEM_N] – Self-check question or task for students
+                                to verify their own understanding
+         NOTE: This section is optional. Include 3-5 items.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Test your understanding before moving on:</p>
+            <ol>
+                <li>[CHECKLIST_ITEM_1]</li>
+                <li>[CHECKLIST_ITEM_2]</li>
+                <li>[CHECKLIST_ITEM_3]</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Think through these problems, then discuss with classmates or your instructor to verify your understanding!</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../js/canvas-image-mapper.js"></script>
+
+</body>
+</html>

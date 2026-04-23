@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L1 Explore: Acid-Base Foundations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE. /tstc-chem-1312/index.html -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 1: Measurements and Motion in 1D</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M1L2 Instantaneous Velocity and Speed</span></h2>
+    </header>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The good thing about science is that it's true whether or not you believe in it."</em></span><br /><span>&mdash;&nbsp;Neil deGrasse Tyson</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">What's the difference between your car's speedometer reading and your average speed on a road trip? The answer lies in understanding instantaneous velocity—the precise speed and direction at any given moment achieved through the mathematical limit process. In this lesson, you'll master how the formal limit definition v = lim<sub>Δt→0</sub> [Δx/Δt] = dx/dt connects calculus to real-world motion, providing the rigorous foundation for all advanced physics. Get ready to see how the concept of limiting processes resolves the ancient paradox of "instantaneous change" and enables precise mathematical description of motion!</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A speedometer showing instantaneous speed reading." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Instantaneous velocity captures motion at a precise moment.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the Open Stax reading assignments.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;"><a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 1</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 2</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">1.Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 4</a></div>
+        <p>&nbsp;</p>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-infinity" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Mathematical Foundation: The Limit Process</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">The Central Question of Calculus</h4>
+                <p class="card-text">How do we mathematically capture the rate of change at a single instant, when rate inherently requires change over time?</p>
+            </div>
+        </div>
+        
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4>From Average to Instantaneous</h4>
+                    <p><strong>Step 1:</strong> Average velocity over interval [t, t+Δt]:</p>
+                    <p style="text-align: center; background: #ededc2; padding: 0.8em; border-radius: 4px;">v<sub>avg</sub> = <span style="font-size: 1.2em;">Δx/Δt = [x(t+Δt) - x(t)]/Δt</span></p>
+                    
+                    <p><strong>Step 2:</strong> Make Δt smaller and smaller:</p>
+                    <ul>
+                        <li>Δt = 1 s → rough approximation</li>
+                        <li>Δt = 0.1 s → better approximation</li>
+                        <li>Δt = 0.01 s → even better</li>
+                        <li>Δt → 0 → perfect instantaneous velocity</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4>The Formal Definition</h4>
+                    <div style="background: #1d2757; color: white; padding: 1.2em; border-radius: 8px; margin: 1em 0;">
+                        <p style="text-align: center; font-size: 1.3em; margin: 0;">
+                            <strong>v(t) = lim<sub>Δt→0</sub> [x(t+Δt) - x(t)]/Δt</strong>
+                        </p>
+                        <p style="text-align: center; font-size: 1.3em; margin: 0.5em 0 0 0;">
+                            <strong>= dx/dt</strong>
+                        </p>
+                    </div>
+                    
+                    <p><strong>This limit process:</strong></p>
+                    <ul>
+                        <li>Resolves the paradox of "instantaneous change"</li>
+                        <li>Provides rigorous mathematical foundation</li>
+                        <li>Connects geometry (slopes) to physics (motion)</li>
+                        <li>Enables precise calculations of real-world motion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC1.1 Solve problems of motion in one dimension</strong></p>
+                    <p style="padding-left: 40px;">LO1.1.1 Translate from scientific notation to regular numbers</p>
+                    <p style="padding-left: 40px;">LO1.1.2 Translate from different measurement systems</p>
+                    <p style="padding-left: 40px;">★ LO1.1.3 Investigate the quantities that define motion in one dimension</p>
+                    <p style="padding-left: 40px;">★ LO1.1.4 Analyze a problem in one dimension</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Ready to dive deeper into instantaneous motion? These resources will help you master the connection between calculus and physics.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas" target="_blank" rel="noopener">Khan Academy: Kinematic Formulas</a> – Interactive lessons on velocity and motion.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/1DKin" target="_blank" rel="noopener">Physics Classroom: 1D Kinematics</a> – Comprehensive tutorials on one-dimensional motion.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch these videos to see how the limit-based definition of instantaneous velocity provides the mathematical foundation for all motion analysis. Focus on the transition from discrete approximations to continuous calculus!</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Understanding Instantaneous Velocity</h3>
+                <div class="dp-panel-content">
+                    <h4>Understanding Instantaneous Velocity</h4>
+                    <p>This video explains how we use calculus to find velocity at a specific instant, connecting derivatives to real-world motion.</p>
+                    <ul>
+                        <li>The difference between average and instantaneous velocity</li>
+                        <li>How derivatives help us find instantaneous rates of change</li>
+                        <li>Reading velocity from position vs. time graphs</li>
+                        <li>Real-world applications like speedometers</li>
+                    </ul>
+                    <p>Time: 6:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video content would go here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Velocity vs. Speed</h3>
+                <div class="dp-panel-content">
+                    <h4>Velocity vs. Speed</h4>
+                    <p>Learn the crucial difference between velocity (which includes direction) and speed (magnitude only).</p>
+                    <ul>
+                        <li>Why direction matters in physics</li>
+                        <li>Vector quantities vs. scalar quantities</li>
+                        <li>Examples of when speed and velocity differ</li>
+                    </ul>
+                    <p>Time: 4:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video content would go here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+        
+        <!-- Order Activity: Velocity Calculation Steps -->
+        <div class="dp-order-wrapper" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order the Steps for Finding Instantaneous Velocity</h4>
+            <p>Arrange the steps in the correct order for calculating instantaneous velocity using calculus:</p>
+            <ol class="dp-order dp-order-text">
+                <li class="">Apply the derivative to find v(t)</li>
+                <li class="">Identify the position function x(t)</li>
+                <li class="">Substitute the specific time value into v(t)</li>
+                <li class="">Set up the derivative: v(t) = dx/dt</li>
+                <li class="">Interpret the result including direction</li>
+                <li class="">Calculate the final numerical answer with units</li>
+            </ol>
+            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Excellent! You've mastered the systematic approach to finding instantaneous velocity!</p></div>
+            </div>
+            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Try again. Think about the logical progression from position function to final answer.</p></div>
+            </div>
+        </div>
+
+        <!-- Sort Activity: Motion Scenarios -->
+        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Motion Scenarios</h4>
+            <p>Classify each scenario based on the type of motion being described:</p>
+            <div class="dp-si-sort-content">
+                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                    <div class="dp-si-sort-bucket-content">
+                        <h4 class="dp-si-sort-bucket-header">Motion Scenarios</h4>
+                        <ul>
+                            <li class="dp-si-item-text">Car travels 200 km in 3 hours</li>
+                            <li class="dp-si-item-text">Speedometer reading at this instant</li>
+                            <li class="dp-si-item-text">Slope of tangent line on x-t graph</li>
+                            <li class="dp-si-item-text">Runner completes marathon in 4 hours</li>
+                            <li class="dp-si-item-text">Radar gun measurement</li>
+                            <li class="dp-si-item-text">GPS reports "currently moving 65 mph"</li>
+                            <li class="dp-si-item-text">Total displacement divided by total time</li>
+                            <li class="dp-si-item-text">Derivative dx/dt at specific time</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid pt-3 px-0">
+                    <div class="row gy-3">
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Average Velocity</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Car travels 200 km in 3 hours</li>
+                                    <li class="dp-si-item-text">Runner completes marathon in 4 hours</li>
+                                    <li class="dp-si-item-text">Total displacement divided by total time</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Instantaneous Velocity</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Speedometer reading at this instant</li>
+                                    <li class="dp-si-item-text">Slope of tangent line on x-t graph</li>
+                                    <li class="dp-si-item-text">Radar gun measurement</li>
+                                    <li class="dp-si-item-text">GPS reports "currently moving 65 mph"</li>
+                                    <li class="dp-si-item-text">Derivative dx/dt at specific time</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flip Cards: Velocity vs Speed Concepts -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Test Your Understanding</h4>
+        <p>Click each card to test your knowledge of velocity and speed concepts:</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What's the key difference between speed and velocity?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Velocity includes direction (vector), while speed is magnitude only (scalar).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How do you find instantaneous velocity graphically?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Find the slope of the tangent line to the position-time graph at that specific point.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What does a negative velocity mean?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The object is moving in the negative direction (opposite to the positive coordinate direction).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why is instantaneous velocity important?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>It tells us exactly how fast and in what direction an object is moving at any specific moment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Calculus and Units</h3>
+                <p>When working with instantaneous velocity problems, remember:</p>
+                <ul>
+                    <li><strong>Derivatives:</strong> If position is x(t), then velocity is v(t) = dx/dt</li>
+                    <li><strong>Units:</strong> Always include proper units (m/s, km/hr, etc.)</li>
+                    <li><strong>Direction:</strong> Pay attention to positive and negative signs—they indicate direction!</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Practice Problem 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1: Rigorous Limit Derivation</h4>
+        <p><strong>Given x(t) = 3t² + 2t, find v(t) using the formal limit definition, then verify with derivative rules.</strong></p>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Problem:</strong> Given x(t) = 3t² + 2t, find v(t) using the formal limit definition, then verify with derivative rules.</p>
+                    
+                    <p><strong>Method 1: Limit Definition</strong></p>
+                    <p>v(t) = lim<sub>Δt→0</sub> [x(t+Δt) - x(t)]/Δt</p>
+                    
+                    <p><strong>Step 1:</strong> Find x(t+Δt)</p>
+                    <p>x(t+Δt) = 3(t+Δt)² + 2(t+Δt) = 3(t² + 2tΔt + (Δt)²) + 2t + 2Δt</p>
+                    <p>x(t+Δt) = 3t² + 6tΔt + 3(Δt)² + 2t + 2Δt</p>
+                    
+                    <p><strong>Step 2:</strong> Calculate the difference</p>
+                    <p>x(t+Δt) - x(t) = [3t² + 6tΔt + 3(Δt)² + 2t + 2Δt] - [3t² + 2t]</p>
+                    <p>= 6tΔt + 3(Δt)² + 2Δt = Δt(6t + 3Δt + 2)</p>
+                    
+                    <p><strong>Step 3:</strong> Apply the limit</p>
+                    <p>v(t) = lim<sub>Δt→0</sub> [Δt(6t + 3Δt + 2)]/Δt = lim<sub>Δt→0</sub> (6t + 3Δt + 2) = <strong>6t + 2</strong></p>
+                    
+                    <p><strong>Method 2: Derivative Rules</strong></p>
+                    <p>v(t) = dx/dt = d/dt(3t² + 2t) = 6t + 2 ✓</p>
+                    
+                    <p><strong>At t = 2 s:</strong> v(2) = 6(2) + 2 = 14 m/s</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Problem 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2: Advanced Functions</h4>
+        <p><strong>A particle moves with position x(t) = 4sin(2πt) + 2e^(0.1t). Find the velocity function and evaluate at t = 0.25 seconds.</strong></p>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Problem:</strong> A particle moves with position x(t) = 4sin(2πt) + 2e^(0.1t). Find the velocity function and evaluate at t = 0.25 seconds.</p>
+                    
+                    <p><strong>Solution using derivative rules:</strong></p>
+                    <p>v(t) = dx/dt = d/dt[4sin(2πt) + 2e^(0.1t)]</p>
+                    
+                    <p><strong>Term 1:</strong> d/dt[4sin(2πt)] = 4 · cos(2πt) · 2π = 8π cos(2πt)</p>
+                    <p><strong>Term 2:</strong> d/dt[2e^(0.1t)] = 2 · e^(0.1t) · 0.1 = 0.2e^(0.1t)</p>
+                    
+                    <p><strong>Complete velocity function:</strong></p>
+                    <p style="text-align: center; background: #ededc2; padding: 0.8em; border-radius: 4px;">v(t) = 8π cos(2πt) + 0.2e^(0.1t)</p>
+                    
+                    <p><strong>At t = 0.25 s:</strong></p>
+                    <p>v(0.25) = 8π cos(2π · 0.25) + 0.2e^(0.1 · 0.25)</p>
+                    <p>v(0.25) = 8π cos(π/2) + 0.2e^(0.025)</p>
+                    <p>v(0.25) = 8π(0) + 0.2(1.0253) = <strong>0.205 m/s</strong></p>
+                    
+                    <p><em>This problem demonstrates calculus techniques needed for oscillatory motion with exponential growth.</em></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Problem 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3: Vector Velocity</h4>
+        <p><strong>A particle moves in 2D with position vector r⃗(t) = (3t², 2t³). Find the velocity vector and speed at t = 1 second.</strong></p>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Problem:</strong> A particle moves in 2D with position vector r⃗(t) = (3t², 2t³). Find the velocity vector and speed at t = 1 second.</p>
+                    
+                    <p><strong>Position vector:</strong> r⃗(t) = (3t², 2t³)</p>
+                    
+                    <p><strong>Velocity vector:</strong> v⃗(t) = dr⃗/dt = (d/dt(3t²), d/dt(2t³)) = (6t, 6t²)</p>
+                    
+                    <p><strong>Component analysis:</strong></p>
+                    <ul>
+                        <li>x-component: vₓ(t) = 6t</li>
+                        <li>y-component: vᵧ(t) = 6t²</li>
+                    </ul>
+                    
+                    <p><strong>At t = 1 second:</strong></p>
+                    <p>v⃗(1) = (6(1), 6(1)²) = (6, 6) m/s</p>
+                    
+                    <p><strong>Speed (magnitude):</strong></p>
+                    <p>|v⃗(1)| = √(vₓ² + vᵧ²) = √(6² + 6²) = √72 = 6√2 ≈ <strong>8.49 m/s</strong></p>
+                    
+                    <p><strong>Direction:</strong> θ = arctan(vᵧ/vₓ) = arctan(6/6) = arctan(1) = 45° above horizontal</p>
+                    
+                    <p><em>This demonstrates the vector nature of velocity and introduces 2D motion analysis.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Advanced Computational Challenges</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">University-Level Problem Solving</h4>
+                <p class="card-text">These problems require sophisticated mathematical techniques and connect to real engineering applications. Master these to excel in advanced physics courses.</p>
+            </div>
+        </div>
+        
+        <!-- Challenge Problem 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-star"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Challenge 1: Parametric Motion Analysis</h4>
+        <p><strong>A particle moves along a curve with parametric equations x(t) = 3t² - 2t and y(t) = t³ - 4t. Find the velocity components and speed at t = 2 seconds, then determine when the particle momentarily stops.</strong></p>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Problem:</strong> A particle moves along a curve with parametric equations x(t) = 3t² - 2t and y(t) = t³ - 4t. Find the velocity components and speed at t = 2 seconds, then determine when the particle momentarily stops.</p>
+                    
+                    <h5>Step-by-Step Solution:</h5>
+                    
+                    <p><strong>Step 1: Find velocity components</strong></p>
+                    <p>vₓ(t) = dx/dt = d/dt(3t² - 2t) = 6t - 2</p>
+                    <p>vᵧ(t) = dy/dt = d/dt(t³ - 4t) = 3t² - 4</p>
+                    
+                    <p><strong>Step 2: Velocity vector and speed</strong></p>
+                    <p>v⃗(t) = (6t - 2, 3t² - 4)</p>
+                    <p>|v⃗(t)| = √[(6t - 2)² + (3t² - 4)²]</p>
+                    
+                    <p><strong>Step 3: Evaluate at t = 2 s</strong></p>
+                    <p>vₓ(2) = 6(2) - 2 = 10 m/s</p>
+                    <p>vᵧ(2) = 3(4) - 4 = 8 m/s</p>
+                    <p>v⃗(2) = (10, 8) m/s</p>
+                    <p>|v⃗(2)| = √(10² + 8²) = √164 = 2√41 ≈ <strong>12.81 m/s</strong></p>
+                    
+                    <p><strong>Step 4: Find when particle stops (v⃗ = 0)</strong></p>
+                    <p>For particle to stop: vₓ = 0 AND vᵧ = 0</p>
+                    <p>6t - 2 = 0 → t = 1/3 s</p>
+                    <p>3t² - 4 = 0 → t = ±2/√3 s ≈ ±1.15 s</p>
+                    <p><strong>No common solution:</strong> Particle never completely stops (always has motion in at least one direction)</p>
+                    
+                    <p><em>This demonstrates 2D motion where stopping requires both components to be zero simultaneously.</em></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Challenge Problem 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-star"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Challenge 2: Engineering Application - Projectile Launch</h4>
+        <p><strong>A rocket's vertical position is given by h(t) = -4.9t² + 120t + 50 (meters), where t is time in seconds. Find: (a) initial velocity, (b) velocity at maximum height, (c) time when rocket hits ground, (d) impact velocity.</strong></p>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Problem:</strong> A rocket's vertical position is given by h(t) = -4.9t² + 120t + 50 (meters), where t is time in seconds. Find: (a) initial velocity, (b) velocity at maximum height, (c) time when rocket hits ground, (d) impact velocity.</p>
+                    
+                    <h5>Complete Engineering Analysis:</h5>
+                    
+                    <p><strong>(a) Initial velocity at t = 0</strong></p>
+                    <p>v(t) = dh/dt = d/dt(-4.9t² + 120t + 50) = -9.8t + 120</p>
+                    <p>v(0) = -9.8(0) + 120 = <strong>120 m/s upward</strong></p>
+                    
+                    <p><strong>(b) Velocity at maximum height</strong></p>
+                    <p>At maximum height, v = 0:</p>
+                    <p>-9.8t + 120 = 0 → t = 120/9.8 ≈ 12.24 s</p>
+                    <p>v(12.24) = <strong>0 m/s</strong> (at maximum height)</p>
+                    <p>Maximum height: h(12.24) = -4.9(12.24)² + 120(12.24) + 50 ≈ 784 m</p>
+                    
+                    <p><strong>(c) Time when rocket hits ground (h = 0)</strong></p>
+                    <p>-4.9t² + 120t + 50 = 0</p>
+                    <p>Using quadratic formula: t = [-120 ± √(120² + 4(4.9)(50))] / (2(-4.9))</p>
+                    <p>t = [-120 ± √(14400 + 980)] / (-9.8) = [-120 ± √15380] / (-9.8)</p>
+                    <p>t = [-120 ± 124.02] / (-9.8)</p>
+                    <p>Taking positive solution: t = (-120 + 124.02) / (-9.8) ≈ <strong>24.9 seconds</strong></p>
+                    
+                    <p><strong>(d) Impact velocity</strong></p>
+                    <p>v(24.9) = -9.8(24.9) + 120 = -244.02 + 120 = <strong>-124.02 m/s</strong></p>
+                    <p>Impact speed = 124.02 m/s downward</p>
+                    
+                    <p><strong>Engineering Insight:</strong> The impact speed (124 m/s) is greater than launch speed (120 m/s) due to the 50 m initial height, demonstrating energy conservation principles.</p>
+                </div>
+            </div>
+            
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Challenge 3: Complex Oscillatory Motion</p>
+                <div class="dp-panel-content">
+                    <p><strong>A mass on a spring has position x(t) = 5e^(-0.2t)cos(3t) + 2sin(3t). This represents damped oscillation. Find velocity function, analyze long-term behavior, and determine when velocity first equals zero.</strong></p>
+                    
+                    <h5>Advanced Calculus Application:</h5>
+                    
+                    <p><strong>Step 1: Find velocity using product and chain rules</strong></p>
+                    <p>x(t) = 5e^(-0.2t)cos(3t) + 2sin(3t)</p>
+                    
+                    <p><strong>Term 1:</strong> d/dt[5e^(-0.2t)cos(3t)] (use product rule)</p>
+                    <p>= 5[e^(-0.2t)(-3sin(3t)) + cos(3t)(-0.2e^(-0.2t))]</p>
+                    <p>= 5e^(-0.2t)[-3sin(3t) - 0.2cos(3t)]</p>
+                    <p>= -e^(-0.2t)[15sin(3t) + cos(3t)]</p>
+                    
+                    <p><strong>Term 2:</strong> d/dt[2sin(3t)] = 6cos(3t)</p>
+                    
+                    <p><strong>Complete velocity function:</strong></p>
+                    <p style="background: #ededc2; padding: 0.8em; border-radius: 4px;">v(t) = -e^(-0.2t)[15sin(3t) + cos(3t)] + 6cos(3t)</p>
+                    
+                    <p><strong>Step 2: Long-term behavior analysis</strong></p>
+                    <p>As t → ∞: e^(-0.2t) → 0, so v(t) → 6cos(3t)</p>
+                    <p><strong>Interpretation:</strong> Damping dies out, leaving simple harmonic motion with amplitude 6 m/s</p>
+                    
+                    <p><strong>Step 3: Find when v(t) = 0 (requires numerical methods)</strong></p>
+                    <p>-e^(-0.2t)[15sin(3t) + cos(3t)] + 6cos(3t) = 0</p>
+                    <p>6cos(3t) = e^(-0.2t)[15sin(3t) + cos(3t)]</p>
+                    <p>This transcendental equation requires numerical solution: <strong>t ≈ 0.157 seconds</strong></p>
+                    
+                    <p><em>This problem demonstrates how real physical systems combine exponential decay with oscillation, requiring advanced mathematical techniques.</em></p>
+                </div>
+            </div>
+            
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Challenge 4: GPS Navigation Algorithm</p>
+                <div class="dp-panel-content">
+                    <p><strong>A GPS unit tracks a vehicle moving along a highway with position s(t) = 100t + 5sin(0.1πt) where s is distance along the highway in meters and t is time in seconds. The sine term represents small deviations due to lane changes. Calculate instantaneous velocity and analyze the motion pattern.</strong></p>
+                    
+                    <h5>Real-World Navigation Analysis:</h5>
+                    
+                    <p><strong>Step 1: Find instantaneous velocity</strong></p>
+                    <p>v(t) = ds/dt = d/dt[100t + 5sin(0.1πt)]</p>
+                    <p>v(t) = 100 + 5(0.1π)cos(0.1πt)</p>
+                    <p>v(t) = 100 + 0.5πcos(0.1πt) m/s</p>
+                    
+                    <p><strong>Step 2: Analyze velocity components</strong></p>
+                    <ul>
+                        <li><strong>Average velocity:</strong> 100 m/s (constant highway speed)</li>
+                        <li><strong>Oscillation amplitude:</strong> ±0.5π ≈ ±1.57 m/s (lane change variations)</li>
+                        <li><strong>Oscillation period:</strong> T = 2π/(0.1π) = 20 seconds</li>
+                    </ul>
+                    
+                    <p><strong>Step 3: Velocity range analysis</strong></p>
+                    <p>Minimum velocity: 100 - 0.5π ≈ <strong>98.43 m/s</strong> (when cos term = -1)</p>
+                    <p>Maximum velocity: 100 + 0.5π ≈ <strong>101.57 m/s</strong> (when cos term = +1)</p>
+                    
+                    <p><strong>Step 4: GPS sampling simulation</strong></p>
+                    <p>If GPS samples every 1 second, velocity estimates at key times:</p>
+                    <ul>
+                        <li>t = 0 s: v(0) = 100 + 0.5π = 101.57 m/s</li>
+                        <li>t = 5 s: v(5) = 100 + 0.5π cos(0.5π) = 100.00 m/s</li>
+                        <li>t = 10 s: v(10) = 100 + 0.5π cos(π) = 98.43 m/s</li>
+                        <li>t = 15 s: v(15) = 100 + 0.5π cos(1.5π) = 100.00 m/s</li>
+                    </ul>
+                    
+                    <p><strong>Engineering Application:</strong> This model helps GPS algorithms distinguish between actual velocity changes and measurement noise in navigation systems.</p>
+                </div>
+            </div>
+            
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Challenge 5: Multi-Step Chain Rule Application</p>
+                <div class="dp-panel-content">
+                    <p><strong>A particle moves along a path where position depends on time through a composite function: x(t) = ln(t² + 3t + 2) + √(5t + 1). Find the velocity function and evaluate at t = 3 seconds. Analyze the domain restrictions.</strong></p>
+                    
+                    <h5>Advanced Differentiation Techniques:</h5>
+                    
+                    <p><strong>Step 1: Domain analysis</strong></p>
+                    <p>For ln(t² + 3t + 2): need t² + 3t + 2 > 0</p>
+                    <p>Factoring: (t + 1)(t + 2) > 0, so t < -2 or t > -1</p>
+                    <p>For √(5t + 1): need 5t + 1 ≥ 0, so t ≥ -1/5</p>
+                    <p><strong>Combined domain:</strong> t > -1/5 = -0.2 seconds</p>
+                    
+                    <p><strong>Step 2: Apply chain rule to each term</strong></p>
+                    
+                    <p><strong>Term 1:</strong> d/dt[ln(t² + 3t + 2)]</p>
+                    <p>= (1/(t² + 3t + 2)) · (2t + 3)</p>
+                    <p>= (2t + 3)/(t² + 3t + 2)</p>
+                    
+                    <p><strong>Term 2:</strong> d/dt[√(5t + 1)]</p>
+                    <p>= (1/2)(5t + 1)^(-1/2) · 5</p>
+                    <p>= 5/(2√(5t + 1))</p>
+                    
+                    <p><strong>Step 3: Complete velocity function</strong></p>
+                    <p style="background: #ededc2; padding: 0.8em; border-radius: 4px;">v(t) = (2t + 3)/(t² + 3t + 2) + 5/(2√(5t + 1))</p>
+                    
+                    <p><strong>Step 4: Evaluate at t = 3 seconds</strong></p>
+                    <p>v(3) = (2(3) + 3)/(3² + 3(3) + 2) + 5/(2√(5(3) + 1))</p>
+                    <p>v(3) = 9/(9 + 9 + 2) + 5/(2√16)</p>
+                    <p>v(3) = 9/20 + 5/8</p>
+                    <p>v(3) = 0.45 + 0.625 = <strong>1.075 m/s</strong></p>
+                    
+                    <p><strong>Step 5: Physical interpretation</strong></p>
+                    <p>The logarithmic term contributes: 0.45 m/s</p>
+                    <p>The square root term contributes: 0.625 m/s</p>
+                    <p>Both terms have decreasing influence as t increases, showing a velocity that approaches zero for large times.</p>
+                    
+                    <p><em>This problem demonstrates the importance of domain analysis and the application of chain rule to complex composite functions in physics.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-industry" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Real-World Engineering Applications</h3>
+        
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-car" style="color: #1d2757;"></i> Automotive Engineering</h4>
+                    <p><strong>Anti-lock Braking Systems (ABS)</strong></p>
+                    <p>ABS systems monitor wheel velocity continuously using the derivative of wheel position. When v(t) approaches zero too rapidly (indicating lock-up), the system modulates brake pressure.</p>
+                    <p><strong>Mathematical model:</strong> If wheel position θ(t) and target deceleration is a_max, then:</p>
+                    <p>ω(t) = dθ/dt (angular velocity)</p>
+                    <p>α(t) = dω/dt = d²θ/dt² (angular acceleration)</p>
+                    <p>ABS activates when |α(t)| > α_threshold</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-satellite" style="color: #1d2757;"></i> Satellite Navigation</h4>
+                    <p><strong>GPS Velocity Calculation</strong></p>
+                    <p>GPS receivers calculate velocity using position derivatives from multiple satellite signals:</p>
+                    <p>r⃗(t) = position vector from satellites</p>
+                    <p>v⃗(t) = dr⃗/dt (calculated numerically)</p>
+                    <p><strong>Kalman filtering:</strong> Combines multiple velocity estimates to reduce noise and account for acceleration predictions.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-plane" style="color: #1d2757;"></i> Aerospace Engineering</h4>
+                    <p><strong>Rocket Trajectory Optimization</strong></p>
+                    <p>Launch vehicles require precise velocity control. Given thrust profile T(t):</p>
+                    <p>a(t) = T(t)/m(t) - g (acceleration)</p>
+                    <p>v(t) = ∫a(t)dt (velocity)</p>
+                    <p>x(t) = ∫v(t)dt (position)</p>
+                    <p>Optimal trajectories minimize fuel while achieving target orbit velocity.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-heartbeat" style="color: #1d2757;"></i> Biomedical Engineering</h4>
+                    <p><strong>Blood Flow Velocity</strong></p>
+                    <p>Doppler ultrasound measures blood velocity using frequency shifts:</p>
+                    <p>Δf/f₀ = (2v cos θ)/c</p>
+                    <p>Solving for velocity: v = (Δf · c)/(2f₀ cos θ)</p>
+                    <p>This provides instantaneous velocity measurements for cardiac diagnostics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-brain" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Conceptual Depth: The Philosophy of Instantaneous Motion</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">The Fundamental Paradox</h4>
+                <p class="card-text">How can something have velocity at an instant when velocity requires change over time? This ancient paradox drove the development of calculus and still challenges our understanding of nature.</p>
+            </div>
+        </div>
+        
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-history" style="color: #1d2757;"></i> Historical Journey: From Paradox to Solution</h4>
+                    
+                    <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Ancient Greece: Zeno's Paradoxes (5th century BCE)</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>The Arrow Paradox:</strong> At any instant, a flying arrow occupies a specific position. If it occupies a position, it's not moving. But how can motion exist if at every instant, nothing is moving?</p>
+                                <p><strong>Philosophical Impact:</strong> Challenged the very concept of motion and continuous change.</p>
+                                <p><strong>Resolution:</strong> Limits and calculus show that instantaneous velocity is the tendency to change position, not actual change at an instant.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Medieval Period: The Calculatores (14th century)</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Oxford Calculators:</strong> Developed concepts of instantaneous velocity using geometric methods.</p>
+                                <p><strong>Nicole Oresme:</strong> Used graphical representations to understand velocity as the "slope" of position graphs.</p>
+                                <p><strong>Key Insight:</strong> Motion could be analyzed mathematically, not just philosophically.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Scientific Revolution: Newton & Leibniz (17th century)</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Isaac Newton:</strong> Developed "fluxions" (derivatives) to describe instantaneous rates of change in his Principia.</p>
+                                <p><strong>Gottfried Leibniz:</strong> Created systematic differential calculus notation (dx/dt) still used today.</p>
+                                <p><strong>Revolutionary Insight:</strong> Instantaneous velocity is the limit of average velocities over infinitesimally small intervals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Modern Physics: New Complexities (20th century)</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Heisenberg Uncertainty Principle:</strong> In quantum mechanics, position and velocity cannot both be precisely known simultaneously.</p>
+                                <p><strong>Relativity:</strong> Velocity depends fundamentally on the observer's reference frame.</p>
+                                <p><strong>Current Understanding:</strong> Classical instantaneous velocity is an idealization useful for macroscopic objects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4><i class="fas fa-compass" style="color: #1d2757;"></i> Reference Frame Analysis: Velocity is Relative</h4>
+                    
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-lightbulb dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Critical Insight</h5>
+                            <p>Velocity has no absolute meaning—it only exists relative to a chosen reference frame. This relativistic nature is fundamental to physics.</p>
+                        </div>
+                    </div>
+                    
+                    <h5>Thought Experiment: The Moving Train</h5>
+                    <p><strong>Scenario:</strong> You're walking forward at 2 m/s inside a train moving 30 m/s relative to the ground.</p>
+                    
+                    <table class="table table-striped" style="margin: 1em 0;">
+                        <thead style="background-color: #1d2757; color: white;">
+                            <tr>
+                                <th>Reference Frame</th>
+                                <th>Your Velocity</th>
+                                <th>Physical Reality?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Your frame</strong></td>
+                                <td>2 m/s forward</td>
+                                <td>You feel this velocity</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Train frame</strong></td>
+                                <td>2 m/s forward</td>
+                                <td>Passengers see this</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ground frame</strong></td>
+                                <td>32 m/s forward</td>
+                                <td>Ground observers measure this</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Car (20 m/s) frame</strong></td>
+                                <td>12 m/s forward</td>
+                                <td>Car passengers measure this</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Opposite train (-25 m/s)</strong></td>
+                                <td>57 m/s forward</td>
+                                <td>Opposite train sees this</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Profound Question:</strong> Which velocity is "real"? Answer: <em>All of them!</em> Physics is the same in all reference frames.</p>
+                    
+                    <h5>Mathematical Transformation</h5>
+                    <p>If velocity in frame A is v⃗ₐ and frame B moves with velocity V⃗ relative to A:</p>
+                    <p style="text-align: center; background: #ededc2; padding: 0.8em; border-radius: 4px;">v⃗ᵦ = v⃗ₐ - V⃗</p>
+                    <p>This <strong>Galilean transformation</strong> shows how velocities change between reference frames.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-microscope" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> The Measurement Problem: Theory vs. Reality</h3>
+        
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4>The Fundamental Tension</h4>
+                    <p><strong>Mathematical Ideal:</strong> Instantaneous velocity requires zero time interval (Δt → 0)</p>
+                    <p><strong>Physical Reality:</strong> All measurements require finite time intervals</p>
+                    <p><strong>The Problem:</strong> Perfect instantaneous velocity cannot actually be measured!</p>
+                    
+                    <h5>Measurement Strategies</h5>
+                    <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">High-Speed Photography</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Method:</strong> Track position changes over microsecond intervals</p>
+                                <p><strong>Time resolution:</strong> Down to 10⁻⁹ seconds</p>
+                                <p><strong>Approximation:</strong> v ≈ Δx/Δt where Δt is very small</p>
+                                <p><strong>Limitation:</strong> Still finite time interval, not true instant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Doppler Radar</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Method:</strong> Use frequency shift to infer velocity</p>
+                                <p><strong>Physics:</strong> f' = f(c + v)/(c - v) for electromagnetic waves</p>
+                                <p><strong>Advantage:</strong> Near-instantaneous measurement</p>
+                                <p><strong>Reality check:</strong> Averages over wave packet duration</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dp-panel-group">
+                            <h5 class="dp-panel-heading">Laser Interferometry</h5>
+                            <div class="dp-panel-content">
+                                <p><strong>Method:</strong> Detect tiny position changes using wave interference</p>
+                                <p><strong>Precision:</strong> Down to 10⁻¹⁸ meters (gravitational wave detectors)</p>
+                                <p><strong>Time resolution:</strong> Limited by measurement frequency</p>
+                                <p><strong>Application:</strong> LIGO gravitational wave detection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4>Quantum Mechanical Complications</h4>
+                    <p>At the quantum level, the concept of instantaneous velocity becomes even more problematic.</p>
+                    
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+                        <div class="card-body">
+                            <h5 class="card-title">Heisenberg Uncertainty Principle</h5>
+                            <p class="card-text">Δx · Δp ≥ ħ/2, where p = mv. The more precisely we know position, the less precisely we can know velocity!</p>
+                        </div>
+                    </div>
+                    
+                    <h5>Implications for Classical Physics</h5>
+                    <ul>
+                        <li><strong>Macroscopic objects:</strong> Uncertainty is negligible, classical velocity concepts work</li>
+                        <li><strong>Microscopic particles:</strong> Classical velocity loses meaning</li>
+                        <li><strong>Practical physics:</strong> Classical concepts remain useful for engineering</li>
+                    </ul>
+                    
+                    <h5>Measurement Uncertainty Analysis</h5>
+                    <p><strong>Example:</strong> GPS velocity measurement</p>
+                    <p><strong>Position uncertainty:</strong> ±3 meters</p>
+                    <p><strong>Time interval:</strong> 1 second</p>
+                    <p><strong>Velocity uncertainty:</strong> ±3 m/s</p>
+                    
+                    <p style="background: #ededc2; padding: 0.8em; border-radius: 4px;"><strong>Fundamental limit:</strong> No measurement can achieve perfect instantaneous velocity. We can only approach the limit through shorter time intervals and more precise instruments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-question-circle" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Critical Thinking Challenges</h3>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Philosophical Challenge: The Nature of Time</p>
+                <div class="dp-panel-content">
+                    <p><strong>Question:</strong> If time is discrete (made of indivisible "moments"), does instantaneous velocity exist?</p>
+                    
+                    <h5>Consider these perspectives:</h5>
+                    <ul>
+                        <li><strong>Continuous Time View:</strong> Time is like real numbers—infinitely divisible, so instantaneous velocity makes sense</li>
+                        <li><strong>Discrete Time View:</strong> Time comes in quantum units (Planck time ≈ 10⁻⁴³ s), so true instantaneous velocity impossible</li>
+                        <li><strong>Pragmatic View:</strong> Regardless of time's nature, the mathematical limit concept is useful for modeling</li>
+                    </ul>
+                    
+                    <p><strong>Reflection:</strong> How does your answer affect the meaning of derivatives in physics?</p>
+                    
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-thinking dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <h6 class="card-title">Discussion Prompt</h6>
+                            <p>Does mathematical physics describe reality, or do we use mathematical models because they're useful? What's the difference?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Conceptual Challenge: Reference Frame Independence</p>
+                <div class="dp-panel-content">
+                    <p><strong>Scenario:</strong> Two physicists in different reference frames measure the same moving object and get different velocities.</p>
+                    
+                    <p><strong>Question:</strong> Who is correct? How do we reconcile different measurements of the same "physical reality"?</p>
+                    
+                    <h5>Analysis Framework:</h5>
+                    <ol>
+                        <li><strong>Identify what's universal:</strong> What properties don't change between reference frames?</li>
+                        <li><strong>Understand transformations:</strong> How do measurements relate between frames?</li>
+                        <li><strong>Find invariants:</strong> What combinations of velocity and other quantities remain constant?</li>
+                    </ol>
+                    
+                    <p><strong>Deep Question:</strong> If velocity is relative, what does "motion" really mean? Is anything truly at rest?</p>
+                    
+                    <h5>Extension to Special Relativity</h5>
+                    <p>For very high speeds (approaching light speed), even time intervals become relative!</p>
+                    <p>Classical velocity addition: v = v₁ + v₂</p>
+                    <p>Relativistic velocity addition: v = (v₁ + v₂)/(1 + v₁v₂/c²)</p>
+                    <p><em>This preview shows how deeper physics challenges even basic concepts like instantaneous velocity.</em></p>
+                </div>
+            </div>
+            
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Practical Challenge: The Limits of Measurement</p>
+                <div class="dp-panel-content">
+                    <p><strong>Thought Experiment:</strong> You want to measure the instantaneous velocity of a particle as precisely as possible.</p>
+                    
+                    <h5>The Fundamental Trade-offs:</h5>
+                    <ul>
+                        <li><strong>Shorter time intervals</strong> → Better approximation of "instantaneous"</li>
+                        <li><strong>Shorter time intervals</strong> → Larger uncertainty in measurement</li>
+                        <li><strong>More precise instruments</strong> → Higher cost and complexity</li>
+                        <li><strong>More precise instruments</strong> → May disturb the system being measured</li>
+                    </ul>
+                    
+                    <p><strong>Engineering Question:</strong> How do you decide what precision is "good enough" for a practical application?</p>
+                    
+                    <h5>Consider These Cases:</h5>
+                    <table class="table table-striped" style="margin: 1em 0;">
+                        <thead style="background-color: #1d2757; color: white;">
+                            <tr>
+                                <th>Application</th>
+                                <th>Required Precision</th>
+                                <th>Limiting Factors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Car speedometer</td>
+                                <td>±1 km/h</td>
+                                <td>Human reaction time, display update rate</td>
+                            </tr>
+                            <tr>
+                                <td>GPS navigation</td>
+                                <td>±0.1 m/s</td>
+                                <td>Satellite signal processing time</td>
+                            </tr>
+                            <tr>
+                                <td>Particle accelerator</td>
+                                <td>±0.001% of light speed</td>
+                                <td>Electromagnetic field precision</td>
+                            </tr>
+                            <tr>
+                                <td>Gravitational wave detection</td>
+                                <td>±10⁻²¹ m/s</td>
+                                <td>Quantum noise, thermal vibrations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Critical Insight:</strong> Perfect measurement is impossible, but understanding limitations enables better engineering decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-gamepad" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Advanced Interactive Activities</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">Interactive Learning Laboratory</h4>
+                <p class="card-text">Master velocity concepts through hands-on activities that simulate real laboratory and engineering experiences.</p>
+            </div>
+        </div>
+        
+        <!-- Error Propagation Interactive Walkthrough -->
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;"><i class="fas fa-exclamation-triangle"></i> Interactive Lab: Velocity Measurement Uncertainty</p>
+                <div class="dp-panel-content">
+                    <p><strong>Scenario:</strong> You're using a motion detector to measure velocity. The position is measured every 0.01 seconds with ±0.5 cm precision.</p>
+                    
+                    <h5><i class="fas fa-step-forward"></i> Step-by-Step Error Analysis</h5>
+                    
+                    <!-- Order Activity: Error Propagation Steps -->
+                    <div class="dp-order-wrapper" style="margin-bottom: 1.5em;">
+                        <h6>Arrange the error propagation steps in correct order:</h6>
+                        <ol class="dp-order dp-order-text">
+                            <li class="">Calculate relative uncertainty in position measurements</li>
+                            <li class="">Identify sources of uncertainty (position and time)</li>
+                            <li class="">Apply error propagation formula for division</li>
+                            <li class="">Record position and time measurements with uncertainties</li>
+                            <li class="">Report final velocity with appropriate uncertainty</li>
+                            <li class="">Calculate velocity using v = Δx/Δt</li>
+                        </ol>
+                        <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                            <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"></i></span>
+                            <div><p>Excellent! You understand the systematic approach to uncertainty analysis!</p></div>
+                        </div>
+                    </div>
+                    
+                    <h6>Worked Example with Real Data:</h6>
+                    <table class="table table-striped">
+                        <thead style="background-color: #1d2757; color: white;">
+                            <tr><th>Time (s)</th><th>Position (cm)</th><th>Uncertainty (cm)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0.00</td><td>10.2</td><td>±0.5</td></tr>
+                            <tr><td>0.01</td><td>11.7</td><td>±0.5</td></tr>
+                            <tr><td>0.02</td><td>13.1</td><td>±0.5</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Calculate:</strong> v = (13.1 - 10.2)/(0.02 - 0.00) = 2.9/0.02 = 145 cm/s</p>
+                    <p><strong>Uncertainty:</strong> δv/v = √[(δΔx/Δx)² + (δΔt/Δt)²]</p>
+                    <p>δΔx = √(0.5² + 0.5²) = 0.71 cm, so δΔx/Δx = 0.71/2.9 ≈ 0.24</p>
+                    <p>δΔt ≈ 0.001 s (timer precision), so δΔt/Δt = 0.001/0.02 = 0.05</p>
+                    <p><strong>Final Result:</strong> v = 145 ± 35 cm/s (24% uncertainty)</p>
+                </div>
+            </div>
+            
+            <!-- Graphical Analysis Challenge -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;"><i class="fas fa-chart-line"></i> Interactive Challenge: Reading Velocity from Graphs</p>
+                <div class="dp-panel-content">
+                    <p><strong>Challenge:</strong> Analyze this position vs. time graph to find instantaneous velocities at different points.</p>
+                    
+                    <figure class="dp-full-width dp-image-rounded-10" style="margin: 1em 0;">
+                        <div style="background: #f0f0f0; border: 2px solid #1d2757; padding: 20px; text-align: center; border-radius: 10px;">
+                            <p style="font-size: 1.1em; margin: 0;"><strong>Position vs. Time Graph</strong></p>
+                            <p style="margin: 10px 0;">📊 [Graph showing curved motion: x(t) = 2t² + 3t + 1]</p>
+                            <p style="font-size: 0.9em; color: #666;">Note: Actual graph would be inserted here in Canvas</p>
+                        </div>
+                        <figcaption style="margin-top: 1em; text-align: center; color: #888;">Position function: x(t) = 2t² + 3t + 1 (meters)</figcaption>
+                    </figure>
+                    
+                    <!-- Flip Cards for Graph Analysis -->
+                    <h6>Test your graph reading skills:</h6>
+                    <div class="dp-column-container container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                    <div class="dp-flip-card-inner">
+                                        <div class="dp-front-card">
+                                            <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                <div class="card-body">
+                                                    <h6 class="card-title dp-ignore-theme text-center">What's the velocity at t = 0?</h6>
+                                                    <p class="text-center">Find the slope of the tangent line</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dp-back-card">
+                                            <div class="dp-card card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Answer</h6>
+                                                    <p>v(0) = 4(0) + 3 = 3 m/s</p>
+                                                    <p><small>The derivative gives the slope!</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                    <div class="dp-flip-card-inner">
+                                        <div class="dp-front-card">
+                                            <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                <div class="card-body">
+                                                    <h6 class="card-title dp-ignore-theme text-center">When is velocity = 7 m/s?</h6>
+                                                    <p class="text-center">Solve v(t) = 7</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dp-back-card">
+                                            <div class="dp-card card h-100">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">Answer</h6>
+                                                    <p>4t + 3 = 7</p>
+                                                    <p>4t = 4</p>
+                                                    <p>t = 1 second</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dimensional Analysis Interactive -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;"><i class="fas fa-ruler-combined"></i> Interactive Lab: Dimensional Analysis Detective</p>
+                <div class="dp-panel-content">
+                    <p><strong>Mission:</strong> Identify and correct dimensional errors in velocity equations!</p>
+                    
+                    <!-- Sort Activity: Correct vs Incorrect Equations -->
+                    <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;">
+                        <h6>Sort these equations into dimensionally correct and incorrect categories:</h6>
+                        <div class="dp-si-sort-content">
+                            <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                <div class="dp-si-sort-bucket-content">
+                                    <h6 class="dp-si-sort-bucket-header">Equations to Sort</h6>
+                                    <ul>
+                                        <li class="dp-si-item-text">v = dx/dt</li>
+                                        <li class="dp-si-item-text">v = x + t</li>
+                                        <li class="dp-si-item-text">v = a·t</li>
+                                        <li class="dp-si-item-text">v = √(2ax)</li>
+                                        <li class="dp-si-item-text">v = F/m</li>
+                                        <li class="dp-si-item-text">v = E/p</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container-fluid pt-3 px-0">
+                                <div class="row gy-3">
+                                    <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                        <div class="dp-si-sort-bucket-content">
+                                            <h6 class="dp-si-sort-bucket-header">Dimensionally Correct</h6>
+                                            <ul>
+                                                <li class="dp-si-item-text">v = dx/dt</li>
+                                                <li class="dp-si-item-text">v = a·t</li>
+                                                <li class="dp-si-item-text">v = √(2ax)</li>
+                                                <li class="dp-si-item-text">v = E/p</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                        <div class="dp-si-sort-bucket-content">
+                                            <h6 class="dp-si-sort-bucket-header">Dimensionally Incorrect</h6>
+                                            <ul>
+                                                <li class="dp-si-item-text">v = x + t</li>
+                                                <li class="dp-si-item-text">v = F/m</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-lightbulb dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <h6 class="card-title">Dimensional Analysis Tips</h6>
+                            <ul>
+                                <li><strong>[v] = LT⁻¹</strong> (length/time)</li>
+                                <li><strong>[a] = LT⁻²</strong> (acceleration)</li>
+                                <li><strong>[F] = MLT⁻²</strong> (force)</li>
+                                <li><strong>[E] = ML²T⁻²</strong> (energy)</li>
+                                <li><strong>[p] = MLT⁻¹</strong> (momentum)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Study Interactive -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;"><i class="fas fa-briefcase"></i> Case Study: Automotive Crash Investigation</p>
+                <div class="dp-panel-content">
+                    <p><strong>Scenario:</strong> You're an automotive engineer investigating a crash. Skid marks show the car decelerated from unknown speed to 0 over 45 meters in 3.2 seconds.</p>
+                    
+                    <h6>Investigation Steps:</h6>
+                    
+                    <!-- Order Activity: Investigation Process -->
+                    <div class="dp-order-wrapper" style="margin-bottom: 1.5em;">
+                        <p><strong>Order the investigation steps:</strong></p>
+                        <ol class="dp-order dp-order-text">
+                            <li class="">Apply kinematic equations to find initial velocity</li>
+                            <li class="">Analyze skid mark evidence and timing data</li>
+                            <li class="">Compare with speed limit to determine violations</li>
+                            <li class="">Calculate average deceleration during braking</li>
+                            <li class="">Estimate instantaneous velocity at crash start</li>
+                            <li class="">Document findings for legal proceedings</li>
+                        </ol>
+                        <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                            <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"></i></span>
+                            <div><p>Perfect! You understand forensic velocity analysis!</p></div>
+                        </div>
+                    </div>
+                    
+                    <h6>Mathematical Analysis:</h6>
+                    <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-secondary">
+                        <div class="dp-panel-group">
+                            <h6 class="dp-panel-heading">Step 1: Find Average Velocity</h6>
+                            <div class="dp-panel-content">
+                                <p>v̄ = Δx/Δt = 45 m / 3.2 s = 14.06 m/s</p>
+                                <p>This is the average velocity during braking.</p>
+                            </div>
+                        </div>
+                        <div class="dp-panel-group">
+                            <h6 class="dp-panel-heading">Step 2: Apply Kinematic Equation</h6>
+                            <div class="dp-panel-content">
+                                <p>For constant acceleration: v̄ = (v₀ + vf)/2</p>
+                                <p>Since vf = 0: v̄ = v₀/2</p>
+                                <p>Therefore: v₀ = 2v̄ = 2(14.06) = <strong>28.1 m/s</strong></p>
+                            </div>
+                        </div>
+                        <div class="dp-panel-group">
+                            <h6 class="dp-panel-heading">Step 3: Legal Analysis</h6>
+                            <div class="dp-panel-content">
+                                <p><strong>Initial speed:</strong> 28.1 m/s = 101.2 km/h</p>
+                                <p><strong>If speed limit was 80 km/h:</strong> 21.2 km/h over limit</p>
+                                <p><strong>Conclusion:</strong> Driver was speeding significantly</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+                        <div class="card-body">
+                            <h6 class="card-title">Real-World Application</h6>
+                            <p>This type of analysis is routinely used in accident reconstruction, insurance investigations, and legal proceedings. Understanding instantaneous vs. average velocity is crucial for accurate forensic analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">  <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-graduation-cap" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Mastery Synthesis: University-Level Integration</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">Comprehensive Challenge</h4>
+                <p class="card-text">Combine all techniques learned to solve this multi-faceted engineering problem that requires limit definitions, complex functions, vector analysis, and real-world application.</p>
+            </div>
+        </div>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Ultimate Challenge: Spacecraft Rendezvous Problem</p>
+                <div class="dp-panel-content">
+                    <p><strong>Two spacecraft approach the International Space Station. Spacecraft A has position r⃗ₐ(t) = (100cos(0.1t), 100sin(0.1t), 50 + 10t) and Spacecraft B has position r⃗ᵦ(t) = (150 - 5t², 75 - 2t³, 100 - t²). All distances in km, time in minutes. Determine which spacecraft has higher speed at t = 5 minutes and when they are closest to each other.</strong></p>
+                    
+                    <h5>Complete Multi-Step Analysis:</h5>
+                    
+                    <p><strong>Step 1: Find velocity vectors</strong></p>
+                    <p>v⃗ₐ(t) = dr⃗ₐ/dt = (-10sin(0.1t), 10cos(0.1t), 10)</p>
+                    <p>v⃗ᵦ(t) = dr⃗ᵦ/dt = (-10t, -6t², -2t)</p>
+                    
+                    <p><strong>Step 2: Calculate speeds at t = 5 minutes</strong></p>
+                    <p>v⃗ₐ(5) = (-10sin(0.5), 10cos(0.5), 10) ≈ (-4.79, 8.78, 10)</p>
+                    <p>|v⃗ₐ(5)| = √((-4.79)² + (8.78)² + 10²) ≈ √200.2 ≈ 14.15 km/min</p>
+                    
+                    <p>v⃗ᵦ(5) = (-50, -150, -10)</p>
+                    <p>|v⃗ᵦ(5)| = √((-50)² + (-150)² + (-10)²) = √25100 ≈ 158.4 km/min</p>
+                    
+                    <p><strong>Result:</strong> Spacecraft B has much higher speed (158.4 km/min vs 14.15 km/min)</p>
+                    
+                    <p><strong>Step 3: Find minimum separation (requires advanced techniques)</strong></p>
+                    <p>Distance vector: d⃗(t) = r⃗ᵦ(t) - r⃗ₐ(t)</p>
+                    <p>For closest approach: d(d²/dt)/dt = 0 (minimize |d⃗(t)|²)</p>
+                    <p><em>This leads to a complex equation requiring numerical methods.</em></p>
+                    
+                    <p><strong>Engineering Significance:</strong> This problem demonstrates orbital mechanics calculations essential for spacecraft navigation and docking procedures.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h4>Self-Assessment Questions:</h4>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h5><i class="fas fa-calculator" style="color: #1d2757;"></i> Mathematical Competency</h5>
+                    <ul>
+                        <li>Can you derive velocity from first principles using limits for any position function?</li>
+                        <li>Do you understand when to use vector vs. scalar analysis?</li>
+                        <li>Can you connect mathematical derivatives to real engineering applications?</li>
+                        <li>Are you prepared for acceleration analysis in the next lesson?</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h5><i class="fas fa-brain" style="color: #1d2757;"></i> Conceptual Understanding</h5>
+                    <ul>
+                        <li>Do you understand why instantaneous velocity is both impossible to measure perfectly yet essential for physics?</li>
+                        <li>Can you explain how velocity depends on reference frame choice?</li>
+                        <li>Do you appreciate the historical development from ancient paradoxes to modern calculus?</li>
+                        <li>Can you discuss the relationship between mathematical idealization and physical reality?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h4 class="card-title">University-Level Synthesis</h4>
+                <p class="card-text">True mastery combines mathematical skill with conceptual depth. You should be able to solve complex problems AND explain the philosophical and practical implications of your methods.</p>
+            </div>
+        </div>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-star dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h4 class="card-title">Congratulations!</h4>
+                <p>You've achieved university-level mastery of instantaneous velocity—not just mathematical computation, but deep conceptual understanding. You now possess:</p>
+                <ul>
+                    <li><strong>Mathematical rigor:</strong> Limit-based derivations and advanced problem-solving skills</li>
+                    <li><strong>Engineering application:</strong> Real-world problem-solving abilities</li>
+                    <li><strong>Conceptual depth:</strong> Understanding of philosophical implications and measurement limitations</li>
+                    <li><strong>Historical perspective:</strong> Appreciation of how human understanding evolved</li>
+                    <li><strong>Critical thinking:</strong> Ability to question assumptions and analyze limitations</li>
+                </ul>
+                <p>This foundation will serve you throughout your academic and professional career in physics, engineering, and related fields. You're ready for advanced topics like acceleration, forces, and the beautiful mathematical description of natural phenomena.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================ -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- ============================================ -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script src="../../../js/canvas-complete.js"></script>
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L1 Explore: Acid-Base Foundations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE. /tstc-chem-1312/index.html -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 1: Measurements and Motion in 1D</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M1L3 Acceleration</span></h2>
+    </header>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"Nature and nature's laws lay hid in night; God said 'Let Newton be' and all was light."</em></span><br /><span>&mdash;&nbsp;Alexander Pope, celebrating Newton's mathematical revolution</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Welcome to the mathematical heart of dynamics—where Newton's genius meets modern engineering precision. Acceleration as the second derivative of position reveals the deep connection between calculus and physical reality. From crash reconstruction algorithms that save lives to spacecraft trajectory optimization, acceleration analysis drives critical engineering decisions. You'll master vector calculus, error propagation in real measurements, and the professional problem-solving methods used in aerospace, automotive, and biomechanical engineering. This is where mathematical theory transforms into engineering power.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="Engineering team analyzing crash test accelerometer data on multiple computer screens." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Professional acceleration analysis drives life-critical engineering decisions.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC1.1 Solve problems of motion in one dimension</strong></p>
+                    <p style="padding-left: 40px;">LO1.1.1 Translate from scientific notation to regular numbers</p>
+                    <p style="padding-left: 40px;">LO1.1.2 Translate from different measurement systems</p>
+                    <p style="padding-left: 40px;">★ LO1.1.3 Investigate the quantities that define motion in one dimension</p>
+                    <p style="padding-left: 40px;">★ LO1.1.4 Analyze a problem in one dimension</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the Open Stax reading assignments.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;"><a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 1</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 2</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">1.Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 4</a></div>
+        <p>&nbsp;</p>
+    </section>
+    <p>&nbsp;</p>
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Professional Resources</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Engineering Applications & Advanced Theory</h3>
+                <p class="card-text">Explore how acceleration analysis drives critical engineering decisions in the real world, from safety systems to spacecraft navigation.</p>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a href="https://www.nhtsa.gov/crash-simulation-vehicle-safety" target="_blank" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">NHTSA: Crash Analysis</a>
+                    <a href="https://www.nasa.gov/mission_pages/station/research/benefits/vibration_isolation.html" target="_blank" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">NASA: Vibration Control</a>
+                    <a href="https://www.sae.org/standards/content/j211-1/" target="_blank" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">SAE: Instrumentation</a>
+                </div>
+                <ul>
+                    <li><strong>Mathematical Foundation:</strong> Vector calculus applications in three-dimensional acceleration analysis</li>
+                    <li><strong>Measurement Technology:</strong> Modern accelerometer systems and data acquisition</li>
+                    <li><strong>Professional Standards:</strong> SAE J211 instrumentation standards for crash testing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Professional Analysis & Theory</h3>
+        <p style="text-align: center;"><strong>Master the calculus-based approach to acceleration that powers modern engineering.</strong> These presentations connect mathematical theory to real-world professional practice.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 700px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Module 1: Calculus-Based Acceleration Theory</h3>
+                <div class="dp-panel-content">
+                    <h4>The Mathematical Foundation of Acceleration</h4>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <p><strong>University-Level Concepts:</strong></p>
+                            <ul>
+                                <li><strong>Second Derivative Analysis:</strong> a⃗(t) = d²r⃗/dt² = dv⃗/dt</li>
+                                <li><strong>Vector Components:</strong> Three-dimensional acceleration in Cartesian coordinates</li>
+                                <li><strong>Limit Definition:</strong> a⃗(t) = lim[Δt→0] [v⃗(t+Δt) - v⃗(t)]/Δt</li>
+                                <li><strong>Parametric Motion:</strong> Analyzing complex trajectories using calculus</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h5>Historical Context: Newton's Mathematical Revolution</h5>
+                    <p>Newton developed calculus specifically to solve problems of motion. The concept of instantaneous acceleration required mathematical tools that didn't exist before the 17th century. Understanding acceleration as a second derivative reveals the profound connection between mathematics and physical reality.</p>
+                    <h5>Professional Applications Preview</h5>
+                    <ul>
+                        <li>Crash reconstruction algorithms use acceleration data to determine fault and safety compliance</li>
+                        <li>Spacecraft trajectory optimization relies on precise acceleration vector calculations</li>
+                        <li>Biomedical engineering analyzes human motion acceleration for injury prevention</li>
+                        <li>Seismic engineering measures ground acceleration to design earthquake-resistant structures</li>
+                    </ul>
+                    <div class="dp-embed-wrapper"><!-- Interactive calculus demonstration here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Module 2: Engineering Measurement Systems</h3>
+                <div class="dp-panel-content">
+                    <h4>Professional Accelerometer Technology</h4>
+                    <div style="background: #f8f9fa; padding: 1.5em; border-left: 4px solid #1d2757; margin: 1em 0;">
+                        <h6 style="color: #1d2757; font-weight: bold;">Real-World Case Study: Automotive Crash Testing</h6>
+                        <p>Modern crash test dummies contain up to 180 accelerometers measuring forces in multiple directions simultaneously. The data must be processed in real-time to determine:</p>
+                        <ul>
+                            <li><strong>Head Injury Criterion (HIC):</strong> ∫[a(t)]^2.5 dt over critical time intervals</li>
+                            <li><strong>Thorax acceleration limits:</strong> Cardiac and lung injury thresholds</li>
+                            <li><strong>Spinal acceleration analysis:</strong> Vertebral loading and injury prediction</li>
+                        </ul>
+                    </div>
+                    <h5>Measurement Challenges & Solutions</h5>
+                    <ul>
+                        <li><strong>Noise Filtering:</strong> Digital signal processing to extract true acceleration from sensor noise</li>
+                        <li><strong>Coordinate Transformations:</strong> Converting between vehicle-fixed and earth-fixed reference frames</li>
+                        <li><strong>Uncertainty Quantification:</strong> Statistical analysis of measurement precision and accuracy</li>
+                        <li><strong>Sampling Rate Optimization:</strong> Balancing data quality with processing constraints</li>
+                    </ul>
+                    <div class="dp-embed-wrapper"><!-- Professional measurement demonstration --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Module 3: Advanced Graphical Analysis</h3>
+                <div class="dp-panel-content">
+                    <h4>Professional Data Interpretation Methods</h4>
+                    <p>Engineers must extract critical information from acceleration data under time pressure and high-stakes conditions. Master these professional analysis techniques:</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-warning dp-callout-type-warning">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-triangle dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Critical Analysis Skills</h5>
+                            <p><strong>Time-Domain Analysis:</strong> Peak detection, impulse calculation, duration analysis</p>
+                            <p><strong>Frequency-Domain Analysis:</strong> FFT analysis for vibration characterization</p>
+                            <p><strong>Statistical Analysis:</strong> RMS values, standard deviation, confidence intervals</p>
+                        </div>
+                    </div>
+                    <h5>Graph Reading for Professionals</h5>
+                    <ul>
+                        <li><strong>Slope Interpretation:</strong> Instantaneous vs. average acceleration from real data</li>
+                        <li><strong>Area Under Curves:</strong> Velocity change integration for impact analysis</li>
+                        <li><strong>Discontinuity Analysis:</strong> Identifying collision events and mechanical failures</li>
+                        <li><strong>Multi-Channel Correlation:</strong> Analyzing x, y, z acceleration components simultaneously</li>
+                    </ul>
+                    <div class="dp-embed-wrapper"><!-- Professional graphical analysis tools --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> University-Level Conceptual Analysis</h3>
+        
+        <!-- Order Activity: Professional Crash Analysis Protocol -->
+        <div class="dp-order-wrapper" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Professional Crash Reconstruction Analysis Protocol</h4>
+            <p><strong>Engineering Case Study:</strong> You are a crash reconstruction engineer analyzing accelerometer data from a vehicle collision. Arrange these professional analysis steps in correct order:</p>
+            <ol class="dp-order dp-order-text">
+                <li class="">Apply coordinate transformations from vehicle-fixed to earth-fixed reference frames</li>
+                <li class="">Validate sensor calibration and check for measurement anomalies</li>
+                <li class="">Perform vector calculus analysis: a⃗(t) = dv⃗/dt with component separation</li>
+                <li class="">Download and import multi-channel accelerometer data (x, y, z components)</li>
+                <li class="">Calculate velocity change vectors: Δv⃗ = ∫ a⃗(t) dt over impact duration</li>
+                <li class="">Generate technical report with uncertainty analysis and professional conclusions</li>
+                <li class="">Apply digital filtering to remove sensor noise and isolate true acceleration signals</li>
+                <li class="">Compare results with SAE J211 injury criteria and federal safety standards</li>
+            </ol>
+            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Excellent! You understand professional-grade acceleration analysis methodology. This systematic approach is used by forensic engineers in real crash investigations.</p></div>
+            </div>
+            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Consider the logical flow: data acquisition → validation → processing → analysis → reporting. Each step builds on the previous one in professional engineering practice.</p></div>
+            </div>
+        </div>
+
+        <!-- Sort Activity: Vector Acceleration Analysis -->
+        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Vector Acceleration Classification: Engineering Applications</h4>
+            <p><strong>Advanced Analysis:</strong> Classify these real engineering scenarios by their vector acceleration characteristics. Consider both magnitude and direction changes in three-dimensional space:</p>
+            <div class="dp-si-sort-content">
+                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                    <div class="dp-si-sort-bucket-content">
+                        <h4 class="dp-si-sort-bucket-header">Engineering Acceleration Scenarios</h4>
+                        <ul>
+                            <li class="dp-si-item-text">ISS astronaut during orbital insertion burn (thrust vector aligned with velocity)</li>
+                            <li class="dp-si-item-text">Formula 1 car cornering at constant speed through banked turn</li>
+                            <li class="dp-si-item-text">Commercial aircraft in level flight at 550 mph with autopilot engaged</li>
+                            <li class="dp-si-item-text">Crash test dummy's head during 35g frontal impact deceleration</li>
+                            <li class="dp-si-item-text">Mars rover wheel during parabolic trajectory over crater rim</li>
+                            <li class="dp-si-item-text">Earthquake simulation table moving in pure vertical harmonic motion</li>
+                            <li class="dp-si-item-text">Robotic arm end-effector during precise linear positioning movement</li>
+                            <li class="dp-si-item-text">Helicopter rotor blade tip during steady hovering flight</li>
+                            <li class="dp-si-item-text">High-speed train on straight track reaching maximum design velocity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid pt-3 px-0">
+                    <div class="row gy-3">
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Linear Acceleration (Magnitude Change)</h4>
+                                <p style="font-size: 0.9em; color: #666;">|a⃗| ≠ 0, direction of a⃗ parallel/antiparallel to v⃗</p>
+                                <ul>
+                                    <li class="dp-si-item-text">ISS astronaut during orbital insertion burn (thrust vector aligned with velocity)</li>
+                                    <li class="dp-si-item-text">Crash test dummy's head during 35g frontal impact deceleration</li>
+                                    <li class="dp-si-item-text">Robotic arm end-effector during precise linear positioning movement</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Zero Net Acceleration</h4>
+                                <p style="font-size: 0.9em; color: #666;">a⃗ = 0⃗, constant velocity vector</p>
+                                <ul>
+                                    <li class="dp-si-item-text">Commercial aircraft in level flight at 550 mph with autopilot engaged</li>
+                                    <li class="dp-si-item-text">High-speed train on straight track reaching maximum design velocity</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Centripetal/Complex Acceleration</h4>
+                                <p style="font-size: 0.9em; color: #666;">Direction change, curved motion, or multi-axis acceleration</p>
+                                <ul>
+                                    <li class="dp-si-item-text">Formula 1 car cornering at constant speed through banked turn</li>
+                                    <li class="dp-si-item-text">Mars rover wheel during parabolic trajectory over crater rim</li>
+                                    <li class="dp-si-item-text">Earthquake simulation table moving in pure vertical harmonic motion</li>
+                                    <li class="dp-si-item-text">Helicopter rotor blade tip during steady hovering flight</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flip Cards: Advanced Acceleration Theory -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> University-Level Conceptual Challenges</h4>
+        <p><strong>Test your mastery:</strong> These advanced concepts separate university-level understanding from introductory physics. Think carefully about vector calculus and real-world applications:</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why does a⃗(t) = d²r⃗/dt² reveal more information than just |a|?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Advanced Answer</h5>
+                                        <p><strong>Vector notation captures directional changes</strong> invisible to scalar analysis. In 3D motion, acceleration components (ax, ay, az) reveal complex dynamics like centripetal acceleration in curved motion, essential for spacecraft navigation and crash reconstruction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">In crash testing, why do engineers measure acceleration in multiple directions simultaneously?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Engineering Answer</h5>
+                                        <p><strong>Real crashes involve complex 3D motion.</strong> The human body responds differently to acceleration in different directions. Brain injury depends on rotational acceleration, spinal injury on axial compression, while chest injury relates to lateral acceleration magnitude and duration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How does the limit definition a⃗ = lim[Δt→0][Δv⃗/Δt] connect to real measurement systems?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mathematical Answer</h5>
+                                        <p><strong>Sampling rate determines accuracy.</strong> Digital accelerometers measure Δv⃗/Δt over finite intervals. Higher sampling rates (smaller Δt) better approximate the true instantaneous acceleration, but generate more data requiring sophisticated signal processing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why does NASA use jerk (da/dt) in spacecraft design beyond just acceleration analysis?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Advanced Application</h5>
+                                        <p><strong>Jerk affects astronaut physiology and equipment.</strong> Rapid acceleration changes stress the human vestibular system and can damage sensitive instruments. Smooth acceleration profiles (controlled jerk) improve mission safety and equipment longevity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">In what engineering scenarios is constant acceleration an idealization versus reality?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Professional Insight</h5>
+                                        <p><strong>Idealization vs. Reality:</strong> Free fall has constant acceleration (theoretical), but real rocket thrust varies with fuel consumption. Elevator acceleration appears constant but includes vibrations and control system adjustments visible only with high-precision measurements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How do engineers account for measurement uncertainty in acceleration data?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Statistical Analysis</h5>
+                                        <p><strong>Error propagation and statistical methods:</strong> Engineers use standard deviation, confidence intervals, and Monte Carlo analysis to quantify measurement uncertainty. This determines safety margins in design and legal admissibility of evidence in court.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Advanced Computational Analysis</h3>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-warning">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-graduation-cap dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">University-Level Acceleration Analysis</h3>
+                <p><strong>Vector Calculus Foundation:</strong></p>
+                <ul>
+                    <li><strong>Instantaneous Acceleration:</strong> a⃗(t) = lim[Δt→0] [v⃗(t+Δt) - v⃗(t)]/Δt = dv⃗/dt = d²r⃗/dt²</li>
+                    <li><strong>Component Form:</strong> a⃗ = ax î + ay ĵ + az k̂ where each component is independently calculated</li>
+                    <li><strong>Magnitude Analysis:</strong> |a⃗| = √(ax² + ay² + az²) for three-dimensional motion</li>
+                    <li><strong>Professional Standards:</strong> Include uncertainty analysis and error propagation in all calculations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            
+            <!-- Engineering Case Study 1: Crash Reconstruction -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Engineering Case Study: Automotive Crash Reconstruction</p>
+                <div class="dp-panel-content">
+                    <div style="background: #fff3cd; padding: 1.5em; border-left: 4px solid #856404; margin: 1em 0;">
+                        <h5 style="color: #856404; font-weight: bold;">⚖️ Legal Engineering Analysis</h5>
+                        <p><strong>Scenario:</strong> A forensic engineer analyzes accelerometer data from a vehicle collision. The data shows the following acceleration components during a 0.12-second impact:</p>
+                        <ul>
+                            <li><strong>Longitudinal (x-direction):</strong> ax(t) = -280 - 150t² m/s²</li>
+                            <li><strong>Lateral (y-direction):</strong> ay(t) = -45 + 200t m/s²</li>
+                            <li><strong>Vertical (z-direction):</strong> az(t) = -9.8 - 20sin(50πt) m/s²</li>
+                        </ul>
+                    </div>
+                    
+                    <h6>Part A: Vector Analysis</h6>
+                    <p><strong>Calculate the instantaneous acceleration magnitude at t = 0.08 s:</strong></p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p>At t = 0.08 s:</p>
+                        <p style="text-align: center;">ax(0.08) = -280 - 150(0.08)² = -280 - 0.96 = -280.96 m/s²</p>
+                        <p style="text-align: center;">ay(0.08) = -45 + 200(0.08) = -45 + 16 = -29 m/s²</p>
+                        <p style="text-align: center;">az(0.08) = -9.8 - 20sin(50π × 0.08) = -9.8 - 20sin(4π) = -9.8 m/s²</p>
+                        <p style="text-align: center;"><strong>|a⃗(0.08)| = √((-280.96)² + (-29)² + (-9.8)²) = √(78,938 + 841 + 96) = 283.1 m/s²</strong></p>
+                    </div>
+                    
+                    <h6>Part B: Professional Interpretation</h6>
+                    <p><strong>Engineering Analysis:</strong> This 28.9g acceleration exceeds the 15g federal safety threshold for head injury. The forensic engineer would conclude:</p>
+                    <ul>
+                        <li>Primary impact direction: Longitudinal (front/rear collision)</li>
+                        <li>Secondary lateral motion indicates vehicle rotation during impact</li>
+                        <li>Vertical oscillation suggests suspension system compression</li>
+                        <li><strong>Legal conclusion:</strong> Acceleration magnitude indicates high-severity impact requiring immediate medical evaluation</li>
+                    </ul>
+                    
+                    <h6>Part C: Uncertainty Analysis</h6>
+                    <p><strong>Professional Requirement:</strong> Accelerometer precision = ±2 m/s². Calculate total uncertainty:</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p>Using error propagation for |a⃗| = √(ax² + ay² + az²):</p>
+                        <p style="text-align: center;">δ|a⃗| ≈ √((∂|a⃗|/∂ax × δax)² + (∂|a⃗|/∂ay × δay)² + (∂|a⃗|/∂az × δaz)²)</p>
+                        <p style="text-align: center;">δ|a⃗| ≈ √((ax/|a⃗| × 2)² + (ay/|a⃗| × 2)² + (az/|a⃗| × 2)²) = 2√((ax² + ay² + az²)/|a⃗|²) = 2.0 m/s²</p>
+                        <p style="text-align: center;"><strong>Final Result: |a⃗| = 283.1 ± 2.0 m/s² (28.9 ± 0.2 g)</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Calculus Problem -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Advanced Calculus Application: Spacecraft Trajectory Design</p>
+                <div class="dp-panel-content">
+                    <div style="background: #d1ecf1; padding: 1.5em; border-left: 4px solid #0c5460; margin: 1em 0;">
+                        <h5 style="color: #0c5460; font-weight: bold;">🚀 NASA Engineering Problem</h5>
+                        <p><strong>Mission:</strong> Design the acceleration profile for a Mars rover landing sequence. The position vector during atmospheric entry is given by:</p>
+                        <p style="text-align: center; font-size: 1.1em;"><strong>r⃗(t) = [(4000 - 50t²)î + (2000 - 30t²)ĵ + (15000 - 200t + 5t³)k̂] meters</strong></p>
+                        <p>where t is time in seconds after entry burn initiation.</p>
+                    </div>
+                    
+                    <h6>Part A: Derive Acceleration Vector Function</h6>
+                    <p><strong>Step 1:</strong> Find velocity by first differentiation:</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p style="text-align: center;">v⃗(t) = dr⃗/dt = [-100t î + (-60t)ĵ + (-200 + 15t²)k̂] m/s</p>
+                    </div>
+                    
+                    <p><strong>Step 2:</strong> Find acceleration by second differentiation:</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p style="text-align: center;"><strong>a⃗(t) = dv⃗/dt = [-100î + (-60)ĵ + 30tk̂] m/s²</strong></p>
+                    </div>
+                    
+                    <h6>Part B: Critical Mission Analysis</h6>
+                    <p><strong>Safety Assessment:</strong> Calculate maximum acceleration magnitude during the 8-second burn:</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p>Acceleration magnitude: |a⃗(t)| = √((-100)² + (-60)² + (30t)²) = √(10000 + 3600 + 900t²) = √(13600 + 900t²)</p>
+                        <p>At t = 8 s: |a⃗(8)| = √(13600 + 900(64)) = √(13600 + 57600) = √71200 = 266.9 m/s²</p>
+                        <p style="text-align: center;"><strong>Maximum acceleration: 266.9 m/s² = 27.2g</strong></p>
+                    </div>
+                    
+                    <h6>Part C: Engineering Decision</h6>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-warning dp-callout-type-warning">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-triangle dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <p><strong>Mission Critical Analysis:</strong> The 27.2g acceleration exceeds the 25g design limit for sensitive scientific instruments. NASA engineers must:</p>
+                            <ul>
+                                <li>Redesign the trajectory to reduce peak acceleration</li>
+                                <li>Implement active vibration isolation systems</li>
+                                <li>Consider alternative entry profiles with longer burn duration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Real Data Analysis Problem -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Professional Data Analysis: Earthquake Seismography</p>
+                <div class="dp-panel-content">
+                    <div style="background: #f8d7da; padding: 1.5em; border-left: 4px solid #721c24; margin: 1em 0;">
+                        <h5 style="color: #721c24; font-weight: bold;">🏗️ Structural Engineering Application</h5>
+                        <p><strong>Scenario:</strong> A building's accelerometer recorded this ground acceleration during an earthquake:</p>
+                        <p style="text-align: center;">a(t) = 0.8sin(2πf₁t) + 0.3sin(2πf₂t) + 0.1sin(2πf₃t) m/s²</p>
+                        <p>where f₁ = 2 Hz, f₂ = 5 Hz, f₃ = 12 Hz represent different seismic wave frequencies.</p>
+                    </div>
+                    
+                    <h6>Part A: Peak Acceleration Analysis</h6>
+                    <p><strong>Engineering Question:</strong> What is the maximum possible acceleration magnitude?</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p><strong>Worst-case scenario:</strong> All sine waves constructively interfere (all peak simultaneously)</p>
+                        <p style="text-align: center;">a_max = |0.8| + |0.3| + |0.1| = 1.2 m/s²</p>
+                        <p><strong>Probability analysis:</strong> Maximum constructive interference occurs rarely; typical RMS value more relevant for design.</p>
+                    </div>
+                    
+                    <h6>Part B: Structural Response Frequency</h6>
+                    <p><strong>Critical Engineering Decision:</strong> Which frequency poses the greatest structural risk?</p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p><strong>Analysis:</strong> Risk = Amplitude × Structural Response Factor</p>
+                        <ul>
+                            <li><strong>2 Hz:</strong> High amplitude (0.8) × Medium response = High risk</li>
+                            <li><strong>5 Hz:</strong> Medium amplitude (0.3) × High response (near resonance) = <strong>CRITICAL</strong></li>
+                            <li><strong>12 Hz:</strong> Low amplitude (0.1) × Low response = Low risk</li>
+                        </ul>
+                        <p><strong>Engineering Conclusion:</strong> The 5 Hz component, despite lower amplitude, poses greatest structural threat due to resonance amplification.</p>
+                    </div>
+                    
+                    <h6>Part C: Professional Calculus Application</h6>
+                    <p><strong>Find velocity and displacement through integration:</strong></p>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p><strong>Velocity:</strong> v(t) = ∫a(t)dt = -0.8/(2πf₁)cos(2πf₁t) - 0.3/(2πf₂)cos(2πf₂t) - 0.1/(2πf₃)cos(2πf₃t) + C</p>
+                        <p><strong>Displacement:</strong> x(t) = ∫v(t)dt = -0.8/(2πf₁)²sin(2πf₁t) - 0.3/(2πf₂)²sin(2πf₂t) - 0.1/(2πf₃)²sin(2πf₃t) + Ct + D</p>
+                        <p><strong>Engineering Insight:</strong> Lower frequencies dominate displacement (1/f² dependency), explaining why long-period seismic waves cause the most structural damage despite lower accelerations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Error Analysis Challenge -->
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Advanced Challenge: Measurement Uncertainty Propagation</p>
+                <div class="dp-panel-content">
+                    <div style="background: #e2e3e5; padding: 1.5em; border-left: 4px solid #383d41; margin: 1em 0;">
+                        <h5 style="color: #383d41; font-weight: bold;">📊 Statistical Engineering Analysis</h5>
+                        <p><strong>Professional Scenario:</strong> You're validating accelerometer calibration before a critical test. Multiple measurements of a known 10.00 ± 0.05 m/s² reference acceleration yield:</p>
+                        <p style="text-align: center;"><strong>Measured values:</strong> 9.97, 10.03, 9.95, 10.08, 9.92, 10.01, 9.99, 10.04 m/s²</p>
+                    </div>
+                    
+                    <h6>Part A: Statistical Analysis</h6>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p><strong>Calculate mean and standard deviation:</strong></p>
+                        <p style="text-align: center;">x̄ = (9.97 + 10.03 + 9.95 + 10.08 + 9.92 + 10.01 + 9.99 + 10.04)/8 = 79.99/8 = 9.999 m/s²</p>
+                        <p style="text-align: center;">σ = √[Σ(xi - x̄)²/(n-1)] = 0.051 m/s²</p>
+                        <p><strong>Standard error:</strong> SE = σ/√n = 0.051/√8 = 0.018 m/s²</p>
+                    </div>
+                    
+                    <h6>Part B: Calibration Validation</h6>
+                    <div style="background: #f8f9fa; padding: 1em; margin: 1em 0; border-radius: 4px;">
+                        <p><strong>Hypothesis test:</strong> Is the accelerometer properly calibrated?</p>
+                        <p style="text-align: center;">t = |x̄ - μ₀|/SE = |9.999 - 10.000|/0.018 = 0.056</p>
+                        <p><strong>Critical value:</strong> t₀.₀₅,₇ = 2.365 (95% confidence)</p>
+                        <p><strong>Conclusion:</strong> Since t = 0.056 < 2.365, the accelerometer is properly calibrated within measurement uncertainty.</p>
+                    </div>
+                    
+                    <h6>Part C: Professional Reporting</h6>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-success dp-callout-type-success">
+                        <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-check-circle dp-default-icon dp-i-size-large"></i></div>
+                        <div class="card-body">
+                            <p><strong>Engineering Report Conclusion:</strong></p>
+                            <p><strong>Accelerometer calibration status:</strong> VALIDATED ✓</p>
+                            <p><strong>Measured accuracy:</strong> 9.999 ± 0.018 m/s² (95% confidence interval)</p>
+                            <p><strong>Meets specifications:</strong> YES (within ±0.05 m/s² tolerance)</p>
+                            <p><strong>Recommendation:</strong> Instrument approved for critical testing applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================ -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- ============================================ -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script src="../../../js/canvas-complete.js"></script>
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

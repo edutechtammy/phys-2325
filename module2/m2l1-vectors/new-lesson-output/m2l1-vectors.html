@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: M2L1 Vectors</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: Force and Motion</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M2L1 Vectors</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve."</em></span><br /><span>&mdash;&nbsp;Eugene Wigner</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Physics describes a world that moves in three dimensions — and most physical quantities that matter, like force, velocity, and displacement, have both a size and a direction. These are vector quantities, and understanding how to work with them mathematically is the foundation of everything in this course. In this lesson, you will build the tools to represent vectors in component form using unit vectors, to add and subtract vectors analytically, and to compute two distinct types of vector products — the dot product and the cross product — each of which appears repeatedly in mechanics, energy, and rotation. The calculus-based approach developed here moves beyond geometric arrows on a page; you will work with vectors expressed as derivatives and integrals of position, velocity, and force fields throughout the semester.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="Three-dimensional coordinate axes with vectors decomposed into x, y, and z components, illustrating vector addition by components." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Vectors in 3D space, resolved into component form along each axis.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC2.1 Analyze the components of motion and any applied forces</strong></p>
+                    <p style="padding-left: 40px;">★ LO2.1.1 Apply Newton's Laws and the formulas of motion to be able to predict the behavior of the motion</p>
+                    <p style="padding-left: 40px;">★ LO2.1.2 Identify the behavior of a particle of motion</p>
+                    <p style="padding-left: 40px;">LO2.1.3 Identify the initial conditions of the motion of the particle</p>
+                    <p style="padding-left: 40px;">LO2.1.4 Apply the equations of motion to describe how the particle will move</p>
+                    <p style="padding-left: 40px;">LO2.1.5 Determine the uniform circular motion of an object</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all four sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors" target="_blank" rel="noopener">2.1 Scalars and Vectors</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/2-2-coordinate-systems-and-components-of-a-vector" target="_blank" rel="noopener">2.2 Coordinate Systems and Components of a Vector</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/2-3-algebra-of-vectors" target="_blank" rel="noopener">2.3 Algebra of Vectors</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/2-4-products-of-vectors" target="_blank" rel="noopener">2.4 Products of Vectors</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want to go deeper or see vectors from a different angle? These free resources complement the OpenStax text and may help clarify the concepts covered in this lesson.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra" target="_blank" rel="noopener">Khan Academy: Introduction to Vectors</a> &ndash; Geometric and algebraic introduction to vectors, with interactive practice.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length" target="_blank" rel="noopener">Khan Academy: Dot Product and Cross Product</a> &ndash; Step-by-step walkthroughs of both vector multiplication types.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/2-key-terms" target="_blank" rel="noopener">OpenStax Chapter 2 Key Terms</a> &ndash; Quick reference glossary for all vocabulary introduced in this chapter.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: Videos are placeholder — awaiting CME recordings.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are available.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch each video in order. The pre-lecture videos introduce the core concepts from the reading; the mini-lectures walk through worked examples step by step.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Scalars and Vectors</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Scalars and Vectors</h4>
+                    <p>This pre-lecture video introduces the distinction between scalar and vector quantities and establishes the geometric representation of vectors — magnitude, direction, tail, and head — using real-world examples from physics.</p>
+                    <ul>
+                        <li>Scalar vs. vector quantities — what distinguishes them</li>
+                        <li>Representing vectors as directed arrows with magnitude and direction</li>
+                        <li>Parallel, antiparallel, and equal vectors</li>
+                        <li>Geometric vector addition: parallelogram rule and tail-to-head method</li>
+                    </ul>
+                    <p>Time: <em>Video pending — to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Vector Components</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Coordinate Systems and Vector Components</h4>
+                    <p>This video covers the analytical method of working with vectors by resolving them into scalar components along each coordinate axis, using unit vectors î, ĵ, and k̂ to express vectors in component form in 2D and 3D.</p>
+                    <ul>
+                        <li>Cartesian coordinate system and unit vectors î, ĵ, k̂</li>
+                        <li>Scalar components A<sub>x</sub>, A<sub>y</sub>, A<sub>z</sub> and vector component form</li>
+                        <li>Finding magnitude from components: A = √(A<sub>x</sub><sup>2</sup> + A<sub>y</sub><sup>2</sup> + A<sub>z</sub><sup>2</sup>)</li>
+                        <li>Direction angles and polar coordinate connection</li>
+                    </ul>
+                    <p>Time: <em>Video pending — to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Vector Algebra</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Algebra of Vectors</h4>
+                    <p>This video demonstrates the analytical method of vector addition and subtraction using scalar components — the technique used throughout the rest of the course to solve kinematics and dynamics problems.</p>
+                    <ul>
+                        <li>Adding and subtracting vectors by adding their components</li>
+                        <li>Finding the resultant vector of multiple forces or displacements</li>
+                        <li>Writing a vector equation and solving for an unknown vector</li>
+                        <li>Unit vector of direction: v̂ = v⃗ / |v⃗|</li>
+                    </ul>
+                    <p>Time: <em>Video pending — to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Adding Vectors by Components</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Adding Two Vectors Component by Component</h4>
+                    <p>A worked example video walking through the full process of resolving two vectors given in magnitude-angle form into their scalar components, computing their sum, and expressing the resultant in both component form and magnitude-angle form.</p>
+                    <ul>
+                        <li>Identify magnitude and direction angle for each vector</li>
+                        <li>Compute A<sub>x</sub> = A cos θ and A<sub>y</sub> = A sin θ for each</li>
+                        <li>Add x-components and y-components separately</li>
+                        <li>Find resultant magnitude and direction angle</li>
+                    </ul>
+                    <p>Time: <em>Video pending — to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Dot and Cross Products</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Dot Product and Cross Product</h4>
+                    <p>This video covers both types of vector multiplication. The dot product produces a scalar and is used to find the angle between vectors and to compute work. The cross product produces a vector and is used to find torque and angular momentum.</p>
+                    <ul>
+                        <li>Dot product: A⃗ · B⃗ = AB cos φ = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub></li>
+                        <li>Finding the angle between two vectors using the dot product</li>
+                        <li>Cross product: |A⃗ × B⃗| = AB sin φ, direction by right-hand rule</li>
+                        <li>Cross product in component form using the determinant method</li>
+                    </ul>
+                    <p>Time: <em>Video pending — to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Steps to Find a Vector Resultant</h4>
+        <p>Arrange the following steps in the correct order for finding the resultant of two or more vectors using the analytical (component) method.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Establish a coordinate system and identify the positive x and y directions.</li>
+                <li>Identify the magnitude and direction angle of each vector.</li>
+                <li>Resolve each vector into scalar components: A<sub>x</sub> = A cos θ and A<sub>y</sub> = A sin θ.</li>
+                <li>Add all x-components to get R<sub>x</sub>; add all y-components to get R<sub>y</sub>.</li>
+                <li>Find the magnitude of the resultant: R = √(R<sub>x</sub><sup>2</sup> + R<sub>y</sub><sup>2</sup>).</li>
+                <li>Find the direction angle of the resultant: θ<sub>R</sub> = tan<sup>-1</sup>(R<sub>y</sub> / R<sub>x</sub>), adjusting for quadrant.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Identify the Vector Quantities</h4>
+        <p>From the list below, select <strong>all</strong> quantities that are vector quantities (they have both magnitude and direction).</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all vector quantities from the list.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">Displacement</li>
+                <li class="dp-sa-correct">Velocity</li>
+                <li class="dp-sa-correct">Acceleration</li>
+                <li class="dp-sa-correct">Force</li>
+                <li class="dp-sa-correct">Torque</li>
+                <li>Distance</li>
+                <li>Speed</li>
+                <li>Mass</li>
+                <li>Temperature</li>
+                <li>Time</li>
+            </ul>
+        </div>
+
+        <!-- 7C: MATCH ITEMS ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match the Vector Notation</h4>
+        <p>Match each vector symbol or expression on the left to its correct meaning or description.</p>
+        <div class="dp-match-items dp-match-pairing dp-si-rounded dp-si-outline" style="background-color: #1d2757; padding: 20px; border-radius: 10px; border: 2px solid #d13138; margin-bottom: 2em;">
+            <h3 class="dp-has-icon" style="color: white;"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match Items</h3>
+            <p class="dp-match-instructions" style="color: white; border: none; background: transparent;">Select each set of two matching items.</p>
+            <div class="dp-unmatched-items">
+                <h4 class="dp-has-icon unmatched-items-header"><i class="fas fa-search"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Items to Match</h4>
+                <dl class="dp-match dp-match-text">
+                    <dt data-pair-id="pair-0">|A⃗|</dt>
+                    <dd data-pair-id="pair-0">The magnitude (length) of vector A — always a positive scalar.</dd>
+                    <dt data-pair-id="pair-1">î (i-hat)</dt>
+                    <dd data-pair-id="pair-1">Unit vector pointing in the positive x-direction; magnitude = 1, no units.</dd>
+                    <dt data-pair-id="pair-2">A⃗ · B⃗</dt>
+                    <dd data-pair-id="pair-2">The dot product of A and B — a scalar equal to AB cos φ.</dd>
+                    <dt data-pair-id="pair-3">A⃗ × B⃗</dt>
+                    <dd data-pair-id="pair-3">The cross product of A and B — a vector perpendicular to both, with magnitude AB sin φ.</dd>
+                    <dt data-pair-id="pair-4">Â (A-hat)</dt>
+                    <dd data-pair-id="pair-4">The unit vector of direction for A⃗ — found by dividing A⃗ by its magnitude.</dd>
+                    <dt data-pair-id="pair-5">R⃗ = A⃗ + B⃗</dt>
+                    <dd data-pair-id="pair-5">The resultant vector — found by adding corresponding scalar components of A and B.</dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 7D: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Vocabulary Check</h4>
+        <p>Click each card to flip it and check your understanding of the key terms from this lesson.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is a scalar quantity? Give two examples from physics.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>A scalar quantity is fully described by a single number and a unit — it has magnitude only, no direction. Examples: mass (5.0 kg), temperature (300 K), distance (12 m), speed (25 m/s), time (4.0 s).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What does the dot product A⃗ · B⃗ equal, and what type of quantity is the result?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>A⃗ · B⃗ = AB cos φ, where φ is the angle between the two vectors. The result is a <strong>scalar</strong>. In component form: A⃗ · B⃗ = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub>. The dot product is used to compute work and find angles between vectors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is a unit vector, and what is its purpose?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>A unit vector has a magnitude of exactly 1 and carries no physical units. Its only purpose is to specify direction. The standard unit vectors î, ĵ, k̂ point in the positive x, y, and z directions respectively. Any vector A⃗ can be written as A⃗ = A<sub>x</sub>î + A<sub>y</sub>ĵ + A<sub>z</sub>k̂.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What does the cross product A⃗ × B⃗ produce, and how is its direction determined?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The cross product produces a <strong>vector</strong> perpendicular to both A⃗ and B⃗, with magnitude |A⃗ × B⃗| = AB sin φ. Its direction is found using the <strong>right-hand rule</strong>: point fingers in the direction of A⃗, curl them toward B⃗ — your thumb points in the direction of A⃗ × B⃗. Note: A⃗ × B⃗ = −B⃗ × A⃗ (anticommutative).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How do you find the angle between two vectors using the dot product?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Use the relation cos φ = (A⃗ · B⃗) / (AB). Steps: (1) Compute the dot product using components: A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub>. (2) Find the magnitudes A and B. (3) Divide and take the inverse cosine: φ = cos<sup>-1</sup>[(A⃗ · B⃗) / (AB)].</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the resultant vector, and how is it found analytically?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The resultant is the vector sum of two or more vectors: R⃗ = A⃗ + B⃗ + ... Analytically, add corresponding scalar components: R<sub>x</sub> = A<sub>x</sub> + B<sub>x</sub>, R<sub>y</sub> = A<sub>y</sub> + B<sub>y</sub>, R<sub>z</sub> = A<sub>z</sub> + B<sub>z</sub>. Then write R⃗ = R<sub>x</sub>î + R<sub>y</sub>ĵ + R<sub>z</sub>k̂ and compute its magnitude and direction angle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <!-- Formatting callout -->
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Answer Formatting</h3>
+                <p>Follow these formatting rules when entering answers:</p>
+                <ul>
+                    <li><strong>Component form:</strong> Express vectors as A⃗ = A<sub>x</sub>î + A<sub>y</sub>ĵ + A<sub>z</sub>k̂. Always include the unit vector symbols.</li>
+                    <li><strong>Magnitude:</strong> Report as a positive number with correct SI units (m, m/s, N, etc.). Round to 3 significant figures unless stated otherwise.</li>
+                    <li><strong>Direction angles:</strong> Report in degrees (°), measured counterclockwise from the positive x-axis. Verify the quadrant matches the sign of your components.</li>
+                    <li><strong>Dot product result:</strong> A scalar — include units (e.g., N·m, m<sup>2</sup>) but no vector notation.</li>
+                    <li><strong>Cross product result:</strong> A vector — express in component form with units.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1</h4>
+        <p><strong>A displacement vector has a magnitude of 8.50 m and points at an angle of 32.0° above the positive x-axis. (a) Find the scalar x- and y-components of this vector. (b) Express the vector in component form using unit vectors. (c) Find the unit vector of its direction.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>A displacement vector has a magnitude of 8.50 m and points at an angle of 32.0° above the positive x-axis. (a) Find the scalar x- and y-components. (b) Express in component form. (c) Find the unit vector of direction.</strong></p>
+                    <p><strong>Given:</strong> A = 8.50 m, θ = 32.0°</p>
+                    <p><strong>Part (a) — Scalar components:</strong></p>
+                    <p style="padding-left: 2em;">A<sub>x</sub> = A cos θ = (8.50 m) cos 32.0° = (8.50)(0.848) = <strong>7.21 m</strong></p>
+                    <p style="padding-left: 2em;">A<sub>y</sub> = A sin θ = (8.50 m) sin 32.0° = (8.50)(0.530) = <strong>4.50 m</strong></p>
+                    <p><strong>Part (b) — Component form:</strong></p>
+                    <p style="padding-left: 2em;">A⃗ = 7.21î + 4.50ĵ (m)</p>
+                    <p><strong>Part (c) — Unit vector of direction:</strong></p>
+                    <p style="padding-left: 2em;">Â = A⃗ / A = (7.21î + 4.50ĵ) / 8.50 = <strong>0.848î + 0.530ĵ</strong></p>
+                    <p><em>Check: |Â| = √(0.848² + 0.530²) = √(0.719 + 0.281) = √1.000 = 1.00 ✓</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2</h4>
+        <p><strong>Three displacement vectors are given in component form: A⃗ = (4.0î − 3.0ĵ) m, B⃗ = (−2.0î + 6.0ĵ − 1.0k̂) m, and C⃗ = (1.0î + 0.0ĵ + 5.0k̂) m. Find the resultant R⃗ = A⃗ + B⃗ + C⃗ and its magnitude.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Three displacement vectors: A⃗ = (4.0î − 3.0ĵ) m, B⃗ = (−2.0î + 6.0ĵ − 1.0k̂) m, C⃗ = (1.0î + 0.0ĵ + 5.0k̂) m. Find R⃗ = A⃗ + B⃗ + C⃗ and its magnitude.</strong></p>
+                    <p><strong>Add corresponding components:</strong></p>
+                    <p style="padding-left: 2em;">R<sub>x</sub> = A<sub>x</sub> + B<sub>x</sub> + C<sub>x</sub> = 4.0 + (−2.0) + 1.0 = <strong>3.0 m</strong></p>
+                    <p style="padding-left: 2em;">R<sub>y</sub> = A<sub>y</sub> + B<sub>y</sub> + C<sub>y</sub> = (−3.0) + 6.0 + 0.0 = <strong>3.0 m</strong></p>
+                    <p style="padding-left: 2em;">R<sub>z</sub> = A<sub>z</sub> + B<sub>z</sub> + C<sub>z</sub> = 0.0 + (−1.0) + 5.0 = <strong>4.0 m</strong></p>
+                    <p><strong>Resultant vector:</strong></p>
+                    <p style="padding-left: 2em;">R⃗ = 3.0î + 3.0ĵ + 4.0k̂ (m)</p>
+                    <p><strong>Magnitude:</strong></p>
+                    <p style="padding-left: 2em;">R = √(R<sub>x</sub><sup>2</sup> + R<sub>y</sub><sup>2</sup> + R<sub>z</sub><sup>2</sup>) = √(3.0<sup>2</sup> + 3.0<sup>2</sup> + 4.0<sup>2</sup>)</p>
+                    <p style="padding-left: 2em;">R = √(9.0 + 9.0 + 16.0) = √34.0 = <strong>5.83 m</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3</h4>
+        <p><strong>Two force vectors are F⃗<sub>1</sub> = (6.0î + 4.0ĵ − 2.0k̂) N and F⃗<sub>2</sub> = (−3.0î + 2.0ĵ + 5.0k̂) N. (a) Find the dot product F⃗<sub>1</sub> · F⃗<sub>2</sub>. (b) Find the angle between the two force vectors.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>F⃗<sub>1</sub> = (6.0î + 4.0ĵ − 2.0k̂) N, F⃗<sub>2</sub> = (−3.0î + 2.0ĵ + 5.0k̂) N. Find the dot product and angle between them.</strong></p>
+                    <p><strong>Part (a) — Dot product:</strong></p>
+                    <p style="padding-left: 2em;">F⃗<sub>1</sub> · F⃗<sub>2</sub> = F<sub>1x</sub>F<sub>2x</sub> + F<sub>1y</sub>F<sub>2y</sub> + F<sub>1z</sub>F<sub>2z</sub></p>
+                    <p style="padding-left: 2em;">= (6.0)(−3.0) + (4.0)(2.0) + (−2.0)(5.0)</p>
+                    <p style="padding-left: 2em;">= −18.0 + 8.0 − 10.0 = <strong>−20.0 N<sup>2</sup></strong></p>
+                    <p><strong>Part (b) — Angle between the vectors:</strong></p>
+                    <p style="padding-left: 2em;">F<sub>1</sub> = √(6.0<sup>2</sup> + 4.0<sup>2</sup> + (−2.0)<sup>2</sup>) = √(36 + 16 + 4) = √56 = 7.48 N</p>
+                    <p style="padding-left: 2em;">F<sub>2</sub> = √((−3.0)<sup>2</sup> + 2.0<sup>2</sup> + 5.0<sup>2</sup>) = √(9 + 4 + 25) = √38 = 6.16 N</p>
+                    <p style="padding-left: 2em;">cos φ = (F⃗<sub>1</sub> · F⃗<sub>2</sub>) / (F<sub>1</sub> F<sub>2</sub>) = −20.0 / (7.48 × 6.16) = −20.0 / 46.1 = −0.434</p>
+                    <p style="padding-left: 2em;">φ = cos<sup>-1</sup>(−0.434) = <strong>115.7°</strong></p>
+                    <p><em>The negative dot product confirms the angle is greater than 90°, meaning the force vectors point in generally opposite directions.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 4 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 4</h4>
+        <p><strong>A wrench applies a force F⃗ = (15.0ĵ) N at a position r⃗ = (0.25î) m from a bolt. (a) Find the torque vector τ⃗ = r⃗ × F⃗. (b) Find the magnitude of the torque. (c) Describe the direction of the torque vector and explain what it means physically.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>r⃗ = (0.25î) m, F⃗ = (15.0ĵ) N. Find τ⃗ = r⃗ × F⃗, its magnitude, and direction.</strong></p>
+                    <p><strong>Part (a) — Cross product:</strong></p>
+                    <p style="padding-left: 2em;">τ⃗ = r⃗ × F⃗ = (0.25î) × (15.0ĵ)</p>
+                    <p style="padding-left: 2em;">= (0.25)(15.0)(î × ĵ)</p>
+                    <p style="padding-left: 2em;">Since î × ĵ = k̂ (cyclic order in the right-hand coordinate system):</p>
+                    <p style="padding-left: 2em;">τ⃗ = (0.25)(15.0)k̂ = <strong>3.75k̂ N·m</strong></p>
+                    <p><strong>Part (b) — Magnitude:</strong></p>
+                    <p style="padding-left: 2em;">|τ⃗| = rF sin φ = (0.25 m)(15.0 N) sin 90° = (0.25)(15.0)(1) = <strong>3.75 N·m</strong></p>
+                    <p><em>(The angle between r⃗ and F⃗ is 90° because r⃗ points in the x-direction and F⃗ points in the y-direction.)</em></p>
+                    <p><strong>Part (c) — Direction and physical meaning:</strong></p>
+                    <p style="padding-left: 2em;">The torque vector points in the <strong>+z direction</strong> (out of the xy-plane, toward you). Physically, this means the force applied by the wrench will cause the bolt to rotate <strong>counterclockwise</strong> when viewed from above (from the +z direction), by the right-hand rule. The magnitude 3.75 N·m is the turning effectiveness of the applied force.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to M2L2, confirm you can do each of the following:</p>
+            <ol>
+                <li>Distinguish between scalar and vector quantities and give two examples of each from physics.</li>
+                <li>Given a vector's magnitude and direction angle, find its scalar components using A<sub>x</sub> = A cos θ and A<sub>y</sub> = A sin θ.</li>
+                <li>Express a vector in component form (A⃗ = A<sub>x</sub>î + A<sub>y</sub>ĵ + A<sub>z</sub>k̂) and find its magnitude from components.</li>
+                <li>Find the resultant of multiple vectors by adding their scalar components.</li>
+                <li>Compute the dot product of two vectors in component form and use it to find the angle between them.</li>
+                <li>Compute the cross product of two vectors and determine the direction of the result using the right-hand rule.</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">If any of these feel uncertain, revisit the reading or videos before continuing. Vectors are the language of the rest of this course!</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L1 Explore: Acid-Base Foundations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE. /tstc-chem-1312/index.html -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 1: Measurements and Motion in 1D</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M1L6 Graphical Integration in Motion Analysis</span></h2>
+    </header>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"A picture is worth a thousand words, but a graph is worth a thousand equations."</em></span><br /><span>&mdash;&nbsp;Physics Insight</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Graphs tell the complete story of motion! While equations give you precise answers, graphs reveal the whole journey&mdash;showing you when objects speed up, slow down, or change direction. In this lesson, you'll learn to extract position and velocity information directly from motion graphs using the powerful technique of graphical integration. You'll discover that the area under a velocity-time graph equals the displacement, and the area under an acceleration-time graph equals the change in velocity. Master these visual tools, and you'll unlock the ability to analyze any motion scenario with confidence!</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;"><img id="14528777" style="height: auto;" src="https://tstc.instructure.com/courses/47588/files/14528777/preview" alt="A velocity-time graph showing the area under the curve representing displacement." width="100%" height="100%" data-api-endpoint="https://tstc.instructure.com/api/v1/courses/47588/files/14528777" data-api-returntype="File" /><br />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">The area under the curve tells the motion story.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC1.1 Solve problems of motion in one dimension</strong></p>
+                    <p style="padding-left: 40px;">LO1.1.1 Translate from scientific notation to regular numbers</p>
+                    <p style="padding-left: 40px;">LO1.1.2 Translate from different measurement systems</p>
+                    <p style="padding-left: 40px;">★ LO1.1.3 Investigate the quantities that define motion in one dimension</p>
+                    <p style="padding-left: 40px;">★ LO1.1.4 Analyze a problem in one dimension</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the Open Stax reading assignments.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;"><a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 1</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 2</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">1.Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 4</a></div>
+        <p>&nbsp;</p>
+    </section>
+    <p>&nbsp;</p>
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Ready to dive deeper into motion graphs? These resources will expand your understanding of graphical analysis techniques and area calculations.</p>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;"><a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/1DKin/Lesson-4/Kinematic-Graphing" target="_blank" rel="noopener">Motion Graph Basics</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-are-position-vs-time-graphs" target="_blank" rel="noopener">Position vs Time</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration" target="_blank" rel="noopener">Graphical Integration</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/1DKin/Lesson-4/Describing-Motion-with-Velocity-vs-Time-Graphs" target="_blank" rel="noopener">Velocity-Time Analysis</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch these videos to master the art of reading motion from graphs. Learn to see velocity in slopes and displacement in areas!</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Understanding Motion Graphs</h3>
+                <div class="dp-panel-content">
+                    <h4>Understanding Motion Graphs</h4>
+                    <p>This video explains how to read and interpret position-time, velocity-time, and acceleration-time graphs.</p>
+                    <ul>
+                        <li>What the slope of a position-time graph tells you</li>
+                        <li>How to read instantaneous velocity from graphs</li>
+                        <li>Connecting position, velocity, and acceleration graphs</li>
+                        <li>Identifying constant vs changing motion</li>
+                    </ul>
+                    <p>Time: 6:15</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Area Under the Curve</h3>
+                <div class="dp-panel-content">
+                    <h4>Graphical Integration: Finding Area</h4>
+                    <p>Learn how to calculate displacement from velocity-time graphs by finding the area under the curve.</p>
+                    <ul>
+                        <li>Why area under v-t graphs equals displacement</li>
+                        <li>Geometric shapes: rectangles, triangles, trapezoids</li>
+                        <li>Handling positive and negative areas</li>
+                        <li>Breaking complex curves into simple shapes</li>
+                    </ul>
+                    <p>Time: 8:30</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Advanced Graph Analysis</h3>
+                <div class="dp-panel-content">
+                    <h4>From Graphs to Motion: Complete Analysis</h4>
+                    <p>See how to extract all kinematic information from motion graphs and make predictions about future motion.</p>
+                    <ul>
+                        <li>Reading turning points and direction changes</li>
+                        <li>Finding maximum speeds and accelerations</li>
+                        <li>Connecting mathematical areas to physical meanings</li>
+                        <li>Using graphs to solve complex motion problems</li>
+                    </ul>
+                    <p>Time: 7:45</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Steps for Graphical Integration</h3>
+                    <div class="dp-panel-content ">
+                        <div class="dp-order-wrapper" style="margin-bottom: 2em;" data-interactive-id="M5nzudxq6VO5" data-interactive-type="Order Items" data-interactive-title="Order Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order the Steps for Graphical Integration</h4>
+                            <p>Arrange these steps in the correct order for finding displacement from a velocity-time graph:</p>
+                            <ol class="dp-order dp-order-text">
+                                <li class="">Calculate the area of each geometric shape</li>
+                                <li class="">Identify the time interval of interest</li>
+                                <li class="">Add up all the areas (considering positive and negative)</li>
+                                <li class="">Break the area under the curve into simple shapes (rectangles, triangles, trapezoids)</li>
+                                <li class="">Determine which areas are positive and which are negative</li>
+                                <li class="">Interpret the final result as total displacement</li>
+                            </ol>
+                            <div class="dp-si-feedback dp-si-correct" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div>
+                                    <p>Excellent! You understand the systematic approach to graphical integration!</p>
+                                </div>
+                            </div>
+                            <div class="dp-si-feedback dp-si-incorrect" style="display: none;"><span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div>
+                                    <p>Try again. Think about what you need to identify first before you can calculate areas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Graph Features</h3>
+                    <div class="dp-panel-content ">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-id="wJZ42jxjtpDF" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Graph Features</h4>
+                            <p>Match each graph characteristic with what it tells us about motion:</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Graph Features</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">Horizontal line on position-time graph</li>
+                                            <li class="dp-si-item-text">Straight line with positive slope on position-time graph</li>
+                                            <li class="dp-si-item-text">Curved line (concave up) on position-time graph</li>
+                                            <li class="dp-si-item-text">Area under velocity-time graph</li>
+                                            <li class="dp-si-item-text">Slope of velocity-time graph</li>
+                                            <li class="dp-si-item-text">Negative area under velocity-time graph</li>
+                                            <li class="dp-si-item-text">Peak or valley on velocity-time graph</li>
+                                            <li class="dp-si-item-text">Zero crossing on velocity-time graph</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">No Motion</h4>
+                                                <ul>
+                                                    <li class="dp-si-item-text">Horizontal line on position-time graph</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Constant Velocity</h4>
+                                                <ul>
+                                                    <li class="dp-si-item-text">Straight line with positive slope on position-time graph</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Acceleration Present</h4>
+                                                <ul>
+                                                    <li class="dp-si-item-text">Curved line (concave up) on position-time graph</li>
+                                                    <li class="dp-si-item-text">Slope of velocity-time graph</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Displacement Information</h4>
+                                                <ul>
+                                                    <li class="dp-si-item-text">Area under velocity-time graph</li>
+                                                    <li class="dp-si-item-text">Negative area under velocity-time graph</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Direction Changes</h4>
+                                                <ul>
+                                                    <li class="dp-si-item-text">Peak or valley on velocity-time graph</li>
+                                                    <li class="dp-si-item-text">Zero crossing on velocity-time graph</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Graph Analysis</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Master Graph Analysis</h4>
+                        <p>Click each card to test your understanding of motion graphs and their relationships:</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">Why does area under a velocity-time graph equal displacement?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Answer</h5>
+                                                        <p>Because displacement = velocity &times; time, and area = base &times; height. The area calculation naturally gives you the total displacement!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">What does a negative area under a velocity-time graph mean?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Answer</h5>
+                                                        <p>It means displacement in the negative direction. The object moved backward during that time interval.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">How do you find instantaneous velocity from a position-time graph?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Answer</h5>
+                                                        <p>Find the slope of the tangent line to the curve at that specific point. Steeper slope = greater velocity.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">If velocity is positive but decreasing, what does the position graph look like?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Answer</h5>
+                                                        <p>The position graph has a positive slope that's getting less steep (curved, concave down). The object is slowing down but still moving forward.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p>&nbsp;</p>
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+        <p style="text-align: center; margin-bottom: 1.5em;">Need a quick reference for area calculations? <a id="dpPopup0" class="dp-popover-trigger" style="color: #1d2757; text-decoration: underline;" href="#dpPopup0Content" aria-describedby="#dpPopup0Content">Click here for formulas!</a></p>
+        <div id="dpPopup0Content" class="dp-popover-content dp-popup-content" style="border: 1px solid #A9A9A9; background: #f7f7f7; padding: 15px; width: 450px; max-width: 100%; margin: auto; border-radius: 6px;">
+            <h4 style="color: #1d2757; margin-top: 0;">Quick Reference: Area Formulas</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div>
+                    <h5 style="color: #333; margin-bottom: 8px;">Rectangle:</h5>
+                    <p style="margin: 0; background: #fff; padding: 8px; border-radius: 4px; font-family: monospace;">A = base &times; height<br />A = &Delta;t &times; v</p>
+                </div>
+                <div>
+                    <h5 style="color: #333; margin-bottom: 8px;">Triangle:</h5>
+                    <p style="margin: 0; background: #fff; padding: 8px; border-radius: 4px; font-family: monospace;">A = &frac12; &times; base &times; height<br />A = &frac12; &times; &Delta;t &times; &Delta;v</p>
+                </div>
+            </div>
+            <div style="margin-top: 15px;">
+                <h5 style="color: #333; margin-bottom: 8px;">Trapezoid:</h5>
+                <p style="margin: 0; background: #fff; padding: 8px; border-radius: 4px; font-family: monospace;">A = &frac12;(b₁ + b₂) &times; h = &frac12;(v₁ + v₂) &times; &Delta;t</p>
+            </div>
+            <div style="margin-top: 15px; padding: 8px; background: #e8f4f8; border-radius: 4px;">
+                <p style="margin: 0; font-size: 0.9em; color: #555;"><strong>Remember:</strong> Positive area = motion in positive direction, Negative area = motion in negative direction</p>
+            </div>
+        </div>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Graph Area Calculations</h3>
+                <p>When finding areas under velocity-time graphs:</p>
+                <ul>
+                    <li><strong>Rectangle:</strong> Area = base &times; height = &Delta;t &times; v</li>
+                    <li><strong>Triangle:</strong> Area = &frac12; &times; base &times; height = &frac12; &times; &Delta;t &times; &Delta;v</li>
+                    <li><strong>Trapezoid:</strong> Area = &frac12;(b₁ + b₂) &times; h = &frac12;(v₁ + v₂) &times; &Delta;t</li>
+                    <li><strong>Positive area:</strong> Motion in positive direction</li>
+                    <li><strong>Negative area:</strong> Motion in negative direction</li>
+                </ul>
+            </div>
+        </div>
+        <p>&nbsp;</p>
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Question 1</h4>
+        <p><strong>A velocity-time graph shows constant velocity of +8 m/s for 5 seconds. What is the displacement?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">See Answer</p>
+                <div class="dp-panel-content">
+                    <p><strong>A velocity-time graph shows constant velocity of +8 m/s for 5 seconds. What is the displacement?</strong></p>
+                    <p>The graph shows a horizontal line at v = +8 m/s from t = 0 to t = 5 s.</p>
+                    <p>This forms a rectangle with:</p>
+                    <ul>
+                        <li>Base = &Delta;t = 5 s</li>
+                        <li>Height = v = +8 m/s</li>
+                    </ul>
+                    <p style="text-align: center;">Area = base &times; height = 5 s &times; 8 m/s = 40 m</p>
+                    <p>The displacement is +40 m in the positive direction.</p>
+                    <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Question 2</h4>
+                    <p><strong>A velocity-time graph shows velocity increasing linearly from 0 to 12 m/s over 4 seconds. Find the displacement.</strong></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">See Answer</p>
+                <div class="dp-panel-content">
+                    <p><strong>A velocity-time graph shows velocity increasing linearly from 0 to 12 m/s over 4 seconds. Find the displacement.</strong></p>
+                    <p>The graph shows a straight line from (0 s, 0 m/s) to (4 s, 12 m/s).</p>
+                    <p>This forms a triangle with:</p>
+                    <ul>
+                        <li>Base = &Delta;t = 4 s</li>
+                        <li>Height = v_final = 12 m/s</li>
+                    </ul>
+                    <p style="text-align: center;">Area = &frac12; &times; base &times; height = &frac12; &times; 4 s &times; 12 m/s = 24 m</p>
+                    <p>The displacement is +24 m in the positive direction.</p>
+                    <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Question 3</h4>
+                    <p><strong>A velocity-time graph shows velocity changing from +6 m/s to +10 m/s over 3 seconds. What is the displacement?</strong></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">See Answer</p>
+                <div class="dp-panel-content">
+                    <p><strong>A velocity-time graph shows velocity changing from +6 m/s to +10 m/s over 3 seconds. What is the displacement?</strong></p>
+                    <p>The graph shows a line from (0 s, +6 m/s) to (3 s, +10 m/s).</p>
+                    <p>This forms a trapezoid with:</p>
+                    <ul>
+                        <li>Parallel sides: v₁ = 6 m/s and v₂ = 10 m/s</li>
+                        <li>Height = &Delta;t = 3 s</li>
+                    </ul>
+                    <p style="text-align: center;">Area = &frac12;(v₁ + v₂) &times; &Delta;t = &frac12;(6 + 10) &times; 3 = &frac12;(16) &times; 3 = 24 m</p>
+                    <p>Alternative: Rectangle (6 &times; 3 = 18) + Triangle (&frac12; &times; 3 &times; 4 = 6) = 24 m</p>
+                    <p>The displacement is +24 m in the positive direction.</p>
+                    <ul>
+                        <li>0-2 s: constant velocity of +8 m/s</li>
+                        <li>2-4 s: velocity decreases linearly from +8 m/s to -4 m/s</li>
+                        <li>4-6 s: constant velocity of -4 m/s</li>
+                    </ul>
+                    <p><strong>Find the total displacement after 6 seconds.</strong></p>
+                    <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Question 4</h4>
+                    <p><strong>A complex velocity-time graph shows:</strong></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">See Answer</p>
+                <div class="dp-panel-content">
+                    <p><strong>A complex velocity-time graph shows:</strong></p>
+                    <ul>
+                        <li>0-2 s: constant velocity of +8 m/s</li>
+                        <li>2-4 s: velocity decreases linearly from +8 m/s to -4 m/s</li>
+                        <li>4-6 s: constant velocity of -4 m/s</li>
+                    </ul>
+                    <p><strong>Find the total displacement after 6 seconds.</strong></p>
+                    <p><strong>Solution:</strong></p>
+                    <p><strong>Segment 1 (0-2 s):</strong> Rectangle with base = 2 s, height = +8 m/s</p>
+                    <p style="padding-left: 20px;">Area₁ = 2 &times; 8 = +16 m</p>
+                    <p><strong>Segment 2 (2-4 s):</strong> Trapezoid with heights +8 m/s and -4 m/s, base = 2 s</p>
+                    <p style="padding-left: 20px;">Area₂ = &frac12;(8 + (-4)) &times; 2 = &frac12;(4) &times; 2 = +4 m</p>
+                    <p><strong>Segment 3 (4-6 s):</strong> Rectangle with base = 2 s, height = -4 m/s</p>
+                    <p style="padding-left: 20px;">Area₃ = 2 &times; (-4) = -8 m</p>
+                    <p style="text-align: center; background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 15px 0;"><strong>Total Displacement = Area₁ + Area₂ + Area₃ = 16 + 4 + (-8) = +12 m</strong></p>
+                    <p>The object ends up 12 meters in the positive direction from its starting point, despite changing directions during the motion!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i>Lesson Checklist</h4>
+            <p>Test your understanding by sketching these scenarios:</p>
+            <ol>
+                <li>Draw a velocity-time graph for an object that travels 30 m forward in 5 seconds at constant speed, then returns to its starting point in the next 3 seconds.</li>
+                <li>If an acceleration-time graph shows constant acceleration of 2 m/s&sup2; for 4 seconds, what's the change in velocity?</li>
+                <li>How would you find the position at t = 6s if you know the position at t = 2s and have a velocity-time graph?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Think through these problems, then discuss with classmates or your instructor to verify your understanding!</p>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================ -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- ============================================ -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script src="../../../js/canvas-complete.js"></script>
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1129 @@
+/*
+ * Canvas Complete CSS
+ * 
+ * Complete Canvas LMS and CidiLabs styling for local development environment.
+ * This single file contains all styles needed to accurately preview Canvas content.
+ * 
+ * Organization:
+ * - Bootstrap Base Foundation
+ * - Canvas Core Variables
+ * - Core Container System
+ * - Typography
+ * - Layout & Spacing
+ * - Components & Elements
+ * - CidiLabs Integration
+ */
+
+/* ================================
+   BOOTSTRAP BASE FOUNDATION
+   ================================ */
+
+/*!
+ * Bootstrap v5.3.0 (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+/* CSS Reset and Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff
+}
+
+/* Container System */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width:576px) {
+
+    .container,
+    .container-sm {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px
+    }
+}
+
+@media (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px
+    }
+}
+
+/* Grid System */
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x))
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y)
+}
+
+.col-12 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.col-lg-6 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%
+    }
+
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%
+    }
+}
+
+
+/* ================================
+   CANVAS CORE VARIABLES
+   ================================ */
+
+:root {
+    /* Bootstrap 5.3.2 CSS Variables - Core System */
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13, 110, 253;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-body-text-align: left;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+
+    /* TSTC Brand Colors */
+    --tstc-primary: #1d2757;
+    /* Texas Blue - Primary brand color */
+    --tstc-secondary: #d13138;
+    /* Lone Star Red - Secondary brand color */
+    --tstc-texas-blue: #1d2757;
+    /* Texas Blue (Primary) */
+    --tstc-lone-star-red: #d13138;
+    /* Lone Star Red (Secondary) */
+    --tstc-primary-rgb: 29, 39, 87;
+    --tstc-secondary-rgb: 209, 49, 56;
+}
+
+
+/* ================================
+   CORE CONTAINER SYSTEM
+   ================================ */
+
+/* Universal box-sizing for dp-wrapper and all children (matches Canvas environment) */
+.dp-wrapper *,
+.dp-wrapper *::before,
+.dp-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* Accessibility-first: Respect reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    .dp-wrapper * {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Core dp-wrapper styling - main container for all CidiLabs content */
+.dp-wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1.5rem !important;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* dp-flat-sections styling - content section containers */
+.dp-flat-sections {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+/* dp-header styling for section headers */
+.dp-header {
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+    margin: 0 0 2rem 0;
+    padding: 2rem 1.5rem;
+    border-radius: var(--bs-border-radius);
+}
+
+.dp-header.dp-flat-sections {
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+}
+
+/* dp-content-block styling for content containers */
+.dp-content-block {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: var(--bs-border-radius);
+}
+
+/* Special styling for header content blocks */
+.dp-header .dp-content-block {
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Module info styling within header */
+.dp-header .dp-content-block p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 2rem 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Hide progress placeholder in our implementation */
+.dp-progress-placeholder {
+    display: none !important;
+}
+
+/* dp-has-icon - Icon + text layout pattern */
+.dp-has-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    position: relative;
+}
+
+/* Flip card vertical spacing */
+.dp-flip-card {
+    margin-bottom: 40px;
+}
+
+.dp-column-container .col-md-6:last-child .dp-flip-card:last-child,
+.dp-column-container .col-sm-12:last-child .dp-flip-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Horizontal line through the icon area */
+.dp-has-icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+    height: 2px;
+    background-color: #888888;
+    z-index: 1;
+}
+
+/* FontAwesome icons within dp-has-icon */
+.dp-has-icon .fas,
+.dp-has-icon .fa,
+.dp-has-icon i {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 2px solid var(--tstc-primary, #1d2757);
+    position: relative;
+    z-index: 2;
+}
+
+/* Icon content span - hide the content inside icons */
+.dp-icon-content {
+    display: none !important;
+}
+
+/* h4.dp-has-icon - Smaller section headings with icons */
+h4.dp-has-icon {
+    position: relative !important;
+    display: block !important;
+    align-items: initial !important;
+    gap: initial !important;
+    font-size: 1.25rem !important;
+    font-weight: 600;
+    color: var(--tstc-primary, #1d2757);
+    margin: 2rem 0 1rem 0 !important;
+    padding-left: 3.5rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Horizontal line through h4 icon area */
+h4.dp-has-icon::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 100% !important;
+    right: 0 !important;
+    height: 1px !important;
+    background-color: rgba(29, 39, 87, 0.3) !important;
+    z-index: 1 !important;
+    margin-top: 0.25rem !important;
+}
+
+/* FontAwesome icons within h4.dp-has-icon */
+h4.dp-has-icon .fas,
+h4.dp-has-icon .fa,
+h4.dp-has-icon .dp-icon,
+h4.dp-has-icon i {
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 1.25rem !important;
+    color: var(--tstc-primary, #1d2757) !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2 !important;
+    flex-shrink: initial !important;
+    margin: 0 !important;
+}
+
+/* Text content within h4.dp-has-icon */
+h4.dp-has-icon span {
+    text-align: left;
+    width: 100%;
+}
+
+/* dp-hr-plain - Simple horizontal rule for section separation */
+.dp-hr-plain {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 1rem 0;
+    width: 100%;
+    height: 0;
+}
+
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+/* Heading styles, body text, and text utility classes */
+
+/* Bootstrap lead class - Enhanced styling for introductory paragraphs */
+.dp-wrapper .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 1rem;
+    color: #777777;
+}
+
+/* dp-lead class - CidiLabs version for special lead content like quotes */
+.dp-lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    color: var(--bs-body-color);
+}
+
+/* dp-heading - Main lesson headings with structured spans */
+.dp-heading {
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    color: white;
+}
+
+.dp-header-pre {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+/* Add horizontal lines on either side of course code pill */
+.dp-header-pre::before,
+.dp-header-pre::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 2px;
+    background-color: var(--tstc-secondary, #d13138);
+    transform: translateY(-50%);
+}
+
+.dp-header-pre::before {
+    left: 10%;
+}
+
+.dp-header-pre::after {
+    right: 10%;
+}
+
+.dp-header-pre-1 {
+    background-color: var(--tstc-secondary, #d13138);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dp-header-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+    display: block;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Code styling - inline and block code elements */
+code {
+    padding: 0.2em 0.4em;
+    font-size: 0.875em;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    color: #d63384;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+pre {
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f5f5f5;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+
+/* ================================
+   LAYOUT & SPACING
+   ================================ */
+/* Grid, flexbox, containers, margins, padding, and responsive patterns */
+
+
+/* ================================
+   COMPONENTS & ELEMENTS
+   ================================ */
+/* Banners, buttons, cards, and other Canvas UI components */
+
+
+/* ================================
+   CIDILABS INTEGRATION
+   ================================ */
+/* CidiLabs component styles and Canvas compatibility overrides */
+
+
+/* ================================
+   PHASE 2: CALLOUTS & CARDS
+   ================================ */
+/* dp-callout system - Card-based callouts with icon emphasis */
+
+/* Main callout container */
+.dp-callout {
+    display: flex;
+    margin: 1.5rem 0;
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+}
+
+/* Left side icon emphasis area */
+.dp-callout-side-emphasis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4rem;
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+    padding: 1rem;
+}
+
+/* Icon sizing for callouts */
+.dp-callout-side-emphasis .dp-i-size-large {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
+}
+
+/* Card body within callouts */
+.dp-callout .card-body {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* Callout type variants */
+.dp-callout-type-info {
+    border-left: 4px solid var(--tstc-primary, #1d2757);
+}
+
+.dp-callout-type-info .card-body {
+    background-color: white;
+}
+
+.dp-callout-type-title-bar {
+    border-left: 4px solid var(--tstc-primary, #1d2757);
+}
+
+/* Title bar callout styling */
+.dp-callout-type-title-bar .card-title {
+    background-color: var(--tstc-primary, #1d2757);
+    color: white;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Color variants */
+.dp-callout-color-dp-primary {
+    border-color: var(--tstc-primary, #1d2757);
+}
+
+.dp-callout-color-dp-primary .dp-callout-side-emphasis {
+    background-color: var(--tstc-primary, #1d2757);
+}
+
+/* ================================
+   PHASE 2: PANELS & ACCORDIONS
+   ================================ */
+/* dp-panels system - Expandable accordion content organization */
+
+/* Main accordion wrapper */
+.dp-panels-wrapper {
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+/* Individual panel group */
+.dp-panel-group {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.dp-panel-group:last-child {
+    border-bottom: none;
+}
+
+/* Panel heading (clickable) - Only in accordion contexts */
+.dp-panels-wrapper .dp-panel-heading,
+.dp-panel-group .dp-panel-heading {
+    background-color: var(--tstc-texas-blue, #1d2757);
+    color: white;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Triangle icon for accordion state - Only in accordion contexts */
+.dp-panels-wrapper .dp-panel-heading::after,
+.dp-panel-group .dp-panel-heading::after {
+    content: '\f0da';
+    /* FontAwesome right triangle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Expanded state - triangle points down */
+.dp-panel-active .dp-panel-heading::after {
+    transform: rotate(90deg);
+}
+
+.dp-panels-wrapper .dp-panel-heading:hover,
+.dp-panel-group .dp-panel-heading:hover {
+    background-color: #2d3561;
+    /* Slightly lighter blue for hover */
+}
+
+/* Active panel heading - Lone Star Red when expanded */
+.dp-panel-active .dp-panel-heading {
+    background-color: var(--tstc-lone-star-red, #d13138);
+}
+
+/* Panel content */
+.dp-panel-content {
+    padding: 1.5rem;
+    background-color: white;
+    display: none;
+    /* Hidden by default, shown via JavaScript */
+}
+
+/* Active panel content */
+.dp-panel-active .dp-panel-content {
+    display: block;
+}
+
+/* Color variants for panels */
+.dp-panel-color-dp-primary .dp-panel-heading {
+    background-color: var(--tstc-primary, #1d2757);
+}
+
+.dp-panel-active-color-dp-secondary .dp-panel-active .dp-panel-heading {
+    background-color: var(--tstc-secondary, #2d3561);
+}
+
+.dp-panel-hover-color-dp-secondary .dp-panel-heading:hover {
+    background-color: var(--tstc-secondary, #d13138);
+}
+
+/* ================================
+   PHASE 2: IMAGES & FIGURES
+   ================================ */
+/* dp-image system - Figure-based image styling with variants */
+
+/* Base figure styling */
+figure {
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Activity figcaptions - larger and non-italic for better readability */
+.dp-order-wrapper figcaption {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+/* dp-image rounded corners */
+.dp-image-rounded-5 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dp-image-rounded-10 {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* dp-image border styling */
+.dp-image-bordered {
+    border: 1px solid var(--bs-border-color);
+}
+
+/* dp-image shadow effect */
+.dp-image-shadow {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* dp-image padding */
+.dp-image-padded {
+    padding: 0.5rem;
+    background-color: white;
+}
+
+/* Full width responsive */
+.dp-full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Aspect ratio controls */
+.dp-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.dp-ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+/* Object fit integration */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Popup image styling */
+.dp-popup-image {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.dp-popup-image:hover {
+    transform: scale(1.02);
+}
+
+/* ================================
+   SORT ITEMS FIGURE SUPPORT
+   ================================ */
+/* Additional styling for sort items that use figures/images instead of text */
+
+/* Figure-based sortable items - generic styling */
+.dp-si-item-figure {
+    background-color: #1d2757;
+    border: 2px solid #14193e;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: move;
+    user-select: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Ensure child elements don't capture drag events - the <li> must be the drag target */
+.dp-si-item-figure * {
+    pointer-events: none;
+}
+
+.dp-si-item-figure:hover {
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.dp-si-item-figure.dragging {
+    opacity: 0.6;
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Figure styling inside sort items */
+.dp-si-item-figure figure {
+    margin: 0;
+    text-align: center;
+}
+
+.dp-si-item-figure figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Answer bank container - ensure it has blue background and proper layout */
+.dp-si-sort-answer-bank {
+    background-color: transparent !important;
+}
+
+.dp-si-sort-answer-bank .dp-si-sort-bucket-content {
+    min-height: 180px;
+    border-radius: 8px;
+}
+
+.dp-si-sort-answer-bank .dp-si-sort-bucket-content.cp-bg-dp-primary {
+    background-color: #1d2757 !important;
+}
+
+/* Answer bank header styling */
+.dp-si-sort-answer-bank .dp-si-sort-bucket-header {
+    color: white;
+    font-weight: normal;
+}
+
+/* Answer bank list - grid layout for draggable items */
+.dp-si-sort-answer-bank ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 0;
+    margin: 0;
+    list-style: none;
+    min-height: 120px;
+}
+
+/* Items inside answer bank - they sit on the blue background */
+.dp-si-sort-answer-bank .dp-si-item-figure {
+    flex: 0 0 auto;
+    background-color: #1d2757;
+    border-color: #3d4a8a;
+}
+
+/* Color class support for sort items and flip cards */
+.cp-bg-dp-primary {
+    background-color: #1d2757 !important;
+    color: white !important;
+}
+
+.cp-bg-dp-primary .card-title,
+.cp-bg-dp-primary .card-text,
+.cp-bg-dp-primary h1,
+.cp-bg-dp-primary h2,
+.cp-bg-dp-primary h3,
+.cp-bg-dp-primary h4,
+.cp-bg-dp-primary h5,
+.cp-bg-dp-primary h6,
+.cp-bg-dp-primary p {
+    color: white !important;
+}
+
+.cp-bg-dp-secondary {
+    background-color: #1d2757 !important;
+    color: white !important;
+}
+
+.cp-bg-dp-secondary figcaption {
+    color: white !important;
+}
+
+.cp-bg-dp-gray {
+    background-color: #f5f5f5;
+}
+
+.cp-bg-dp-accent {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Target buckets (Stage 1-6) should have white/light background */
+.dp-si-sort-bucket:not(.dp-si-sort-answer-bank) .dp-si-sort-bucket-content.cp-bg-dp-gray {
+    background-color: #f5f5f5 !important;
+}
+
+/* Target bucket lists need proper layout */
+.dp-si-sort-bucket:not(.dp-si-sort-answer-bank) ul {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Success state for figure items */
+.dp-si-item-figure.sort-success-item {
+    background-color: #d4edda !important;
+    border-color: #28a745 !important;
+}
+
+/* Ordered list styling for figure sequences - DISABLED to prevent unwanted numbers */
+.dp-order-figure {
+    list-style: none;
+    /* counter-reset: figure-counter; */
+    /* Disabled */
+    /* Removed flex layout - vertical stacking is easier for drag and drop */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+}
+
+.dp-order-figure li {
+    /* counter-increment: figure-counter; */
+    /* Disabled */
+    position: relative;
+    /* Removed flex properties - items now stack vertically */
+    min-width: 150px;
+    max-width: fit-content;
+    /* Constrain width to content size */
+    width: fit-content;
+    /* Prevent li from stretching full width */
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Spacing between items */
+}
+
+/* Ensure child elements don't capture drag events - the <li> must be the drag target */
+.dp-order-figure li * {
+    pointer-events: none;
+}
+
+.dp-order-figure li::before {
+    /* content: counter(figure-counter); */
+    /* Disabled */
+    display: none;
+    /* Hide any existing counter content */
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: var(--tstc-primary, #1d2757);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+
+/* ================================
+   RESPONSIVE BEHAVIOR
+   ================================ */
+/* Canvas-specific responsive patterns from canvas-foundation.css */
+
+/* Mobile responsive adjustments for dp-has-icon (≤768px) */
+@media (max-width: 768px) {
+    .dp-has-icon {
+        padding-left: 25px;
+    }
+
+    .dp-has-icon .fas,
+    .dp-has-icon .fa,
+    .dp-has-icon i {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive typography scaling (Canvas patterns) */
+.dp-wrapper h1,
+.dp-wrapper .h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+
+    .dp-wrapper h1,
+    .dp-wrapper .h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.dp-wrapper h2,
+.dp-wrapper .h2 {
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+
+    .dp-wrapper h2,
+    .dp-wrapper .h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive content adjustments for mobile */
+@media (max-width: 768px) {
+    .dp-popover-content {
+        width: 95%;
+        max-width: 95%;
+        padding: 15px;
+    }
+}
+
+/* Animation preferences */
+@media (prefers-reduced-motion: no-preference) {
+
+    .dp-has-icon .fas,
+    .dp-has-icon .fa,
+    .dp-has-icon i {
+        transition: all 0.3s ease;
+    }
+}

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L1 Explore: Acid-Base Foundations</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+    
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE. /tstc-chem-1312/index.html -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 1: Measurements and Motion in 1D</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M1L5 Free Fall</span></h2>
+    </header>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"What goes up must come down."</em></span><br /><span>&mdash;&nbsp;Isaac Newton's insight on gravity</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Free fall represents one of physics' most elegant examples of how calculus-based analysis reveals the fundamental nature of gravitational motion. Beyond simple kinematic equations, you'll explore the differential equation foundations of gravity, analyze terminal velocity through drag force modeling, and apply these concepts to real-world engineering challenges like spacecraft reentry dynamics and building safety design. From Galileo's revolutionary insights to modern aerospace engineering, free fall physics connects mathematical elegance with life-saving applications in structural engineering, automotive safety, and space exploration.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="An apple falling from a tree demonstrating free fall." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Gravity provides constant acceleration at 9.8 m/s².</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC1.1 Solve problems of motion in one dimension</strong></p>
+                    <p style="padding-left: 40px;">LO1.1.1 Translate from scientific notation to regular numbers</p>
+                    <p style="padding-left: 40px;">LO1.1.2 Translate from different measurement systems</p>
+                    <p style="padding-left: 40px;">★ LO1.1.3 Investigate the quantities that define motion in one dimension</p>
+                    <p style="padding-left: 40px;">★ LO1.1.4 Analyze a problem in one dimension</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the Open Stax reading assignments.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;"><a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 1</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 2</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/" target="_blank" rel="noopener">1.Reading 3</a> <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1" target="_blank" rel="noopener">Reading 4</a></div>
+        <p>&nbsp;</p>
+    </section>
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Curious about gravity and free fall? These resources will deepen your understanding of how gravity affects motion.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/1DKin/Lesson-5/Free-Fall-and-the-Acceleration-of-Gravity" target="_blank" rel="noopener">Physics Classroom: Free Fall</a> – Detailed explanations of free fall motion.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/one-dimensional-motion/kinematic-formulas/a/what-is-free-fall" target="_blank" rel="noopener">Khan Academy: Free Fall</a> – Video lessons and interactive problems.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch these videos to see gravity in action and learn how to solve free fall problems. Pay attention to how we handle coordinate systems and signs!</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Understanding Free Fall</h3>
+                <div class="dp-panel-content">
+                    <h4>Understanding Free Fall</h4>
+                    <p>This video explains the physics of free fall and why all objects accelerate at the same rate under gravity.</p>
+                    <ul>
+                        <li>Why gravity causes constant acceleration</li>
+                        <li>The value g = 9.8 m/s² and what it means</li>
+                        <li>Why mass doesn't affect free fall acceleration</li>
+                        <li>Choosing coordinate systems (positive up vs. positive down)</li>
+                    </ul>
+                    <p>Time: 5:45</p>
+                    <div class="dp-embed-wrapper"><!-- Video content would go here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Solving Free Fall Problems</h3>
+                <div class="dp-panel-content">
+                    <h4>Solving Free Fall Problems</h4>
+                    <p>Learn the strategy for applying kinematic equations to free fall situations, including objects thrown upward.</p>
+                    <ul>
+                        <li>Setting up the coordinate system</li>
+                        <li>Identifying initial conditions</li>
+                        <li>Handling positive and negative velocities</li>
+                        <li>Special cases: dropped objects vs. thrown objects</li>
+                    </ul>
+                    <p>Time: 7:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video content would go here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Famous Free Fall Experiment</h3>
+                <div class="dp-panel-content">
+                    <h4>Galileo's Feather and Hammer Experiment</h4>
+                    <p>See the famous demonstration that proves all objects fall at the same rate in a vacuum, regardless of their mass.</p>
+                    <ul>
+                        <li>Historical context of Galileo's discoveries</li>
+                        <li>Why air resistance masks the true effect of gravity</li>
+                        <li>The Apollo 15 moon experiment</li>
+                    </ul>
+                    <p>Time: 3:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video content would go here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Advanced Physics: Calculus-Based Free Fall Analysis</h3>
+        
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 500px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Mathematical Foundation: Differential Equations</h3>
+                <div class="dp-panel-content">
+                    <h4>From Newton's Second Law to Kinematic Equations</h4>
+                    <p>Free fall motion emerges from solving the differential equation:</p>
+                    <div style="background: #f0f0f0; padding: 1em; margin: 1em 0; border-radius: 5px; text-align: center;">
+                        <strong>F = ma = mg</strong><br>
+                        <strong>d²y/dt² = -g</strong>
+                    </div>
+                    <p>Integrating once: <strong>dy/dt = v(t) = -gt + C₁</strong></p>
+                    <p>With initial condition v(0) = v₀: <strong>v(t) = v₀ - gt</strong></p>
+                    <p>Integrating again: <strong>y(t) = v₀t - ½gt² + C₂</strong></p>
+                    <p>With initial condition y(0) = y₀: <strong>y(t) = y₀ + v₀t - ½gt²</strong></p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">University-Level Insight</h5>
+                            <p>This derivation shows how all kinematic equations are simply solutions to Newton's second law expressed as a differential equation. This approach generalizes to any force function F(t, v, y).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Air Resistance & Terminal Velocity</h3>
+                <div class="dp-panel-content">
+                    <h4>Beyond Idealized Free Fall</h4>
+                    <p>Real-world falling objects experience air resistance, modeled as:</p>
+                    <div style="background: #f0f0f0; padding: 1em; margin: 1em 0; border-radius: 5px; text-align: center;">
+                        <strong>F_drag = -bv - cv²</strong><br>
+                        <strong>ma = mg - bv - cv²</strong>
+                    </div>
+                    <p>For high-speed objects (Reynolds number > 1000): <strong>F_drag ≈ -cv²</strong></p>
+                    <p>Terminal velocity occurs when acceleration = 0:</p>
+                    <div style="background: #e8f4f8; padding: 1em; margin: 1em 0; border-radius: 5px; text-align: center;">
+                        <strong>v_terminal = √(mg/c)</strong>
+                    </div>
+                    <ul>
+                        <li><strong>Skydiver:</strong> ~120 mph (53 m/s)</li>
+                        <li><strong>Raindrop:</strong> ~20 mph (9 m/s)</li>
+                        <li><strong>Feather:</strong> ~1 mph (0.4 m/s)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Engineering Applications</h3>
+                <div class="dp-panel-content">
+                    <h4>Professional Problem-Solving Contexts</h4>
+                    <div class="dp-column-container container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>🚗 Automotive Safety Engineering</h5>
+                                <ul>
+                                    <li>Crash test drop tower analysis</li>
+                                    <li>Airbag deployment timing</li>
+                                    <li>Rollover protection systems</li>
+                                </ul>
+                                <h5>🏗️ Structural Engineering</h5>
+                                <ul>
+                                    <li>Building debris fall zones</li>
+                                    <li>Construction safety protocols</li>
+                                    <li>Seismic response analysis</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>🚀 Aerospace Engineering</h5>
+                                <ul>
+                                    <li>Spacecraft reentry trajectories</li>
+                                    <li>Parachute deployment systems</li>
+                                    <li>Meteorite impact modeling</li>
+                                </ul>
+                                <h5>⚖️ Forensic Science</h5>
+                                <ul>
+                                    <li>Accident reconstruction</li>
+                                    <li>Time-of-fall calculations</li>
+                                    <li>Impact velocity determination</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+        
+        <!-- Order Activity: Free Fall Problem-Solving Steps -->
+        <div class="dp-order-wrapper" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order the Steps for Solving Free Fall Problems</h4>
+            <p>Arrange these steps in the correct order for systematically solving free fall motion problems:</p>
+            <ol class="dp-order dp-order-text">
+                <li class="">Choose the appropriate kinematic equation</li>
+                <li class="">Set up coordinate system (usually positive = upward)</li>
+                <li class="">Substitute values and solve for the unknown</li>
+                <li class="">Identify what you know and what you need to find</li>
+                <li class="">Set a = -9.8 m/s² (downward acceleration due to gravity)</li>
+                <li class="">Check that your answer makes physical sense</li>
+            </ol>
+            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Perfect! You understand the systematic approach to free fall problems!</p></div>
+            </div>
+            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                <div><p>Try again. Think about what you need to establish first before solving.</p></div>
+            </div>
+        </div>
+
+        <!-- Sort Activity: Free Fall Motion Characteristics -->
+        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;">
+            <h4 class="dp-has-icon"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Free Fall Motion Characteristics</h4>
+            <p>Classify each scenario based on the motion characteristics during free fall:</p>
+            <div class="dp-si-sort-content">
+                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                    <div class="dp-si-sort-bucket-content">
+                        <h4 class="dp-si-sort-bucket-header">Free Fall Scenarios</h4>
+                        <ul>
+                            <li class="dp-si-item-text">Ball dropped from rest</li>
+                            <li class="dp-si-item-text">Ball thrown upward at peak height</li>
+                            <li class="dp-si-item-text">Ball thrown downward from cliff</li>
+                            <li class="dp-si-item-text">Ball thrown upward while rising</li>
+                            <li class="dp-si-item-text">Ball just before impact</li>
+                            <li class="dp-si-item-text">Ball thrown horizontally</li>
+                            <li class="dp-si-item-text">Feather and hammer on moon</li>
+                            <li class="dp-si-item-text">Ball falling through air on Earth</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid pt-3 px-0">
+                    <div class="row gy-3">
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Velocity = 0</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Ball dropped from rest</li>
+                                    <li class="dp-si-item-text">Ball thrown upward at peak height</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">True Free Fall (a = -9.8 m/s²)</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Ball thrown downward from cliff</li>
+                                    <li class="dp-si-item-text">Ball thrown upward while rising</li>
+                                    <li class="dp-si-item-text">Ball thrown horizontally</li>
+                                    <li class="dp-si-item-text">Feather and hammer on moon</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Maximum Speed/Air Resistance Effects</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Ball just before impact</li>
+                                    <li class="dp-si-item-text">Ball falling through air on Earth</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flip Cards: Free Fall Misconceptions -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Clear Up Common Misconceptions</h4>
+        <p>Click each card to test your understanding and clear up common free fall misconceptions:</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Do heavier objects fall faster than lighter objects?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>NO!</strong> In a vacuum, all objects fall at the same rate (9.8 m/s²) regardless of mass. Air resistance can make heavier objects seem to fall faster in air.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">At the peak of its flight, does a thrown ball have any acceleration?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>YES!</strong> Even when velocity = 0 at the peak, acceleration is still -9.8 m/s² downward. This is what makes the ball start falling!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">If you throw a ball upward, is its acceleration different while going up vs. down?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>NO!</strong> Acceleration is always -9.8 m/s² downward throughout the entire flight - up, at the peak, and down.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why do we use a = -9.8 m/s² instead of +9.8 m/s²?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The negative sign indicates direction. If we define upward as positive, then gravity (downward) is negative acceleration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Advanced Computational Analysis</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">University-Level Problem-Solving Framework</h3>
+                <p>Advanced free fall analysis requires:</p>
+                <ul>
+                    <li><strong>Mathematical precision:</strong> Use calculus-based derivations when needed</li>
+                    <li><strong>Reference frame analysis:</strong> Consider Earth's rotation and gravitational variations</li>
+                    <li><strong>Error analysis:</strong> Include measurement uncertainties and air resistance effects</li>
+                    <li><strong>Professional applications:</strong> Connect to real engineering contexts</li>
+                    <li><strong>Limit analysis:</strong> Understand when idealizations break down</li>
+                </ul>
+            </div>
+        </div>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Practice Problem 1</p>
+                <div class="dp-panel-content">
+                    <p><strong>A ball is dropped from a height of 45 m. How long does it take to hit the ground?</strong></p>
+                    <p>Given: y₀ = 45 m, y = 0 m, v₀ = 0, a = -9.8 m/s²</p>
+                    <p>Find: t</p>
+                    <p>Use: y = y₀ + v₀t + ½at²</p>
+                    <p style="text-align: center;">0 = 45 + 0 + ½(-9.8)t²</p>
+                    <p style="text-align: center;">0 = 45 - 4.9t²</p>
+                    <p style="text-align: center;">4.9t² = 45</p>
+                    <p style="text-align: center;">t² = 9.18</p>
+                    <p style="text-align: center;">t = 3.03 seconds</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Practice Problem 2</p>
+                <div class="dp-panel-content">
+                    <p><strong>A ball is thrown upward with initial velocity 20 m/s. How high does it go?</strong></p>
+                    <p>Given: v₀ = 20 m/s, v = 0 (at maximum height), a = -9.8 m/s²</p>
+                    <p>Find: maximum height (y - y₀)</p>
+                    <p>Use: v² = v₀² + 2a(y - y₀)</p>
+                    <p style="text-align: center;">0² = 20² + 2(-9.8)(y - y₀)</p>
+                    <p style="text-align: center;">0 = 400 - 19.6(y - y₀)</p>
+                    <p style="text-align: center;">19.6(y - y₀) = 400</p>
+                    <p style="text-align: center;">y - y₀ = 20.4 m</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Practice Problem 3</p>
+                <div class="dp-panel-content">
+                    <p><strong>A stone is thrown downward from a 100 m cliff with initial speed 15 m/s. What is its speed when it hits the water?</strong></p>
+                    <p>Given: y₀ = 100 m, y = 0, v₀ = -15 m/s (negative because downward), a = -9.8 m/s²</p>
+                    <p>Find: v</p>
+                    <p>Use: v² = v₀² + 2a(y - y₀)</p>
+                    <p style="text-align: center;">v² = (-15)² + 2(-9.8)(0 - 100)</p>
+                    <p style="text-align: center;">v² = 225 + (-19.6)(-100)</p>
+                    <p style="text-align: center;">v² = 225 + 1960 = 2185</p>
+                    <p style="text-align: center;">v = -46.7 m/s</p>
+                    <p>The speed (magnitude) is 46.7 m/s downward.</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Advanced Problem 4: Engineering Application</p>
+                <div class="dp-panel-content">
+                    <p><strong>Aerospace Engineering: A spacecraft heat shield test article is dropped from a high-altitude balloon at 40 km altitude. Calculate the time to reach terminal velocity and the distance traveled.</strong></p>
+                    <p>Given: Initial altitude y₀ = 40,000 m, v₀ = 0, m = 500 kg, drag coefficient analysis shows terminal velocity v_t = 200 m/s</p>
+                    <p><strong>Phase 1 - Free fall acceleration (before significant air resistance):</strong></p>
+                    <p>Time to reach 90% of terminal velocity: t = v_t/g = (0.9 × 200)/9.8 = 18.4 s</p>
+                    <p>Distance during acceleration phase: y = ½gt² = ½(9.8)(18.4)² = 1,660 m</p>
+                    <p><strong>Phase 2 - Terminal velocity:</strong></p>
+                    <p>Remaining distance: 40,000 - 1,660 = 38,340 m at constant 200 m/s</p>
+                    <p>Time at terminal velocity: t = 38,340/200 = 192 s</p>
+                    <p><strong>Total time: 18.4 + 192 = 210 seconds (3.5 minutes)</strong></p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Advanced Problem 5: Calculus Application</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given a position function for a falling object with air resistance: y(t) = y₀ - (v_t²/g)[t + (v_t/g)(e^(-gt/v_t) - 1)], find velocity and acceleration functions.</strong></p>
+                    <p>Given: y₀ = 1000 m, v_t = 50 m/s, g = 9.8 m/s²</p>
+                    <p><strong>Solution using calculus:</strong></p>
+                    <p>Velocity: v(t) = dy/dt = -v_t(1 - e^(-gt/v_t))</p>
+                    <p>Acceleration: a(t) = dv/dt = -g·e^(-gt/v_t)</p>
+                    <p><strong>Physical interpretation:</strong></p>
+                    <ul>
+                        <li>At t = 0: v = 0, a = -g (starts from rest with full gravitational acceleration)</li>
+                        <li>As t → ∞: v → -v_t, a → 0 (approaches terminal velocity with zero acceleration)</li>
+                        <li>The exponential term shows how air resistance gradually takes effect</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-title-bar" style="margin-top: 2em;">
+            <div class="card-body">
+                <h3 class="card-title">Professional Engineering Insight</h3>
+                <p class="card-text">These advanced problems demonstrate how university-level physics directly applies to:</p>
+                <div class="dp-column-container container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Aerospace:</strong> Spacecraft reentry design and heat shield testing</li>
+                                <li><strong>Automotive:</strong> Crash test analysis and safety system design</li>
+                                <li><strong>Civil Engineering:</strong> Building safety and debris trajectory analysis</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Forensics:</strong> Accident reconstruction and timing analysis</li>
+                                <li><strong>Manufacturing:</strong> Drop test protocols and quality assurance</li>
+                                <li><strong>Research:</strong> Atmospheric physics and meteorological modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dp-content-block kl_synthesis" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); margin-bottom: 1.5em; border: 1px solid #dee2e6; border-radius: 8px;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-graduation-cap" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> University Physics Synthesis</h3>
+        
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Mathematical Connections & Advanced Concepts</h3>
+                <div class="dp-panel-content">
+                    <div class="dp-column-container container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>🔬 Connection to Advanced Physics</h4>
+                                <ul>
+                                    <li><strong>Differential Equations:</strong> Free fall as a boundary value problem</li>
+                                    <li><strong>Energy Methods:</strong> Conservation principles in gravitational fields</li>
+                                    <li><strong>Relativistic Effects:</strong> When v approaches c in gravitational fields</li>
+                                    <li><strong>General Relativity:</strong> Gravitational time dilation effects</li>
+                                </ul>
+                                <h4>📊 Experimental Considerations</h4>
+                                <ul>
+                                    <li><strong>Measurement precision:</strong> High-speed camera analysis</li>
+                                    <li><strong>Systematic errors:</strong> Air density variations, Earth's rotation</li>
+                                    <li><strong>Statistical analysis:</strong> Uncertainty propagation in calculations</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>🏭 Professional Applications</h4>
+                                <ul>
+                                    <li><strong>Materials Testing:</strong> Impact strength analysis</li>
+                                    <li><strong>Safety Engineering:</strong> Personal protective equipment design</li>
+                                    <li><strong>Ballistics:</strong> Projectile motion analysis</li>
+                                    <li><strong>Seismology:</strong> Earthquake motion modeling</li>
+                                </ul>
+                                <h4>💡 Research Frontiers</h4>
+                                <ul>
+                                    <li><strong>Microgravity:</strong> Space station experiments</li>
+                                    <li><strong>Quantum gravity:</strong> Testing equivalence principle</li>
+                                    <li><strong>Atmospheric physics:</strong> Climate modeling applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-success" style="margin-top: 1.5em;">
+            <div class="card-body">
+                <h3 class="card-title">🎯 Learning Objectives Achievement</h3>
+                <p>Through this university-level treatment of free fall, you have:</p>
+                <ul>
+                    <li>✅ <strong>Mastered calculus-based derivations</strong> of kinematic equations from Newton's laws</li>
+                    <li>✅ <strong>Analyzed complex engineering scenarios</strong> requiring sophisticated problem-solving</li>
+                    <li>✅ <strong>Connected mathematical theory</strong> to real-world professional applications</li>
+                    <li>✅ <strong>Developed critical thinking skills</strong> for advanced physics and engineering coursework</li>
+                    <li>✅ <strong>Prepared for graduate-level study</strong> in physics, engineering, or related fields</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============================================ -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- ============================================ -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script src="../../../js/canvas-complete.js"></script>
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

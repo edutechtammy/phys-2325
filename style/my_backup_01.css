@@ -1,0 +1,303 @@
+
+@import url(//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+
+body {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#kl_wrapper_3 * {
+    position: relative;
+}
+
+.kl_wrapper {
+    max-width: 1100px;
+}
+
+div:not([class]){
+    background: #F5F5F5; /* When divs do not have classes, they will get a grey background. I have added rounded corners because I think it looks nicer than the squared ones in Design tools */
+    border-radius: 5px;
+}
+/* likely the target grey - #F5F5F5  */
+
+
+
+/* Banner-related IDS and Classes */
+
+#kl_banner { /* This is the larger box structure of the banner */
+    background: #1d2757; /* Confirmed - is a variable based on theme. Color based on color-picker */
+    padding: 20px 0;
+    margin: 0px 0px 10px;
+    overflow: visible;
+}
+
+#kl_banner_left { /* This is the section in the red naming the course  */
+    display: block;
+    background-color: #d13138; /* This is set as a variable from the theme */
+    border-radius: 30px;
+    width: 50%;
+    line-height: 30px;
+    margin: -35px auto 10px;
+    font-size: 16px; /* This is the font-size for the text in the red pill */
+    color: white; /* This is the text color set as a variable from the theme */
+    font-weight: 300;
+}
+
+#kl_banner_right {
+    display: block;
+    color: white; /* This is the h2 title color set as a variable from the theme */
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; /* This does set the title font */
+    font-weight: 300; /* font-weight for the Title */
+    font-size: 30px; /* font-size for the title */
+    text-align: center; /* text-align for the title */
+    text-rendering: optimizeLegibility;
+    margin: 5px;
+}
+
+h2 {
+    display: block;
+    text-align: center; /* text centering is critical here */
+}
+
+#kl_banner_left::before {
+    position: relative; /* this is making the red line to the right for the red subtitle section */
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: #d13138;
+    content: "";
+    top: 15px;
+    right: -100%;
+}
+
+h2::before{
+    position: relative;
+    display: block;
+    width: 25%;
+    height: 1px;
+    background: #d13138;
+    content: "";
+    top: -20px;
+}
+
+/* Introduction-related IDS and Classes */
+
+#kl_introduction p:first-child {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #2d3b45
+}
+
+#kl_introduction {
+    background-color: transparent;
+}
+
+/* Accordion-related IDS and Classes */
+
+li {
+    font-family: "Lato","Helvetica Neue", Helvetica,Arial, sans-serif;
+    font-size: 14px; /* I have not seen any text that this yet is acting on */
+    font-weight: 300;
+    line-height: 18px;
+    color: black;
+    text-rendering: optimizeLegibility;
+}
+
+.kl_panels_wrapper { /* This is completely temporary - being used to add a border around what will eventually be the accordion */
+    border: 1px solid black
+}
+
+/* Content-related to h3 heading */
+
+i.fab { /* fab is for brand icons */
+    position: relative; /* Positioning styles begin here */
+    display: block;
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 3px;
+    text-align: center;
+    margin: -25px auto 0;
+    text-align: center;
+}
+
+i.fab::before { /* fab is for brand icons */
+    border-radius: 50px; /* icon styling begin here */
+    padding: 12px 12px;
+    background: black;
+    color: white;
+    height: 50px;
+    width: 50px;
+    /* font-family: "Font Awesome 5 Free"; /* font Awesome 5 Free plan @ 900 weight allows for solid and Font Awesome 5 Brands @ 400 weight */
+    /* font-weight: 900;
+    text-align: center; */
+}
+
+i.fas { /* fas is for solid icons */
+    position: relative; /* Positioning styles begin here */
+    display: block;
+    font-size: 25px;
+    line-height: 50px;
+    padding-left: 3px;
+    text-align: center;
+    margin: -25px auto 0;
+    text-align: center;
+}
+
+i.fas::before {  /* fas is for solid icons */
+    border-radius: 50px; /* icon styling begin here */
+    padding: 12px 12px;
+    background: black;
+    color: white;
+    height: 50px;
+    width: 50px;
+    /* font-family: "Font Awesome 5 Free"; /* font Awesome 5 Free plan @ 900 weight allows for solid and Font Awesome 5 Brands @ 400 weight */
+    /* font-weight: 900;
+    text-align: center; */
+}
+
+h3 {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px; 
+    font-weight: 400;
+    text-align:center; 
+    /* padding-bottom:15px; */
+    line-height: 1.5;
+    padding-top: 40px;
+    /* margin-top: 15px; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 3px; 
+    color:#111;
+}
+
+h3::before{
+    position: relative;
+    display: block;
+    letter-spacing: 3px;
+    width: 90%;
+    height: 1px;
+    background: rgb(198, 198, 198);
+    content: "";
+    left: 50%; /* I know it looks like this and the next ine will not be necessary, but they are to get this line to center well */
+    transform: translateX(-50%);
+}
+
+
+
+.dp-icon-content {
+    height: 500px; /* currently not doing anything  */
+}
+
+p {
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica,Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-family: "Helvetica Neue", Helvetica,Arial, sans-serif;
+    font-size:18px;
+    line-height: 27px;
+    font-weight: 200;
+    text-align:left;  
+    padding-bottom:15px;
+    padding-top: 40px; 
+    letter-spacing: 2px; 
+    margin-left: 30px;
+    color:#111;
+    text-rendering: optimizeLegibility;
+}
+
+h4::after{
+    position: relative;
+    top: -40px;
+    width: 90%;
+    height: 1px;
+    background: rgb(198, 198, 198);
+    content: "";
+    display: block;
+    left: 45%;
+    transform: translatex(-50%);
+}
+
+a:link {
+    color: #0068de;
+}
+
+a:visited {
+    color: #551A8B;
+  }
+
+  a:hover {
+    color: #FF0000;
+  }
+
+  a:active {
+    color: #FF0000;
+  }
+
+a[target="_blank"]:after {
+    font-family: 'FontAwesome';
+    font-size: 8px;
+    content: " \f08e";
+    color: black;
+}
+
+/* ---------- These are yet untested - Code Styling  --------  */
+
+code {
+    background-color: #eef0f3;
+    border-radius: 0.3rem;
+    padding: 4px 5px 5px;
+    white-space: nowrap;
+    color: black; 
+}
+
+pre code {
+    white-space: inherit;
+}
+
+pre {
+    border: 1px solid red;
+    background-color: #eef0f3;
+    padding: 10px;
+    border-radius: 0.3em;
+}
+
+/* -------- HOME PAGE STYLES ------------- */
+
+#kl_navigation li {
+    font-size: 1.2em;
+    font-weight: 400;
+    list-style-type: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#kl_navigation>ul {
+    background-color: #1e5799;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+#kl_wrapper_3.kl_flat_sections_main #kl_navigation {
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 0;
+}

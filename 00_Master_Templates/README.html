@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Templates - Quality Standards & Implementation Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --tstc-blue: #1d2757;
+            --tstc-red: #d13138;
+            --quality-green: #28a745;
+            --warning-orange: #fd7e14;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .quality-badge { font-size: 0.875rem; font-weight: 600; padding: 0.375rem 0.75rem; }
+        .excellence-standard { border-left: 4px solid var(--quality-green); background: rgba(40, 167, 69, 0.1); }
+        .improvement-needed { border-left: 4px solid var(--warning-orange); background: rgba(253, 126, 20, 0.1); }
+        .template-card { transition: all 0.3s ease; border: 2px solid #e9ecef; }
+        .template-card:hover { border-color: var(--tstc-blue); box-shadow: 0 4px 12px rgba(29, 39, 87, 0.15); }
+        .workflow-step { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px; }
+        .code-highlight { background: #f8f9fa; border-left: 3px solid var(--tstc-blue); }
+        .cross-course-note { background: rgba(29, 39, 87, 0.05); border: 1px solid rgba(29, 39, 87, 0.2); }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <!-- Header -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold" style="color: var(--tstc-blue);">Development Templates</h1>
+                    <p class="lead">Quality Standards & Cross-Course Implementation Guide</p>
+                    <div class="badge bg-success quality-badge">Module 5 Excellence Standards Applied</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quality Standards Overview -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">🎯 Quality Standards Reference</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card h-100 excellence-standard">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">✅ Excellence Patterns (Module 5 Standard)</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>Video-First Architecture:</strong> Clear learning progression with embedded videos</li>
+                                    <li><strong>Progressive Difficulty:</strong> Basic → Intermediate → Advanced problem sequences</li>
+                                    <li><strong>Comprehensive Applications:</strong> Multiple real-world contexts (biomedical, environmental, industrial)</li>
+                                    <li><strong>Hierarchical Reading:</strong> Textbook integration with clear section guidance</li>
+                                    <li><strong>Complete Documentation:</strong> Learning objectives, competencies, and assessment alignment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 improvement-needed">
+                            <div class="card-header" style="background: var(--warning-orange); color: white;">
+                                <h5 class="mb-0">⚠️ Quality Degradation Patterns (Avoid These)</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled mb-0">
+                                    <li><strong>Text-Heavy Layouts:</strong> Information dumps without structured learning flow</li>
+                                    <li><strong>Minimal Practice:</strong> Single difficulty level with limited problem variety</li>
+                                    <li><strong>Scattered Applications:</strong> Disconnected examples without conceptual progression</li>
+                                    <li><strong>Vague Reading Guidance:</strong> Generic "read chapter" without specific sections</li>
+                                    <li><strong>Missing Context:</strong> Activities without clear learning purpose or assessment connection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Template Selection Guide -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">📋 Template Selection Guide</h2>
+                <div class="row g-4">
+                    <!-- Core Lesson Template -->
+                    <div class="col-lg-4">
+                        <div class="card template-card h-100">
+                            <div class="card-header" style="background: var(--tstc-blue); color: white;">
+                                <h5 class="mb-0">lesson-explore-template.html</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Primary Use:</strong> Main lesson architecture</p>
+                                <p><strong>Best For:</strong> New topic introduction, concept exploration, comprehensive learning modules</p>
+                                <p><strong>Cross-Course Adaptation:</strong> Replace chemistry-specific content while maintaining video-first structure</p>
+                                <div class="badge bg-primary">Foundation Template</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Problem Types -->
+                    <div class="col-lg-4">
+                        <div class="card template-card h-100">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Problem Type Templates</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>calculation-problems:</strong> Math-heavy subjects (physics, engineering, statistics)</p>
+                                <p><strong>concept-application:</strong> Theory-to-practice connections (biology, psychology, business)</p>
+                                <p><strong>progressive-difficulty:</strong> Skill-building sequences (any quantitative subject)</p>
+                                <div class="badge bg-info">Skill Development</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layout Patterns -->
+                    <div class="col-lg-4">
+                        <div class="card template-card h-100">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0">Layout Pattern Templates</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>video-organization:</strong> Multi-media presentations</p>
+                                <p><strong>reading-guidance:</strong> Textbook-integrated courses</p>
+                                <p><strong>html-boilerplate:</strong> Starting point for any new content</p>
+                                <div class="badge bg-secondary">Structural Framework</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-Course Adaptation -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">🔄 Cross-Course Adaptation Strategy</h2>
+                <div class="cross-course-note p-4 rounded">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>STEM Courses</h5>
+                            <ul>
+                                <li>Keep calculation-problems template structure</li>
+                                <li>Adapt units and formulas</li>
+                                <li>Maintain progressive difficulty</li>
+                                <li>Update CidiLabs interactions for subject-specific tools</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Liberal Arts Courses</h5>
+                            <ul>
+                                <li>Focus on concept-application templates</li>
+                                <li>Replace calculations with analysis frameworks</li>
+                                <li>Emphasize reading-guidance integration</li>
+                                <li>Adapt video content for discussion-based learning</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Technical/Vocational</h5>
+                            <ul>
+                                <li>Emphasize real-world applications</li>
+                                <li>Use video-organization for demonstrations</li>
+                                <li>Create industry-specific problem sequences</li>
+                                <li>Integrate certification exam preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Workflow -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">⚙️ Implementation Workflow</h2>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="workflow-step p-3 h-100">
+                            <div class="text-center mb-2">
+                                <span class="badge bg-primary rounded-pill">Step 1</span>
+                            </div>
+                            <h6>Quality Assessment</h6>
+                            <p class="small mb-0">Identify current course quality patterns. Compare against Module 5 excellence standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="workflow-step p-3 h-100">
+                            <div class="text-center mb-2">
+                                <span class="badge bg-primary rounded-pill">Step 2</span>
+                            </div>
+                            <h6>Template Selection</h6>
+                            <p class="small mb-0">Choose appropriate templates based on content type and learning objectives.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="workflow-step p-3 h-100">
+                            <div class="text-center mb-2">
+                                <span class="badge bg-primary rounded-pill">Step 3</span>
+                            </div>
+                            <h6>Content Adaptation</h6>
+                            <p class="small mb-0">Customize templates for subject-specific content while maintaining quality patterns.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="workflow-step p-3 h-100">
+                            <div class="text-center mb-2">
+                                <span class="badge bg-primary rounded-pill">Step 4</span>
+                            </div>
+                            <h6>Quality Validation</h6>
+                            <p class="small mb-0">Verify implementation meets excellence standards before Canvas deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance & Quality Control -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">🔧 Maintenance & Quality Control</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" style="background: var(--quality-green); color: white;">
+                                <h5 class="mb-0">Regular Quality Checks</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">✓ Video-first architecture maintained</li>
+                                    <li class="list-group-item">✓ Progressive difficulty preserved in problems</li>
+                                    <li class="list-group-item">✓ Real-world applications remain current</li>
+                                    <li class="list-group-item">✓ Reading guidance stays specific</li>
+                                    <li class="list-group-item">✓ Learning objectives align with activities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" style="background: var(--tstc-blue); color: white;">
+                                <h5 class="mb-0">Template Evolution</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">🔄 Update templates based on usage feedback</li>
+                                    <li class="list-group-item">🔄 Incorporate new CidiLabs components</li>
+                                    <li class="list-group-item">🔄 Adapt to Canvas LMS updates</li>
+                                    <li class="list-group-item">🔄 Refine cross-course adaptation patterns</li>
+                                    <li class="list-group-item">🔄 Document successful variations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h3 mb-4" style="color: var(--tstc-blue);">📚 Quick Reference</h2>
+                <div class="code-highlight p-3 rounded">
+                    <h6>Template File Structure:</h6>
+                    <pre class="mb-3"><code>00-development-templates/
+├── lesson-explore-template.html          ← Main lesson architecture
+├── problem-types/
+│   ├── calculation-problems-template.html
+│   ├── concept-application-template.html
+│   └── progressive-difficulty-template.html
+├── layout-patterns/
+│   ├── video-organization-template.html
+│   ├── reading-guidance-template.html
+│   └── html-boilerplate-template.html
+└── README.html                          ← This documentation</code></pre>
+                    
+                    <h6>Key Quality Indicators:</h6>
+                    <ul class="mb-0">
+                        <li><strong>Engagement:</strong> Video + interactive elements balanced with text</li>
+                        <li><strong>Structure:</strong> Clear learning progression with defined sections</li>
+                        <li><strong>Practice:</strong> Multiple difficulty levels with varied contexts</li>
+                        <li><strong>Integration:</strong> Textbook connections and assessment alignment</li>
+                        <li><strong>Accessibility:</strong> Bootstrap responsive design with semantic HTML</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row mt-5 pt-4">
+            <div class="col-12 text-center">
+                <p class="text-muted">
+                    <em>Templates based on CHEM-1312 Module 5 excellence patterns • Designed for multi-course instructional design efficiency</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

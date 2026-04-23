@@ -1,0 +1,323 @@
+@import url(//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
+
+
+body {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#kl_wrapper_3 * {
+    position: relative;
+}
+
+.kl_wrapper {
+    max-width: 1100px;
+    margin: 20 px;
+}
+
+div:not([class]) {
+    background: #F5F5F5;
+    /* When divs do not have classes, they will get a grey background. I have added rounded corners because I think it looks nicer than the squared ones in Design tools */
+    border-radius: 5px;
+}
+
+/* likely the target grey - #F5F5F5  */
+
+
+
+/* Banner-related IDS and Classes */
+
+#kl_banner {
+    /* This is the larger box structure of the banner */
+    background: #1d2757;
+    /* Confirmed - is a variable based on theme. Color based on color-picker */
+    padding: 50px 0px 20px 0px;
+    /* This controls the blue that will show up above the 'pill subtitle' and under the text in the title */
+    margin: 20px 0px 0px;
+    overflow: visible;
+}
+
+#kl_banner_left {
+    /* This is the section in the red naming the course  */
+    display: block;
+    background-color: #d13138;
+    /* This is set as a variable from the theme */
+    border-radius: 30px;
+    width: 50%;
+    line-height: 30px;
+    margin: -35px auto 10px;
+    font-size: 16px;
+    /* This is the font-size for the text in the red pill */
+    color: white;
+    /* This is the text color set as a variable from the theme */
+    font-weight: 300;
+}
+
+#kl_banner_right {
+    display: block;
+    color: white;
+    /* This is the h2 title color set as a variable from the theme */
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* This does set the title font */
+    font-weight: 300;
+    /* font-weight for the Title */
+    font-size: 30px;
+    /* font-size for the title */
+    text-align: center;
+    /* text-align for the title */
+    text-rendering: optimizeLegibility;
+    margin: 5px;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    /* text centering is critical here */
+}
+
+#kl_banner_left::before {
+    position: relative;
+    /* this is making the red line to the right for the red subtitle section */
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: #d13138;
+    content: "";
+    top: 15px;
+    right: -100%;
+}
+
+h2::before {
+    position: relative;
+    display: block;
+    width: 25%;
+    height: 1px;
+    background: #d13138;
+    content: "";
+    top: -20px;
+}
+
+/* Introduction-related IDS and Classes */
+
+#kl_introduction p:first-child {
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #000305
+}
+
+#kl_introduction {
+    background-color: transparent;
+}
+
+/* Accordion-related IDS and Classes */
+
+li {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    /* I have not seen any text that this yet is acting on */
+    font-weight: 300;
+    line-height: 18px;
+    color: black;
+    text-rendering: optimizeLegibility;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.kl_panels_wrapper {
+    /* This is completely temporary - being used to add a border around what will eventually be the accordion */
+    border: 1px solid black
+}
+
+/* Content-related to h3 heading. it is the i and icon type that is putting the FontAwesome icons in a circle and moving it. */
+
+h3>i.fab {
+    /* fab is for brand icons */
+    position: relative;
+    /* Positioning styles begin here */
+    display: block;
+    line-height: 50px;
+    /* changing this impacts alignment to the line by setting the space between it and the text */
+    margin: -25px auto 0;
+    /* This aligns the FontAwesome Icon to the line */
+}
+
+i.fab::before {
+    /* fab is for brand icons */
+    border-radius: 50px;
+    /* icon background circle */
+    padding: 10px 9px;
+    /* Make the circle bigger */
+    background: #1d2757;
+    /* Sets the background color for the circle  */
+    color: white;
+    /*Sets the color of the FontAwesome icon */
+}
+
+h3>i.fas {
+    /* fas is for solid icons */
+    position: relative;
+    /* Positioning styles begin here */
+    display: block;
+    line-height: 50px;
+    /* changing this impacts alignment to the line by setting the space between it and the text */
+    margin: -25px auto 0;
+    /* This aligns the FontAwesome Icon to the line */
+}
+
+i.fas::before {
+    border-radius: 50px;
+    /* icon background circle */
+    padding: 10px 9px;
+    /* Make the circle bigger */
+    background: #1d2757;
+    /* Sets the background color for the circle  */
+    color: white;
+    /*Sets the color of the FontAwesome icon */
+}
+
+h3 {
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 40px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: 3px;
+    color: #111;
+}
+
+h3::before {
+    position: relative;
+    display: block;
+    letter-spacing: 3px;
+    width: 90%;
+    height: 1px;
+    background: rgb(198, 198, 198);
+    content: "";
+    left: 50%;
+    /* I know it looks like this and the next ine will not be necessary, but they are to get this line to center well */
+    transform: translateX(-50%);
+}
+
+
+
+.dp-icon-content {
+    height: 500px;
+    /* currently not doing anything  */
+}
+
+p {
+    display: block;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 200;
+    text-align: left;
+    padding-bottom: 15px;
+    padding-top: 40px;
+    letter-spacing: 2px;
+    margin-left: 30px;
+    color: #111;
+    text-rendering: optimizeLegibility;
+}
+
+h4::after {
+    position: relative;
+    top: -40px;
+    width: 90%;
+    height: 1px;
+    background: rgb(198, 198, 198);
+    content: "";
+    display: block;
+    left: 45%;
+    transform: translatex(-50%);
+}
+
+a:link {
+    color: #0068de;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+a:active {
+    color: #FF0000;
+}
+
+
+a[target="_blank"]::after {
+    font-family: "Font Awesome 5 Free";
+    /*  For whatever reason, it must be this font for it to show up */
+    font-size: 8px;
+    font-weight: 900;
+    content: "\f35d";
+    color: black;
+    margin-left: 3px;
+}
+
+/* ---------- These are yet untested - Code Styling  --------  */
+
+code {
+    background-color: #eef0f3;
+    border-radius: 0.3rem;
+    padding: 4px 5px 5px;
+    color: black;
+    overflow: auto;
+}
+
+pre code {
+    white-space: inherit;
+}
+
+pre {
+    border: 1px solid red;
+    background-color: #eef0f3;
+    padding: 5px;
+    border-radius: 0.3em;
+    margin: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* About Your Instructor  */
+
+.kl_image_align_left {
+    float: left;
+    margin: 0px 15px 15px 15px;
+}
+
+.kl_image_round_white_border {
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+.kl_user_details {
+    padding: 20px 5px 15px 20px;
+}
