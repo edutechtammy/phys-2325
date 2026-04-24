@@ -227,7 +227,7 @@ When starting a new lesson build, provide the AI with these files as context:
 ### Module 3 — Energy and Work
 | Lesson | Title | Status |
 |---|---|---|
-| M3L1 | Work and Kinetic Energy | 🔲 Not started |
+| M3L1 | Work and Kinetic Energy | ✅ Complete |
 | M3L2 | Potential Energy and Conservation of Energy | 🔲 Not started |
 
 ### Module 4 — Center of Mass and Linear Momentum

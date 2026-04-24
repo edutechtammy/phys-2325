@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: M3L1 Work and Kinetic Energy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 3: Energy and Work</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M3L1 Work and Kinetic Energy</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"Energy cannot be created or destroyed; it can only be changed from one form to another."</em></span><br /><span>&mdash;&nbsp;Albert Einstein</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Newton's laws told you <em>how</em> forces change motion. Energy methods give you a powerful alternative: instead of tracking forces and accelerations instant by instant, you can relate the <em>net work done on an object</em> directly to its <em>change in kinetic energy</em> — the Work-Kinetic Energy Theorem. This single equation, derived using calculus from Newton's second law, often solves problems in one step that would otherwise require multiple force equations and kinematics. You will learn to calculate work done by constant forces, by gravity, by spring forces, and by any variable force using integration — then connect work to power, the rate at which energy is transferred.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A graph of force versus displacement with the area under the curve shaded, representing the work done by a variable force." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Work done by a variable force equals the area under the F vs. x curve — a definite integral.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC3.1 Analyze the energy transformations associated with the work-energy theorem</strong></p>
+                    <p style="padding-left: 40px;">★ LO3.1.1 Define kinetic energy and calculate it for an object of known mass and velocity</p>
+                    <p style="padding-left: 40px;">★ LO3.1.2 Calculate the work done by a constant force using W = <strong>F</strong> &middot; <strong>d</strong> = Fd cos &phi;</p>
+                    <p style="padding-left: 40px;">★ LO3.1.3 Apply the Work-Kinetic Energy Theorem to find the speed of an object after a net work is done on it</p>
+                    <p style="padding-left: 40px;">★ LO3.1.4 Calculate the work done by the gravitational force on objects moving along any path</p>
+                    <p style="padding-left: 40px;">★ LO3.1.5 Calculate the work done by a spring force using Hooke's Law and integration</p>
+                    <p style="padding-left: 40px;">★ LO3.1.6 Calculate the work done by a variable force using graphical integration and functional integration (definite integral)</p>
+                    <p style="padding-left: 40px;">★ LO3.1.7 Define power and calculate average and instantaneous power using P = dW/dt = <strong>F</strong> &middot; <strong>v</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all six sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-1-kinetic-energy" target="_blank" rel="noopener">7.1 Kinetic Energy</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-2-work" target="_blank" rel="noopener">7.2 Work and Kinetic Energy</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-3-work-energy-theorem" target="_blank" rel="noopener">7.3 Work Done by the Gravitational Force</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-4-power" target="_blank" rel="noopener">7.4 Work Done by a Spring Force</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-4-power" target="_blank" rel="noopener">7.5 Work Done by a General Variable Force</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/7-4-power" target="_blank" rel="noopener">7.6 Power</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want additional practice with work, energy, and power? These free resources complement the reading and offer interactive tools.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://phet.colorado.edu/en/simulations/energy-skate-park-basics" target="_blank" rel="noopener">PhET: Energy Skate Park Basics</a> &ndash; Visualize kinetic and potential energy transformations in real time.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/energy/Lesson-1/Definition-and-Mathematics-of-Work" target="_blank" rel="noopener">Physics Classroom: Definition and Mathematics of Work</a> &ndash; Conceptual and quantitative overview with diagrams.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/work-and-energy" target="_blank" rel="noopener">Khan Academy: Work and Energy</a> &ndash; Video lessons and practice problems on work, kinetic energy, and power.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/7-key-terms" target="_blank" rel="noopener">OpenStax Chapter 7 Key Terms</a> &ndash; Glossary for all Work and Kinetic Energy vocabulary.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/7-key-equations" target="_blank" rel="noopener">OpenStax Chapter 7 Key Equations</a> &ndash; Quick reference for all formulas from this lesson.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: All pre-lecture and mini-lecture video files are
+               pending upload to Canvas.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are uploaded.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Work through the pre-lecture videos for each reading section first, then watch the mini-lectures for detailed worked examples.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- ──────────────── PRE-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; 7.1 Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Kinetic Energy</h4>
+                    <p>This video introduces kinetic energy as the energy an object possesses because of its motion. Using calculus, we derive that kinetic energy K = &frac12;mv<sup>2</sup> and establish its units (joules, J). The video emphasizes that kinetic energy depends on <em>speed squared</em> — doubling speed quadruples kinetic energy.</p>
+                    <ul>
+                        <li>Kinetic energy: K = &frac12;mv<sup>2</sup> — scalar quantity, always &ge; 0, SI unit: joule (J = kg&middot;m<sup>2</sup>/s<sup>2</sup>)</li>
+                        <li>K depends on the <em>magnitude</em> of velocity (speed), not direction</li>
+                        <li>Relative kinetic energy: K depends on the reference frame — always state the frame</li>
+                        <li>Connecting to Newton's second law: the calculus derivation that leads to the work-energy theorem</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.1 Kinetic Energy --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Pre-Lecture &mdash; 7.2 Work and Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Work, the Dot Product, and the Work-Kinetic Energy Theorem</h4>
+                    <p>This video defines work done by a constant force as the dot product <strong>F</strong> &middot; <strong>d</strong> = Fd cos &phi;, where &phi; is the angle between the force and displacement vectors. It then states and derives the Work-Kinetic Energy Theorem: W<sub>net</sub> = &Delta;K.</p>
+                    <ul>
+                        <li>Work by a constant force: W = <strong>F</strong> &middot; <strong>d</strong> = Fd cos &phi; — scalar; can be positive, negative, or zero</li>
+                        <li>Dot product geometry: W = 0 when force is perpendicular to displacement (no energy transfer)</li>
+                        <li>Work-Kinetic Energy Theorem: W<sub>net</sub> = K<sub>f</sub> &minus; K<sub>i</sub> = &Delta;K</li>
+                        <li>Derived from Newton's 2nd Law using F<sub>net</sub> = ma and kinematics (or the integral of F&middot;dx)</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.2 Work and Kinetic Energy --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Pre-Lecture &mdash; 7.3 Work Done by the Gravitational Force</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Gravitational Work — Lifting and Lowering</h4>
+                    <p>This video applies the work formula to the gravitational force. The key result: work done by gravity depends only on the vertical displacement (&Delta;y), not on the path taken. It also introduces the work done <em>against</em> gravity by an applied force when lifting an object.</p>
+                    <ul>
+                        <li>Work by gravity: W<sub>g</sub> = mg&Delta;y (positive going down, negative going up; take +y upward)</li>
+                        <li>Path independence: gravity does the same work regardless of the route — this is a signature of conservative forces</li>
+                        <li>Lifting at constant velocity: W<sub>applied</sub> = &minus;W<sub>g</sub> = mgh (applied force does positive work equal to the gain in height)</li>
+                        <li>Lifting with acceleration: W<sub>net</sub> = &Delta;K &ne; 0 — the applied force exceeds mg during acceleration</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.3 Work Done by the Gravitational Force --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Pre-Lecture &mdash; 7.4 Work Done by a Spring Force</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Hooke's Law and Spring Work via Integration</h4>
+                    <p>The spring force F<sub>s</sub> = &minus;kx varies with position, so the work it does must be calculated by integration. This video derives W<sub>s</sub> = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup> and applies it to objects attached to springs.</p>
+                    <ul>
+                        <li>Hooke's Law: F<sub>s</sub> = &minus;kx — restoring force, opposes displacement from equilibrium</li>
+                        <li>Spring work (calculus): W<sub>s</sub> = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> (&minus;kx) dx = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup></li>
+                        <li>From equilibrium (x<sub>i</sub> = 0): W<sub>s</sub> = &minus;&frac12;kx<sub>f</sub><sup>2</sup> (spring does negative work when stretched or compressed)</li>
+                        <li>Applying W<sub>net</sub> = &Delta;K with spring work to find speed after compression/extension</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.4 Work Done by a Spring Force --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Pre-Lecture &mdash; 7.5 Work Done by a General Variable Force</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Integration as the General Method for Variable Force Work</h4>
+                    <p>When the force varies arbitrarily with position, neither the constant-force formula nor Hooke's Law applies. This video shows how to calculate work as a definite integral — both graphically (area under the F vs. x curve) and analytically (evaluating &int;F(x) dx).</p>
+                    <ul>
+                        <li>General definition: W = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> F(x) dx — the area under the F vs. x graph from x<sub>i</sub> to x<sub>f</sub></li>
+                        <li>Graphical integration: estimate W by counting grid squares or using geometric shapes</li>
+                        <li>Functional integration: when F(x) is given as an equation, evaluate the antiderivative analytically</li>
+                        <li>Three-dimensional case: W = &int;<strong>F</strong> &middot; d<strong>r</strong> = &int;(F<sub>x</sub>dx + F<sub>y</sub>dy + F<sub>z</sub>dz)</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.5 Work Done by a General Variable Force --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 6 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Pre-Lecture &mdash; 7.6 Power</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Power — the Rate of Doing Work</h4>
+                    <p>Power is the rate at which work is done or energy is transferred. This video introduces average power and derives instantaneous power as the dot product of force and velocity, P = <strong>F</strong> &middot; <strong>v</strong>. It connects power to the familiar units of watts and horsepower.</p>
+                    <ul>
+                        <li>Average power: P<sub>avg</sub> = &Delta;W / &Delta;t — SI unit: watt (W = J/s)</li>
+                        <li>Instantaneous power: P = dW/dt = <strong>F</strong> &middot; <strong>v</strong> = Fv cos &phi;</li>
+                        <li>Unit conversions: 1 hp = 746 W; 1 kWh = 3.6 &times; 10<sup>6</sup> J</li>
+                        <li>Integrating power to get work (or energy): W = &int; P dt — used when power varies with time</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 7.6 Power --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── MINI-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 7 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 7: Mini-Lecture &mdash; Work and Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Applying the Work-Kinetic Energy Theorem</h4>
+                    <p>This video works a complete example applying W<sub>net</sub> = &Delta;K: given an object's initial speed, mass, and one or more forces acting over a displacement, find the final speed. The strategy is to calculate work done by each force, sum them for W<sub>net</sub>, then solve for v<sub>f</sub>.</p>
+                    <ul>
+                        <li>Calculate work done by each force: W = Fd cos &phi; for each</li>
+                        <li>Identify forces that do zero work: normal force, centripetal force (perpendicular to motion)</li>
+                        <li>Sum all works: W<sub>net</sub> = W<sub>1</sub> + W<sub>2</sub> + ... = &Delta;K = &frac12;mv<sub>f</sub><sup>2</sup> &minus; &frac12;mv<sub>i</sub><sup>2</sup></li>
+                        <li>Solve for v<sub>f</sub>: v<sub>f</sub> = &radic;(v<sub>i</sub><sup>2</sup> + 2W<sub>net</sub>/m)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 8 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 8: Mini-Lecture &mdash; Work Along a Ramp</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Work by Multiple Forces on an Inclined Surface</h4>
+                    <p>A block moves along a rough inclined ramp under an applied force. This video demonstrates how to calculate the work done by each force — applied force, gravity, normal force, and friction — using the dot product, then applies the Work-Kinetic Energy Theorem to find the final speed.</p>
+                    <ul>
+                        <li>Gravity work along a ramp: W<sub>g</sub> = &minus;mgd sin &theta; (opposing upward displacement)</li>
+                        <li>Normal force work: W<sub>N</sub> = 0 (perpendicular to displacement)</li>
+                        <li>Friction work: W<sub>f</sub> = &minus;&mu;<sub>k</sub>Nd = &minus;&mu;<sub>k</sub>mg cos &theta; &middot; d (always negative — opposes motion)</li>
+                        <li>Net work gives &Delta;K: solve for v<sub>f</sub> from initial rest or given v<sub>i</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 9 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 9: Mini-Lecture &mdash; Work by a Variable Force: Graphical and Functional Integration</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Two Methods for Finding Work from a Variable Force</h4>
+                    <p>This video solves the same problem two ways: first by estimating the area under an F vs. x graph (graphical integration), then by evaluating the antiderivative analytically (functional integration). The comparison shows when each method is appropriate.</p>
+                    <ul>
+                        <li>Graphical method: divide the area under F(x) into rectangles or triangles; sum their areas; estimate uncertainty</li>
+                        <li>Functional method: given F(x) = ax<sup>n</sup>, integrate: W = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> ax<sup>n</sup> dx = [ax<sup>n+1</sup>/(n+1)]<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup></li>
+                        <li>Both methods yield the same result — graphical is approximate, functional is exact</li>
+                        <li>Use W<sub>net</sub> = &Delta;K to find the final speed after the variable force acts</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 10 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 10: Mini-Lecture &mdash; Power</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Calculating Instantaneous and Average Power</h4>
+                    <p>This video works through power calculations in two contexts: finding the constant power output needed to accelerate an object over a distance, and integrating a time-varying power function to find total work (energy transferred). It reinforces the link P = <strong>F</strong> &middot; <strong>v</strong>.</p>
+                    <ul>
+                        <li>At constant speed: P = Fv (driving force equals friction; power goes to heat)</li>
+                        <li>During acceleration: P = F<sub>net</sub>v = mav — power increases as speed increases</li>
+                        <li>Time-varying power: W = &int;<sub>t<sub>i</sub></sub><sup>t<sub>f</sub></sup> P(t) dt — integrate to find total energy delivered</li>
+                        <li>Converting between watts, kilowatts, and horsepower; kWh as a unit of energy</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Strategy: Applying the Work-Kinetic Energy Theorem</h4>
+        <p>Arrange the following steps in the correct order for solving a work-kinetic energy problem.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Identify all forces acting on the object during the displacement.</li>
+                <li>Calculate the work done by each force: W = Fd cos &phi;.</li>
+                <li>Identify forces that do zero work (perpendicular to displacement).</li>
+                <li>Sum all non-zero works to find W<sub>net</sub>.</li>
+                <li>Apply W<sub>net</sub> = &Delta;K = &frac12;mv<sub>f</sub><sup>2</sup> &minus; &frac12;mv<sub>i</sub><sup>2</sup>.</li>
+                <li>Solve for the unknown (usually v<sub>f</sub> or displacement d).</li>
+                <li>Check: verify units are joules (J) and the answer is physically reasonable.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Which Forces Do Zero Work?</h4>
+        <p>From the scenarios below, select <strong>all</strong> forces that do <strong>zero work</strong> on the moving object.</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all forces that do zero work.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">The normal force on a block sliding along a horizontal surface.</li>
+                <li class="dp-sa-correct">The tension in a string on a ball moving in a horizontal circle.</li>
+                <li class="dp-sa-correct">The centripetal force on an object in uniform circular motion.</li>
+                <li class="dp-sa-correct">The normal force on a block sliding up a ramp (force perpendicular to ramp surface).</li>
+                <li>The gravitational force on a ball thrown upward (does negative work).</li>
+                <li>The friction force on a sliding block (does negative work opposing motion).</li>
+                <li>An applied horizontal force on a block moving horizontally in the same direction.</li>
+                <li>The spring force on a mass being stretched away from equilibrium.</li>
+            </ul>
+        </div>
+
+        <!-- 7C: SORT ITEMS ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-random"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort by Sign of Work Done</h4>
+        <p>Sort each scenario into the correct category based on the sign of the work done by the specified force.</p>
+        <div class="dp-sort-items" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-random"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Items</h4>
+            <p style="color: white; border: none; background: transparent;">Sort each item into the correct category.</p>
+            <div class="dp-sort-buckets">
+                <div class="dp-sort-bucket" data-bucket="positive">
+                    <h5>Positive Work (W &gt; 0)</h5>
+                </div>
+                <div class="dp-sort-bucket" data-bucket="negative">
+                    <h5>Negative Work (W &lt; 0)</h5>
+                </div>
+                <div class="dp-sort-bucket" data-bucket="zero">
+                    <h5>Zero Work (W = 0)</h5>
+                </div>
+            </div>
+            <ul class="dp-sort-items-list dp-sort-text">
+                <li data-bucket="positive">Gravity on a ball falling downward.</li>
+                <li data-bucket="negative">Gravity on a ball thrown upward.</li>
+                <li data-bucket="positive">Applied push on a box sliding in the same direction as the push.</li>
+                <li data-bucket="negative">Kinetic friction on a sliding block.</li>
+                <li data-bucket="negative">Spring force on a mass being pulled away from equilibrium (spring pulls back).</li>
+                <li data-bucket="positive">Applied force pulling a mass toward a spring's equilibrium from extension.</li>
+                <li data-bucket="zero">Normal force on a block moving horizontally on a flat surface.</li>
+                <li data-bucket="negative">Air resistance on a car moving forward.</li>
+            </ul>
+        </div>
+
+        <!-- 7D: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding of work, kinetic energy, and power.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">State the Work-Kinetic Energy Theorem. What does it mean physically?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>W<sub>net</sub> = &Delta;K = K<sub>f</sub> &minus; K<sub>i</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &minus; &frac12;mv<sub>i</sub><sup>2</sup>. Physically: <strong>the net work done on an object equals the change in its kinetic energy.</strong> Positive net work speeds the object up; negative net work slows it down; zero net work means constant speed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why must work done by a spring be calculated by integration rather than W = Fd cos&phi;?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Because the spring force <strong>varies with position</strong>: F<sub>s</sub>(x) = &minus;kx. The formula W = Fd cos&phi; is only valid for a <em>constant</em> force. For a variable force, work must be computed as a definite integral: W<sub>s</sub> = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> (&minus;kx)dx = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A car moves at constant velocity. Its engine exerts a forward force. Is the net work on the car zero? Explain.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>Yes, the net work is zero.</strong> Constant velocity means &Delta;K = 0, so W<sub>net</sub> = 0 by the Work-Kinetic Energy Theorem. The engine does positive work, but friction (and drag) does equal negative work. The engine's power output is entirely dissipated as heat by friction — none goes into kinetic energy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How does the work done by gravity depend on the path taken? What does this tell you about gravity as a force?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The work done by gravity <strong>depends only on the vertical displacement</strong> &Delta;y — not on the path. W<sub>g</sub> = mg&Delta;y regardless of whether the object takes a straight line, a curved path, or a ramp. This path-independence is the defining property of a <strong>conservative force</strong>, which allows us to define a potential energy function (covered in Module 4).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What does the area under an F(x) vs. x graph represent? How do you calculate it when F(x) is a given function?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The area under the F(x) vs. x graph between x<sub>i</sub> and x<sub>f</sub> represents the <strong>work done by that force</strong> over that displacement. When F(x) is given as a function, calculate it as the definite integral: W = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> F(x) dx. Evaluate by finding the antiderivative F(x) &rarr; G(x), then compute G(x<sub>f</sub>) &minus; G(x<sub>i</sub>).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Write the formula for instantaneous power in terms of force and velocity. When is this most useful?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>P = dW/dt = <strong>F</strong> &middot; <strong>v</strong> = Fv cos &phi;. This is most useful when you know the force and the velocity at a specific instant and need the power at that moment — for example, finding the power output of a motor driving a vehicle at a given speed, or integrating P(t) to find total work: W = &int;P dt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Key Equations and Strategy Reminders</h3>
+                <p><strong>Kinetic energy:</strong> K = &frac12;mv<sup>2</sup></p>
+                <p><strong>Work by a constant force:</strong> W = Fd cos &phi; = <strong>F</strong> &middot; <strong>d</strong></p>
+                <p><strong>Work-Kinetic Energy Theorem:</strong> W<sub>net</sub> = &Delta;K = &frac12;mv<sub>f</sub><sup>2</sup> &minus; &frac12;mv<sub>i</sub><sup>2</sup></p>
+                <p><strong>Work by gravity:</strong> W<sub>g</sub> = &minus;mg&Delta;y &nbsp;(positive downward; use W<sub>g</sub> = mgh for downward drop h)</p>
+                <p><strong>Work by a spring:</strong> W<sub>s</sub> = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup></p>
+                <p><strong>Work by a variable force:</strong> W = &int;<sub>x<sub>i</sub></sub><sup>x<sub>f</sub></sup> F(x) dx</p>
+                <p><strong>Power:</strong> P<sub>avg</sub> = W/&Delta;t &nbsp;|&nbsp; P = dW/dt = <strong>F</strong> &middot; <strong>v</strong></p>
+                <ul>
+                    <li><strong>Work is a scalar</strong> — add works algebraically (watch signs).</li>
+                    <li><strong>Normal force and centripetal force do zero work</strong> — perpendicular to displacement.</li>
+                    <li><strong>Report energy in joules (J), power in watts (W).</strong> Three significant figures unless stated otherwise.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SAMPLE PROBLEM VIDEOS -->
+        <h4 class="dp-has-icon" style="margin-top: 1.5em;"><i class="fas fa-video"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sample Problem Videos</h4>
+        <p style="text-align: center;">Watch each sample problem video, then attempt the corresponding written practice problem below.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 400px; margin-bottom: 2em;">
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 1: Work Done by a Constant Force in Unit-Vector Notation</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: W = <strong>F</strong> &middot; <strong>d</strong> Using Component Form</h4>
+                    <p>A force given in unit-vector notation acts on an object undergoing a displacement also given in unit-vector notation. This video calculates the work using the dot product component method and verifies with the magnitude-angle formula.</p>
+                    <ul>
+                        <li>Dot product: <strong>F</strong> &middot; <strong>d</strong> = F<sub>x</sub>d<sub>x</sub> + F<sub>y</sub>d<sub>y</sub> + F<sub>z</sub>d<sub>z</sub></li>
+                        <li>Equivalent to: W = Fd cos &phi; where &phi; is the angle between <strong>F</strong> and <strong>d</strong></li>
+                        <li>Key check: confirm sign makes physical sense (positive work &rarr; force has a component along motion)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 2: Work and Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Finding Final Speed Using W<sub>net</sub> = &Delta;K</h4>
+                    <p>An object starts at rest (or a given speed) and has several forces acting on it over a displacement. This video finds the final speed by calculating each force's work, summing for W<sub>net</sub>, and applying the Work-Kinetic Energy Theorem.</p>
+                    <ul>
+                        <li>Calculate W for each force; identify zero-work forces immediately</li>
+                        <li>W<sub>net</sub> = W<sub>1</sub> + W<sub>2</sub> + ... (algebraic sum)</li>
+                        <li>Solve W<sub>net</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &minus; &frac12;mv<sub>i</sub><sup>2</sup> for v<sub>f</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 3: Work Done by Two Constant Forces — Industrial Spies</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Net Work and Final Speed from Two Applied Forces</h4>
+                    <p>Two forces act simultaneously on an object moving through a displacement. This video finds the net work done by both forces and uses the Work-Kinetic Energy Theorem to determine the object's final speed. It illustrates that only the component of each force along the displacement contributes to work.</p>
+                    <ul>
+                        <li>W<sub>1</sub> = F<sub>1</sub>d cos &phi;<sub>1</sub>; W<sub>2</sub> = F<sub>2</sub>d cos &phi;<sub>2</sub></li>
+                        <li>W<sub>net</sub> = W<sub>1</sub> + W<sub>2</sub> = &Delta;K</li>
+                        <li>Compare to alternative: find <strong>F</strong><sub>net</sub> first, then compute W<sub>net</sub> = F<sub>net</sub>d cos &phi;<sub>net</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 4: Work Done Along a Ramp</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Work by Applied Force, Gravity, Friction, and Normal on an Incline</h4>
+                    <p>A block is pushed up a rough ramp by an applied force. This video calculates the work done by each of the four forces (applied, gravity, friction, normal) individually, then sums them and applies W<sub>net</sub> = &Delta;K to find the final speed.</p>
+                    <ul>
+                        <li>Applied force work: W<sub>app</sub> = F<sub>app</sub>d cos &phi;<sub>app</sub></li>
+                        <li>Gravity work: W<sub>g</sub> = &minus;mgd sin &theta; (component of weight along ramp &times; distance)</li>
+                        <li>Friction work: W<sub>f</sub> = &minus;&mu;<sub>k</sub>mg cos &theta; &middot; d (always negative, opposes motion)</li>
+                        <li>Normal force work: W<sub>N</sub> = 0 (perpendicular to motion)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 5: Work Done on an Accelerating Elevator Cab</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Elevator Work — Cable Tension, Gravity, and &Delta;K</h4>
+                    <p>An elevator cab accelerates upward over a given displacement. This video finds the work done by the cable tension and by gravity, verifies that their sum equals &Delta;K, and finds the speed at the end of the acceleration phase.</p>
+                    <ul>
+                        <li>Find tension using Newton's 2nd Law: T &minus; mg = ma &rarr; T = m(g + a)</li>
+                        <li>W<sub>T</sub> = Td (positive, upward force &times; upward displacement)</li>
+                        <li>W<sub>g</sub> = &minus;mgd (negative, gravity opposes upward motion)</li>
+                        <li>W<sub>net</sub> = W<sub>T</sub> + W<sub>g</sub> = mad = &Delta;K ✓</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 6: Work Done in Lifting — Paul Anderson</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Work Against Gravity — Weightlifting Application</h4>
+                    <p>A real-world application: calculating the work done lifting a heavy load through a vertical distance. This video emphasizes that work done against gravity equals mgh regardless of path, and connects this to energy requirements in athletic and engineering contexts.</p>
+                    <ul>
+                        <li>W<sub>app</sub> = mgh (lifting at constant speed, applied force = weight)</li>
+                        <li>If accelerating: W<sub>app</sub> = m(g + a)h (more work required)</li>
+                        <li>Path independence: work done against gravity depends only on height, not horizontal displacement</li>
+                        <li>Practical check: compare to energy content of food (1 kcal = 4186 J)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 7: Work Done by a Spring</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Spring Work via Integration — Stretch and Compression</h4>
+                    <p>A spring (spring constant k) is compressed or stretched from one position to another. This video applies the spring work integral W<sub>s</sub> = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup> to two cases: compressing from equilibrium and further compressing from an already-compressed state.</p>
+                    <ul>
+                        <li>From equilibrium (x<sub>i</sub> = 0): W<sub>s</sub> = &minus;&frac12;kx<sub>f</sub><sup>2</sup> (negative: spring opposes compression)</li>
+                        <li>Between two non-zero positions: W<sub>s</sub> = &frac12;k(x<sub>i</sub><sup>2</sup> &minus; x<sub>f</sub><sup>2</sup>)</li>
+                        <li>Sign interpretation: spring does negative work when moving away from equilibrium, positive work when returning toward it</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 8: Work Done by Spring to Change Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Applying W<sub>net</sub> = &Delta;K with Spring Work</h4>
+                    <p>A block attached to a spring is released from rest at a compressed position. This video applies the Work-Kinetic Energy Theorem with spring work as the only force doing work (frictionless surface, normal force perpendicular) to find the block's speed when the spring returns to equilibrium.</p>
+                    <ul>
+                        <li>At release (x<sub>i</sub> = &minus;x<sub>0</sub>) to equilibrium (x<sub>f</sub> = 0): W<sub>s</sub> = &frac12;kx<sub>0</sub><sup>2</sup> (positive — spring releases energy)</li>
+                        <li>W<sub>net</sub> = W<sub>s</sub> = &Delta;K = &frac12;mv<sub>f</sub><sup>2</sup> &minus; 0</li>
+                        <li>v<sub>f</sub> = x<sub>0</sub>&radic;(k/m) — this is the maximum speed for a spring-block system</li>
+                        <li>Connection to simple harmonic motion: v<sub>max</sub> = A&omega; (previewed here, detailed in Module 7)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 9: Work Calculated by Graphical Integration</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Estimating Work from an F vs. x Graph</h4>
+                    <p>Given a graph of a variable force F(x) versus position x, this video estimates the work done by counting grid squares, using geometric decomposition (rectangles + triangles), and comparing to the exact analytical result where possible.</p>
+                    <ul>
+                        <li>Identify regions: divide the graph into simple geometric shapes</li>
+                        <li>Area of each region = work done by that portion of the force profile</li>
+                        <li>Watch signs: area above the x-axis is positive work; below is negative work</li>
+                        <li>Total work = algebraic sum of all region areas</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 10: Work, Two-Dimensional Integration</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Work by a 2D Variable Force Along a Curved Path</h4>
+                    <p>A force with both x and y components varies along a two-dimensional path. This video evaluates the work integral W = &int;<strong>F</strong> &middot; d<strong>r</strong> = &int;(F<sub>x</sub>dx + F<sub>y</sub>dy) by parameterizing the path and integrating each component separately.</p>
+                    <ul>
+                        <li>Set up: W = &int;<sub>path</sub> (F<sub>x</sub>dx + F<sub>y</sub>dy)</li>
+                        <li>Parameterize the path: express y as a function of x (or use a parameter t)</li>
+                        <li>Substitute and integrate each term independently</li>
+                        <li>Check whether the result depends on the path chosen (non-conservative) or only on endpoints (conservative)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 11: Kinetic Energy — Train Crash</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Comparing Kinetic Energies — Mass vs. Speed</h4>
+                    <p>This problem compares the kinetic energies of two objects (e.g., a slow heavy train and a fast light car) to illustrate how K = &frac12;mv<sup>2</sup> depends more sensitively on speed than on mass. It also applies the Work-Kinetic Energy Theorem to find the braking force needed to stop each.</p>
+                    <ul>
+                        <li>K = &frac12;mv<sup>2</sup>: doubling mass doubles K; doubling speed quadruples K</li>
+                        <li>Stopping: W<sub>braking</sub> = &minus;&Delta;K = &minus;K<sub>i</sub> (bring to rest); W = &minus;Fd &rarr; F = K<sub>i</sub>/d</li>
+                        <li>Compare stopping distances for different initial kinetic energies at the same braking force</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 12: Power — Force and Velocity / Integrating Power to Get Speed</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Power Output at a Given Speed; Speed from Integrated Power (Funny Car)</h4>
+                    <p>Two power problems in one video: (1) finding the instantaneous power output of an engine given force and velocity using P = Fv; (2) integrating a time-dependent power function P(t) to find total work, then using W<sub>net</sub> = &Delta;K to find the final speed of a dragster ("funny car") from rest.</p>
+                    <ul>
+                        <li>Part 1: P = Fv — given F and v at a specific instant, calculate instantaneous power</li>
+                        <li>Part 2: W = &int;<sub>0</sub><sup>t</sup> P(t') dt' — integrate P(t) to get total work delivered</li>
+                        <li>Apply W<sub>net</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &minus; 0 &rarr; v<sub>f</sub> = &radic;(2W/m)</li>
+                        <li>Real-world context: NHRA Top Fuel/Funny Car performance data</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- WRITTEN PRACTICE PROBLEMS -->
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1 &mdash; Work by Multiple Forces and Final Speed</h4>
+        <p><strong>A 4.00-kg block starts from rest on a frictionless horizontal surface. A constant force F<sub>1</sub> = 12.0 N acts at 0° (along the direction of motion) and a second constant force F<sub>2</sub> = 6.00 N acts at 60.0° above the direction of motion. Both forces act over a displacement d = 5.00 m. (a) Find the work done by each force. (b) Find the final speed of the block.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 4.00 kg, v<sub>i</sub> = 0, F<sub>1</sub> = 12.0 N at &phi;<sub>1</sub> = 0°, F<sub>2</sub> = 6.00 N at &phi;<sub>2</sub> = 60.0°, d = 5.00 m, frictionless surface</p>
+                    <p><strong>Part (a) &mdash; Work by each force:</strong></p>
+                    <p style="padding-left: 2em;">W<sub>1</sub> = F<sub>1</sub>d cos &phi;<sub>1</sub> = (12.0)(5.00) cos 0° = (12.0)(5.00)(1) = <strong>60.0 J</strong></p>
+                    <p style="padding-left: 2em;">W<sub>2</sub> = F<sub>2</sub>d cos &phi;<sub>2</sub> = (6.00)(5.00) cos 60.0° = (6.00)(5.00)(0.500) = <strong>15.0 J</strong></p>
+                    <p style="padding-left: 2em;">W<sub>N</sub> = 0 (normal force perpendicular to motion)</p>
+                    <p style="padding-left: 2em;">W<sub>g</sub> = 0 (gravity perpendicular to horizontal motion)</p>
+                    <p><strong>Part (b) &mdash; Final speed:</strong></p>
+                    <p style="padding-left: 2em;">W<sub>net</sub> = W<sub>1</sub> + W<sub>2</sub> = 60.0 + 15.0 = 75.0 J</p>
+                    <p style="padding-left: 2em;">W<sub>net</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &minus; 0 &rarr; v<sub>f</sub> = &radic;(2W<sub>net</sub>/m) = &radic;(2 &times; 75.0 / 4.00)</p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = &radic;(37.5) = <strong>6.12 m/s</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2 &mdash; Spring Work and Final Speed</h4>
+        <p><strong>A 2.50-kg block rests on a frictionless surface and is connected to a spring with spring constant k = 800 N/m. The spring is compressed 0.120 m from equilibrium and released from rest. (a) Calculate the work done by the spring as the block moves from x = &minus;0.120 m to x = 0. (b) Find the speed of the block at x = 0.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 2.50 kg, k = 800 N/m, x<sub>i</sub> = &minus;0.120 m, x<sub>f</sub> = 0, v<sub>i</sub> = 0</p>
+                    <p><strong>Part (a) &mdash; Spring work:</strong></p>
+                    <p style="padding-left: 2em;">W<sub>s</sub> = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup> = &frac12;(800)(0.120)<sup>2</sup> &minus; &frac12;(800)(0)<sup>2</sup></p>
+                    <p style="padding-left: 2em;">W<sub>s</sub> = &frac12;(800)(0.0144) &minus; 0 = 400 &times; 0.0144 = <strong>5.76 J</strong></p>
+                    <p style="padding-left: 2em;"><em>Positive: the spring pushes the block toward equilibrium — force and displacement are in the same direction.</em></p>
+                    <p><strong>Part (b) &mdash; Speed at x = 0:</strong></p>
+                    <p style="padding-left: 2em;">W<sub>net</sub> = W<sub>s</sub> = 5.76 J (normal force and gravity do zero work on horizontal surface)</p>
+                    <p style="padding-left: 2em;">W<sub>net</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &rarr; v<sub>f</sub> = &radic;(2W<sub>net</sub>/m) = &radic;(2 &times; 5.76 / 2.50)</p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = &radic;(4.608) = <strong>2.15 m/s</strong></p>
+                    <p style="padding-left: 2em;"><em>Check using v<sub>max</sub> = x<sub>0</sub>&radic;(k/m) = 0.120&radic;(800/2.50) = 0.120 &times; 17.9 = 2.15 m/s ✓</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3 &mdash; Work by a Variable Force via Integration</h4>
+        <p><strong>A variable force acts on a 3.00-kg object along the x-axis: F(x) = (3.00x<sup>2</sup> &minus; 2.00x) N, where x is in meters. The object starts at x<sub>i</sub> = 1.00 m with speed 2.00 m/s. (a) Calculate the work done by this force as the object moves from x = 1.00 m to x = 3.00 m. (b) Find the object's speed at x = 3.00 m.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 3.00 kg, F(x) = (3.00x<sup>2</sup> &minus; 2.00x) N, x<sub>i</sub> = 1.00 m, x<sub>f</sub> = 3.00 m, v<sub>i</sub> = 2.00 m/s</p>
+                    <p><strong>Part (a) &mdash; Work by variable force:</strong></p>
+                    <p style="padding-left: 2em;">W = &int;<sub>1.00</sub><sup>3.00</sup> (3.00x<sup>2</sup> &minus; 2.00x) dx</p>
+                    <p style="padding-left: 2em;">= [x<sup>3</sup> &minus; x<sup>2</sup>]<sub>1.00</sub><sup>3.00</sup></p>
+                    <p style="padding-left: 2em;">= [(3.00)<sup>3</sup> &minus; (3.00)<sup>2</sup>] &minus; [(1.00)<sup>3</sup> &minus; (1.00)<sup>2</sup>]</p>
+                    <p style="padding-left: 2em;">= [27.0 &minus; 9.00] &minus; [1.00 &minus; 1.00]</p>
+                    <p style="padding-left: 2em;">= 18.0 &minus; 0 = <strong>18.0 J</strong></p>
+                    <p><strong>Part (b) &mdash; Speed at x = 3.00 m:</strong></p>
+                    <p style="padding-left: 2em;">K<sub>i</sub> = &frac12;mv<sub>i</sub><sup>2</sup> = &frac12;(3.00)(2.00)<sup>2</sup> = 6.00 J</p>
+                    <p style="padding-left: 2em;">W<sub>net</sub> = &Delta;K = K<sub>f</sub> &minus; K<sub>i</sub> &rarr; K<sub>f</sub> = K<sub>i</sub> + W = 6.00 + 18.0 = 24.0 J</p>
+                    <p style="padding-left: 2em;">K<sub>f</sub> = &frac12;mv<sub>f</sub><sup>2</sup> &rarr; v<sub>f</sub> = &radic;(2K<sub>f</sub>/m) = &radic;(2 &times; 24.0 / 3.00) = &radic;(16.0) = <strong>4.00 m/s</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to the next lesson, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate kinetic energy K = &frac12;mv<sup>2</sup> for an object with given mass and speed.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate work done by a constant force using W = Fd cos &phi; and identify when W = 0.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply the Work-Kinetic Energy Theorem W<sub>net</sub> = &Delta;K to find the final speed of an object.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate work done by gravity: W<sub>g</sub> = &minus;mg&Delta;y (path-independent).</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate work done by a spring force: W<sub>s</sub> = &frac12;kx<sub>i</sub><sup>2</sup> &minus; &frac12;kx<sub>f</sub><sup>2</sup>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Evaluate the work done by a variable force using a definite integral: W = &int;F(x) dx.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Estimate work graphically from an F vs. x graph by computing the area under the curve.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate average power P<sub>avg</sub> = W/&Delta;t and instantaneous power P = <strong>F</strong> &middot; <strong>v</strong>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Integrate a power function P(t) to find total work: W = &int;P dt.</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Work and kinetic energy are the entry point to all of energy physics. In the next lesson you will add potential energy and the full conservation of energy framework — the most powerful problem-solving tool in all of classical mechanics.</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>
