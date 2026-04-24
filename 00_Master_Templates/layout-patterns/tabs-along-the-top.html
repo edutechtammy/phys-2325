@@ -64,11 +64,30 @@
 <!-- SIMPLE ONE - COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
 <!-- ============================================= -->
 
+<!-- ============================================================
+     TABS-ALONG-THE-TOP: CLASS REFERENCE
+     ================================================================
+     dp-panels-wrapper    — required outer wrapper for all panel types
+     dp-tabs-pills        — renders tabs as pill buttons along the top
+                            (use instead of dp-accordion-default or
+                             dp-next-prev-tabs dp-tabs-buttons-vertical)
+     dp-panel-active-color-dp-primary
+                          — REQUIRED: sets the ACTIVE (selected) tab
+                            to Texas Blue (#1d2757). Without this the
+                            active tab has no highlight color.
+     dp-panel-hover-color-dp-secondary
+                          — sets hover state to the secondary brand color.
+     dp-panel-color-dp-primary
+                          — optional: sets INACTIVE tab background color.
+                            Omit for default unstyled inactive tabs.
+
+     USAGE RULE: Every dp-panels-wrapper using dp-tabs-pills MUST include
+     dp-panel-active-color-dp-primary or the active tab will be invisible.
+     ============================================================ -->
+
 <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
         <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> University-Level Conceptual Analysis</h3>
-        <p>------ BEGIN PANEL</p>
         <div class="dp-content-block">
-            <p>&nbsp;</p>
             <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
                 <div class="dp-panel-group">
                     <h3 class="dp-panel-heading ">Tab 1</h3>
