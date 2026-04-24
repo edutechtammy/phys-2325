@@ -233,7 +233,7 @@ When starting a new lesson build, provide the AI with these files as context:
 ### Module 4 — Center of Mass and Linear Momentum
 | Lesson | Title | Status |
 |---|---|---|
-| M4L1 | Impulse, Conservation of Momentum, and Center of Gravity | 🔲 Not started |
+| M4L1 | Impulse, Conservation of Momentum, and Center of Mass | ✅ Complete |
 
 ### Module 5 — Equilibrium and Elasticity
 | Lesson | Title | Status |

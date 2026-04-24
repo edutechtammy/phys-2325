@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: M4L1 Impulse, Conservation of Momentum, and Center of Mass</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 4: Center of Mass and Linear Momentum</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M4L1 Impulse, Conservation of Momentum, and Center of Mass</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"For every action there is an equal and opposite reaction — and the total momentum of the universe never changes."</em></span><br /><span>&mdash;&nbsp;Isaac Newton (paraphrase)</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Energy gave you one powerful conservation law. Now you have a second: <strong>linear momentum</strong>. The momentum of an object is <strong>p</strong> = m<strong>v</strong> — a vector quantity that captures both how much mass is moving and how fast. When a net force acts over a time interval, it delivers an <em>impulse</em> <strong>J</strong> = <strong>F</strong>&Delta;t that changes momentum: the impulse-momentum theorem. When objects in a system interact only with each other — no net external force — the total momentum of the system is conserved. This law applies to every collision, explosion, and interaction in mechanics. You will also find the <em>center of mass</em> of a system: the single point that moves as if all the system's mass were concentrated there, obeying Newton's second law exactly as a single particle would.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="Newton's cradle with five steel balls suspended on strings — the classic demonstration of conservation of momentum and energy in elastic collisions." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Newton's cradle: a beautiful demonstration of both conservation of momentum and (approximately) conservation of kinetic energy.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC4.1 Apply the impulse-momentum theorem and conservation of linear momentum to analyze interactions between objects</strong></p>
+                    <p style="padding-left: 40px;">★ LO4.1.1 Define linear momentum as a vector: <strong>p</strong> = m<strong>v</strong>; calculate the momentum of a single object and of a system of objects</p>
+                    <p style="padding-left: 40px;">★ LO4.1.2 State the impulse-momentum theorem and calculate the impulse delivered by a constant or average force: <strong>J</strong> = &Delta;<strong>p</strong> = <strong>F</strong><sub>avg</sub>&Delta;t</p>
+                    <p style="padding-left: 40px;">★ LO4.1.3 State the law of conservation of linear momentum and identify the conditions under which it holds; apply it to one-dimensional and two-dimensional interactions</p>
+                    <p style="padding-left: 40px;">★ LO4.1.4 Distinguish between elastic, perfectly inelastic, and inelastic collisions; apply both momentum conservation and energy analysis to classify and solve collision problems</p>
+                    <p style="padding-left: 40px;">★ LO4.1.5 Solve two-dimensional collision problems using vector components of momentum</p>
+                    <p style="padding-left: 40px;">★ LO4.1.6 Locate the center of mass of a system of discrete particles or a continuous object; describe the motion of the center of mass under a net external force</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all six sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-1-linear-momentum" target="_blank" rel="noopener">9.1 Linear Momentum</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions" target="_blank" rel="noopener">9.2 Impulse and Collisions</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-3-conservation-of-linear-momentum" target="_blank" rel="noopener">9.3 Conservation of Linear Momentum</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-4-types-of-collisions" target="_blank" rel="noopener">9.4 Types of Collisions</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-5-collisions-in-multiple-dimensions" target="_blank" rel="noopener">9.5 Collisions in Multiple Dimensions</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/9-6-center-of-mass" target="_blank" rel="noopener">9.6 Center of Mass</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want additional practice with momentum, impulse, and collisions? These free resources complement the reading.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://phet.colorado.edu/en/simulations/collision-lab" target="_blank" rel="noopener">PhET: Collision Lab</a> &ndash; Explore 1D and 2D collisions; adjust masses and velocities; observe elastic, inelastic, and perfectly inelastic cases with real-time momentum and energy bars.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/momentum/Lesson-2/The-Law-of-Momentum-Conservation" target="_blank" rel="noopener">Physics Classroom: Conservation of Momentum</a> &ndash; Conceptual explanation with worked examples and practice problems.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/linear-momentum/momentum-tutorial/a/what-is-conservation-of-momentum" target="_blank" rel="noopener">Khan Academy: Conservation of Momentum</a> &ndash; Article plus video tutorial on applying the law of conservation of momentum.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/9-key-terms" target="_blank" rel="noopener">OpenStax Chapter 9 Key Terms</a> &ndash; Glossary for all momentum, impulse, and collision vocabulary.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/9-key-equations" target="_blank" rel="noopener">OpenStax Chapter 9 Key Equations</a> &ndash; Quick reference for all formulas from this lesson.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: All video files are pending upload to Canvas.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are uploaded.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Work through the pre-lecture videos for each reading section first, then watch the illustration and mini-lectures for deeper problem-solving strategies.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- ──────────────── PRE-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; 9.1 Linear Momentum</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Defining Linear Momentum — A Vector Quantity</h4>
+                    <p>This video introduces linear momentum <strong>p</strong> = m<strong>v</strong> as a vector property of a moving object. It develops the connection between Newton's second law and momentum — F<sub>net</sub> = d<strong>p</strong>/dt — establishing that force is the rate of change of momentum, not merely mass times acceleration.</p>
+                    <ul>
+                        <li>Linear momentum: <strong>p</strong> = m<strong>v</strong> — units: kg&middot;m/s (= N&middot;s)</li>
+                        <li>Momentum is a vector: direction is the same as the velocity direction</li>
+                        <li>Newton's second law in momentum form: <strong>F</strong><sub>net</sub> = d<strong>p</strong>/dt (the more general statement)</li>
+                        <li>System momentum: <strong>p</strong><sub>total</sub> = &Sigma;m<sub>i</sub><strong>v</strong><sub>i</sub> — the vector sum of all individual momenta</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.1 Linear Momentum --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Pre-Lecture &mdash; 9.2 Impulse and Collisions</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: The Impulse-Momentum Theorem — J = &Delta;p</h4>
+                    <p>When a force acts over a time interval &Delta;t, it delivers an impulse <strong>J</strong> = <strong>F</strong><sub>avg</sub>&Delta;t that equals the change in momentum of the object. This video derives the impulse-momentum theorem from Newton's second law and shows how to apply it to both constant-force and variable-force situations using the area under an F-t graph.</p>
+                    <ul>
+                        <li>Impulse: <strong>J</strong> = <strong>F</strong><sub>avg</sub>&Delta;t = &Delta;<strong>p</strong> = m<strong>v</strong><sub>f</sub> &minus; m<strong>v</strong><sub>i</sub></li>
+                        <li>Variable force: J = &int;F(t)dt — area under the F vs. t curve</li>
+                        <li>Average force from a collision: F<sub>avg</sub> = &Delta;p / &Delta;t — short collision time &rarr; very large average force</li>
+                        <li>Applications: airbags, helmets, crumple zones — extend &Delta;t to reduce F<sub>avg</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.2 Impulse and Collisions --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Pre-Lecture &mdash; 9.3 Conservation of Linear Momentum</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: When the Net External Force Is Zero, Total Momentum Is Constant</h4>
+                    <p>The law of conservation of linear momentum is one of the most powerful and broadly applicable laws in physics. This video derives it from Newton's third law, defines the conditions required (isolated system or negligible external forces), and shows how to apply it to a system of two or more objects.</p>
+                    <ul>
+                        <li>Isolated system: &Sigma;<strong>F</strong><sub>ext</sub> = 0 &rarr; <strong>p</strong><sub>total</sub> = constant</li>
+                        <li>For a two-body system: m<sub>1</sub><strong>v</strong><sub>1i</sub> + m<sub>2</sub><strong>v</strong><sub>2i</sub> = m<sub>1</sub><strong>v</strong><sub>1f</sub> + m<sub>2</sub><strong>v</strong><sub>2f</sub></li>
+                        <li>Explosion (reverse collision): objects start at rest (<strong>p</strong><sub>total</sub> = 0); after explosion, momenta are equal and opposite</li>
+                        <li>Key: apply conservation as a vector equation — treat x and y components separately in 2D</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.3 Conservation of Linear Momentum --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Pre-Lecture &mdash; 9.4 Types of Collisions</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Elastic, Inelastic, and Perfectly Inelastic — Classifying Collisions by KE</h4>
+                    <p>Momentum is conserved in all collisions (if the system is isolated). What distinguishes collision types is whether kinetic energy is also conserved. This video defines the three types, derives the special result for 1D elastic collisions between unequal masses, and shows how to identify collision type from the problem statement.</p>
+                    <ul>
+                        <li><strong>Elastic:</strong> momentum AND kinetic energy conserved; objects bounce off — use two equations for two unknowns</li>
+                        <li><strong>Perfectly inelastic:</strong> objects stick together after collision (v<sub>1f</sub> = v<sub>2f</sub> = v<sub>f</sub>); maximum KE lost — use one momentum equation</li>
+                        <li><strong>Inelastic:</strong> momentum conserved; some (not all) KE lost — only momentum equation available unless KE loss given</li>
+                        <li>1D elastic result: v<sub>1f</sub> = [(m<sub>1</sub>&minus;m<sub>2</sub>)/(m<sub>1</sub>+m<sub>2</sub>)]v<sub>1i</sub>; v<sub>2f</sub> = [2m<sub>1</sub>/(m<sub>1</sub>+m<sub>2</sub>)]v<sub>1i</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.4 Types of Collisions --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Pre-Lecture &mdash; 9.5 Collisions in Multiple Dimensions</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: 2D Collisions — Conservation of Momentum as Two Scalar Equations</h4>
+                    <p>In two or three dimensions, momentum conservation is a vector law and must be applied to each component separately. This video shows how to set up the x and y momentum equations for a 2D collision, and works through the geometry of finding final speeds and angles when two objects collide off-axis.</p>
+                    <ul>
+                        <li>x-component: m<sub>1</sub>v<sub>1ix</sub> + m<sub>2</sub>v<sub>2ix</sub> = m<sub>1</sub>v<sub>1fx</sub> + m<sub>2</sub>v<sub>2fx</sub></li>
+                        <li>y-component: m<sub>1</sub>v<sub>1iy</sub> + m<sub>2</sub>v<sub>2iy</sub> = m<sub>1</sub>v<sub>1fy</sub> + m<sub>2</sub>v<sub>2fy</sub></li>
+                        <li>Common setup: one object initially at rest, collision at an angle — find final speeds and angles</li>
+                        <li>Elastic 2D: use both component equations plus KE conservation — three equations for four unknowns (need one more piece of information, e.g., a final angle)</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.5 Collisions in Multiple Dimensions --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 6 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Pre-Lecture &mdash; 9.6 Center of Mass</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: The Center of Mass — The Point That Obeys Newton's Laws</h4>
+                    <p>The center of mass (CM) of a system is the mass-weighted average position of all the particles in the system. It is the single point that moves as if all the system's mass were concentrated there and all external forces acted on it. This video derives the formula for CM position, velocity, and the CM form of Newton's second law.</p>
+                    <ul>
+                        <li>CM position: x<sub>cm</sub> = (&Sigma;m<sub>i</sub>x<sub>i</sub>) / M<sub>total</sub> — generalize to y and z components</li>
+                        <li>CM velocity: <strong>v</strong><sub>cm</sub> = <strong>p</strong><sub>total</sub> / M<sub>total</sub></li>
+                        <li>Newton's second law for a system: <strong>F</strong><sub>net,ext</sub> = M<sub>total</sub><strong>a</strong><sub>cm</sub></li>
+                        <li>Key consequence: internal forces (Newton's 3rd law pairs) cancel — only external forces move the CM</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 9.6 Center of Mass --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── ILLUSTRATION ──────────────── -->
+
+            <!-- VIDEO 7 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 7: Illustration &mdash; Newton's Cradle</h3>
+                <div class="dp-panel-content">
+                    <h4>Video Illustration: Conservation of Momentum and Energy in Newton's Cradle</h4>
+                    <p>Newton's cradle is one of the most visually striking demonstrations of both conservation of momentum and conservation of kinetic energy (elastic collision) in physics. This illustration video analyzes what happens when one, two, or three balls are lifted and released, and explains why the same number of balls always fly out the other side — not one ball moving twice as fast, for example.</p>
+                    <ul>
+                        <li>One ball in, one ball out: the only solution that conserves both momentum AND kinetic energy simultaneously</li>
+                        <li>One ball moving at 2v cannot substitute for two balls moving at v — momentum is conserved but KE is not (KE = &frac12;m(2v)<sup>2</sup> &ne; 2 &times; &frac12;mv<sup>2</sup>)</li>
+                        <li>Real cradle: slight inelasticity causes gradual amplitude reduction over many swings</li>
+                        <li>Deeper physics: the wave-like propagation of force through touching spheres — this is a rich problem in materials physics</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Video Illustration — Newton's Cradle --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── MINI-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 8 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 8: Mini-Lecture &mdash; Impulse and Change in Momentum</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Calculating Impulse — Constant Force, Average Force, and F-t Graph</h4>
+                    <p>This video works complete examples of the impulse-momentum theorem: (1) a ball bouncing off a wall — find the average force given the contact time; (2) a variable force given as a function of time — find impulse as the integral &int;F(t)dt; (3) reading a force-time graph — find impulse as the area under the curve.</p>
+                    <ul>
+                        <li>Ball bouncing off wall: <strong>J</strong> = m<strong>v</strong><sub>f</sub> &minus; m<strong>v</strong><sub>i</sub> — careful with signs (velocity reverses direction)</li>
+                        <li>Average force: F<sub>avg</sub> = J / &Delta;t — shows why short collision times produce enormous forces</li>
+                        <li>F-t graph: impulse = area (triangle, rectangle, or trapezoid — use geometry)</li>
+                        <li>Units check: N&middot;s = kg&middot;m/s ✓ — impulse and momentum have the same units</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 9 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 9: Mini-Lecture &mdash; Conservation of Momentum in 1D Collisions</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Setting Up and Solving 1D Collision and Explosion Problems</h4>
+                    <p>This video works through the two most common 1D momentum problems side by side: a perfectly inelastic collision (two carts stick together) and an explosion (a stationary cart splits into two pieces moving in opposite directions). The emphasis is on the systematic setup: define the system, check for external forces, write the conservation equation with correct signs.</p>
+                    <ul>
+                        <li>Perfectly inelastic: m<sub>1</sub>v<sub>1i</sub> + m<sub>2</sub>v<sub>2i</sub> = (m<sub>1</sub> + m<sub>2</sub>)v<sub>f</sub> — one equation, one unknown</li>
+                        <li>Explosion: 0 = m<sub>1</sub>v<sub>1f</sub> + m<sub>2</sub>v<sub>2f</sub> &rarr; the two fragments move in opposite directions; their momenta are equal in magnitude</li>
+                        <li>Sign convention: choose positive direction before writing the equation; stick to it throughout</li>
+                        <li>Check: does the answer make physical sense? (Conservation of momentum is an exact law — there is no "approximately correct")</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 10 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 10: Mini-Lecture &mdash; Elastic and Perfectly Inelastic Collisions</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Two-Equation System for Elastic Collisions; KE Lost in Perfectly Inelastic Collisions</h4>
+                    <p>This video solves a 1D elastic collision between two objects of different masses — setting up the two simultaneous equations (momentum and kinetic energy) and using the derived shortcut formulas. It then finds the kinetic energy lost in a perfectly inelastic collision and identifies where that energy goes (deformation, heat, sound).</p>
+                    <ul>
+                        <li>Elastic: use p conservation AND KE conservation; solve simultaneously for v<sub>1f</sub> and v<sub>2f</sub></li>
+                        <li>Shortcut formulas (equal masses): v<sub>1f</sub> = 0, v<sub>2f</sub> = v<sub>1i</sub> — objects exchange velocities</li>
+                        <li>Perfectly inelastic: KE lost = K<sub>i</sub> &minus; K<sub>f</sub> = &frac12;&mu;v<sub>rel</sub><sup>2</sup>, where &mu; = m<sub>1</sub>m<sub>2</sub>/(m<sub>1</sub>+m<sub>2</sub>) is the reduced mass</li>
+                        <li>Identifying collision type: if objects stick &rarr; perfectly inelastic; if given as "elastic" &rarr; use both conservation laws; anything else &rarr; inelastic (only momentum conserved)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 11 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 11: Mini-Lecture &mdash; Center of Mass of a System</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Calculating the Center of Mass and Describing Its Motion</h4>
+                    <p>This video calculates the center of mass position for a system of discrete particles and for a uniform extended object. It then tracks how the CM moves under a net external force — and shows that even in an explosion where pieces fly apart, the CM continues on its original trajectory.</p>
+                    <ul>
+                        <li>Discrete particles: x<sub>cm</sub> = (m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub> + &hellip;) / (m<sub>1</sub> + m<sub>2</sub> + &hellip;) — same formula for y<sub>cm</sub></li>
+                        <li>Uniform object with a hole: treat as full object minus the hole (use negative mass for the missing piece)</li>
+                        <li>CM motion: <strong>F</strong><sub>net,ext</sub> = M<strong>a</strong><sub>cm</sub> — only external forces matter; internal forces cannot move the CM</li>
+                        <li>Example: a grenade explodes in flight — the CM of all the fragments continues along the original parabolic trajectory</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Strategy: Solving a Conservation of Momentum Problem</h4>
+        <p>Arrange the following steps in the correct order for applying conservation of linear momentum to a collision or explosion problem.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Define the system and identify all objects involved in the interaction.</li>
+                <li>Check whether the net external force on the system is zero (or negligible during the collision).</li>
+                <li>Choose a positive direction and a consistent sign convention.</li>
+                <li>Identify the collision type (elastic, perfectly inelastic, or inelastic) to determine how many conservation equations are available.</li>
+                <li>Write the momentum conservation equation: <strong>p</strong><sub>total,i</sub> = <strong>p</strong><sub>total,f</sub>.</li>
+                <li>Substitute known values and solve for the unknown velocity (or velocities).</li>
+                <li>Check: verify units (kg&middot;m/s), confirm direction is physically reasonable, and optionally verify KE change is consistent with collision type.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> When Is Linear Momentum Conserved?</h4>
+        <p>Select <strong>all</strong> scenarios in which the total linear momentum of the system is <strong>conserved</strong>.</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all scenarios where linear momentum is conserved.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">Two ice skaters push off each other on a frictionless surface (net external horizontal force = 0).</li>
+                <li class="dp-sa-correct">Two carts collide on a frictionless air track.</li>
+                <li class="dp-sa-correct">A rifle and bullet before and after firing (treating rifle + bullet as the system, ignoring the shooter).</li>
+                <li class="dp-sa-correct">Two billiard balls colliding on a frictionless table.</li>
+                <li class="dp-sa-correct">A grenade exploding in mid-flight (during the brief explosion, internal forces &gg; gravity).</li>
+                <li>A ball rolling along the floor gradually coming to rest due to friction.</li>
+                <li>A car braking to a stop (the road exerts an external friction force on the system).</li>
+                <li>A rocket accelerating in space (the rocket exhausts mass — single-object momentum is not conserved, but rocket + exhaust momentum is).</li>
+            </ul>
+        </div>
+
+        <!-- 7C: SORT ITEMS ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-th-large"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort: Elastic, Perfectly Inelastic, or Inelastic?</h4>
+        <p>Sort each collision scenario into the correct category based on the type of collision described.</p>
+        <div class="dp-sort-items dp-si-sa dp-si-rounded dp-si-outline" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h3 class="dp-has-icon" style="color: white;"><i class="fas fa-th-large"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Items</h3>
+            <p style="color: white; border: none; background: transparent;">Drag each item to the correct category.</p>
+            <div class="dp-sort-columns">
+                <div class="dp-sort-column">
+                    <h4 style="color: white;">Elastic</h4>
+                    <ul class="dp-sort-list dp-sort-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 10px; background: white; min-height: 80px;">
+                        <li data-dp-sort-group="elastic">Two steel billiard balls collide and bounce off each other with no measurable loss of kinetic energy.</li>
+                        <li data-dp-sort-group="elastic">A superball dropped on a hard floor bounces back to nearly the same height.</li>
+                        <li data-dp-sort-group="elastic">Two protons collide in a particle accelerator with no energy loss to internal excitation.</li>
+                    </ul>
+                </div>
+                <div class="dp-sort-column">
+                    <h4 style="color: white;">Perfectly Inelastic</h4>
+                    <ul class="dp-sort-list dp-sort-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 10px; background: white; min-height: 80px;">
+                        <li data-dp-sort-group="perfectly-inelastic">A football player tackles another player and they move together after the hit.</li>
+                        <li data-dp-sort-group="perfectly-inelastic">A ballistic pendulum: a bullet embeds itself in a hanging block of wood.</li>
+                        <li data-dp-sort-group="perfectly-inelastic">Two train cars couple together on contact and continue moving as one unit.</li>
+                    </ul>
+                </div>
+                <div class="dp-sort-column">
+                    <h4 style="color: white;">Inelastic (but not perfectly)</h4>
+                    <ul class="dp-sort-list dp-sort-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 10px; background: white; min-height: 80px;">
+                        <li data-dp-sort-group="inelastic">Two cars collide and bounce off each other, but both are dented — some kinetic energy is lost.</li>
+                        <li data-dp-sort-group="inelastic">A rubber ball bounces off the floor and returns to 80% of its original height.</li>
+                        <li data-dp-sort-group="inelastic">Two carts collide and separate, but with less relative speed than before — some energy was lost to heat and sound.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7D: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding of momentum, impulse, and center of mass.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A 0.15-kg baseball moving at 40 m/s is hit by a bat and reverses direction at 50 m/s. The contact time is 1.2 ms. What is the average force exerted by the bat?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Taking initial direction as positive: v<sub>i</sub> = +40 m/s, v<sub>f</sub> = &minus;50 m/s. <br>&Delta;p = m(v<sub>f</sub> &minus; v<sub>i</sub>) = (0.15)(&minus;50 &minus; 40) = &minus;13.5 kg&middot;m/s. <br>F<sub>avg</sub> = &Delta;p / &Delta;t = &minus;13.5 / (1.2&times;10<sup>&minus;3</sup>) = <strong>&minus;11,250 N</strong> (direction: opposite to initial motion). Magnitude: <strong>11.3 kN</strong> — the bat exerts enormous force over a very short time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Can kinetic energy be conserved in a perfectly inelastic collision? Can momentum be conserved in an elastic collision?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>No</strong> to the first: by definition, perfectly inelastic means the objects stick together — this always involves KE loss (deformation, heat, sound). The <em>only</em> special case where no KE is lost is if both objects were already at the same velocity (then &Delta;v = 0 — trivial). <strong>Yes</strong> to the second: in an elastic collision, both momentum AND kinetic energy are conserved — that is precisely the definition of elastic.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Two ice skaters initially at rest push off each other. Skater A (60 kg) moves left at 2.0 m/s. What is the speed of Skater B (80 kg)?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Initial total momentum = 0 (both at rest). Conservation: 0 = m<sub>A</sub>v<sub>A</sub> + m<sub>B</sub>v<sub>B</sub>. Taking right as positive, v<sub>A</sub> = &minus;2.0 m/s: <br>0 = (60)(&minus;2.0) + (80)v<sub>B</sub> &rarr; v<sub>B</sub> = 120/80 = <strong>+1.5 m/s (right)</strong>. The skaters move in opposite directions; their momenta are equal in magnitude (120 kg&middot;m/s each).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">In a 1D elastic collision, a 2-kg block moving at 6 m/s strikes a stationary 2-kg block. What are the final velocities?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Equal-mass elastic collision: the objects exchange velocities. <strong>v<sub>1f</sub> = 0 m/s; v<sub>2f</sub> = 6 m/s.</strong> Check: p<sub>i</sub> = (2)(6) = 12 kg&middot;m/s; p<sub>f</sub> = (2)(0) + (2)(6) = 12 ✓. KE<sub>i</sub> = &frac12;(2)(6)<sup>2</sup> = 36 J; KE<sub>f</sub> = &frac12;(2)(6)<sup>2</sup> = 36 J ✓ (elastic). This is exactly what Newton's cradle demonstrates ball-by-ball.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Three particles: 1.0 kg at x = 0, 2.0 kg at x = 3.0 m, 3.0 kg at x = 6.0 m. Where is the center of mass?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>x<sub>cm</sub> = (&Sigma;m<sub>i</sub>x<sub>i</sub>) / M = [(1.0)(0) + (2.0)(3.0) + (3.0)(6.0)] / (1.0 + 2.0 + 3.0) = [0 + 6.0 + 18.0] / 6.0 = 24.0 / 6.0 = <strong>4.0 m</strong>. Notice the CM is closest to the most massive particle (3.0 kg at x = 6.0 m) — the CM is pulled toward higher-mass objects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why do car safety engineers want the collision time to be as long as possible during a crash? What role does the impulse-momentum theorem play?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The impulse-momentum theorem states: F<sub>avg</sub> = &Delta;p / &Delta;t. The change in momentum (&Delta;p = mv<sub>f</sub> &minus; mv<sub>i</sub>) is <em>fixed</em> by the crash — you must go from highway speed to zero. But by maximizing &Delta;t (through crumple zones, airbags, and seatbelts), you <strong>minimize F<sub>avg</sub></strong> — the average force on the occupants. Less force = less injury. Doubling the collision time halves the average force on the occupant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Key Equations and Strategy Reminders</h3>
+                <p><strong>Linear momentum:</strong> <strong>p</strong> = m<strong>v</strong> &nbsp;|&nbsp; units: kg&middot;m/s = N&middot;s</p>
+                <p><strong>Impulse-momentum theorem:</strong> <strong>J</strong> = <strong>F</strong><sub>avg</sub>&Delta;t = &Delta;<strong>p</strong> = m<strong>v</strong><sub>f</sub> &minus; m<strong>v</strong><sub>i</sub></p>
+                <p><strong>Conservation of momentum:</strong> m<sub>1</sub><strong>v</strong><sub>1i</sub> + m<sub>2</sub><strong>v</strong><sub>2i</sub> = m<sub>1</sub><strong>v</strong><sub>1f</sub> + m<sub>2</sub><strong>v</strong><sub>2f</sub> &nbsp;(when &Sigma;<strong>F</strong><sub>ext</sub> = 0)</p>
+                <p><strong>Perfectly inelastic:</strong> v<sub>f</sub> = (m<sub>1</sub>v<sub>1i</sub> + m<sub>2</sub>v<sub>2i</sub>) / (m<sub>1</sub> + m<sub>2</sub>)</p>
+                <p><strong>1D elastic shortcuts:</strong> v<sub>1f</sub> = [(m<sub>1</sub>&minus;m<sub>2</sub>)/(m<sub>1</sub>+m<sub>2</sub>)]v<sub>1i</sub> &nbsp;|&nbsp; v<sub>2f</sub> = [2m<sub>1</sub>/(m<sub>1</sub>+m<sub>2</sub>)]v<sub>1i</sub></p>
+                <p><strong>Center of mass:</strong> x<sub>cm</sub> = (&Sigma;m<sub>i</sub>x<sub>i</sub>) / M<sub>total</sub></p>
+                <ul>
+                    <li><strong>Momentum is a vector</strong> — set up a sign convention before writing equations; watch for direction reversals.</li>
+                    <li><strong>Identify collision type first</strong> — this determines how many conservation equations you can write.</li>
+                    <li><strong>In 2D collisions</strong> — write separate x and y momentum equations; components are independent.</li>
+                    <li><strong>Report momentum in kg&middot;m/s, force in N, speed in m/s.</strong> Three significant figures.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SAMPLE PROBLEM VIDEOS -->
+        <h4 class="dp-has-icon" style="margin-top: 1.5em;"><i class="fas fa-video"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sample Problem Videos</h4>
+        <p style="text-align: center;">Watch each sample problem video, then attempt the corresponding written practice problem below.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 400px; margin-bottom: 2em;">
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 1: Momentum of a Football Player</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Calculating and Comparing Linear Momentum</h4>
+                    <p>A running back and a lineman have different masses and speeds on the field. This video calculates and compares their momenta, then finds the force and time required to stop each player, reinforcing that momentum — not speed alone — determines how hard it is to stop a moving object.</p>
+                    <ul>
+                        <li><strong>p</strong> = m<strong>v</strong> — a heavier, slower player may have more momentum than a lighter, faster player</li>
+                        <li>To stop a player: impulse needed = &Delta;p = 0 &minus; mv<sub>i</sub> = &minus;mv<sub>i</sub></li>
+                        <li>Tackling force: F<sub>avg</sub> = mv<sub>i</sub> / &Delta;t — larger momentum requires more impulse to stop</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 2: Impulse from a Force-Time Graph</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Finding Impulse and Change in Velocity from an F-t Graph</h4>
+                    <p>Given a force-time graph for a collision (triangular or trapezoidal shape), this video finds the impulse by calculating the area under the curve, then uses J = &Delta;p to find the velocity change of the object. It also identifies the average force during the collision.</p>
+                    <ul>
+                        <li>Impulse = area under F-t curve: triangle &rarr; J = &frac12;F<sub>max</sub>&Delta;t</li>
+                        <li>&Delta;v = J / m — larger mass, smaller velocity change for the same impulse</li>
+                        <li>Average force = total area / total time interval</li>
+                        <li>Common pitfall: the area must account for sign (force below the axis is negative impulse)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 3: Explosion — Recoil of a Rifle</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Conservation of Momentum in a Recoil Problem</h4>
+                    <p>A rifle and bullet are initially at rest. After firing, the bullet moves forward at high speed. This video applies conservation of momentum (total initial momentum = 0) to find the recoil velocity of the rifle, and calculates the kinetic energies of both — demonstrating that the lighter object receives far more kinetic energy than the heavier one.</p>
+                    <ul>
+                        <li>Initial: p<sub>total</sub> = 0. After firing: m<sub>bullet</sub>v<sub>bullet</sub> + m<sub>rifle</sub>v<sub>rifle</sub> = 0</li>
+                        <li>v<sub>rifle</sub> = &minus;(m<sub>bullet</sub>/m<sub>rifle</sub>)v<sub>bullet</sub> — rifle recoils opposite to bullet direction</li>
+                        <li>KE<sub>bullet</sub> / KE<sub>rifle</sub> = m<sub>rifle</sub> / m<sub>bullet</sub> &gg; 1 — most of the chemical energy goes to the bullet</li>
+                        <li>Application: same analysis applies to rockets, cannons, and any explosion from rest</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 4: Perfectly Inelastic Collision — Two Cars</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Finding Final Velocity and KE Lost When Cars Stick Together</h4>
+                    <p>A moving car rear-ends a stationary car and they lock bumpers. This video finds the final velocity of the combined wreck using conservation of momentum, then calculates the kinetic energy lost in the collision and discusses where that energy goes (deformation, heat, sound).</p>
+                    <ul>
+                        <li>v<sub>f</sub> = m<sub>1</sub>v<sub>1i</sub> / (m<sub>1</sub> + m<sub>2</sub>) when car 2 is initially at rest</li>
+                        <li>&Delta;KE = K<sub>f</sub> &minus; K<sub>i</sub> — always negative for a perfectly inelastic collision</li>
+                        <li>Fraction of KE lost = m<sub>2</sub>/(m<sub>1</sub>+m<sub>2</sub>) — the greater the mass ratio difference, the greater the fractional loss</li>
+                        <li>Real-world: crumple zone design balances collision time (impulse) with kinetic energy absorption</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 5: Ballistic Pendulum</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Combining Momentum Conservation and Energy Conservation</h4>
+                    <p>The ballistic pendulum is a classic two-step problem: a bullet embeds in a hanging block (perfectly inelastic — use momentum conservation), then the block swings upward (use energy conservation). This video is a masterclass in knowing which law to apply at which stage.</p>
+                    <ul>
+                        <li>Step 1 — collision (use momentum): m<sub>bullet</sub>v<sub>bullet</sub> = (m<sub>bullet</sub>+m<sub>block</sub>)v<sub>f</sub> &rarr; find v<sub>f</sub></li>
+                        <li>Step 2 — swing upward (use energy): &frac12;(m<sub>bullet</sub>+m<sub>block</sub>)v<sub>f</sub><sup>2</sup> = (m<sub>bullet</sub>+m<sub>block</sub>)gh &rarr; find h</li>
+                        <li>Cannot use energy conservation for the collision — it is perfectly inelastic (KE is lost)</li>
+                        <li>Cannot use momentum conservation for the swing — gravity is an external force</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 6: 1D Elastic Collision — Hockey Pucks</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Two-Equation System for a 1D Elastic Collision</h4>
+                    <p>Two hockey pucks of different masses collide elastically on a frictionless ice surface. This video sets up the two conservation equations (momentum and kinetic energy), uses the shortcut formula, and finds both final velocities — including the case where a lighter puck bounces backward after hitting a heavier one.</p>
+                    <ul>
+                        <li>Set up: m<sub>1</sub>v<sub>1i</sub> + m<sub>2</sub>v<sub>2i</sub> = m<sub>1</sub>v<sub>1f</sub> + m<sub>2</sub>v<sub>2f</sub> AND &frac12;m<sub>1</sub>v<sub>1i</sub><sup>2</sup> + &frac12;m<sub>2</sub>v<sub>2i</sub><sup>2</sup> = &frac12;m<sub>1</sub>v<sub>1f</sub><sup>2</sup> + &frac12;m<sub>2</sub>v<sub>2f</sub><sup>2</sup></li>
+                        <li>Use shortcut formulas — faster than solving the quadratic system</li>
+                        <li>If m<sub>1</sub> &lt; m<sub>2</sub>: v<sub>1f</sub> is negative (puck 1 bounces back)</li>
+                        <li>Limiting cases: equal masses (exchange velocities); m<sub>1</sub> &gg; m<sub>2</sub> (heavy puck barely slows; light puck shoots forward at ~2v<sub>1i</sub>)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 7: 2D Collision — Billiard Balls</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Applying x and y Component Momentum Conservation in 2D</h4>
+                    <p>A cue ball strikes a stationary billiard ball of equal mass at an angle. One ball goes off at a known angle; find the speeds of both balls and the angle of the second. This video works through the vector component setup for 2D momentum conservation and (for the elastic case) uses the elegant result that equal-mass elastic 2D collisions always produce balls moving at 90° to each other.</p>
+                    <ul>
+                        <li>x: m v<sub>1i</sub> = m v<sub>1f</sub>cos&theta;<sub>1</sub> + m v<sub>2f</sub>cos&theta;<sub>2</sub></li>
+                        <li>y: 0 = m v<sub>1f</sub>sin&theta;<sub>1</sub> &minus; m v<sub>2f</sub>sin&theta;<sub>2</sub></li>
+                        <li>Equal masses elastic: &theta;<sub>1</sub> + &theta;<sub>2</sub> = 90° always (follows from both conservation laws)</li>
+                        <li>Solve two equations for two unknowns (v<sub>1f</sub> and v<sub>2f</sub>) given &theta;<sub>1</sub></li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 8: Center of Mass — Earth and Moon</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Locating the Center of Mass of the Earth-Moon System</h4>
+                    <p>This video calculates the center of mass of the Earth-Moon system using the actual masses and the mean distance between them — and finds that the CM lies inside the Earth (about 4,600 km from Earth's center). This is the point that moves in an ellipse around the Sun, not Earth's center.</p>
+                    <ul>
+                        <li>x<sub>cm</sub> = (m<sub>E</sub>&times;0 + m<sub>M</sub>&times;d<sub>EM</sub>) / (m<sub>E</sub> + m<sub>M</sub>) — placing Earth at origin</li>
+                        <li>m<sub>E</sub> = 5.97&times;10<sup>24</sup> kg; m<sub>M</sub> = 7.35&times;10<sup>22</sup> kg; d<sub>EM</sub> = 3.84&times;10<sup>8</sup> m</li>
+                        <li>Result: x<sub>cm</sub> &approx; 4,670 km from Earth's center — inside Earth (Earth's radius = 6,371 km)</li>
+                        <li>Both Earth and Moon orbit this common CM — the CM is what actually follows a smooth ellipse around the Sun</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 9: Center of Mass Motion — Exploding Projectile</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Internal Forces Cannot Change the Motion of the Center of Mass</h4>
+                    <p>A projectile is fired at an angle and explodes into two pieces at the peak of its trajectory. This video finds the landing position of one fragment (given the other's) by tracking the center of mass — which continues on the original parabolic trajectory, unaffected by the internal explosion forces, all the way to the original landing point.</p>
+                    <ul>
+                        <li>CM before explosion: follows the original parabola — <strong>F</strong><sub>ext</sub> = mg acts on CM as if it were a point mass</li>
+                        <li>At peak: v<sub>y,cm</sub> = 0; CM still has v<sub>x,cm</sub> = v<sub>x,0</sub> (horizontal component unchanged)</li>
+                        <li>After explosion: x<sub>cm</sub> = (m<sub>1</sub>x<sub>1</sub> + m<sub>2</sub>x<sub>2</sub>) / M — use this to find x<sub>2</sub> (unknown fragment position)</li>
+                        <li>Key principle: no matter how violent the explosion, the CM lands exactly where the unexploded projectile would have</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- WRITTEN PRACTICE PROBLEMS -->
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1 &mdash; Impulse-Momentum Theorem</h4>
+        <p><strong>A 0.500-kg soccer ball is kicked from rest and leaves the foot with a speed of 25.0 m/s. The foot is in contact with the ball for 8.00 ms. (a) What impulse does the foot deliver to the ball? (b) What is the average force exerted by the foot on the ball during the kick?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 0.500 kg, v<sub>i</sub> = 0, v<sub>f</sub> = 25.0 m/s, &Delta;t = 8.00&times;10<sup>&minus;3</sup> s</p>
+                    <p><strong>Part (a) &mdash; Impulse:</strong></p>
+                    <p style="padding-left: 2em;">J = &Delta;p = m(v<sub>f</sub> &minus; v<sub>i</sub>) = (0.500)(25.0 &minus; 0) = <strong>12.5 N&middot;s</strong> (in the direction of motion)</p>
+                    <p><strong>Part (b) &mdash; Average force:</strong></p>
+                    <p style="padding-left: 2em;">F<sub>avg</sub> = J / &Delta;t = 12.5 / (8.00&times;10<sup>&minus;3</sup>) = <strong>1,560 N</strong> &approx; 1.56 kN</p>
+                    <p style="padding-left: 2em;"><em>Note: 1,560 N is about 350 lb of force — the enormous peak force in a kick lasts only 8 ms, which is why it isn't felt as strongly as a sustained push of the same magnitude would be.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2 &mdash; Perfectly Inelastic Collision</h4>
+        <p><strong>A 1,200-kg car traveling east at 20.0 m/s collides with a 1,600-kg SUV at rest at an intersection. The vehicles lock bumpers. (a) Find the velocity of the combined wreck immediately after the collision. (b) Calculate the kinetic energy lost in the collision. (c) What percentage of the original kinetic energy was lost?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m<sub>1</sub> = 1,200 kg, v<sub>1i</sub> = +20.0 m/s (east); m<sub>2</sub> = 1,600 kg, v<sub>2i</sub> = 0</p>
+                    <p><strong>Part (a) &mdash; Final velocity (perfectly inelastic):</strong></p>
+                    <p style="padding-left: 2em;">m<sub>1</sub>v<sub>1i</sub> = (m<sub>1</sub>+m<sub>2</sub>)v<sub>f</sub></p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = (1200)(20.0) / (1200+1600) = 24,000 / 2,800 = <strong>+8.57 m/s (east)</strong></p>
+                    <p><strong>Part (b) &mdash; Kinetic energy lost:</strong></p>
+                    <p style="padding-left: 2em;">K<sub>i</sub> = &frac12;(1200)(20.0)<sup>2</sup> = 240,000 J = 240 kJ</p>
+                    <p style="padding-left: 2em;">K<sub>f</sub> = &frac12;(2800)(8.57)<sup>2</sup> = &frac12;(2800)(73.4) = 102,800 J &approx; 103 kJ</p>
+                    <p style="padding-left: 2em;">&Delta;KE = K<sub>f</sub> &minus; K<sub>i</sub> = 103 &minus; 240 = <strong>&minus;137 kJ</strong> (lost)</p>
+                    <p><strong>Part (c) &mdash; Percentage lost:</strong></p>
+                    <p style="padding-left: 2em;">% lost = 137/240 &times; 100% = <strong>57.1%</strong> — more than half the original kinetic energy was converted to deformation, heat, and sound.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3 &mdash; Ballistic Pendulum</h4>
+        <p><strong>A 0.0100-kg bullet is fired horizontally into a 2.00-kg block of wood suspended as a ballistic pendulum. The block (with the embedded bullet) swings upward and rises a vertical height of 0.120 m. (a) Find the speed of the block + bullet immediately after the collision. (b) Find the initial speed of the bullet.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m<sub>b</sub> = 0.0100 kg, m<sub>B</sub> = 2.00 kg, h = 0.120 m, g = 9.80 m/s<sup>2</sup></p>
+                    <p><strong>Part (a) &mdash; Speed after collision (use energy conservation for the swing):</strong></p>
+                    <p style="padding-left: 2em;">&frac12;(m<sub>b</sub>+m<sub>B</sub>)v<sub>f</sub><sup>2</sup> = (m<sub>b</sub>+m<sub>B</sub>)gh</p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = &radic;(2gh) = &radic;(2&times;9.80&times;0.120) = &radic;(2.352) = <strong>1.534 m/s &approx; 1.53 m/s</strong></p>
+                    <p><strong>Part (b) &mdash; Initial bullet speed (use momentum conservation for the collision):</strong></p>
+                    <p style="padding-left: 2em;">m<sub>b</sub>v<sub>bullet</sub> = (m<sub>b</sub>+m<sub>B</sub>)v<sub>f</sub></p>
+                    <p style="padding-left: 2em;">v<sub>bullet</sub> = (m<sub>b</sub>+m<sub>B</sub>)v<sub>f</sub> / m<sub>b</sub> = (2.0100)(1.534) / (0.0100) = 3.083 / 0.0100 = <strong>308 m/s</strong></p>
+                    <p style="padding-left: 2em;"><em>Check: KE<sub>bullet,i</sub> = &frac12;(0.0100)(308)<sup>2</sup> = 474 J; KE<sub>f</sub> (after collision) = &frac12;(2.01)(1.534)<sup>2</sup> = 2.37 J. KE lost in collision = 471 J — about 99.5% of the bullet's kinetic energy was converted to heat and deformation. This illustrates why the ballistic pendulum can measure bullet speed even though it is a highly inelastic collision.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to Module 5, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate the linear momentum of a single object and the total momentum of a system of objects: <strong>p</strong> = m<strong>v</strong>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply the impulse-momentum theorem to find the impulse delivered by a force and the average force from a collision: <strong>J</strong> = &Delta;<strong>p</strong> = <strong>F</strong><sub>avg</sub>&Delta;t.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Find the impulse delivered by a variable force from the area under a force-time graph.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;State the conditions for conservation of linear momentum and apply it to one-dimensional collisions and explosions.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Identify collision type (elastic, perfectly inelastic, inelastic) and determine which conservation laws apply.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Solve elastic 1D collisions using both momentum and kinetic energy conservation (or the shortcut formulas).</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply conservation of momentum in two-dimensional collisions using x and y component equations.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Locate the center of mass of a system of particles: x<sub>cm</sub> = (&Sigma;m<sub>i</sub>x<sub>i</sub>) / M.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Describe how the center of mass moves under a net external force and explain why internal forces cannot change the CM motion.</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Momentum conservation is the second of the three great conservation laws of classical mechanics (energy, momentum, angular momentum). You will apply it again in Module 5 (rotational motion) when angular momentum enters the picture — and it reappears in every subsequent physics course you take.</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>
