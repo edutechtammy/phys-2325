@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: M2L2b Projectile Motion, Circular Motion &amp; Relative Motion</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: Motion in Two and Three Dimensions</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M2L2b Projectile Motion, Circular Motion &amp; Relative Motion</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         DRAFT BANNER — REMOVE AFTER CME APPROVAL
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-title-bar" style="border: 3px solid #d13138; background: #fff3cd; margin-bottom: 1.5em;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #856404;"><i class="fas fa-exclamation-triangle" style="color: #d13138;"></i> &nbsp;DRAFT &mdash; Pending CME Approval</h3>
+            <p class="card-text">This lesson page is a <strong>proposed draft</strong> created for structural review. The original M2L2 content has been <strong>split into two lessons (M2L2a and M2L2b)</strong> to allow appropriate depth for each topic area. This split is pending approval from the Course Matter Expert. Learning objectives, video titles, and final content may be revised before publication.</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"In my studies of astronomy and philosophy I hold this opinion about the universe: that the Sun remains fixed in the centre of the circle of heavenly bodies, without changing its place; and the Earth, turning upon itself, moves round the Sun."</em></span><br /><span>&mdash;&nbsp;Galileo Galilei</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">With the vector kinematics framework from M2L2a in hand, you are ready to analyze three of the most important and practical types of 2D motion. <strong>Projectile motion</strong> applies when only gravity acts on an object — the horizontal velocity is constant while vertical motion is uniformly accelerated, giving the characteristic parabolic trajectory. <strong>Uniform circular motion</strong> reveals a surprising truth: moving in a circle at constant speed still requires a constant centripetal acceleration directed toward the center. <strong>Relative motion</strong> shows how the velocity and acceleration of an object depend on who is doing the measuring — a concept essential for analyzing collisions, weather systems, and spacecraft maneuvers. All five sample problem videos from your course are in this lesson.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A composite image showing a parabolic projectile path, a circular orbit with centripetal acceleration arrow, and two reference frames illustrating relative motion." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Three distinct types of 2D motion — each governed by the same vector kinematics equations.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p style="text-align: center; border: 1px solid #d13138; padding: 10px; border-radius: 6px; margin: 10px 30px; background: #fff3cd; color: #856404;"><i class="fas fa-exclamation-triangle"></i>&nbsp; <strong>DRAFT:</strong> Learning objectives below are placeholders pending CME confirmation.</p>
+                    <p><strong>CC2.1 Analyze the components of motion and any applied forces</strong></p>
+                    <p style="padding-left: 40px;">★ LO2.2.4 Apply kinematic equations independently to each coordinate direction in multi-dimensional motion</p>
+                    <p style="padding-left: 40px;">★ LO2.2.5 Analyze projectile motion by separating horizontal (constant velocity) and vertical (constant acceleration) components</p>
+                    <p style="padding-left: 40px;">★ LO2.2.6 Determine the centripetal acceleration of an object undergoing uniform circular motion</p>
+                    <p style="padding-left: 40px;">★ LO2.2.7 Apply the Galilean velocity addition formula to solve relative motion problems in one and two dimensions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion" target="_blank" rel="noopener">4.3 Projectile Motion</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-circular-motion" target="_blank" rel="noopener">4.4 Uniform Circular Motion</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-5-relative-motion-in-one-and-two-dimensions" target="_blank" rel="noopener">4.5 Relative Motion in One and Two Dimensions</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want deeper practice or alternative explanations for projectile motion, circular motion, or relative velocity? These free resources provide additional worked examples and simulations.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://phet.colorado.edu/en/simulations/projectile-motion" target="_blank" rel="noopener">PhET: Projectile Motion Simulation</a> &ndash; Explore launch angle, speed, and height interactively.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/two-dimensional-motion/projectile-motion/v/projectile-motion-part-1" target="_blank" rel="noopener">Khan Academy: Projectile Motion</a> &ndash; Step-by-step walkthroughs with visualizations.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/circles/Lesson-1/Speed-and-Velocity" target="_blank" rel="noopener">Physics Classroom: Circular Motion</a> &ndash; Conceptual introduction to speed, velocity, and acceleration in circular motion.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/4-key-terms" target="_blank" rel="noopener">OpenStax Chapter 4 Key Terms</a> &ndash; Quick reference glossary for all vocabulary in Chapter 4.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: Videos are placeholder — awaiting CME recordings.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are available.
+               All 5 sample problem videos are in this lesson.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Videos are organized by topic. Work through the pre-lecture and mini-lecture tabs for each topic before attempting the corresponding sample problems.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- ─────────────────────────────── PROJECTILE MOTION ─── -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; Projectile Motion Overview</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Projectile Motion &mdash; The Two-Axis Framework (OpenStax 4.3)</h4>
+                    <p>This video introduces projectile motion as a special case of 2D kinematics where the only acceleration is gravitational (downward). The key insight is the complete independence of horizontal and vertical motion.</p>
+                    <ul>
+                        <li>Assumptions: no air resistance; g = 9.80 m/s<sup>2</sup> downward</li>
+                        <li>Horizontal: a<sub>x</sub> = 0, so v<sub>x</sub> = v<sub>0x</sub> = constant</li>
+                        <li>Vertical: a<sub>y</sub> = &minus;g = &minus;9.80 m/s<sup>2</sup></li>
+                        <li>The trajectory is a parabola — derived from eliminating t between x(t) and y(t)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Mini-Lecture &mdash; Projectile Motion Problem Setup</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Setting Up and Solving Projectile Motion Problems</h4>
+                    <p>This worked-example video walks through the systematic approach to any projectile problem: decompose the initial velocity, apply the kinematic equations on each axis, and combine results to find range, max height, and time of flight.</p>
+                    <ul>
+                        <li>Initial velocity components: v<sub>0x</sub> = v<sub>0</sub> cos &theta;, v<sub>0y</sub> = v<sub>0</sub> sin &theta;</li>
+                        <li>Equations: x(t) = v<sub>0x</sub>t; y(t) = v<sub>0y</sub>t &minus; &frac12;gt<sup>2</sup></li>
+                        <li>Finding time of flight (when y = 0 for ground-level launch)</li>
+                        <li>Range formula R = v<sub>0</sub><sup>2</sup> sin(2&theta;) / g — and why 45° gives maximum range</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Sample Problem &mdash; Projectile Motion 1</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Projectile Launched at an Angle from Ground Level</h4>
+                    <p>A complete worked solution for a classic projectile problem: a ball is launched at an angle above the horizontal, and you are asked to find the maximum height, time in the air, horizontal range, and velocity at impact.</p>
+                    <ul>
+                        <li>Decompose initial velocity into v<sub>0x</sub> and v<sub>0y</sub></li>
+                        <li>Find time to reach apex: v<sub>y</sub> = 0 at apex &rarr; t<sub>apex</sub> = v<sub>0y</sub>/g</li>
+                        <li>Calculate maximum height: y<sub>max</sub> = v<sub>0y</sub><sup>2</sup> / (2g)</li>
+                        <li>Find range and impact velocity (magnitude and angle below horizontal)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Sample Problem &mdash; Projectile Motion 2</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Projectile Launched Horizontally from a Height</h4>
+                    <p>A worked solution for a projectile launched horizontally from an elevated position — a common variant where v<sub>0y</sub> = 0. Covers time to reach the ground and horizontal distance traveled.</p>
+                    <ul>
+                        <li>Initial conditions: v<sub>0x</sub> = v<sub>0</sub>, v<sub>0y</sub> = 0, launch height = h</li>
+                        <li>Time to fall: h = &frac12;gt<sup>2</sup> &rarr; t = &radic;(2h/g)</li>
+                        <li>Horizontal range: R = v<sub>0x</sub> &times; t</li>
+                        <li>Final velocity components and impact angle below horizontal</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- ─────────────────────────────── CIRCULAR MOTION ─── -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Pre-Lecture &mdash; Uniform Circular Motion</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Uniform Circular Motion &mdash; Centripetal Acceleration (OpenStax 4.4)</h4>
+                    <p>This video shows that a particle moving in a circle at constant speed is nonetheless accelerating — because its direction is always changing. The acceleration vector points toward the center and is called centripetal acceleration.</p>
+                    <ul>
+                        <li>Uniform circular motion: constant speed v, radius r, period T</li>
+                        <li>Centripetal acceleration: a<sub>c</sub> = v<sup>2</sup> / r, directed toward center</li>
+                        <li>Period and frequency: T = 2&pi;r / v, f = 1/T</li>
+                        <li>Speed in terms of radius and period: v = 2&pi;r / T</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Sample Problem &mdash; Circular Motion</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Centripetal Acceleration of an Object in Circular Motion</h4>
+                    <p>A complete worked solution for a uniform circular motion problem, finding the centripetal acceleration from given speed and radius, then finding the force required to maintain circular motion (preview of Newton's second law applied in 2D).</p>
+                    <ul>
+                        <li>Given: radius r and speed v or period T — find a<sub>c</sub></li>
+                        <li>Convert between period and speed if necessary: v = 2&pi;r / T</li>
+                        <li>Apply a<sub>c</sub> = v<sup>2</sup> / r; confirm units (m/s<sup>2</sup>)</li>
+                        <li>Direction of <strong>a</strong><sub>c</sub>: always toward the center of the circle</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- ─────────────────────────────── RELATIVE MOTION ─── -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 7: Pre-Lecture &mdash; Relative Motion in 1D</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Relative Motion in One Dimension (OpenStax 4.5)</h4>
+                    <p>This video introduces reference frames and the Galilean velocity addition formula in one dimension. You will see how the observed velocity of an object depends on the motion of the observer's reference frame.</p>
+                    <ul>
+                        <li>Reference frames S and S&prime; — one moving at velocity <strong>v</strong><sub>S&prime;S</sub> relative to the other</li>
+                        <li>Galilean velocity addition (1D): v<sub>PA</sub> = v<sub>PB</sub> + v<sub>BA</sub></li>
+                        <li>Subscript notation: v<sub>PA</sub> = velocity of P as seen from frame A</li>
+                        <li>Classic examples: passenger on a train, boat in a river (1D case)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 8: Pre-Lecture &mdash; Relative Motion in 2D</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Relative Motion in Two Dimensions (OpenStax 4.5 continued)</h4>
+                    <p>Extending relative motion into two dimensions using vector addition. The velocity of the passenger relative to the ground equals the velocity of the passenger relative to the vehicle plus the velocity of the vehicle relative to the ground.</p>
+                    <ul>
+                        <li>Vector form: <strong>v</strong><sub>PA</sub> = <strong>v</strong><sub>PB</sub> + <strong>v</strong><sub>BA</sub></li>
+                        <li>Each velocity is a 2D vector — add component by component</li>
+                        <li>Classic 2D example: airplane flying in a crosswind</li>
+                        <li>Boat crossing a river at an angle — finding the actual heading needed to go straight across</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 9: Sample Problem &mdash; Relative Motion 1D</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Relative Velocity in One Dimension</h4>
+                    <p>A complete worked solution for a 1D relative motion problem: two vehicles moving in the same or opposite directions, finding the velocity of one as seen by an observer in the other.</p>
+                    <ul>
+                        <li>Identify the two reference frames and the object being observed</li>
+                        <li>Set up subscript notation correctly: v<sub>PA</sub> = v<sub>PB</sub> + v<sub>BA</sub></li>
+                        <li>Assign signs carefully — motion in positive or negative x-direction</li>
+                        <li>Interpret the answer: what does the observer actually see?</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 10: Sample Problem &mdash; Relative Motion 2D</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Relative Velocity in Two Dimensions (Crosswind / River Crossing)</h4>
+                    <p>A complete worked solution for a 2D relative motion problem — a classic airplane-in-a-crosswind or boat-crossing-a-river scenario — showing how to use vector addition to find both the actual velocity and the direction the vehicle must point to achieve a desired path.</p>
+                    <ul>
+                        <li>Set up <strong>v</strong><sub>PA</sub> = <strong>v</strong><sub>PB</sub> + <strong>v</strong><sub>BA</sub> in vector form</li>
+                        <li>Resolve each velocity into x and y components</li>
+                        <li>Solve for the unknown velocity or heading angle</li>
+                        <li>Report magnitude and direction of the resultant velocity</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: SORT ITEMS — Projectile, Circular, Relative Motion -->
+        <h4 class="dp-has-icon"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Classify Each Statement</h4>
+        <p>Sort each statement into the correct motion category: Projectile Motion, Uniform Circular Motion, or Relative Motion.</p>
+        <div class="dp-si-sort-pool dp-si-sort-type-text" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Classify Motion Concepts">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Items</h4>
+            <div class="dp-si-sort-content">
+                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                    <div class="dp-si-sort-bucket-content">
+                        <h4 class="dp-si-sort-bucket-header">Concepts to Sort</h4>
+                        <ul>
+                            <li class="dp-si-item-text">Horizontal velocity is constant throughout the motion.</li>
+                            <li class="dp-si-item-text">The acceleration is always directed toward the center of the path.</li>
+                            <li class="dp-si-item-text">The observed velocity depends on the reference frame of the observer.</li>
+                            <li class="dp-si-item-text">Speed is constant but velocity is always changing direction.</li>
+                            <li class="dp-si-item-text">The trajectory is parabolic when only gravity acts.</li>
+                            <li class="dp-si-item-text">v<sub>PA</sub> = v<sub>PB</sub> + v<sub>BA</sub></li>
+                            <li class="dp-si-item-text">a<sub>c</sub> = v<sup>2</sup> / r</li>
+                            <li class="dp-si-item-text">Vertical and horizontal components are analyzed independently.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-fluid pt-3 px-0">
+                    <div class="row gy-3">
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Projectile Motion</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">Horizontal velocity is constant throughout the motion.</li>
+                                    <li class="dp-si-item-text">The trajectory is parabolic when only gravity acts.</li>
+                                    <li class="dp-si-item-text">Vertical and horizontal components are analyzed independently.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Uniform Circular Motion</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">The acceleration is always directed toward the center of the path.</li>
+                                    <li class="dp-si-item-text">Speed is constant but velocity is always changing direction.</li>
+                                    <li class="dp-si-item-text">a<sub>c</sub> = v<sup>2</sup> / r</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                            <div class="dp-si-sort-bucket-content">
+                                <h4 class="dp-si-sort-bucket-header">Relative Motion</h4>
+                                <ul>
+                                    <li class="dp-si-item-text">The observed velocity depends on the reference frame of the observer.</li>
+                                    <li class="dp-si-item-text">v<sub>PA</sub> = v<sub>PB</sub> + v<sub>BA</sub></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7B: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding across all three topic areas.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">In projectile motion, why is the horizontal velocity constant?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Because the only force acting is gravity, which points downward (negative y-direction). There is no horizontal component of force or acceleration: a<sub>x</sub> = 0. With zero acceleration, v<sub>x</sub> = v<sub>0x</sub> = constant throughout the entire flight.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why does an object in uniform circular motion have a centripetal acceleration even though its speed is constant?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Acceleration is the rate of change of the <em>velocity vector</em>, not just speed. In circular motion, the direction of <strong>v</strong> is continuously changing even though |<strong>v</strong>| is constant. The rate of change of direction produces a centripetal (center-pointing) acceleration of magnitude a<sub>c</sub> = v<sup>2</sup>/r.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">At what launch angle does a projectile achieve maximum range? Why?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>45°.</strong> The range formula is R = v<sub>0</sub><sup>2</sup> sin(2&theta;) / g. The function sin(2&theta;) is maximized when 2&theta; = 90°, so &theta; = 45°. This angle provides the optimal balance between time of flight (maximized by high launch angle) and horizontal speed (maximized by low launch angle).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What does the subscript notation v<sub>PA</sub> mean in a relative motion problem?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>v<sub>PA</sub> means "the velocity of object P <strong>as measured by observer in frame A</strong>." The first subscript is the object being observed; the second is the reference frame doing the observing. The Galilean addition rule is: v<sub>PA</sub> = v<sub>PB</sub> + v<sub>BA</sub> — the middle subscripts (B) cancel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How do you find the centripetal acceleration if you are given the period T and radius r instead of speed?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>First, find speed from period and radius: v = 2&pi;r / T. Then apply a<sub>c</sub> = v<sup>2</sup> / r = (2&pi;r/T)<sup>2</sup> / r = 4&pi;<sup>2</sup>r / T<sup>2</sup>. So the combined formula is <strong>a<sub>c</sub> = 4&pi;<sup>2</sup>r / T<sup>2</sup></strong> — useful when the period is given instead of speed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A ball is dropped and another is thrown horizontally from the same height. Which hits the ground first?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>They hit at exactly the same time.</strong> The vertical motion is identical for both — both start with v<sub>0y</sub> = 0 and fall under the same gravitational acceleration. The horizontal throw only adds a horizontal velocity, which has no effect on the time to fall. This is the classic independence of horizontal and vertical motion.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Key Equations for This Lesson</h3>
+                <p><strong>Projectile Motion (g = 9.80 m/s<sup>2</sup>, no air resistance):</strong></p>
+                <ul>
+                    <li>Horizontal: x(t) = x<sub>0</sub> + v<sub>0x</sub>t &nbsp;&nbsp;|&nbsp;&nbsp; v<sub>x</sub> = v<sub>0x</sub> = v<sub>0</sub> cos &theta;</li>
+                    <li>Vertical: y(t) = y<sub>0</sub> + v<sub>0y</sub>t &minus; &frac12;gt<sup>2</sup> &nbsp;&nbsp;|&nbsp;&nbsp; v<sub>y</sub> = v<sub>0y</sub> &minus; gt &nbsp;&nbsp;|&nbsp;&nbsp; v<sub>0y</sub> = v<sub>0</sub> sin &theta;</li>
+                    <li>Range (ground-level launch): R = v<sub>0</sub><sup>2</sup> sin(2&theta;) / g</li>
+                </ul>
+                <p><strong>Uniform Circular Motion:</strong></p>
+                <ul>
+                    <li>Speed: v = 2&pi;r / T &nbsp;&nbsp;|&nbsp;&nbsp; Centripetal acceleration: a<sub>c</sub> = v<sup>2</sup> / r = 4&pi;<sup>2</sup>r / T<sup>2</sup></li>
+                    <li>Direction of <strong>a</strong><sub>c</sub>: always toward the center of the circle</li>
+                </ul>
+                <p><strong>Relative Motion:</strong></p>
+                <ul>
+                    <li><strong>v</strong><sub>PA</sub> = <strong>v</strong><sub>PB</sub> + <strong>v</strong><sub>BA</sub> &nbsp;&nbsp; (vector equation — use components in 2D)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 1 — Projectile -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1 &mdash; Projectile Motion</h4>
+        <p><strong>A soccer ball is kicked from the ground with an initial speed of 25.0 m/s at an angle of 38.0° above the horizontal. (a) Find the horizontal and vertical components of the initial velocity. (b) Find the maximum height reached by the ball. (c) Find the total time the ball is in the air. (d) Find the horizontal range.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> v<sub>0</sub> = 25.0 m/s, &theta; = 38.0°, g = 9.80 m/s<sup>2</sup></p>
+                    <p><strong>Part (a) &mdash; Initial velocity components:</strong></p>
+                    <p style="padding-left: 2em;">v<sub>0x</sub> = v<sub>0</sub> cos &theta; = (25.0)(cos 38.0°) = (25.0)(0.788) = <strong>19.7 m/s</strong></p>
+                    <p style="padding-left: 2em;">v<sub>0y</sub> = v<sub>0</sub> sin &theta; = (25.0)(sin 38.0°) = (25.0)(0.616) = <strong>15.4 m/s</strong></p>
+                    <p><strong>Part (b) &mdash; Maximum height (v<sub>y</sub> = 0 at apex):</strong></p>
+                    <p style="padding-left: 2em;">v<sub>y</sub><sup>2</sup> = v<sub>0y</sub><sup>2</sup> &minus; 2gy<sub>max</sub> &rarr; y<sub>max</sub> = v<sub>0y</sub><sup>2</sup> / (2g)</p>
+                    <p style="padding-left: 2em;">y<sub>max</sub> = (15.4)<sup>2</sup> / (2 &times; 9.80) = 237.16 / 19.60 = <strong>12.1 m</strong></p>
+                    <p><strong>Part (c) &mdash; Total time in air (ground-level launch, y<sub>final</sub> = 0):</strong></p>
+                    <p style="padding-left: 2em;">t<sub>total</sub> = 2v<sub>0y</sub> / g = 2(15.4) / 9.80 = <strong>3.14 s</strong></p>
+                    <p><strong>Part (d) &mdash; Horizontal range:</strong></p>
+                    <p style="padding-left: 2em;">R = v<sub>0x</sub> &times; t<sub>total</sub> = (19.7)(3.14) = <strong>61.9 m</strong></p>
+                    <p><em>Check using range formula: R = v<sub>0</sub><sup>2</sup> sin(2&theta;)/g = (625)(sin 76°)/9.80 = (625)(0.970)/9.80 = 61.8 m ✓</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 — Circular Motion -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2 &mdash; Uniform Circular Motion</h4>
+        <p><strong>A satellite orbits Earth in a circular orbit of radius 7.20 &times; 10<sup>6</sup> m with a period of 6025 s. (a) Find the orbital speed of the satellite. (b) Find the centripetal acceleration of the satellite. (c) In which direction does the acceleration vector point?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> r = 7.20 &times; 10<sup>6</sup> m, T = 6025 s</p>
+                    <p><strong>Part (a) &mdash; Orbital speed:</strong></p>
+                    <p style="padding-left: 2em;">v = 2&pi;r / T = 2&pi;(7.20 &times; 10<sup>6</sup>) / 6025</p>
+                    <p style="padding-left: 2em;">v = (4.524 &times; 10<sup>7</sup>) / 6025 = <strong>7.51 &times; 10<sup>3</sup> m/s = 7510 m/s</strong></p>
+                    <p><strong>Part (b) &mdash; Centripetal acceleration:</strong></p>
+                    <p style="padding-left: 2em;">a<sub>c</sub> = v<sup>2</sup> / r = (7510)<sup>2</sup> / (7.20 &times; 10<sup>6</sup>)</p>
+                    <p style="padding-left: 2em;">a<sub>c</sub> = (5.640 &times; 10<sup>7</sup>) / (7.20 &times; 10<sup>6</sup>) = <strong>7.83 m/s<sup>2</sup></strong></p>
+                    <p><em>(Alternatively: a<sub>c</sub> = 4&pi;<sup>2</sup>r/T<sup>2</sup> = 4&pi;<sup>2</sup>(7.20&times;10<sup>6</sup>)/(6025)<sup>2</sup> = 7.83 m/s<sup>2</sup> ✓)</em></p>
+                    <p><strong>Part (c) &mdash; Direction of acceleration:</strong></p>
+                    <p style="padding-left: 2em;">The centripetal acceleration vector always points <strong>toward the center of the orbit</strong> — in this case, toward Earth's center. This is the gravitational acceleration providing the centripetal force.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 — Relative Motion -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3 &mdash; Relative Motion in 2D</h4>
+        <p><strong>An airplane heads due east with an airspeed of 240 km/h. A wind blows from south to north at 55.0 km/h. (a) Find the velocity of the airplane relative to the ground in unit-vector form. (b) Find the speed of the airplane relative to the ground. (c) Find the direction angle of the actual flight path measured from east.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> <strong>v</strong><sub>plane/air</sub> = 240î km/h (east); <strong>v</strong><sub>air/ground</sub> = 55.0ĵ km/h (north)</p>
+                    <p><strong>Part (a) &mdash; Velocity of airplane relative to ground:</strong></p>
+                    <p style="padding-left: 2em;"><strong>v</strong><sub>plane/ground</sub> = <strong>v</strong><sub>plane/air</sub> + <strong>v</strong><sub>air/ground</sub></p>
+                    <p style="padding-left: 2em;"><strong>v</strong><sub>plane/ground</sub> = 240î + 55.0ĵ km/h</p>
+                    <p><strong>Part (b) &mdash; Speed relative to ground:</strong></p>
+                    <p style="padding-left: 2em;">v = &radic;(240<sup>2</sup> + 55.0<sup>2</sup>) = &radic;(57600 + 3025) = &radic;60625 = <strong>246 km/h</strong></p>
+                    <p><strong>Part (c) &mdash; Direction angle north of east:</strong></p>
+                    <p style="padding-left: 2em;">&theta; = tan<sup>&minus;1</sup>(v<sub>y</sub> / v<sub>x</sub>) = tan<sup>&minus;1</sup>(55.0 / 240) = tan<sup>&minus;1</sup>(0.229) = <strong>12.9° north of east</strong></p>
+                    <p><em>The wind pushes the plane northward, so the actual ground track deviates 12.9° north of due east even though the plane is pointing due east.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to M2L3, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Decompose an initial velocity into horizontal and vertical components using v<sub>0x</sub> = v<sub>0</sub> cos &theta; and v<sub>0y</sub> = v<sub>0</sub> sin &theta;.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Solve for time of flight, maximum height, and horizontal range in a projectile motion problem.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Explain why a horizontally thrown ball and a dropped ball hit the ground at the same time.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate centripetal acceleration using a<sub>c</sub> = v<sup>2</sup>/r or a<sub>c</sub> = 4&pi;<sup>2</sup>r/T<sup>2</sup>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Explain why an object in uniform circular motion is accelerating even though its speed is constant.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply <strong>v</strong><sub>PA</sub> = <strong>v</strong><sub>PB</sub> + <strong>v</strong><sub>BA</sub> to find relative velocities in 1D and 2D problems.</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Projectile motion and circular motion will appear again when you apply Newton's second law in two dimensions — mastering these kinematics now will make Newton's Laws much more approachable!</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: M2L2a Kinematics in Two and Three Dimensions</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: Motion in Two and Three Dimensions</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M2L2a Kinematics in Two and Three Dimensions</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         DRAFT BANNER — REMOVE AFTER CME APPROVAL
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-title-bar" style="border: 3px solid #d13138; background: #fff3cd; margin-bottom: 1.5em;">
+        <div class="card-body">
+            <h3 class="card-title" style="color: #856404;"><i class="fas fa-exclamation-triangle" style="color: #d13138;"></i> &nbsp;DRAFT &mdash; Pending CME Approval</h3>
+            <p class="card-text">This lesson page is a <strong>proposed draft</strong> created for structural review. The original M2L2 content has been <strong>split into two lessons (M2L2a and M2L2b)</strong> to allow appropriate depth for each topic area. This split is pending approval from the Course Matter Expert. Learning objectives, video titles, and final content may be revised before publication.</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"Nature uses only the longest threads to weave her patterns, so each small piece of her fabric reveals the organization of the entire tapestry."</em></span><br /><span>&mdash;&nbsp;Richard Feynman</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Motion in the real world is rarely confined to a straight line. A thrown ball, an orbiting satellite, a car rounding a curve — all move in two or three dimensions simultaneously. In this lesson, you will extend the kinematic concepts you mastered in Module 1 (position, displacement, velocity, and acceleration) into 2D and 3D space using vector notation. You will express position as <strong>r</strong>(t) = x(t)î + y(t)ĵ + z(t)k̂, find velocity as the time derivative of position, <strong>v</strong> = d<strong>r</strong>/dt, and find acceleration as the derivative of velocity, <strong>a</strong> = d<strong>v</strong>/dt. These vector relationships form the mathematical backbone for everything that follows — projectile motion, circular motion, and all of Newton's Laws applied in multiple dimensions.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A 3D coordinate system showing a curved path with position vector r, velocity vector v tangent to the path, and acceleration vector a pointing toward the center of curvature." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">In 2D and 3D motion, position, velocity, and acceleration are all vectors that change with time.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p style="text-align: center; border: 1px solid #d13138; padding: 10px; border-radius: 6px; margin: 10px 30px; background: #fff3cd; color: #856404;"><i class="fas fa-exclamation-triangle"></i>&nbsp; <strong>DRAFT:</strong> Learning objectives below are placeholders pending CME confirmation.</p>
+                    <p><strong>CC2.1 Analyze the components of motion and any applied forces</strong></p>
+                    <p style="padding-left: 40px;">★ LO2.2.1 Express the position, velocity, and acceleration of a particle as vector functions of time using unit-vector notation</p>
+                    <p style="padding-left: 40px;">★ LO2.2.2 Calculate average and instantaneous velocity vectors from a given position function in 2D or 3D</p>
+                    <p style="padding-left: 40px;">★ LO2.2.3 Calculate average and instantaneous acceleration vectors from a given velocity function in 2D or 3D</p>
+                    <p style="padding-left: 40px;">LO2.2.4 Apply kinematic equations independently to each coordinate direction in multi-dimensional motion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all three sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors" target="_blank" rel="noopener">4.1 Displacement and Velocity Vectors</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-2-acceleration-vector" target="_blank" rel="noopener">4.2 Acceleration Vector</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion" target="_blank" rel="noopener">4.3 Projectile Motion (preview only)</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want additional perspectives on 2D and 3D kinematics? These free resources complement the OpenStax text and may help solidify the vector calculus approach.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/two-dimensional-motion" target="_blank" rel="noopener">Khan Academy: Two-Dimensional Motion</a> &ndash; Visual walkthroughs of position, velocity, and acceleration vectors in 2D.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/vectors/Lesson-1/Vectors-and-Direction" target="_blank" rel="noopener">The Physics Classroom: Vectors and Direction</a> &ndash; Conceptual review of vector representation and notation.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/4-key-terms" target="_blank" rel="noopener">OpenStax Chapter 4 Key Terms</a> &ndash; Quick reference glossary for all vocabulary in Chapter 4.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: Videos are placeholder — awaiting CME recordings.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are available.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch each video in order. The pre-lecture videos connect the reading to key concepts; the mini-lectures work through the unit-vector notation in detail.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; Displacement &amp; Position Vectors</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Displacement and Velocity Vectors (OpenStax 4.1)</h4>
+                    <p>This pre-lecture video introduces the concept of position as a vector function of time and shows how displacement in 2D and 3D is calculated as the change in the position vector. The average velocity vector is derived directly from this displacement.</p>
+                    <ul>
+                        <li>Position vector <strong>r</strong>(t) = x(t)î + y(t)ĵ + z(t)k̂</li>
+                        <li>Displacement: &Delta;<strong>r</strong> = <strong>r</strong><sub>2</sub> &minus; <strong>r</strong><sub>1</sub> = &Delta;xî + &Delta;yĵ + &Delta;zk̂</li>
+                        <li>Average velocity: <strong>v</strong><sub>avg</sub> = &Delta;<strong>r</strong> / &Delta;t</li>
+                        <li>Path length vs. magnitude of displacement in 2D motion</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Pre-Lecture &mdash; Instantaneous Velocity Vector</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Instantaneous Velocity in 2D and 3D</h4>
+                    <p>Building on Section 4.1, this video defines instantaneous velocity as the derivative of the position vector with respect to time and shows how each component of velocity is independently derived from the corresponding component of position.</p>
+                    <ul>
+                        <li>Instantaneous velocity: <strong>v</strong>(t) = d<strong>r</strong>/dt = (dx/dt)î + (dy/dt)ĵ + (dz/dt)k̂</li>
+                        <li>The velocity vector is always tangent to the path of motion</li>
+                        <li>Speed: the magnitude of the velocity vector, |<strong>v</strong>| = v</li>
+                        <li>How direction of <strong>v</strong> changes even when speed is constant</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Pre-Lecture &mdash; Acceleration Vector</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Acceleration Vector in 2D and 3D (OpenStax 4.2)</h4>
+                    <p>This video extends the concept of acceleration to 2D and 3D using vector calculus. You will see how acceleration arises from both changes in speed (tangential) and changes in direction (centripetal), even when the speed is constant.</p>
+                    <ul>
+                        <li>Average acceleration: <strong>a</strong><sub>avg</sub> = &Delta;<strong>v</strong> / &Delta;t</li>
+                        <li>Instantaneous acceleration: <strong>a</strong>(t) = d<strong>v</strong>/dt = d<sup>2</sup><strong>r</strong>/dt<sup>2</sup></li>
+                        <li>Component form: <strong>a</strong> = (dv<sub>x</sub>/dt)î + (dv<sub>y</sub>/dt)ĵ + (dv<sub>z</sub>/dt)k̂</li>
+                        <li>Acceleration can be perpendicular to velocity even when speed is constant</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Mini-Lecture &mdash; Position &amp; Velocity in Unit-Vector Notation</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Writing and Differentiating Position Vectors</h4>
+                    <p>This worked-example video shows how to write a position function in unit-vector notation and then differentiate each component to obtain the velocity vector, step by step. Both polynomial and trigonometric position functions are demonstrated.</p>
+                    <ul>
+                        <li>Given <strong>r</strong>(t) = (3t<sup>2</sup> &minus; 2t)î + (4t &minus; 1)ĵ m, find <strong>v</strong>(t)</li>
+                        <li>Differentiate each component independently: d/dt[x(t)], d/dt[y(t)]</li>
+                        <li>Evaluate velocity at a specific time: <strong>v</strong>(t = 2 s) = ?</li>
+                        <li>Find the speed and direction angle of <strong>v</strong> at that instant</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Mini-Lecture &mdash; Acceleration from Velocity</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Finding Acceleration by Differentiating Velocity</h4>
+                    <p>This video works through finding the acceleration vector from a given velocity function, evaluating it at specific times, and interpreting the physical meaning of both the magnitude and direction of the resulting acceleration vector.</p>
+                    <ul>
+                        <li>Given <strong>v</strong>(t), differentiate to find <strong>a</strong>(t) = d<strong>v</strong>/dt</li>
+                        <li>Distinguishing the x- and y-components of acceleration</li>
+                        <li>Average acceleration over a time interval: &Delta;<strong>v</strong> / &Delta;t</li>
+                        <li>Relating the direction of <strong>a</strong> to changes in the velocity vector</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 6 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Mini-Lecture &mdash; Displacement &amp; Average Velocity</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Displacement Vector and Average Velocity in Unit-Vector Form</h4>
+                    <p>This video demonstrates computing displacement and average velocity directly from position vectors expressed in unit-vector notation, including cases where both x and y components are changing non-uniformly with time.</p>
+                    <ul>
+                        <li>Displacement: &Delta;<strong>r</strong> = <strong>r</strong>(t<sub>2</sub>) &minus; <strong>r</strong>(t<sub>1</sub>) — subtract component by component</li>
+                        <li>Average velocity: <strong>v</strong><sub>avg</sub> = &Delta;<strong>r</strong> / (t<sub>2</sub> &minus; t<sub>1</sub>)</li>
+                        <li>Why average velocity direction &ne; direction of motion at every instant</li>
+                        <li>Connecting to 1D results: each axis is an independent 1D problem</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Finding Instantaneous Velocity from a Position Function</h4>
+        <p>Arrange the following steps in the correct order for finding the instantaneous velocity vector from a position function given in unit-vector notation.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Write the position function <strong>r</strong>(t) in unit-vector notation: <strong>r</strong>(t) = x(t)î + y(t)ĵ.</li>
+                <li>Differentiate each scalar component independently with respect to time.</li>
+                <li>Assemble the velocity vector: <strong>v</strong>(t) = (dx/dt)î + (dy/dt)ĵ.</li>
+                <li>Substitute the desired time value t to find <strong>v</strong> at that instant.</li>
+                <li>Compute the speed: v = |<strong>v</strong>| = &radic;(v<sub>x</sub><sup>2</sup> + v<sub>y</sub><sup>2</sup>).</li>
+                <li>Find the direction angle: &theta; = tan<sup>&minus;1</sup>(v<sub>y</sub> / v<sub>x</sub>), adjusting for quadrant.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Which Statements About Velocity in 2D Are True?</h4>
+        <p>From the list below, select <strong>all</strong> statements that are correct about velocity and speed in 2D motion.</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all correct statements about velocity in two-dimensional motion.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">The instantaneous velocity vector is always tangent to the path of motion.</li>
+                <li class="dp-sa-correct">Speed is the magnitude of the velocity vector: v = |<strong>v</strong>|.</li>
+                <li class="dp-sa-correct">Each component of velocity is found by differentiating the corresponding position component.</li>
+                <li class="dp-sa-correct">A particle can have a non-zero acceleration while moving at constant speed.</li>
+                <li>The direction of the average velocity vector is always the same as the instantaneous velocity.</li>
+                <li>If the speed is constant, the acceleration must be zero.</li>
+                <li>The x- and y-components of velocity are always equal to each other.</li>
+            </ul>
+        </div>
+
+        <!-- 7C: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding of kinematics in 2D and 3D.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the relationship between position and velocity in vector form?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Instantaneous velocity is the time derivative of the position vector: <strong>v</strong>(t) = d<strong>r</strong>/dt. In component form: v<sub>x</sub> = dx/dt and v<sub>y</sub> = dy/dt. Each axis is treated as an independent 1D problem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Can a particle have a non-zero acceleration while moving at constant speed? Explain.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>Yes.</strong> Acceleration is the rate of change of the <em>velocity vector</em>, not just its magnitude. If the direction of <strong>v</strong> is changing while its magnitude (speed) stays constant, the acceleration is non-zero but perpendicular to the velocity. Uniform circular motion is the classic example.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How is the average velocity vector different from instantaneous velocity?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Average velocity is <strong>v</strong><sub>avg</sub> = &Delta;<strong>r</strong>/&Delta;t — it points in the direction of the displacement vector over the whole interval. Instantaneous velocity is the limit as &Delta;t &rarr; 0: <strong>v</strong> = d<strong>r</strong>/dt. It points tangent to the path at a single instant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the relationship between velocity and acceleration in vector form?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Instantaneous acceleration is the time derivative of the velocity vector: <strong>a</strong>(t) = d<strong>v</strong>/dt = d<sup>2</sup><strong>r</strong>/dt<sup>2</sup>. In component form: a<sub>x</sub> = dv<sub>x</sub>/dt and a<sub>y</sub> = dv<sub>y</sub>/dt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why is the velocity vector always tangent to the trajectory?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The velocity vector is defined as the limit of &Delta;<strong>r</strong>/&Delta;t as &Delta;t &rarr; 0. As the time interval shrinks, the displacement vector &Delta;<strong>r</strong> becomes parallel to the curve at that point. Therefore <strong>v</strong>, which is in the direction of the infinitesimal displacement, points along the tangent to the path.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">If a particle's acceleration is only in the y-direction, how does its x-motion behave?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>The x-motion is <strong>uniform (constant velocity)</strong>. Since a<sub>x</sub> = 0, v<sub>x</sub> = constant and x(t) = x<sub>0</sub> + v<sub>x</sub>t. The y-motion is accelerated independently: a<sub>y</sub> &ne; 0. This is the key insight behind projectile motion — the horizontal motion is independent of the vertical.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Working in Component Form</h3>
+                <ul>
+                    <li><strong>Treat each axis independently.</strong> The x- and y-equations are separate 1D problems.</li>
+                    <li><strong>Velocity from position:</strong> differentiate each component &mdash; v<sub>x</sub> = dx/dt, v<sub>y</sub> = dy/dt.</li>
+                    <li><strong>Acceleration from velocity:</strong> differentiate again &mdash; a<sub>x</sub> = dv<sub>x</sub>/dt, a<sub>y</sub> = dv<sub>y</sub>/dt.</li>
+                    <li><strong>Magnitude:</strong> always &radic;(component<sub>x</sub><sup>2</sup> + component<sub>y</sub><sup>2</sup> + component<sub>z</sub><sup>2</sup>). Include SI units.</li>
+                    <li><strong>Direction angle:</strong> &theta; = tan<sup>&minus;1</sup>(y-component / x-component). Verify the quadrant.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1</h4>
+        <p><strong>A particle's position is given by <strong>r</strong>(t) = (2.0t<sup>2</sup> &minus; 1.0)î + (3.0t &minus; 2.0t<sup>2</sup>)ĵ meters, where t is in seconds. (a) Find the velocity vector <strong>v</strong>(t). (b) Find the velocity and speed at t = 2.0 s. (c) Find the acceleration vector <strong>a</strong>(t). Is the acceleration constant?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> <strong>r</strong>(t) = (2.0t<sup>2</sup> &minus; 1.0)î + (3.0t &minus; 2.0t<sup>2</sup>)ĵ m</p>
+                    <p><strong>Part (a) &mdash; Velocity vector:</strong></p>
+                    <p style="padding-left: 2em;"><strong>v</strong>(t) = d<strong>r</strong>/dt = (d/dt)[2.0t<sup>2</sup> &minus; 1.0]î + (d/dt)[3.0t &minus; 2.0t<sup>2</sup>]ĵ</p>
+                    <p style="padding-left: 2em;"><strong>v</strong>(t) = <strong>4.0t î + (3.0 &minus; 4.0t) ĵ</strong> m/s</p>
+                    <p><strong>Part (b) &mdash; Velocity at t = 2.0 s:</strong></p>
+                    <p style="padding-left: 2em;"><strong>v</strong>(2.0) = 4.0(2.0)î + (3.0 &minus; 4.0 &times; 2.0)ĵ = 8.0î + (3.0 &minus; 8.0)ĵ = <strong>8.0î &minus; 5.0ĵ m/s</strong></p>
+                    <p style="padding-left: 2em;">Speed: v = &radic;(8.0<sup>2</sup> + (&minus;5.0)<sup>2</sup>) = &radic;(64 + 25) = &radic;89 = <strong>9.43 m/s</strong></p>
+                    <p><strong>Part (c) &mdash; Acceleration vector:</strong></p>
+                    <p style="padding-left: 2em;"><strong>a</strong>(t) = d<strong>v</strong>/dt = (d/dt)[4.0t]î + (d/dt)[3.0 &minus; 4.0t]ĵ</p>
+                    <p style="padding-left: 2em;"><strong>a</strong>(t) = <strong>4.0î &minus; 4.0ĵ m/s<sup>2</sup></strong></p>
+                    <p style="padding-left: 2em;">Yes, the acceleration is <strong>constant</strong> (no t dependence). This is analogous to constant acceleration in 1D, but in 2D.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2</h4>
+        <p><strong>A particle's position changes from <strong>r</strong><sub>1</sub> = (1.0î &minus; 2.0ĵ + 3.0k̂) m at t<sub>1</sub> = 1.0 s to <strong>r</strong><sub>2</sub> = (5.0î + 1.0ĵ + 0.0k̂) m at t<sub>2</sub> = 3.0 s. (a) Find the displacement vector &Delta;<strong>r</strong>. (b) Find the average velocity vector. (c) Find the magnitude of the average velocity.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> <strong>r</strong><sub>1</sub> = (1.0î &minus; 2.0ĵ + 3.0k̂) m; <strong>r</strong><sub>2</sub> = (5.0î + 1.0ĵ + 0.0k̂) m; &Delta;t = 2.0 s</p>
+                    <p><strong>Part (a) &mdash; Displacement:</strong></p>
+                    <p style="padding-left: 2em;">&Delta;<strong>r</strong> = <strong>r</strong><sub>2</sub> &minus; <strong>r</strong><sub>1</sub> = (5.0 &minus; 1.0)î + (1.0 &minus; (&minus;2.0))ĵ + (0.0 &minus; 3.0)k̂</p>
+                    <p style="padding-left: 2em;">&Delta;<strong>r</strong> = <strong>4.0î + 3.0ĵ &minus; 3.0k̂ m</strong></p>
+                    <p><strong>Part (b) &mdash; Average velocity:</strong></p>
+                    <p style="padding-left: 2em;"><strong>v</strong><sub>avg</sub> = &Delta;<strong>r</strong> / &Delta;t = (4.0î + 3.0ĵ &minus; 3.0k̂) / 2.0 = <strong>2.0î + 1.5ĵ &minus; 1.5k̂ m/s</strong></p>
+                    <p><strong>Part (c) &mdash; Magnitude of average velocity:</strong></p>
+                    <p style="padding-left: 2em;">|<strong>v</strong><sub>avg</sub>| = &radic;(2.0<sup>2</sup> + 1.5<sup>2</sup> + (&minus;1.5)<sup>2</sup>) = &radic;(4.0 + 2.25 + 2.25) = &radic;8.5 = <strong>2.92 m/s</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3</h4>
+        <p><strong>A particle's velocity at t = 0 s is <strong>v</strong><sub>0</sub> = (3.0î + 4.0ĵ) m/s, and its constant acceleration is <strong>a</strong> = (1.0î &minus; 2.0ĵ) m/s<sup>2</sup>. (a) Write the velocity vector as a function of time. (b) Write the position vector as a function of time, given <strong>r</strong><sub>0</sub> = 0. (c) At what time does the y-component of the velocity equal zero?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> <strong>v</strong><sub>0</sub> = (3.0î + 4.0ĵ) m/s; <strong>a</strong> = (1.0î &minus; 2.0ĵ) m/s<sup>2</sup>; <strong>r</strong><sub>0</sub> = 0</p>
+                    <p><strong>Part (a) &mdash; Velocity as a function of time (constant acceleration):</strong></p>
+                    <p style="padding-left: 2em;"><strong>v</strong>(t) = <strong>v</strong><sub>0</sub> + <strong>a</strong>t = (3.0 + 1.0t)î + (4.0 &minus; 2.0t)ĵ m/s</p>
+                    <p><strong>Part (b) &mdash; Position as a function of time:</strong></p>
+                    <p style="padding-left: 2em;"><strong>r</strong>(t) = <strong>r</strong><sub>0</sub> + <strong>v</strong><sub>0</sub>t + &frac12;<strong>a</strong>t<sup>2</sup></p>
+                    <p style="padding-left: 2em;">x(t) = 0 + 3.0t + &frac12;(1.0)t<sup>2</sup> = 3.0t + 0.5t<sup>2</sup></p>
+                    <p style="padding-left: 2em;">y(t) = 0 + 4.0t + &frac12;(&minus;2.0)t<sup>2</sup> = 4.0t &minus; 1.0t<sup>2</sup></p>
+                    <p style="padding-left: 2em;"><strong>r</strong>(t) = (3.0t + 0.5t<sup>2</sup>)î + (4.0t &minus; t<sup>2</sup>)ĵ m</p>
+                    <p><strong>Part (c) &mdash; When does v<sub>y</sub> = 0?</strong></p>
+                    <p style="padding-left: 2em;">v<sub>y</sub>(t) = 4.0 &minus; 2.0t = 0 &rarr; t = 4.0/2.0 = <strong>2.0 s</strong></p>
+                    <p style="padding-left: 2em;"><em>At t = 2.0 s the particle is moving entirely in the x-direction. The y-component of motion has momentarily stopped (this is the apex if thinking of projectile-like motion).</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to M2L2b, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Write a position vector in unit-vector notation as a function of time: <strong>r</strong>(t) = x(t)î + y(t)ĵ + z(t)k̂.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Find the instantaneous velocity vector by differentiating each component of <strong>r</strong>(t).</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Find the instantaneous acceleration vector by differentiating each component of <strong>v</strong>(t).</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Compute the displacement vector &Delta;<strong>r</strong> and average velocity <strong>v</strong><sub>avg</sub> between two times.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Explain why a particle moving at constant speed can still have a non-zero acceleration.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply <strong>r</strong>(t) = <strong>r</strong><sub>0</sub> + <strong>v</strong><sub>0</sub>t + &frac12;<strong>a</strong>t<sup>2</sup> in 2D by treating x and y as independent equations.</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">These skills are the mathematical foundation for projectile motion, circular motion, and all of Newton's Laws in 2D and 3D. Take the time to make them automatic!</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>
