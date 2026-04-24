@@ -246,6 +246,32 @@ When starting a new lesson build, provide the AI with these files as context:
 
 ---
 
+## CidiLabs Component Cross-Reference
+
+Use this table when a CidiLabs DesignPLUS update, bug report, or behavior change is announced. It shows exactly which built lessons contain each interactive component type, so you know immediately which files need to be inspected or re-tested.
+
+Component template files are in `00_Master_Templates/cidilabs-components/`.
+
+### By Component Type → Lessons
+
+| Component | CSS/JS Class | Lessons Containing It |
+|---|---|---|
+| **Order Items** | `dp-order-wrapper` | M1L1 · M1L2 (×3) · M1L3 · M1L4 · M1L5 · M1L6 · M2L1 · M2L2a · M2L2b · M2L3 · M3L1 · M3L2 · M4L1 |
+| **Sort Items** | `dp-si-sort-pool` | M1L1 · M1L2 (×2) · M1L3 · M1L4 · M1L5 · M1L6 · M2L2b · M4L1 |
+| **Select All** | `dp-sa-list` | M2L1 · M2L2a · M2L3 · M3L1 · M3L2 · M4L1 |
+| **Match Items** | `dp-match-items` | M2L1 · M2L3 · M3L2 |
+| **Flip Cards** | `dp-flip-card` | M1L1 · M1L2 · M1L3 · M1L4 · M1L5 · M1L6 · M2L1 · M2L2a · M2L2b · M2L3 · M3L1 · M3L2 · M4L1 |
+
+> ⚠️ **Note on M1L1–M1L5:** These lessons were built during an earlier course's development process. M2–M4 lessons were built in this course's own workflow.
+
+### Known Bug History
+
+| Date | Component | Bug | Lessons Affected | Fix Applied |
+|---|---|---|---|---|
+| Apr 2026 | Sort Items | Answer buckets pre-populated with `<li>` items — caused every draggable item to appear twice (once in pool, once in bucket). Root cause: template `cidilabs-sort-items.html` had placeholder items inside bucket `<ul>` elements. | M1L1 · M1L2 · M1L3 · M1L4 · M1L5 · M1L6 · M2L2b | Emptied all bucket `<ul>` elements in affected lessons; fixed template with `⚠️` comment (commits `a237c23`, `18f36b7`, `62651e3`, `c3523c2`) |
+
+---
+
 ## Build Status
 
 ### Module 1 — Measurement and Motion in 1D
