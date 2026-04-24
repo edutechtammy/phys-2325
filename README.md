@@ -48,6 +48,7 @@ These documents are maintained by the Content Matter Expert (CME) and contain au
 |---|---|---|
 | **PHYS 2325 OER Changes Needed** | [Google Doc](https://docs.google.com/document/d/1YgKYnYhHrHsrR09PMAOe_P9KJ5hbnuJavvvL0__RSgw/edit?tab=t.0) | Module outlines, reading assignments, media lists, and practice problem guidance for all modules |
 | **PHYS 2325/2326 OER Conversion Timeline** | [Google Doc](https://docs.google.com/document/d/1d9ldf9fQpQ2eUpDCqXBv4FcIf-RHulrg54KCJqVC8G4/edit?tab=t.0#heading=h.79axoyw2hulz) | Project timeline for OER conversion across PHYS 2325 and PHYS 2326 |
+| **PHYS 2325 Course Outline** | [Google Sheet](https://docs.google.com/spreadsheets/d/12auLMiELYRWIKj5wQxxf3si6U2aRzDe_sMfgQ-R9nlA/edit?gid=1741891085#gid=1741891085) | Official course outline spreadsheet — modules, competencies, and lesson structure |
 
 > ⚠️ **AI Content Note:** Before building any lesson, check the *PHYS 2325 OER Changes Needed* document for the authoritative reading list, media list, and practice problem outline for that lesson. The user will paste the relevant section into the chat as the content outline.
 
