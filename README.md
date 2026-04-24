@@ -5,6 +5,48 @@
 
 ---
 
+## 🧪 AI Predictive Accuracy Test — Module 4
+
+**Context:** The CME went on vacation before completing the Module 4 outline. Rather than waiting, M4L1 was built entirely from AI prediction on **April 23, 2026** — with no CME-supplied outline — to serve as a test case for AI-assisted content development adoption among instructional designers.
+
+**Prediction basis:** The AI analyzed the established CME pattern across M1–M3 (structure, media counts, activity types, problem styles) and predicted M4L1 content from OpenStax Chapter 9 (*Linear Momentum and Collisions*), which is the unambiguous next chapter in the course sequence.
+
+### What Was Predicted (High Confidence — ~90%)
+
+| Element | Predicted | Reasoning |
+|---|---|---|
+| OpenStax sections covered | 9.1–9.6 | Chapter 9 is the only Ch. 9 content in the course outline |
+| Number of pre-lecture videos | 6 (one per section) | Every prior lesson has had exactly one pre-lecture per OpenStax section |
+| Mini-lecture count | 4 | M1–M3 lessons consistently have 4 mini-lectures |
+| CidiLabs activity types | Order + Select All + Sort + Flip Cards | Same pattern used in every lesson |
+| Computational practice problems | 3 (with accordion solutions) | Consistent across all completed lessons |
+| Lesson checklist format | ☐ items, 8–9 entries | Consistent pattern |
+| Calculus-based derivations | All derivations from calculus | Course requirement |
+
+### What Was Predicted (Lower Confidence — ~50–60%)
+
+| Element | Predicted As | Uncertainty |
+|---|---|---|
+| Sample problem names/themes | Football player · rifle recoil · ballistic pendulum · billiard balls · exploding projectile · Earth-Moon CM | CME uses creative, specific real-world names (e.g., "sloth," "tamales," "cabbage heads") — these are plausible but likely differ from his actual choices |
+| Illustration video topic | Newton's Cradle | Could have been a ballistic pendulum, collision animation, or another demo — reasonable guess but not certain |
+| Lesson split decision | Single lesson (M4L1 covers all of Ch. 9) | CME may have split Ch. 9 across two lessons (as was done with M2L2a/M2L2b); if so, M4 would have two lessons |
+
+### How to Score Accuracy When CME Returns
+
+When the CME provides the actual Module 4 outline, compare it against `module4/m4l1-impulse-momentum-center-of-mass/new-lesson-output/m4l1-impulse-momentum-center-of-mass.html` and score the following:
+
+- [ ] **Sections covered** — Did the CME use 9.1–9.6? (or a subset, or did he include 9.7 Rocket Propulsion?)
+- [ ] **Pre-lecture count** — Does it match the number of reading sections?
+- [ ] **Mini-lecture count and topics** — How many of the 4 predicted topics align?
+- [ ] **Activity types** — Did he use Order, Select All, Sort Items, and Flip Cards?
+- [ ] **Sample problem names** — How many of the 9 predicted names/themes match his actual list?
+- [ ] **Illustration topic** — Newton's Cradle vs. his actual choice?
+- [ ] **Lesson split** — One lesson or two?
+
+> 💡 **Why this matters:** If the predicted lesson scores ≥ 80% structural accuracy against the CME's actual outline, it demonstrates that AI can meaningfully pre-build course content from established instructional patterns — reducing CME bottlenecks, accelerating production timelines, and giving instructional designers a draft-quality starting point rather than a blank page. This is a real test case for AI adoption in the TSTC instructional design workflow.
+
+---
+
 ## Course Overview
 
 | Field | Details |
