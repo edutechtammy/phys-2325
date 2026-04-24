@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: M2L3 Newton's Laws and Forces</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 2: Motion in Two and Three Dimensions</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M2L3 Newton's Laws and Forces</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"If I have seen further it is by standing on the shoulders of giants."</em></span><br /><span>&mdash;&nbsp;Isaac Newton</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Newton's three laws of motion are the governing rules of classical mechanics — they explain <em>why</em> objects move the way they do. While Modules 1 and 2 answered the <em>what</em> (describing motion with position, velocity, and acceleration vectors), this lesson answers the <em>why</em>: forces cause acceleration. You will learn to identify every force acting on an object, organize them in a free-body diagram, and apply Newton's second law, <strong>F</strong><sub>net</sub> = m<strong>a</strong>, along each coordinate axis independently. You will then extend this framework to three real-world force types — friction, drag, and the centripetal force needed to maintain circular motion — gaining the tools to solve the full range of dynamics problems you will encounter throughout this course and in your engineering career.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A free-body diagram showing multiple force vectors acting on a block on an inclined ramp, with the net force arrow and coordinate axes labeled." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">The free-body diagram — the physicist's essential tool for applying Newton's second law.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC2.1 Analyze the components of motion and any applied forces</strong></p>
+                    <p style="padding-left: 40px;">★ LO2.3.1 State Newton's First, Second, and Third Laws and identify the conditions under which each applies</p>
+                    <p style="padding-left: 40px;">★ LO2.3.2 Draw a correct free-body diagram for an object subject to multiple forces in two dimensions</p>
+                    <p style="padding-left: 40px;">★ LO2.3.3 Apply Newton's second law component-by-component to solve for unknown forces or accelerations</p>
+                    <p style="padding-left: 40px;">★ LO2.3.4 Calculate static and kinetic friction forces using the friction model f = &mu;N</p>
+                    <p style="padding-left: 40px;">★ LO2.3.5 Determine terminal speed from the drag force equation and interpret the forces on a falling object</p>
+                    <p style="padding-left: 40px;">★ LO2.3.6 Apply Newton's second law to uniform circular motion, identifying the net centripetal force</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all six sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/5-2-newtons-first-law" target="_blank" rel="noopener">5.1 Newton's First and Second Laws</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/5-6-common-forces" target="_blank" rel="noopener">5.2 Some Particular Forces</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/5-7-drawing-free-body-diagrams" target="_blank" rel="noopener">5.3 Applying Newton's Laws</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/6-2-friction" target="_blank" rel="noopener">6.1 Friction</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/6-4-drag-force-and-terminal-speed" target="_blank" rel="noopener">6.2 The Drag Force and Terminal Speed</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/6-3-centripetal-force" target="_blank" rel="noopener">6.3 Uniform Circular Motion</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want additional practice with free-body diagrams, friction, or circular motion? These free resources complement the reading and offer interactive tools.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://phet.colorado.edu/en/simulations/forces-and-motion-basics" target="_blank" rel="noopener">PhET: Forces and Motion Basics</a> &ndash; Interactive simulation for exploring Newton's laws with applied forces, friction, and acceleration.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/newtlaws/Lesson-3/Newton-s-Second-Law" target="_blank" rel="noopener">Physics Classroom: Newton's Second Law</a> &ndash; Conceptual treatment with diagrams and examples.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/forces-newtons-laws" target="_blank" rel="noopener">Khan Academy: Forces and Newton's Laws</a> &ndash; Video lessons and practice problems on all three laws, friction, and tension.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/5-key-terms" target="_blank" rel="noopener">OpenStax Chapter 5 Key Terms</a> &ndash; Glossary for all Newton's Laws vocabulary.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/6-key-terms" target="_blank" rel="noopener">OpenStax Chapter 6 Key Terms</a> &ndash; Glossary for friction, drag, and circular motion vocabulary.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: Pre-lecture video files are in VIDEOS/M2/M2L3/.
+               Mini-lecture videos pending recording.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are uploaded.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Work through the pre-lecture videos for the reading sections first, then watch the mini-lectures for detailed worked examples on each topic.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- ──────────────── PRE-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; Newton's First and Second Laws</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Newton's First and Second Laws (5.1)</h4>
+                    <p>This video introduces Newton's First Law (the law of inertia) and Newton's Second Law (<strong>F</strong><sub>net</sub> = m<strong>a</strong>) — the two foundational principles that relate force to the motion of an object. You will also see Newton's Third Law stated and illustrated with examples.</p>
+                    <ul>
+                        <li>Newton's First Law: an object at rest stays at rest; an object in motion stays in motion unless acted on by a net external force</li>
+                        <li>Inertia and mass — resistance to changes in motion</li>
+                        <li>Newton's Second Law: <strong>F</strong><sub>net</sub> = m<strong>a</strong> — vector equation, applies along each axis independently</li>
+                        <li>Newton's Third Law: forces always come in equal-and-opposite action-reaction pairs</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Newton's First and Second Laws.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Pre-Lecture &mdash; Some Particular Forces</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Common Forces &mdash; Weight, Normal, Tension, Spring (5.2)</h4>
+                    <p>This video catalogs the most frequently encountered forces in mechanics: gravitational weight, normal force from a surface, tension in a rope or cable, and the spring force. Understanding each force's direction and magnitude is essential before drawing any free-body diagram.</p>
+                    <ul>
+                        <li>Weight: <strong>w</strong> = m<strong>g</strong>, directed straight downward; magnitude w = mg</li>
+                        <li>Normal force: perpendicular to the contact surface; adjusts to maintain equilibrium or produce a given acceleration</li>
+                        <li>Tension: along a rope or cable, pulling toward the attachment point; same magnitude throughout a massless rope</li>
+                        <li>Spring force: <strong>F</strong><sub>s</sub> = &minus;k<strong>x</strong> (Hooke's Law) — opposes displacement from equilibrium</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Common Forces &amp; FBDs.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Pre-Lecture &mdash; Applying Newton's Laws</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Free-Body Diagrams and Newton's Second Law Strategy (5.3)</h4>
+                    <p>This video presents the systematic problem-solving strategy for Newton's second law: identify all forces, draw a free-body diagram, choose a coordinate system, write &Sigma;F = ma along each axis, and solve. This workflow applies to every dynamics problem in the course.</p>
+                    <ul>
+                        <li>Step 1: Identify the object (system) and all external forces acting on it</li>
+                        <li>Step 2: Draw the free-body diagram — one arrow per force, labeled with symbol and direction</li>
+                        <li>Step 3: Choose a coordinate system aligned with the acceleration when possible</li>
+                        <li>Step 4: Write &Sigma;F<sub>x</sub> = ma<sub>x</sub> and &Sigma;F<sub>y</sub> = ma<sub>y</sub>; solve the system of equations</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Applying Newton's Laws.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Pre-Lecture &mdash; Friction</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Static and Kinetic Friction (6.1)</h4>
+                    <p>This video explains the microscopic origin of friction and the two-regime model used in problem-solving: static friction (which prevents motion up to a maximum value) and kinetic friction (which opposes sliding motion with a constant magnitude).</p>
+                    <ul>
+                        <li>Static friction: f<sub>s</sub> &le; &mu;<sub>s</sub>N — adjusts to prevent motion; maximum value f<sub>s,max</sub> = &mu;<sub>s</sub>N</li>
+                        <li>Kinetic friction: f<sub>k</sub> = &mu;<sub>k</sub>N — constant once sliding; direction opposes relative motion</li>
+                        <li>Coefficients of friction &mu;<sub>s</sub> and &mu;<sub>k</sub>: &mu;<sub>k</sub> &lt; &mu;<sub>s</sub> in all practical cases</li>
+                        <li>Friction on inclines — component approach; condition for sliding vs. staying</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Decoding Friction.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Pre-Lecture &mdash; Drag Force and Terminal Speed</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: The Drag Force and Terminal Speed (6.2)</h4>
+                    <p>This video introduces the drag force as a velocity-dependent resistive force that opposes motion through a fluid. As a falling object speeds up, drag increases until it exactly balances gravity — at that point the object reaches terminal speed and stops accelerating.</p>
+                    <ul>
+                        <li>Drag force model: F<sub>D</sub> = &frac12;C&rho;Av<sup>2</sup> — depends on speed squared, fluid density, cross-section, and drag coefficient</li>
+                        <li>Direction: always opposite to the velocity of the object through the fluid</li>
+                        <li>Terminal speed: v<sub>T</sub> = &radic;(2mg / C&rho;A) — when F<sub>D</sub> = mg, acceleration = 0</li>
+                        <li>Why heavier or more streamlined objects have higher terminal speeds</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Drag &amp; Terminal Speed.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 6 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Pre-Lecture &mdash; Uniform Circular Motion</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Centripetal Force in Uniform Circular Motion (6.3)</h4>
+                    <p>From M2L2b you know that circular motion requires a centripetal acceleration directed toward the center. This video applies Newton's second law to that acceleration: whatever force (or combination of forces) provides the centripetal acceleration is the net centripetal force, F<sub>c</sub> = mv<sup>2</sup>/r.</p>
+                    <ul>
+                        <li>Centripetal force is not a new type of force — it is the net force directed toward the center</li>
+                        <li>F<sub>net, centripetal</sub> = ma<sub>c</sub> = mv<sup>2</sup>/r = m(4&pi;<sup>2</sup>r)/T<sup>2</sup></li>
+                        <li>Examples: tension in a string, gravity for orbits, normal force for loop-the-loop, friction for a car on a curve</li>
+                        <li>Banked curves — how banking angle reduces the friction required to maintain circular motion</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Uniform Circular Motion.mp4 --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── MINI-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 7 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 7: Mini-Lecture &mdash; Newton's 2nd Law: Horizontal, Vertical, and Tilted</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Applying <strong>F</strong><sub>net</sub> = m<strong>a</strong> in Three Orientations</h4>
+                    <p>This video works through three versions of the same core problem — a single object with multiple forces — demonstrating how the strategy changes when the surface is horizontal, vertical (elevator), and tilted (inclined ramp). The key insight: always align the coordinate system with the acceleration direction.</p>
+                    <ul>
+                        <li>Horizontal surface: N = mg; net force is horizontal; solve for a or F</li>
+                        <li>Vertical (elevator): N &minus; mg = ma; interpret N &gt; mg (accelerating up) vs. N &lt; mg (accelerating down)</li>
+                        <li>Tilted (ramp, frictionless): rotate axes so x is along the ramp; component of gravity along ramp = mg sin &theta;</li>
+                        <li>Systematic strategy: draw FBD, choose axes, write &Sigma;F = ma, solve</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 8 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 8: Mini-Lecture &mdash; Block on a Frictionless Ramp</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Newton's Second Law on an Incline (No Friction)</h4>
+                    <p>A detailed worked example: a block slides down a frictionless inclined surface. The video shows how to decompose the gravitational force into components along and perpendicular to the ramp surface, apply Newton's second law along each axis, and find the acceleration and normal force.</p>
+                    <ul>
+                        <li>Choose axes: x along the ramp (positive downslope), y perpendicular to ramp</li>
+                        <li>Along ramp: mg sin &theta; = ma &rarr; a = g sin &theta;</li>
+                        <li>Perpendicular to ramp: N &minus; mg cos &theta; = 0 &rarr; N = mg cos &theta;</li>
+                        <li>Note: a = g sin &theta; is independent of mass — all objects on the same frictionless ramp accelerate identically</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 9 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 9: Mini-Lecture &mdash; Reading a Graph: Acceleration Along a Ramp</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Extracting Forces from an Acceleration-Time Graph</h4>
+                    <p>This video demonstrates how to read a graph of acceleration vs. time for an object on a ramp and use Newton's second law to calculate the forces involved — including identifying when friction is present versus absent from the shape of the graph.</p>
+                    <ul>
+                        <li>Constant acceleration on graph &rarr; constant net force &rarr; constant friction (or no friction)</li>
+                        <li>Using a = g sin &theta; &minus; &mu;<sub>k</sub>g cos &theta; to back-calculate &mu;<sub>k</sub> from measured acceleration</li>
+                        <li>Reading the transition point where a changes (e.g., block reaches bottom of ramp)</li>
+                        <li>Connecting graphical analysis (M1L6) to Newton's law dynamics</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 10 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 10: Mini-Lecture &mdash; Several Objects Pushed or Pulled as One</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Multi-Body Systems &mdash; One Acceleration, Multiple FBDs</h4>
+                    <p>When two or more objects are connected (by a rope, rod, or contact) and move together, they share the same acceleration. This video shows how to treat the system as a whole to find the acceleration and then isolate each object to find the internal forces (tension, contact forces) between them.</p>
+                    <ul>
+                        <li>Treat the connected system as a single object: F<sub>applied</sub> = (m<sub>1</sub> + m<sub>2</sub> + ...)a</li>
+                        <li>Isolate one object to find tension or contact force between objects</li>
+                        <li>Key check: Newton's Third Law — tension pulls equally on both objects at the junction</li>
+                        <li>Worked example: two blocks on a surface connected by a string, one pulled by an applied force</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 11 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 11: Mini-Lecture &mdash; Static and Kinetic Friction: Block Pushed Along a Floor</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: The Two Friction Regimes &mdash; When Does the Block Start Moving?</h4>
+                    <p>This video walks through the classic block-on-floor friction problem in full detail: determining whether the block moves at all (static regime), finding the applied force at which it just starts to slide, and computing the acceleration once kinetic friction takes over.</p>
+                    <ul>
+                        <li>Static regime: f<sub>s</sub> = F<sub>applied</sub> as long as F<sub>applied</sub> &le; &mu;<sub>s</sub>mg &rarr; a = 0</li>
+                        <li>Threshold for motion: F<sub>applied</sub> = &mu;<sub>s</sub>mg = f<sub>s,max</sub></li>
+                        <li>Kinetic regime: f<sub>k</sub> = &mu;<sub>k</sub>mg (constant); net force = F<sub>applied</sub> &minus; f<sub>k</sub> = ma</li>
+                        <li>Why &mu;<sub>k</sub> &lt; &mu;<sub>s</sub>: it takes more force to start sliding than to keep sliding</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 12 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 12: Mini-Lecture &mdash; Friction on a Ramp</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Kinetic and Static Friction on an Inclined Surface</h4>
+                    <p>Combining the ramp geometry from Video 8 with friction: this video solves for the acceleration of a block sliding down a rough inclined surface and determines the minimum angle at which the block will start to slide from rest.</p>
+                    <ul>
+                        <li>Along ramp: mg sin &theta; &minus; f<sub>k</sub> = ma &rarr; a = g(sin &theta; &minus; &mu;<sub>k</sub> cos &theta;)</li>
+                        <li>Perpendicular to ramp: N = mg cos &theta; (unchanged by friction)</li>
+                        <li>Angle for impending motion: tan &theta;<sub>c</sub> = &mu;<sub>s</sub> &rarr; &theta;<sub>c</sub> = tan<sup>&minus;1</sup>(&mu;<sub>s</sub>)</li>
+                        <li>Going up vs. coming down: friction always opposes direction of motion, so the two cases differ</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 13 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 13: Mini-Lecture &mdash; Drag Force and Terminal Speed</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Calculating Terminal Speed and Drag-Limited Acceleration</h4>
+                    <p>This worked-example video applies the drag force model quantitatively: starting from rest, a falling object accelerates under gravity while drag grows with v<sup>2</sup>, until the net force approaches zero at terminal speed. The video derives and applies the terminal speed formula.</p>
+                    <ul>
+                        <li>Net force on falling object: F<sub>net</sub> = mg &minus; F<sub>D</sub> = mg &minus; &frac12;C&rho;Av<sup>2</sup></li>
+                        <li>At terminal speed: F<sub>net</sub> = 0 &rarr; mg = &frac12;C&rho;Av<sub>T</sub><sup>2</sup></li>
+                        <li>Solving for v<sub>T</sub> = &radic;(2mg / C&rho;A) — units check and numerical example</li>
+                        <li>Why a heavier object of the same shape has a higher terminal speed</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 14 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 14: Mini-Lecture &mdash; Centripetal Force and Circular Motion</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Identifying and Calculating the Net Centripetal Force</h4>
+                    <p>This video applies Newton's second law directly to circular motion: the net force toward the center of the circular path equals mv<sup>2</sup>/r. Multiple physical setups are shown to illustrate that different forces (tension, gravity, normal, friction) can all serve as the centripetal force depending on the context.</p>
+                    <ul>
+                        <li>&Sigma;F<sub>centripetal</sub> = mv<sup>2</sup>/r — always directed toward center, never "outward"</li>
+                        <li>Ball on a string (horizontal circle): T = mv<sup>2</sup>/r</li>
+                        <li>Satellite in orbit: F<sub>gravity</sub> = mv<sup>2</sup>/r</li>
+                        <li>Car on a flat curve: f<sub>s</sub> = mv<sup>2</sup>/r — maximum speed before sliding = &radic;(&mu;<sub>s</sub>gr)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Steps to Solve a Newton's Second Law Problem</h4>
+        <p>Arrange the following steps in the correct order for solving a Newton's second law dynamics problem using free-body diagrams.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Identify the object (system) whose motion you will analyze.</li>
+                <li>List all external forces acting on the object with their directions.</li>
+                <li>Draw the free-body diagram with one labeled arrow per force.</li>
+                <li>Choose a coordinate system — align x with the acceleration direction when possible.</li>
+                <li>Write Newton's second law along each axis: &Sigma;F<sub>x</sub> = ma<sub>x</sub> and &Sigma;F<sub>y</sub> = ma<sub>y</sub>.</li>
+                <li>Solve the resulting equations for the unknown quantity.</li>
+                <li>Check units, significant figures, and whether the answer is physically reasonable.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Which Objects Have a Non-Zero Net Force?</h4>
+        <p>From the scenarios below, select <strong>all</strong> in which the net force on the object is <strong>not zero</strong>.</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all scenarios in which the net force is non-zero.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">A block accelerating down a frictionless ramp.</li>
+                <li class="dp-sa-correct">A car speeding up from a stoplight.</li>
+                <li class="dp-sa-correct">A ball on a string swinging in a horizontal circle at constant speed.</li>
+                <li class="dp-sa-correct">A skydiver before reaching terminal speed.</li>
+                <li class="dp-sa-correct">A rocket decelerating as it approaches a landing pad.</li>
+                <li>A book resting on a table with no applied force.</li>
+                <li>A car traveling at constant velocity on a straight highway.</li>
+                <li>A skydiver falling at terminal speed.</li>
+                <li>A block sitting stationary on a rough inclined surface (not sliding).</li>
+            </ul>
+        </div>
+
+        <!-- 7C: MATCH ITEMS ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match the Force to Its Formula</h4>
+        <p>Match each force on the left to its correct formula or description on the right.</p>
+        <div class="dp-match-items dp-match-pairing dp-si-rounded dp-si-outline" style="background-color: #1d2757; padding: 20px; border-radius: 10px; border: 2px solid #d13138; margin-bottom: 2em;">
+            <h3 class="dp-has-icon" style="color: white;"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match Items</h3>
+            <p class="dp-match-instructions" style="color: white; border: none; background: transparent;">Select each set of two matching items.</p>
+            <div class="dp-unmatched-items">
+                <h4 class="dp-has-icon unmatched-items-header"><i class="fas fa-search"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Items to Match</h4>
+                <dl class="dp-match dp-match-text">
+                    <dt data-pair-id="pair-0">Weight</dt>
+                    <dd data-pair-id="pair-0">w = mg, directed straight downward toward Earth's center.</dd>
+                    <dt data-pair-id="pair-1">Kinetic friction</dt>
+                    <dd data-pair-id="pair-1">f<sub>k</sub> = &mu;<sub>k</sub>N — constant magnitude, opposes direction of sliding.</dd>
+                    <dt data-pair-id="pair-2">Static friction (maximum)</dt>
+                    <dd data-pair-id="pair-2">f<sub>s,max</sub> = &mu;<sub>s</sub>N — upper limit that prevents the onset of sliding.</dd>
+                    <dt data-pair-id="pair-3">Drag force</dt>
+                    <dd data-pair-id="pair-3">F<sub>D</sub> = &frac12;C&rho;Av<sup>2</sup> — opposes velocity through a fluid; grows with v squared.</dd>
+                    <dt data-pair-id="pair-4">Net centripetal force</dt>
+                    <dd data-pair-id="pair-4">F<sub>c</sub> = mv<sup>2</sup>/r — directed toward the center of the circular path.</dd>
+                    <dt data-pair-id="pair-5">Normal force</dt>
+                    <dd data-pair-id="pair-5">N — perpendicular to the contact surface; prevents interpenetration.</dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 7D: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding of Newton's Laws, friction, drag, and circular motion.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">State Newton's First Law. What does it imply about objects at rest and objects in motion?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>An object at rest remains at rest, and an object in motion continues in motion at constant velocity, <strong>unless acted upon by a net external force.</strong> This means that <em>no force is needed to maintain motion</em> — only to change it. The tendency to resist change is called inertia, and mass quantifies it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Why is the centripetal force NOT listed as a separate force on a free-body diagram?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Because centripetal force is not a new or separate type of force — it is simply the <strong>net force in the inward radial direction</strong>. It is provided by one of the forces already on the FBD (tension, gravity, normal force, friction, etc.). Writing "centripetal force" as an additional arrow would count it twice.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A block is pushed across a floor at constant velocity. Is the net force zero? How do you know?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>Yes, the net force is zero.</strong> Constant velocity means zero acceleration. By Newton's second law, &Sigma;<strong>F</strong> = m<strong>a</strong> = 0 when a = 0. The applied push exactly balances the kinetic friction force in the horizontal direction, and the normal force exactly balances the weight in the vertical direction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the difference between static and kinetic friction? Which is larger?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>Static friction</strong> acts on a stationary object to prevent it from sliding; it adjusts in magnitude (0 &le; f<sub>s</sub> &le; &mu;<sub>s</sub>N). <strong>Kinetic friction</strong> acts on a sliding object and has constant magnitude f<sub>k</sub> = &mu;<sub>k</sub>N. Static friction is larger: &mu;<sub>s</sub> &gt; &mu;<sub>k</sub>, which is why it takes more force to start an object sliding than to keep it sliding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What happens to the acceleration of a skydiver as they fall from rest? Why does it eventually reach zero?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Initially, acceleration = g (only gravity acts). As speed increases, the drag force F<sub>D</sub> = &frac12;C&rho;Av<sup>2</sup> grows. The net downward force (mg &minus; F<sub>D</sub>) decreases, so acceleration decreases. When F<sub>D</sub> = mg, the net force = 0 and acceleration = 0. The skydiver now falls at constant <strong>terminal speed</strong> v<sub>T</sub> = &radic;(2mg/C&rho;A).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the maximum speed a car can take a flat (unbanked) circular curve of radius r with coefficient of static friction &mu;<sub>s</sub>?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Static friction provides the centripetal force: f<sub>s</sub> = mv<sup>2</sup>/r. The maximum static friction is f<sub>s,max</sub> = &mu;<sub>s</sub>mg = &mu;<sub>s</sub>N (since N = mg on a flat road). Setting them equal: &mu;<sub>s</sub>mg = mv<sup>2</sup>/r &rarr; <strong>v<sub>max</sub> = &radic;(&mu;<sub>s</sub>gr).</strong> Note: mass cancels — all cars have the same speed limit on a given curve.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Key Equations and Strategy Reminders</h3>
+                <p><strong>Newton's Second Law (apply along each axis):</strong> &Sigma;F<sub>x</sub> = ma<sub>x</sub> &nbsp;&nbsp;|&nbsp;&nbsp; &Sigma;F<sub>y</sub> = ma<sub>y</sub></p>
+                <p><strong>Friction:</strong> f<sub>k</sub> = &mu;<sub>k</sub>N (kinetic) &nbsp;&nbsp;|&nbsp;&nbsp; f<sub>s</sub> &le; &mu;<sub>s</sub>N; max = &mu;<sub>s</sub>N (static)</p>
+                <p><strong>Drag and terminal speed:</strong> F<sub>D</sub> = &frac12;C&rho;Av<sup>2</sup> &nbsp;&nbsp;|&nbsp;&nbsp; v<sub>T</sub> = &radic;(2mg / C&rho;A)</p>
+                <p><strong>Centripetal:</strong> &Sigma;F<sub>centripetal</sub> = mv<sup>2</sup>/r &nbsp;&nbsp;|&nbsp;&nbsp; v<sub>max, flat curve</sub> = &radic;(&mu;<sub>s</sub>gr)</p>
+                <ul>
+                    <li><strong>Always draw the FBD first</strong> — identify every force before writing any equations.</li>
+                    <li><strong>Align axes with acceleration</strong> — along the ramp, toward the center of a circle, etc.</li>
+                    <li><strong>Normal force &ne; weight</strong> unless the surface is horizontal and a<sub>y</sub> = 0.</li>
+                    <li><strong>Report forces in N, acceleration in m/s<sup>2</sup>, speed in m/s.</strong> Three significant figures unless stated otherwise.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SAMPLE PROBLEM VIDEOS -->
+        <h4 class="dp-has-icon" style="margin-top: 1.5em;"><i class="fas fa-video"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sample Problem Videos</h4>
+        <p style="text-align: center;">Watch each sample problem video, then attempt the corresponding written practice problem below.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 400px; margin-bottom: 2em;">
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 1: Car in a Banked Circular Turn</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Banked Curve &mdash; Finding the Ideal Banking Angle and Speed</h4>
+                    <p>A complete worked solution for a car navigating a banked circular turn. The video finds the banking angle at which no friction is needed to maintain circular motion, and the corresponding ideal speed. It then extends to finding the maximum speed with friction.</p>
+                    <ul>
+                        <li>FBD for a car on a banked curve: weight downward, normal force perpendicular to banked surface</li>
+                        <li>Horizontal (centripetal): N sin &theta; = mv<sup>2</sup>/r</li>
+                        <li>Vertical (no vertical acceleration): N cos &theta; &minus; mg = 0 &rarr; N = mg / cos &theta;</li>
+                        <li>Ideal angle (no friction needed): tan &theta; = v<sup>2</sup> / (rg)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 2: Friction with Applied Force at an Angle</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Block Pushed at an Angle &mdash; Normal Force, Friction, and Acceleration</h4>
+                    <p>A complete worked solution for a block on a horizontal surface pushed by a force at an angle below the horizontal. The downward component of the applied force increases the normal force (and therefore friction), which changes the block's acceleration compared to a purely horizontal push.</p>
+                    <ul>
+                        <li>FBD: weight (down), normal (up), applied force at angle (down-right), kinetic friction (left)</li>
+                        <li>Vertical: N &minus; mg &minus; F sin &phi; = 0 &rarr; N = mg + F sin &phi;</li>
+                        <li>Horizontal: F cos &phi; &minus; &mu;<sub>k</sub>N = ma &rarr; solve for a</li>
+                        <li>Key insight: pushing down increases N and therefore increases friction — pulling up would decrease it</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 3: Terminal Speed of a Falling Raindrop</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Terminal Speed &mdash; Applying the Drag Force Model</h4>
+                    <p>A complete worked solution finding the terminal speed of a spherical raindrop. Given the drop's radius, the density of water and air, and the drag coefficient, the video applies the terminal speed formula and discusses what physical factors control the speed of rainfall.</p>
+                    <ul>
+                        <li>Calculate mass from density and radius: m = &rho;<sub>water</sub> &times; (4/3)&pi;r<sup>3</sup></li>
+                        <li>Calculate cross-sectional area: A = &pi;r<sup>2</sup></li>
+                        <li>Apply: v<sub>T</sub> = &radic;(2mg / C&rho;<sub>air</sub>A) with C &approx; 0.45 for a sphere</li>
+                        <li>Interpret: larger drops fall faster; smaller drops (mist) fall nearly at rest</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1 &mdash; Newton's Second Law on a Ramp with Friction</h4>
+        <p><strong>A 5.00-kg block is placed on a rough inclined surface tilted at &theta; = 30.0° above the horizontal. The coefficients of friction are &mu;<sub>s</sub> = 0.400 and &mu;<sub>k</sub> = 0.300. (a) Does the block slide? (b) If it does slide, find its acceleration down the ramp. (c) Find the normal force on the block.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 5.00 kg, &theta; = 30.0°, &mu;<sub>s</sub> = 0.400, &mu;<sub>k</sub> = 0.300, g = 9.80 m/s<sup>2</sup></p>
+                    <p><strong>Part (a) &mdash; Does the block slide?</strong></p>
+                    <p style="padding-left: 2em;">Angle for impending motion: tan &theta;<sub>c</sub> = &mu;<sub>s</sub> = 0.400 &rarr; &theta;<sub>c</sub> = tan<sup>&minus;1</sup>(0.400) = 21.8°</p>
+                    <p style="padding-left: 2em;">Since &theta; = 30.0° &gt; &theta;<sub>c</sub> = 21.8°, the gravitational component along the ramp exceeds maximum static friction.</p>
+                    <p style="padding-left: 2em;"><strong>Yes, the block slides.</strong></p>
+                    <p><strong>Part (b) &mdash; Acceleration down the ramp:</strong></p>
+                    <p style="padding-left: 2em;">Axes: x along ramp (positive down-slope), y perpendicular to ramp.</p>
+                    <p style="padding-left: 2em;">y-axis: N &minus; mg cos &theta; = 0 &rarr; N = (5.00)(9.80) cos 30.0° = 49.0 &times; 0.866 = <strong>42.4 N</strong></p>
+                    <p style="padding-left: 2em;">f<sub>k</sub> = &mu;<sub>k</sub>N = (0.300)(42.4) = 12.7 N (directed up the ramp)</p>
+                    <p style="padding-left: 2em;">x-axis: mg sin &theta; &minus; f<sub>k</sub> = ma</p>
+                    <p style="padding-left: 2em;">(5.00)(9.80) sin 30.0° &minus; 12.7 = (5.00)a</p>
+                    <p style="padding-left: 2em;">24.5 &minus; 12.7 = 5.00a &rarr; a = 11.8 / 5.00 = <strong>2.36 m/s<sup>2</sup> down the ramp</strong></p>
+                    <p><strong>Part (c) &mdash; Normal force:</strong></p>
+                    <p style="padding-left: 2em;">N = mg cos &theta; = (5.00)(9.80)(0.866) = <strong>42.4 N</strong></p>
+                    <p><em>Note: N &lt; mg = 49.0 N because the incline supports only the component of weight perpendicular to the surface.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2 &mdash; Multi-Body System with Tension</h4>
+        <p><strong>Two blocks are connected by a light string. Block A (m<sub>A</sub> = 3.00 kg) sits on a frictionless horizontal table and is connected via a string over a frictionless pulley to Block B (m<sub>B</sub> = 2.00 kg) hanging vertically. (a) Find the acceleration of the system. (b) Find the tension in the string.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m<sub>A</sub> = 3.00 kg (on table), m<sub>B</sub> = 2.00 kg (hanging), frictionless table and pulley, g = 9.80 m/s<sup>2</sup></p>
+                    <p><strong>Part (a) &mdash; System acceleration:</strong></p>
+                    <p style="padding-left: 2em;">Both blocks have the same magnitude of acceleration a (string is inextensible).</p>
+                    <p style="padding-left: 2em;">Block A (horizontal): T = m<sub>A</sub>a &nbsp;&nbsp;→ &nbsp;&nbsp; T = 3.00a &nbsp;&nbsp; ...(1)</p>
+                    <p style="padding-left: 2em;">Block B (vertical, positive direction downward): m<sub>B</sub>g &minus; T = m<sub>B</sub>a &nbsp;&nbsp;→ &nbsp;&nbsp; 2.00(9.80) &minus; T = 2.00a &nbsp;&nbsp; ...(2)</p>
+                    <p style="padding-left: 2em;">Add equations (1) and (2):</p>
+                    <p style="padding-left: 2em;">m<sub>B</sub>g = (m<sub>A</sub> + m<sub>B</sub>)a &rarr; a = m<sub>B</sub>g / (m<sub>A</sub> + m<sub>B</sub>) = (2.00)(9.80) / (3.00 + 2.00)</p>
+                    <p style="padding-left: 2em;">a = 19.6 / 5.00 = <strong>3.92 m/s<sup>2</sup></strong></p>
+                    <p><strong>Part (b) &mdash; Tension:</strong></p>
+                    <p style="padding-left: 2em;">T = m<sub>A</sub>a = (3.00)(3.92) = <strong>11.8 N</strong></p>
+                    <p style="padding-left: 2em;"><em>Check with Block B: m<sub>B</sub>g &minus; T = m<sub>B</sub>a &rarr; 19.6 &minus; 11.8 = 7.84 = (2.00)(3.92) = 7.84 N ✓</em></p>
+                    <p><em>Note: T &lt; m<sub>B</sub>g = 19.6 N because Block B is accelerating downward — if it were in equilibrium, T would equal its weight.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3 &mdash; Banked Circular Turn</h4>
+        <p><strong>A highway curve has a radius of r = 120 m and is banked at an angle of &theta; = 18.0°. (a) Find the ideal speed (no friction needed) for this curve. (b) If the coefficient of static friction is &mu;<sub>s</sub> = 0.350, find the maximum speed at which a car can safely navigate this curve.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> r = 120 m, &theta; = 18.0°, &mu;<sub>s</sub> = 0.350, g = 9.80 m/s<sup>2</sup></p>
+                    <p><strong>Part (a) &mdash; Ideal speed (no friction):</strong></p>
+                    <p style="padding-left: 2em;">FBD: weight mg down, normal force N perpendicular to banked surface.</p>
+                    <p style="padding-left: 2em;">Horizontal (centripetal): N sin &theta; = mv<sup>2</sup>/r</p>
+                    <p style="padding-left: 2em;">Vertical: N cos &theta; = mg &rarr; N = mg / cos &theta;</p>
+                    <p style="padding-left: 2em;">Substitute N: (mg / cos &theta;) sin &theta; = mv<sup>2</sup>/r &rarr; g tan &theta; = v<sup>2</sup>/r</p>
+                    <p style="padding-left: 2em;">v<sub>ideal</sub> = &radic;(rg tan &theta;) = &radic;(120 &times; 9.80 &times; tan 18.0°) = &radic;(120 &times; 9.80 &times; 0.3249)</p>
+                    <p style="padding-left: 2em;">v<sub>ideal</sub> = &radic;(381.9) = <strong>19.5 m/s</strong> (about 70 km/h)</p>
+                    <p><strong>Part (b) &mdash; Maximum speed with friction:</strong></p>
+                    <p style="padding-left: 2em;">Above the ideal speed, friction acts down the bank (inward) to supplement the inward component of N.</p>
+                    <p style="padding-left: 2em;">v<sub>max</sub> = &radic;[rg(&mu;<sub>s</sub> + tan &theta;) / (1 &minus; &mu;<sub>s</sub> tan &theta;)]</p>
+                    <p style="padding-left: 2em;">Numerator factor: &mu;<sub>s</sub> + tan &theta; = 0.350 + 0.3249 = 0.6749</p>
+                    <p style="padding-left: 2em;">Denominator factor: 1 &minus; &mu;<sub>s</sub> tan &theta; = 1 &minus; (0.350)(0.3249) = 1 &minus; 0.1137 = 0.8863</p>
+                    <p style="padding-left: 2em;">v<sub>max</sub> = &radic;[120 &times; 9.80 &times; 0.6749 / 0.8863] = &radic;[1176 &times; 0.7615] = &radic;[896] = <strong>29.9 m/s</strong> (about 108 km/h)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to the next lesson, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;State Newton's three laws and give a real-world example illustrating each.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Draw a correct free-body diagram for a block on a flat surface, on an incline, and hanging from a string.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply &Sigma;F<sub>x</sub> = ma<sub>x</sub> and &Sigma;F<sub>y</sub> = ma<sub>y</sub> to find unknown forces or accelerations in 2D problems.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Determine whether an object on a rough incline will slide using tan &theta;<sub>c</sub> = &mu;<sub>s</sub>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate acceleration on a rough incline: a = g(sin &theta; &minus; &mu;<sub>k</sub> cos &theta;).</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate terminal speed using v<sub>T</sub> = &radic;(2mg / C&rho;A) and explain why it is reached.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply Newton's second law to circular motion: identify the centripetal force and calculate mv<sup>2</sup>/r.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Solve a banked-curve problem for ideal speed (tan &theta; = v<sup>2</sup>/rg).</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Newton's Laws are the foundation of the rest of the course. Every subsequent topic — energy, momentum, rotation — builds directly on the force-and-acceleration framework you've built here.</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>
