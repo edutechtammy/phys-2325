@@ -40,6 +40,18 @@ OpenStax, *University Physics Volume 1* — free OER, no cost to students
 
 ---
 
+## CME Reference Documents
+
+These documents are maintained by the Content Matter Expert (CME) and contain authoritative course structure information. Always consult these before building new lessons.
+
+| Document | Link | Notes |
+|---|---|---|
+| **PHYS 2325 OER Changes Needed** | [Google Doc](https://docs.google.com/document/d/1YgKYnYhHrHsrR09PMAOe_P9KJ5hbnuJavvvL0__RSgw/edit?tab=t.0) | Module outlines, reading assignments, media lists, and practice problem guidance for all modules |
+
+> ⚠️ **AI Content Note:** Before building any lesson, check the *PHYS 2325 OER Changes Needed* document for the authoritative reading list, media list, and practice problem outline for that lesson. The user will paste the relevant section into the chat as the content outline.
+
+---
+
 ## Course Modules
 
 | Module | Title | CC | Lessons |
@@ -205,8 +217,9 @@ When starting a new lesson build, provide the AI with these files as context:
 | Lesson | Title | Status |
 |---|---|---|
 | M2L1 | Vectors | ✅ Complete |
-| M2L2 | 2D and 3D Motion ⚠️ *split pending CME approval* | 🔲 Not started |
-| M2L3 | Force | 🔲 Not started |
+| M2L2a | Kinematics in 2D and 3D *(proposed split — pending CME approval)* | ⚠️ Draft built |
+| M2L2b | Projectile, Circular & Relative Motion *(proposed split — pending CME approval)* | ⚠️ Draft built |
+| M2L3 | Newton's Laws and Forces | ✅ Complete |
 
 ### Module 3 — Energy and Work
 | Lesson | Title | Status |
