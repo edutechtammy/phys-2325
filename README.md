@@ -109,6 +109,7 @@ Full CC and LO details: [`00_Master_Templates/course-competencies-los.md`](00_Ma
 | Component | Details |
 |---|---|
 | **LMS** | Canvas (tstc.instructure.com) |
+| **Canvas Build Course** | [PHYS-2325-SBX-P](https://tstc.instructure.com/courses/47588/modules) — active sandbox where lesson HTML is being built and tested |
 | **CSS Framework** | Bootstrap 5.3.2 (CDN) |
 | **Icon Library** | Font Awesome 6.0.0 (CDN) |
 | **Fonts** | Google Fonts — Lato (CDN) |
