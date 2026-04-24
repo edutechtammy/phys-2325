@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: M3L2 Potential Energy and Conservation of Energy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 1: HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 3: Energy and Work</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M3L2 Potential Energy and Conservation of Energy</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 2: INTRODUCTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The total energy of the universe is constant; the total entropy is always increasing."</em></span><br /><span>&mdash;&nbsp;Rudolf Clausius</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">In the last lesson, work changed kinetic energy. Now you will see that work done by a <em>conservative force</em> can also be stored and fully recovered — this stored capacity to do work is called <strong>potential energy</strong>. Gravitational potential energy U<sub>g</sub> = mgy and elastic (spring) potential energy U<sub>s</sub> = &frac12;kx<sup>2</sup> are the two forms you will work with most. When only conservative forces act, mechanical energy E = K + U is conserved — an extraordinarily powerful constraint that lets you solve problems that Newton's laws alone would make extremely difficult. You will also extend the framework to include friction: when non-conservative forces act, mechanical energy is not conserved, but total energy still is — the "missing" mechanical energy is converted to thermal energy.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img class="dp-full-width dp-popup-image object-fit-cover dp-ratio-1-1" style="height: auto;" src="CANVAS_IMAGE_URL" alt="A potential energy curve U(x) plotted against position x, showing turning points, equilibrium positions, and the total mechanical energy level as a horizontal line." />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">The potential energy curve: where the total energy line intersects U(x) are the turning points of motion.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 3: LEARNING OBJECTIVES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC3.1 Analyze the energy transformations associated with the work-energy theorem</strong></p>
+                    <p style="padding-left: 40px;">★ LO3.2.1 Define gravitational potential energy and elastic potential energy; calculate each for a given configuration</p>
+                    <p style="padding-left: 40px;">★ LO3.2.2 State the principle of conservation of mechanical energy and apply it to solve for unknown speeds or heights when only conservative forces act</p>
+                    <p style="padding-left: 40px;">★ LO3.2.3 Read a potential energy curve: identify turning points, equilibrium positions, and kinetic energy at any location</p>
+                    <p style="padding-left: 40px;">★ LO3.2.4 Calculate the work done on a system by an external force in the presence of friction and relate it to the change in total mechanical energy</p>
+                    <p style="padding-left: 40px;">★ LO3.2.5 Apply the general law of conservation of energy, accounting for thermal energy generated by friction: &Delta;E<sub>mec</sub> = &minus;&Delta;E<sub>th</sub></p>
+                    <p style="padding-left: 40px;">★ LO3.2.6 Choose an appropriate reference level for gravitational potential energy and demonstrate that the choice does not affect the physics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 4: REQUIRED READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Complete all five sections before watching the videos.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/8-1-potential-energy-of-a-system" target="_blank" rel="noopener">8.1 Potential Energy</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/8-2-conservative-and-non-conservative-forces" target="_blank" rel="noopener">8.2 Conservation of Mechanical Energy</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/8-3-conservation-of-energy" target="_blank" rel="noopener">8.3 Reading a Potential Energy Curve</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/8-4-potential-energy-diagrams-and-stability" target="_blank" rel="noopener">8.4 Work Done on a System by an External Force</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/8-5-sources-of-energy" target="_blank" rel="noopener">8.5 Conservation of Energy</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 5: OPTIONAL READING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want additional practice with potential energy, conservation of energy, and energy graphs? These free resources complement the reading.</p>
+                <ul>
+                    <li><a class="inline_disabled" href="https://phet.colorado.edu/en/simulations/energy-skate-park" target="_blank" rel="noopener">PhET: Energy Skate Park</a> &ndash; Full simulation — explore conservation of energy with a skateboarder, adjustable friction, and real-time energy bar graphs.</li>
+                    <li><a class="inline_disabled" href="https://www.physicsclassroom.com/class/energy/Lesson-2/Analysis-of-Situations-in-Which-Mechanical-Energy-is-Conserved" target="_blank" rel="noopener">Physics Classroom: Conservation of Mechanical Energy</a> &ndash; Conceptual and quantitative examples with bar chart analysis.</li>
+                    <li><a class="inline_disabled" href="https://www.khanacademy.org/science/physics/work-and-energy/potential-energy/a/what-is-gravitational-potential-energy" target="_blank" rel="noopener">Khan Academy: Gravitational Potential Energy</a> &ndash; Article and practice problems on U<sub>g</sub> = mgh.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/8-key-terms" target="_blank" rel="noopener">OpenStax Chapter 8 Key Terms</a> &ndash; Glossary for all potential energy and conservation vocabulary.</li>
+                    <li><a class="inline_disabled" href="https://openstax.org/books/university-physics-volume-1/pages/8-key-equations" target="_blank" rel="noopener">OpenStax Chapter 8 Key Equations</a> &ndash; Quick reference for all formulas from this lesson.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 6: MEDIA
+         NOTE: All video files are pending upload to Canvas.
+               Replace dp-embed-wrapper comments with Canvas embed
+               code when videos are uploaded.
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Work through the pre-lecture videos for each reading section first, then watch the illustration and mini-lectures for deeper examples.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+
+            <!-- ──────────────── PRE-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 1 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Pre-Lecture &mdash; 8.1 Potential Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Defining Potential Energy — Gravitational and Elastic</h4>
+                    <p>This video introduces potential energy as energy stored in a system by virtue of its configuration. It derives both forms from the work done by conservative forces: gravitational potential energy U<sub>g</sub> = mgy (with a chosen reference level) and elastic potential energy U<sub>s</sub> = &frac12;kx<sup>2</sup>.</p>
+                    <ul>
+                        <li>Potential energy is associated with a <em>system</em>, not a single object</li>
+                        <li>Gravitational PE: U<sub>g</sub> = mgy — defined relative to a chosen reference level (y = 0 is arbitrary)</li>
+                        <li>Elastic (spring) PE: U<sub>s</sub> = &frac12;kx<sup>2</sup> — always &ge; 0; reference level is equilibrium (x = 0)</li>
+                        <li>Relationship to conservative force: F = &minus;dU/dx — force points toward lower potential energy</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 8.1 Potential Energy --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 2 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Pre-Lecture &mdash; 8.2 Conservation of Mechanical Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: E<sub>mec</sub> = K + U = Constant (Conservative Forces Only)</h4>
+                    <p>When only conservative forces do work, the total mechanical energy E<sub>mec</sub> = K + U remains constant throughout the motion. This video derives the conservation law from the work-kinetic energy theorem and shows how to apply it: set K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub>.</p>
+                    <ul>
+                        <li>Conservative forces: work is path-independent (gravity, spring); non-conservative: friction, drag</li>
+                        <li>Conservation of mechanical energy: K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub> when W<sub>nc</sub> = 0</li>
+                        <li>Strategy: identify initial and final states; write energy equation; solve for unknown</li>
+                        <li>Energy can transform between K and U, but their sum is constant — illustrated with a pendulum and a roller coaster</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 8.2 Conservation of Mechanical Energy --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 3 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Pre-Lecture &mdash; 8.3 Reading a Potential Energy Curve</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: Extracting Physics from a U(x) Graph</h4>
+                    <p>A plot of potential energy U vs. position x encodes everything about the conservative force and the allowed motion. This video teaches you to read such a curve: find the force at any point, identify turning points, locate equilibrium positions, and determine whether equilibria are stable or unstable.</p>
+                    <ul>
+                        <li>Force from the curve: F(x) = &minus;dU/dx — slope of U(x) gives the force (magnitude and direction)</li>
+                        <li>Turning points: where E<sub>total</sub> = U(x) — the object momentarily stops (K = 0)</li>
+                        <li>Stable equilibrium: local minimum of U(x) — force restores the object if displaced</li>
+                        <li>Unstable equilibrium: local maximum of U(x) — force pushes the object further away if displaced</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 8.3 Reading a Potential Energy Curve --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 4 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 4: Pre-Lecture &mdash; 8.4 Work Done on a System by an External Force</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: External Work, Friction, and the Change in Mechanical Energy</h4>
+                    <p>When an external agent does work on a system that also has internal friction, the change in mechanical energy is less than the external work — the difference goes into thermal energy. This video introduces &Delta;E<sub>mec</sub> = W<sub>ext</sub> &minus; &Delta;E<sub>th</sub> and the thermal energy term &Delta;E<sub>th</sub> = f<sub>k</sub>d.</p>
+                    <ul>
+                        <li>With no friction: W<sub>ext</sub> = &Delta;E<sub>mec</sub> = &Delta;K + &Delta;U</li>
+                        <li>With friction: W<sub>ext</sub> = &Delta;E<sub>mec</sub> + &Delta;E<sub>th</sub>, where &Delta;E<sub>th</sub> = f<sub>k</sub>d</li>
+                        <li>Thermal energy generated: &Delta;E<sub>th</sub> = f<sub>k</sub>d — always positive (friction always increases thermal energy)</li>
+                        <li>System boundary: defines what counts as "internal" vs. "external" energy</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 8.4 Work Done on a System by an External Force --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 5 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 5: Pre-Lecture &mdash; 8.5 Conservation of Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Pre-Lecture: The General Law — Total Energy of an Isolated System is Constant</h4>
+                    <p>This video states the full conservation of energy law: the total energy of an isolated system (mechanical + thermal + internal) never changes. For non-isolated systems, the change in total energy equals the energy transferred across the system boundary. This is one of the most fundamental laws in all of physics.</p>
+                    <ul>
+                        <li>Isolated system: &Delta;E<sub>total</sub> = 0 &rarr; &Delta;E<sub>mec</sub> + &Delta;E<sub>th</sub> + &Delta;E<sub>int</sub> = 0</li>
+                        <li>Non-isolated system: &Delta;E<sub>total</sub> = W + Q (work and heat transfer across boundary)</li>
+                        <li>Conservative vs. non-conservative: friction converts mechanical energy to thermal, not lost — just transformed</li>
+                        <li>Practical form with friction: K<sub>f</sub> + U<sub>f</sub> = K<sub>i</sub> + U<sub>i</sub> &minus; f<sub>k</sub>d</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Pre-Lecture 8.5 Conservation of Energy --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── ILLUSTRATION ──────────────── -->
+
+            <!-- VIDEO 6 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 6: Illustration &mdash; Pendulum Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Video Illustration: Energy Transformation in a Swinging Pendulum</h4>
+                    <p>This illustration video shows a pendulum swinging back and forth and tracks the continuous exchange between kinetic energy and gravitational potential energy throughout the swing — demonstrating conservation of mechanical energy in one of its most visually intuitive forms.</p>
+                    <ul>
+                        <li>At the lowest point: K is maximum, U<sub>g</sub> is minimum (reference level)</li>
+                        <li>At the highest point (turning points): K = 0, U<sub>g</sub> is maximum</li>
+                        <li>At any intermediate angle &theta;: K + U<sub>g</sub> = E<sub>mec</sub> = constant</li>
+                        <li>With air resistance (non-ideal): E<sub>mec</sub> slowly decreases as energy converts to thermal — amplitude decreases over time</li>
+                    </ul>
+                    <p>Time: <em>Video pending upload to Canvas</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed: Video Illustration — Pendulum Energy --></div>
+                </div>
+            </div>
+
+            <!-- ──────────────── MINI-LECTURE VIDEOS ──────────────── -->
+
+            <!-- VIDEO 7 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 7: Mini-Lecture &mdash; Conservation of Mechanical Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Applying K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub></h4>
+                    <p>This video works a complete example — a ball launched from a height, or a roller coaster car at various points on a frictionless track — using conservation of mechanical energy to find speeds and heights without needing to track forces or use kinematics.</p>
+                    <ul>
+                        <li>Choose a reference level (y = 0); assign U<sub>g</sub> accordingly at each point</li>
+                        <li>Write K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub>: &frac12;mv<sub>i</sub><sup>2</sup> + mgy<sub>i</sub> = &frac12;mv<sub>f</sub><sup>2</sup> + mgy<sub>f</sub></li>
+                        <li>Solve for the unknown (v<sub>f</sub> or y<sub>f</sub>); note that mass often cancels</li>
+                        <li>Key check: the reference level choice does not affect the final answer</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 8 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 8: Mini-Lecture &mdash; Elastic Potential Energy and Conservation of Mechanical Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Spring-Block System — K, U<sub>s</sub>, and E<sub>mec</sub></h4>
+                    <p>Combining kinetic energy with elastic potential energy: a block on a frictionless surface attached to a spring is displaced and released. This video tracks K and U<sub>s</sub> at each stage and finds the speed at any position using energy conservation.</p>
+                    <ul>
+                        <li>At maximum compression/extension: K = 0, U<sub>s</sub> = &frac12;kx<sub>max</sub><sup>2</sup> = E<sub>mec</sub></li>
+                        <li>At equilibrium (x = 0): U<sub>s</sub> = 0, K = &frac12;mv<sub>max</sub><sup>2</sup> = E<sub>mec</sub></li>
+                        <li>At any position x: &frac12;mv<sup>2</sup> + &frac12;kx<sup>2</sup> = &frac12;kx<sub>max</sub><sup>2</sup></li>
+                        <li>Solve for v: v = &radic;[(k/m)(x<sub>max</sub><sup>2</sup> &minus; x<sup>2</sup>)] — previews simple harmonic motion (Module 7)</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 9 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 9: Mini-Lecture &mdash; Energy Accounting: K and U<sub>g</sub></h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Tracking Kinetic and Gravitational Potential Energy at Multiple Points</h4>
+                    <p>A systematic energy accounting exercise: given a projectile or object moving along a curved path under gravity only, this video computes K and U<sub>g</sub> at several key positions and verifies that E<sub>mec</sub> = K + U<sub>g</sub> is constant throughout — reinforcing the meaning of energy conservation as a bookkeeping tool.</p>
+                    <ul>
+                        <li>Choose reference level; calculate U<sub>g</sub> = mgy at each point relative to that level</li>
+                        <li>Calculate K = &frac12;mv<sup>2</sup> at each point; sum K + U<sub>g</sub></li>
+                        <li>Verify E<sub>mec</sub> is the same at every point (within rounding)</li>
+                        <li>Key insight: the <em>reference level choice</em> shifts all U values by the same constant — the differences &Delta;U are unaffected, and E<sub>mec</sub> is the same regardless of where you set y = 0</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <!-- VIDEO 10 -->
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 10: Mini-Lecture &mdash; Potential Energy Curve</h3>
+                <div class="dp-panel-content">
+                    <h4>Mini-Lecture: Reading F, Turning Points, and Equilibria from U(x)</h4>
+                    <p>This video works through a complete potential energy curve problem: given U(x) as a graph or equation, find the force at several positions, identify all turning points for a given E<sub>total</sub>, and classify each equilibrium position as stable or unstable.</p>
+                    <ul>
+                        <li>Force: F(x) = &minus;dU/dx — evaluate as the negative slope of the U(x) graph</li>
+                        <li>Turning points: set U(x) = E<sub>total</sub> and solve for x; object cannot go beyond these points</li>
+                        <li>Stable equilibrium at local U minimum: F = 0 here; restoring if displaced</li>
+                        <li>Unstable equilibrium at local U maximum: F = 0 here; destabilizing if displaced</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 7: PRACTICE AND APPLY – CONCEPTUAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Conceptual</h3>
+
+        <!-- 7A: ORDER ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Strategy: Solving a Conservation of Energy Problem</h4>
+        <p>Arrange the following steps in the correct order for applying conservation of energy to a mechanics problem.</p>
+        <div class="dp-order-wrapper" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="fas fa-sort-numeric-down"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order Items</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Arrange the following items in the correct order.</p>
+            <ol class="dp-order dp-order-text" style="background-color: white; border: 2px solid #d13138; border-radius: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+                <li>Identify the system and whether any non-conservative forces (friction, drag) act.</li>
+                <li>Choose a reference level for gravitational potential energy (set y = 0).</li>
+                <li>Define the initial and final states of the system.</li>
+                <li>Write the energy equation: K<sub>i</sub> + U<sub>i</sub> + W<sub>ext</sub> = K<sub>f</sub> + U<sub>f</sub> + &Delta;E<sub>th</sub>.</li>
+                <li>Calculate known energy terms and substitute into the equation.</li>
+                <li>Solve for the unknown (speed, height, compression, etc.).</li>
+                <li>Check: verify units (joules) and confirm the answer is physically reasonable.</li>
+            </ol>
+        </div>
+
+        <!-- 7B: SELECT ALL ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> When Is Mechanical Energy Conserved?</h4>
+        <p>Select <strong>all</strong> scenarios in which the mechanical energy of the object or system is <strong>conserved</strong>.</p>
+        <div class="dp-si-sa" style="background-color: #1d2757; padding: 20px; border-radius: 10px; margin-bottom: 2em;">
+            <h4 class="dp-has-icon" style="color: white;"><i class="dp-icon fas fa-mouse-pointer"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Select All</h4>
+            <p style="color: white; border: none; outline: none; text-shadow: none; background: transparent;">Select all scenarios where mechanical energy is conserved.</p>
+            <ul class="dp-sa-list dp-sa-list-text" style="border: 2px solid #d13138; border-radius: 10px; padding: 15px; background-color: white;">
+                <li class="dp-sa-correct">A ball in free fall (ignoring air resistance).</li>
+                <li class="dp-sa-correct">A block sliding down a frictionless ramp.</li>
+                <li class="dp-sa-correct">A pendulum swinging in a vacuum.</li>
+                <li class="dp-sa-correct">A spring-block system on a frictionless surface oscillating after release.</li>
+                <li class="dp-sa-correct">A roller coaster on a frictionless track.</li>
+                <li>A block sliding down a rough ramp (friction present).</li>
+                <li>A skydiver falling through air (drag present).</li>
+                <li>A car braking to a stop (friction converts K to thermal energy).</li>
+                <li>A box pushed across a floor with an applied force against friction.</li>
+            </ul>
+        </div>
+
+        <!-- 7C: MATCH ITEMS ACTIVITY -->
+        <h4 class="dp-has-icon"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match the Energy Term to Its Definition</h4>
+        <p>Match each energy term or symbol on the left to its correct definition or formula on the right.</p>
+        <div class="dp-match-items dp-match-pairing dp-si-rounded dp-si-outline" style="background-color: #1d2757; padding: 20px; border-radius: 10px; border: 2px solid #d13138; margin-bottom: 2em;">
+            <h3 class="dp-has-icon" style="color: white;"><i class="fas fa-object-ungroup"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match Items</h3>
+            <p class="dp-match-instructions" style="color: white; border: none; background: transparent;">Select each set of two matching items.</p>
+            <div class="dp-unmatched-items">
+                <h4 class="dp-has-icon unmatched-items-header"><i class="fas fa-search"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Items to Match</h4>
+                <dl class="dp-match dp-match-text">
+                    <dt data-pair-id="pair-0">U<sub>g</sub> = mgy</dt>
+                    <dd data-pair-id="pair-0">Gravitational potential energy; depends on height above the chosen reference level.</dd>
+                    <dt data-pair-id="pair-1">U<sub>s</sub> = &frac12;kx<sup>2</sup></dt>
+                    <dd data-pair-id="pair-1">Elastic potential energy stored in a spring displaced x from equilibrium.</dd>
+                    <dt data-pair-id="pair-2">E<sub>mec</sub> = K + U</dt>
+                    <dd data-pair-id="pair-2">Total mechanical energy — the sum of kinetic and potential energies.</dd>
+                    <dt data-pair-id="pair-3">&Delta;E<sub>th</sub> = f<sub>k</sub>d</dt>
+                    <dd data-pair-id="pair-3">Thermal energy generated by kinetic friction over displacement d.</dd>
+                    <dt data-pair-id="pair-4">F(x) = &minus;dU/dx</dt>
+                    <dd data-pair-id="pair-4">Conservative force obtained from the negative derivative of the potential energy function.</dd>
+                    <dt data-pair-id="pair-5">Turning point</dt>
+                    <dd data-pair-id="pair-5">Location where U(x) = E<sub>total</sub> and K = 0; the object momentarily stops and reverses.</dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- 7D: FLIP CARDS -->
+        <h4 class="dp-has-icon"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Key Concept Check</h4>
+        <p>Click each card to flip it and test your understanding of potential energy and conservation of energy.</p>
+        <div class="dp-column-container container-fluid">
+            <div class="row">
+                <!-- LEFT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A skier starts from rest at height h on a frictionless slope. What is the skier's speed at the bottom?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Set y = 0 at the bottom. Conservation of energy: K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub> &rarr; 0 + mgh = &frac12;mv<sub>f</sub><sup>2</sup> + 0. Solving: <strong>v<sub>f</sub> = &radic;(2gh)</strong>. Note: mass cancels — all skiers reach the same speed, regardless of mass.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">How does friction affect mechanical energy? Where does the "lost" mechanical energy go?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>Friction is a non-conservative force — it reduces mechanical energy: &Delta;E<sub>mec</sub> = &minus;&Delta;E<sub>th</sub> &lt; 0. The mechanical energy is not "lost" — it is converted to <strong>thermal energy</strong> (heat) in the sliding surfaces: &Delta;E<sub>th</sub> = f<sub>k</sub>d. Total energy (mechanical + thermal) is still conserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">Does it matter where you place the reference level (y = 0) for gravitational potential energy? Explain.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>No — the choice of reference level does not affect the physics.</strong> Shifting y = 0 changes U at every point by the same constant, so &Delta;U = U<sub>f</sub> &minus; U<sub>i</sub> is unchanged. Since only differences in energy appear in the conservation equation, the final answers for speed, height, etc., are always the same regardless of where you set y = 0. Choose the level that makes the algebra simplest.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">On a U(x) graph, how do you find the force on the object at any position x?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>F(x) = &minus;dU/dx. Graphically: F is the <strong>negative slope</strong> of the U(x) curve at that point. Where the curve slopes downward (dU/dx &lt; 0), F is positive (force in +x direction). Where it slopes upward (dU/dx &gt; 0), F is negative. At a minimum or maximum of U, the slope is zero and F = 0 — these are equilibrium positions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">A spring launches a block from compression x<sub>0</sub> on a frictionless surface. What is the block's maximum speed?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p>At release: K<sub>i</sub> = 0, U<sub>s,i</sub> = &frac12;kx<sub>0</sub><sup>2</sup>. At equilibrium (x = 0): U<sub>s,f</sub> = 0, K<sub>f</sub> = &frac12;mv<sub>max</sub><sup>2</sup>. Conservation: &frac12;kx<sub>0</sub><sup>2</sup> = &frac12;mv<sub>max</sub><sup>2</sup>. Solving: <strong>v<sub>max</sub> = x<sub>0</sub>&radic;(k/m)</strong>. This is the maximum speed — all spring PE has converted to KE.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                        <div class="dp-flip-card-inner">
+                            <div class="dp-front-card">
+                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                    <div class="card-body">
+                                        <h5 class="card-title dp-ignore-theme text-center">What is the difference between a stable and unstable equilibrium on a U(x) graph?</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dp-back-card">
+                                <div class="dp-card card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Answer</h5>
+                                        <p><strong>Stable equilibrium</strong> is at a <em>local minimum</em> of U(x): if the object is displaced slightly, F = &minus;dU/dx points back toward the equilibrium — it is restored. <strong>Unstable equilibrium</strong> is at a <em>local maximum</em>: if displaced, F points away — the object accelerates further from equilibrium. Think: a ball in a bowl (stable) vs. a ball balanced on a hill (unstable).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 8: PRACTICE AND APPLY – COMPUTATIONAL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-calculator" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply - Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Important: Key Equations and Strategy Reminders</h3>
+                <p><strong>Potential energy:</strong> U<sub>g</sub> = mgy &nbsp;|&nbsp; U<sub>s</sub> = &frac12;kx<sup>2</sup></p>
+                <p><strong>Mechanical energy:</strong> E<sub>mec</sub> = K + U = &frac12;mv<sup>2</sup> + U</p>
+                <p><strong>Conservation (no friction):</strong> K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub></p>
+                <p><strong>With friction:</strong> K<sub>f</sub> + U<sub>f</sub> = K<sub>i</sub> + U<sub>i</sub> &minus; f<sub>k</sub>d &nbsp;(or: W<sub>ext</sub> = &Delta;E<sub>mec</sub> + &Delta;E<sub>th</sub>)</p>
+                <p><strong>Thermal energy from friction:</strong> &Delta;E<sub>th</sub> = f<sub>k</sub>d &nbsp;|&nbsp; f<sub>k</sub> = &mu;<sub>k</sub>N</p>
+                <p><strong>Force from potential energy:</strong> F(x) = &minus;dU/dx</p>
+                <ul>
+                    <li><strong>Choose y = 0 to minimize algebra</strong> — the final answer is independent of this choice.</li>
+                    <li><strong>Check whether friction is present</strong> — if yes, &Delta;E<sub>mec</sub> &lt; 0; use the friction form.</li>
+                    <li><strong>Mass often cancels</strong> in pure gravitational problems — verify this before solving.</li>
+                    <li><strong>Report energy in joules (J), speed in m/s, height in m.</strong> Three significant figures.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SAMPLE PROBLEM VIDEOS -->
+        <h4 class="dp-has-icon" style="margin-top: 1.5em;"><i class="fas fa-video"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sample Problem Videos</h4>
+        <p style="text-align: center;">Watch each sample problem video, then attempt the corresponding written practice problem below.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 400px; margin-bottom: 2em;">
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 1: Choosing a Reference Level — Sloth</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Gravitational PE with Two Different Reference Levels</h4>
+                    <p>A sloth hangs at different heights. This video calculates gravitational potential energy using two different reference levels and shows that while the numerical value of U changes, the difference &Delta;U — and hence the physics — is identical in both cases.</p>
+                    <ul>
+                        <li>Case 1: y = 0 at the ground; Case 2: y = 0 at the sloth's lowest position</li>
+                        <li>U<sub>g</sub> differs between cases by a constant offset</li>
+                        <li>&Delta;U = U<sub>f</sub> &minus; U<sub>i</sub> is the same in both — this is what enters the energy equation</li>
+                        <li>Conclusion: reference level choice is a matter of convenience, not physics</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 2: Conservation of Mechanical Energy — Water Slide</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Speed at the Bottom of a Frictionless Water Slide</h4>
+                    <p>A rider starts from rest at the top of a water slide of height h. This video applies K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub> to find the speed at the bottom, and then asks: at what height along the slide does the rider reach half the maximum speed?</p>
+                    <ul>
+                        <li>Initial: K<sub>i</sub> = 0, U<sub>i</sub> = mgh; Final: K<sub>f</sub> = &frac12;mv<sub>f</sub><sup>2</sup>, U<sub>f</sub> = 0</li>
+                        <li>v<sub>f</sub> = &radic;(2gh) — independent of mass and path shape</li>
+                        <li>Height for v = v<sub>f</sub>/2: set &frac12;mv<sub>f</sub><sup>2</sup>/4 + mgy = mgh &rarr; y = 3h/4</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 3: Equivalent Paths — Slippery Cheese</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Path Independence of Conservative Forces</h4>
+                    <p>A wedge of cheese slides from the same starting height to the same ending height by two different routes. This video shows that the work done by gravity — and the final speed — is the same for both paths, confirming the path-independence property of conservative forces.</p>
+                    <ul>
+                        <li>W<sub>g</sub> = &minus;&Delta;U<sub>g</sub> = &minus;mg(y<sub>f</sub> &minus; y<sub>i</sub>) — depends only on endpoints</li>
+                        <li>Path A (direct) vs. Path B (longer route): identical &Delta;y &rarr; identical W<sub>g</sub> &rarr; identical v<sub>f</sub></li>
+                        <li>Key distinction from friction: friction work <em>does</em> depend on path length — longer path &rarr; more thermal energy</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 4: Reading a Potential Energy Graph</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Extracting Force, KE, Turning Points, and Equilibria from U(x)</h4>
+                    <p>Given a specific U(x) graph and a total mechanical energy value, this video identifies the turning points, the kinetic energy at each labeled position, the sign and approximate magnitude of the force at each position, and the stability of each equilibrium.</p>
+                    <ul>
+                        <li>K(x) = E<sub>total</sub> &minus; U(x) at each x — read directly from the graph as the vertical gap between E line and U curve</li>
+                        <li>Force at each x: negative slope of U — steep downward slope &rarr; large positive force</li>
+                        <li>Turning points: where U(x) = E<sub>total</sub> line; K = 0 here</li>
+                        <li>Stability: local minima of U are stable equilibria; local maxima are unstable</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 5: Energy and Friction — Mountain Slope</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Speed on a Rough Slope Using Energy with Friction</h4>
+                    <p>A hiker descends a rough mountain slope of known angle and friction coefficient over a given distance. This video applies K<sub>f</sub> + U<sub>f</sub> = K<sub>i</sub> + U<sub>i</sub> &minus; f<sub>k</sub>d to find the speed at the bottom, accounting for the thermal energy generated by friction.</p>
+                    <ul>
+                        <li>Height descended: &Delta;y = d sin &theta;; normal force: N = mg cos &theta;; friction force: f<sub>k</sub> = &mu;<sub>k</sub>mg cos &theta;</li>
+                        <li>Energy equation: &frac12;mv<sub>f</sub><sup>2</sup> = mgd sin &theta; &minus; &mu;<sub>k</sub>mgd cos &theta; = mgd(sin &theta; &minus; &mu;<sub>k</sub> cos &theta;)</li>
+                        <li>v<sub>f</sub> = &radic;[2gd(sin &theta; &minus; &mu;<sub>k</sub> cos &theta;)] — same result as Newton's second law approach</li>
+                        <li>Connection to M2L3: a = g(sin &theta; &minus; &mu;<sub>k</sub> cos &theta;) and v<sub>f</sub><sup>2</sup> = 2ad confirms consistency</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 6: Work When There Is Friction — Easter Island Statues</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: External Work Required to Move a Heavy Object Against Friction</h4>
+                    <p>Moving a large stone statue (like those at Easter Island) across a horizontal surface requires an external force to overcome friction. This video calculates the work done by the applied force, the thermal energy generated by friction, and verifies the energy balance W<sub>ext</sub> = &Delta;K + &Delta;E<sub>th</sub>.</p>
+                    <ul>
+                        <li>If &Delta;K = 0 (moved at constant speed): W<sub>ext</sub> = &Delta;E<sub>th</sub> = f<sub>k</sub>d = &mu;<sub>k</sub>mgd</li>
+                        <li>If moving from rest to some speed: W<sub>ext</sub> = &frac12;mv<sub>f</sub><sup>2</sup> + &mu;<sub>k</sub>mgd</li>
+                        <li>Energy audit: work from the people &rarr; kinetic energy + heat in the ground/statue surface</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 7: Work, Friction, Change in Thermal Energy — Cabbage Heads</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Energy Accounting with Friction — Calculating &Delta;E<sub>th</sub></h4>
+                    <p>Cabbages slide along a surface with friction. Given the applied work and measured change in kinetic energy, this video works backward using W<sub>ext</sub> = &Delta;K + &Delta;E<sub>th</sub> to determine the thermal energy generated — an energy audit that highlights what fraction of the input work became heat.</p>
+                    <ul>
+                        <li>Rearrange: &Delta;E<sub>th</sub> = W<sub>ext</sub> &minus; &Delta;K</li>
+                        <li>Verify using &Delta;E<sub>th</sub> = f<sub>k</sub>d = &mu;<sub>k</sub>Nd independently</li>
+                        <li>Percentage of input work converted to heat: (&Delta;E<sub>th</sub> / W<sub>ext</sub>) &times; 100%</li>
+                        <li>Real-world context: efficiency of transport, machinery, and energy conversion</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 8: Energy, Friction, Spring, Graph</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Block Compresses a Spring on a Rough Surface — Graphical Analysis</h4>
+                    <p>A moving block slides along a rough surface and compresses a spring. This video uses an energy bar chart (graph) to track K, U<sub>s</sub>, and &Delta;E<sub>th</sub> at each stage, then solves for the maximum compression of the spring using the full energy equation including friction.</p>
+                    <ul>
+                        <li>Initial: K<sub>i</sub> = &frac12;mv<sub>i</sub><sup>2</sup>, U<sub>s,i</sub> = 0, E<sub>th,i</sub> = 0</li>
+                        <li>At maximum compression (v = 0): K = 0, U<sub>s</sub> = &frac12;kx<sub>max</sub><sup>2</sup>, &Delta;E<sub>th</sub> = f<sub>k</sub>d</li>
+                        <li>Energy equation: &frac12;mv<sub>i</sub><sup>2</sup> = &frac12;kx<sub>max</sub><sup>2</sup> + f<sub>k</sub>d (where d = x<sub>max</sub>)</li>
+                        <li>Solve for x<sub>max</sub> — quadratic in x<sub>max</sub>; choose the physically meaningful root</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Sample Problem 9: Energy, Friction, Spring — Tamales</h3>
+                <div class="dp-panel-content">
+                    <h4>Sample Problem: Object Launched by a Spring, Slides with Friction</h4>
+                    <p>A spring launches a tamale (or block) horizontally; the object then slides along a rough surface. This video finds the launch speed from spring PE, then uses energy methods with friction to find the stopping distance — or the speed after traveling a given distance.</p>
+                    <ul>
+                        <li>Phase 1 (launch): &frac12;kx<sub>0</sub><sup>2</sup> = &frac12;mv<sub>launch</sub><sup>2</sup> &rarr; v<sub>launch</sub> = x<sub>0</sub>&radic;(k/m)</li>
+                        <li>Phase 2 (sliding with friction): &frac12;mv<sub>launch</sub><sup>2</sup> &minus; f<sub>k</sub>d = &frac12;mv<sub>f</sub><sup>2</sup></li>
+                        <li>To stop: d<sub>stop</sub> = mv<sub>launch</sub><sup>2</sup> / (2f<sub>k</sub>) = kx<sub>0</sub><sup>2</sup> / (2&mu;<sub>k</sub>mg)</li>
+                        <li>Entire problem solved with energy — no Newton's law kinematics needed</li>
+                    </ul>
+                    <p>Time: <em>Video pending &mdash; to be recorded by instructor</em></p>
+                    <div class="dp-embed-wrapper"><!-- Canvas media embed code will go here when video is available --></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- WRITTEN PRACTICE PROBLEMS -->
+
+        <!-- PRACTICE PROBLEM 1 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 1 &mdash; Conservation of Mechanical Energy on a Frictionless Ramp</h4>
+        <p><strong>A 2.00-kg block starts from rest at the top of a frictionless ramp h = 4.00 m above the floor. (a) Find the speed of the block at the bottom of the ramp. (b) Find the height at which the block has a speed of 6.00 m/s on the way down.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 2.00 kg, h = 4.00 m, v<sub>i</sub> = 0, g = 9.80 m/s<sup>2</sup>, frictionless</p>
+                    <p><strong>Reference level:</strong> y = 0 at the floor (bottom of ramp).</p>
+                    <p><strong>Part (a) &mdash; Speed at the bottom:</strong></p>
+                    <p style="padding-left: 2em;">K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub></p>
+                    <p style="padding-left: 2em;">0 + mgh = &frac12;mv<sub>f</sub><sup>2</sup> + 0 &rarr; v<sub>f</sub> = &radic;(2gh) = &radic;(2 &times; 9.80 &times; 4.00) = &radic;(78.4)</p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = <strong>8.85 m/s</strong> &nbsp;(note: mass cancels — same answer for any mass)</p>
+                    <p><strong>Part (b) &mdash; Height where v = 6.00 m/s:</strong></p>
+                    <p style="padding-left: 2em;">K<sub>i</sub> + U<sub>i</sub> = K + U &rarr; mgh = &frac12;mv<sup>2</sup> + mgy</p>
+                    <p style="padding-left: 2em;">y = h &minus; v<sup>2</sup>/(2g) = 4.00 &minus; (6.00)<sup>2</sup>/(2 &times; 9.80) = 4.00 &minus; 36.0/19.6 = 4.00 &minus; 1.84</p>
+                    <p style="padding-left: 2em;">y = <strong>2.16 m</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 2 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 2 &mdash; Energy with Friction on a Rough Surface</h4>
+        <p><strong>A 3.00-kg block slides along a horizontal surface with &mu;<sub>k</sub> = 0.250. The block has an initial speed of 8.00 m/s. (a) How far does the block travel before stopping? (b) How much thermal energy is generated? (c) What is the block's speed after traveling 4.00 m?</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 3.00 kg, v<sub>i</sub> = 8.00 m/s, &mu;<sub>k</sub> = 0.250, horizontal surface, g = 9.80 m/s<sup>2</sup></p>
+                    <p>On horizontal surface: N = mg &rarr; f<sub>k</sub> = &mu;<sub>k</sub>mg = (0.250)(3.00)(9.80) = 7.35 N</p>
+                    <p><strong>Part (a) &mdash; Stopping distance:</strong></p>
+                    <p style="padding-left: 2em;">At rest: K<sub>f</sub> = 0. Energy equation: K<sub>i</sub> = &Delta;E<sub>th</sub> = f<sub>k</sub>d</p>
+                    <p style="padding-left: 2em;">d = K<sub>i</sub> / f<sub>k</sub> = &frac12;mv<sub>i</sub><sup>2</sup> / f<sub>k</sub> = &frac12;(3.00)(8.00)<sup>2</sup> / 7.35 = 96.0 / 7.35 = <strong>13.1 m</strong></p>
+                    <p><strong>Part (b) &mdash; Thermal energy generated (stopping):</strong></p>
+                    <p style="padding-left: 2em;">&Delta;E<sub>th</sub> = f<sub>k</sub>d = (7.35)(13.1) = <strong>96.0 J</strong> &nbsp;(= K<sub>i</sub> ✓)</p>
+                    <p><strong>Part (c) &mdash; Speed after 4.00 m:</strong></p>
+                    <p style="padding-left: 2em;">K<sub>f</sub> = K<sub>i</sub> &minus; f<sub>k</sub>d = 96.0 &minus; (7.35)(4.00) = 96.0 &minus; 29.4 = 66.6 J</p>
+                    <p style="padding-left: 2em;">v<sub>f</sub> = &radic;(2K<sub>f</sub>/m) = &radic;(2 &times; 66.6 / 3.00) = &radic;(44.4) = <strong>6.66 m/s</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICE PROBLEM 3 -->
+        <h4 class="dp-has-icon"><i class="fas fa-question-circle"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice Problem 3 &mdash; Spring Compressed by a Moving Block with Friction</h4>
+        <p><strong>A 1.50-kg block slides at 5.00 m/s across a rough horizontal surface (&mu;<sub>k</sub> = 0.200) and compresses a spring (k = 600 N/m). The block travels d = x<sub>max</sub> from its initial position before stopping at maximum compression. Find the maximum compression x<sub>max</sub> of the spring.</strong></p>
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary" style="margin-bottom: 2em;">
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Show Solution</p>
+                <div class="dp-panel-content">
+                    <p><strong>Given:</strong> m = 1.50 kg, v<sub>i</sub> = 5.00 m/s, &mu;<sub>k</sub> = 0.200, k = 600 N/m, g = 9.80 m/s<sup>2</sup></p>
+                    <p>Friction force: f<sub>k</sub> = &mu;<sub>k</sub>mg = (0.200)(1.50)(9.80) = 2.94 N</p>
+                    <p><strong>Energy equation at maximum compression (v<sub>f</sub> = 0):</strong></p>
+                    <p style="padding-left: 2em;">K<sub>i</sub> = U<sub>s</sub> + &Delta;E<sub>th</sub></p>
+                    <p style="padding-left: 2em;">&frac12;mv<sub>i</sub><sup>2</sup> = &frac12;kx<sub>max</sub><sup>2</sup> + f<sub>k</sub>x<sub>max</sub></p>
+                    <p style="padding-left: 2em;">&frac12;(1.50)(5.00)<sup>2</sup> = &frac12;(600)x<sub>max</sub><sup>2</sup> + (2.94)x<sub>max</sub></p>
+                    <p style="padding-left: 2em;">18.75 = 300x<sub>max</sub><sup>2</sup> + 2.94x<sub>max</sub></p>
+                    <p style="padding-left: 2em;">Rearrange: 300x<sub>max</sub><sup>2</sup> + 2.94x<sub>max</sub> &minus; 18.75 = 0</p>
+                    <p style="padding-left: 2em;">Quadratic formula: x<sub>max</sub> = [&minus;2.94 + &radic;(2.94<sup>2</sup> + 4 &times; 300 &times; 18.75)] / (2 &times; 300)</p>
+                    <p style="padding-left: 2em;">= [&minus;2.94 + &radic;(8.64 + 22500)] / 600 = [&minus;2.94 + &radic;(22508.6)] / 600</p>
+                    <p style="padding-left: 2em;">= [&minus;2.94 + 150.0] / 600 = 147.1 / 600 = <strong>0.245 m</strong></p>
+                    <p style="padding-left: 2em;"><em>Note: the negative root is rejected (compression must be positive).</em></p>
+                    <p><em>Check (no friction): x<sub>max,0</sub> = v<sub>i</sub>&radic;(m/k) = 5.00&radic;(1.50/600) = 0.250 m. With friction, x<sub>max</sub> = 0.245 m &lt; 0.250 m ✓ — friction reduces compression slightly.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SECTION 9: LESSON CHECKLIST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-clipboard-check" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 600px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Lesson Checklist</h4>
+            <p>Before moving on to the next module, confirm you can do each of the following:</p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate gravitational potential energy U<sub>g</sub> = mgy and elastic potential energy U<sub>s</sub> = &frac12;kx<sup>2</sup> for a given system configuration.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Choose an appropriate reference level for U<sub>g</sub> and explain why the choice does not affect &Delta;U or the physics.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub> to find unknown speeds or heights when no friction acts.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Read a U(x) graph: determine the force F(x) = &minus;dU/dx, identify turning points, and classify equilibria as stable or unstable.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate the thermal energy generated by friction: &Delta;E<sub>th</sub> = f<sub>k</sub>d.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Apply the full energy equation with friction: K<sub>f</sub> + U<sub>f</sub> = K<sub>i</sub> + U<sub>i</sub> &minus; f<sub>k</sub>d.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;Calculate the work done by an external agent on a system with friction: W<sub>ext</sub> = &Delta;K + &Delta;U + &Delta;E<sub>th</sub>.</li>
+                <li style="margin-bottom: 0.6em;">☐&nbsp;State the general law of conservation of energy and explain what happens to mechanical energy when friction is present.</li>
+            </ul>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Conservation of energy is the most powerful single tool in classical mechanics — and in all of physics. You will use it in every remaining module of this course. The ideas here also lay the groundwork for thermodynamics in Module 8.</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- =========================================== -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE -->
+<!-- =========================================== -->
+
+<!-- Bootstrap 5.3.2 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+
+<!-- CidiLabs Activities JS -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+<!-- Canvas Image Mapper JS -->
+<script src="../../../files/00-image-script/canvas-image-mapper.js"></script>
+
+</body>
+</html>
