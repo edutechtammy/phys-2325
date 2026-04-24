@@ -269,6 +269,7 @@ Component template files are in `00_Master_Templates/cidilabs-components/`.
 | Date | Component | Bug | Lessons Affected | Fix Applied |
 |---|---|---|---|---|
 | Apr 2026 | Sort Items | Answer buckets pre-populated with `<li>` items — caused every draggable item to appear twice (once in pool, once in bucket). Root cause: template `cidilabs-sort-items.html` had placeholder items inside bucket `<ul>` elements. | M1L1 · M1L2 · M1L3 · M1L4 · M1L5 · M1L6 · M2L2b | Emptied all bucket `<ul>` elements in affected lessons; fixed template with `⚠️` comment (commits `a237c23`, `18f36b7`, `62651e3`, `c3523c2`) |
+| Apr 2026 | Flip Cards | When 2+ cards are stacked vertically in the same column, the bottom edge of the upper card overlaps the card below it. Fix: add `<p>&nbsp;</p>` between each pair of vertically stacked `dp-flip-card` divs within a column. Cards in separate side-by-side columns are unaffected. Root cause: template `cidilabs-flipcards.html` lacked spacers between stacked cards. | M1L1 · M1L2 · M1L3 · M1L4 · M1L5 (M1L6 already fixed; M2+ built after fix) | Added `<p>&nbsp;</p>` spacers between stacked cards in each affected column; fixed template (commit `6ce92a6`) |
 
 ---
 
