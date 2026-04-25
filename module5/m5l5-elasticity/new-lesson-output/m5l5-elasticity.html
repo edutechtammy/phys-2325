@@ -1,0 +1,651 @@
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 5: Rotation and Equilibrium</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M5L5 Elasticity</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- INTRODUCTION                                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"Ut tensio, sic vis."</em></span><br /><span>&mdash;&nbsp;Robert Hooke, 1678 &nbsp;|&nbsp; <em>As the extension, so the force.</em></span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">M5L4 assumed that everything was perfectly rigid &mdash; forces acted, torques balanced, and structures stayed exactly the same shape. Real materials do not work that way. Every bridge cable stretches, every bone compresses, every rubber band deforms. The question is not <em>whether</em> a material deforms under load, but <em>by how much</em>, and whether it snaps or springs back. This lesson builds the quantitative framework for those answers: <strong>stress</strong> (force per unit area), <strong>strain</strong> (fractional deformation), and the three <strong>elastic moduli</strong> that connect them. Hooke's law lives at the heart of it &mdash; but here it applies not just to springs but to every solid material in every engineering structure ever built.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img style="height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Stress_strain_ductile.svg/400px-Stress_strain_ductile.svg.png" alt="A stress-strain curve for a ductile material showing the linear elastic region, yield point, plastic deformation region, and fracture point." width="100%" height="100%" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">The stress-strain curve: the linear region is where Hooke's law holds and the material is elastic.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THREE MODULI FRAMEWORK BOX -->
+            <div style="margin-top: 1.5em; padding: 1.5em; background: #1d2757; border-radius: 8px; color: #fff;">
+                <h3 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-ruler-combined" style="margin-right: 0.5em;"></i>Three Ways a Material Can Deform</h3>
+                <p style="text-align: center; margin-bottom: 1.25em; color: #ccd6f6;">Each type of deformation has its own stress, its own strain, and its own modulus. All three follow the same linear relationship in the elastic regime.</p>
+                <div class="dp-column-container container-fluid">
+                    <div class="row gy-3">
+                        <div class="col-md-4">
+                            <div style="background: rgba(255,255,255,0.1); border-radius: 6px; padding: 1.1em; height: 100%;">
+                                <h4 style="color: #fff; margin-top: 0; border-bottom: 2px solid #d13138; padding-bottom: 0.4em; font-size: 1rem;">Tensile / Compressive</h4>
+                                <p style="text-align: center; font-family: monospace; font-size: 1.15em; margin: 0.75em 0;"><strong>Y = stress / strain</strong></p>
+                                <p style="color: #ccd6f6; font-size: 0.9em; margin: 0;">Stress = F/A &nbsp; (Pa)<br>Strain = &Delta;L/L<sub>0</sub> &nbsp; (dimensionless)<br><em>Y</em> = Young's modulus</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style="background: rgba(255,255,255,0.1); border-radius: 6px; padding: 1.1em; height: 100%;">
+                                <h4 style="color: #fff; margin-top: 0; border-bottom: 2px solid #d13138; padding-bottom: 0.4em; font-size: 1rem;">Shear</h4>
+                                <p style="text-align: center; font-family: monospace; font-size: 1.15em; margin: 0.75em 0;"><strong>S = stress / strain</strong></p>
+                                <p style="color: #ccd6f6; font-size: 0.9em; margin: 0;">Stress = F<sub>&parallel;</sub>/A &nbsp; (Pa)<br>Strain = &Delta;x/L &nbsp; (dimensionless)<br><em>S</em> = shear modulus</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div style="background: rgba(255,255,255,0.1); border-radius: 6px; padding: 1.1em; height: 100%;">
+                                <h4 style="color: #fff; margin-top: 0; border-bottom: 2px solid #d13138; padding-bottom: 0.4em; font-size: 1rem;">Bulk (Volume)</h4>
+                                <p style="text-align: center; font-family: monospace; font-size: 1.15em; margin: 0.75em 0;"><strong>B = stress / strain</strong></p>
+                                <p style="color: #ccd6f6; font-size: 0.9em; margin: 0;">Stress = &Delta;p &nbsp; (Pa)<br>Strain = &minus;&Delta;V/V<sub>0</sub> &nbsp; (dimensionless)<br><em>B</em> = bulk modulus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.25em; margin-bottom: 0; color: #ccd6f6; font-style: italic;">All three moduli have units of pascals (Pa = N/m&sup2;). Steel: Y &asymp; 200 GPa &nbsp;&bull;&nbsp; S &asymp; 82 GPa &nbsp;&bull;&nbsp; B &asymp; 160 GPa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEARNING OBJECTIVES                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC5.5 Apply stress, strain, and elastic moduli to analyze deformation of materials</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.5.1 Define stress and strain for tensile, compressive, shear, and bulk deformation</p>
+                    <p style="padding-left: 40px;">★ LO5.5.2 State Hooke's law for elastic materials and identify the conditions under which it applies</p>
+                    <p style="padding-left: 40px;">★ LO5.5.3 Apply Young's modulus to calculate tensile or compressive deformation: &Delta;L = (F/A)(L<sub>0</sub>/Y)</p>
+                    <p style="padding-left: 40px;">★ LO5.5.4 Apply the shear modulus to calculate shear deformation: &Delta;x = (F<sub>&parallel;</sub>/A)(L/S)</p>
+                    <p style="padding-left: 40px;">★ LO5.5.5 Apply the bulk modulus to calculate volume change under uniform pressure: &Delta;V = &minus;(&Delta;p/B)V<sub>0</sub></p>
+                    <p style="padding-left: 40px;">★ LO5.5.6 Interpret the stress-strain curve: elastic limit, yield point, plastic deformation, and fracture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- REQUIRED READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Chapter 12.3 covers all three moduli. Chapter 12.4 extends the discussion to practical failure conditions and engineering safety factors. Read both sections carefully &mdash; the modulus formulas all look similar, and the differences in how stress and strain are defined for each case are where students most often make errors.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus" target="_blank" rel="noopener">12.3 Stress, Strain, and Elastic Modulus</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/12-4-elasticity-and-plasticity" target="_blank" rel="noopener">12.4 Elasticity and Plasticity</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OPTIONAL READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/waves/Lesson-0/Properties-of-a-Medium" target="_blank" rel="noopener">Physics Classroom: Elastic Properties</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/work-energy-power/hookes-law/a/what-is-hookes-law" target="_blank" rel="noopener">Khan Academy: Hooke's Law</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/hookes-law" target="_blank" rel="noopener">PhET: Hooke's Law Simulation</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.engineeringtoolbox.com/young-modulus-d_417.html" target="_blank" rel="noopener">Engineering Toolbox: Young's Modulus Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEDIA                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Video 1 establishes stress, strain, and Young's modulus; Video 2 covers shear and bulk moduli; Video 3 interprets the stress-strain curve and connects elasticity to engineering failure analysis.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Stress, Strain, and Young's Modulus</h3>
+                <div class="dp-panel-content">
+                    <h4>Why &ldquo;How Much Force?&rdquo; Is the Wrong Question</h4>
+                    <p>Whether a wire breaks depends not on the force alone but on the force per unit cross-sectional area. And whether it stretches much depends not on the absolute extension but on the extension relative to the original length. Stress and strain normalize both quantities to make them material properties rather than geometry properties.</p>
+                    <ul>
+                        <li>Stress = F/A: why a thin wire breaks before a thick one under the same force</li>
+                        <li>Strain = &Delta;L/L<sub>0</sub>: fractional change, dimensionless, independent of original length</li>
+                        <li>Young's modulus Y = stress/strain: the material's resistance to being stretched or compressed</li>
+                        <li>Working formula: &Delta;L = FL<sub>0</sub>/(AY)</li>
+                        <li>Comparing Y values: steel (~200 GPa) vs bone (~15 GPa) vs rubber (~0.01 GPa) &mdash; what these numbers mean in practice</li>
+                    </ul>
+                    <p>Time: 10:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 1 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Shear Modulus and Bulk Modulus</h3>
+                <div class="dp-panel-content">
+                    <h4>Two More Ways a Material Can Deform</h4>
+                    <p>Shear deformation happens when forces slide parallel layers of a material past each other. Bulk compression happens when uniform pressure acts on all surfaces simultaneously, changing volume without changing shape.</p>
+                    <ul>
+                        <li>Shear stress = F<sub>&parallel;</sub>/A; shear strain = &Delta;x/L (the shear angle &phi; &asymp; tan&phi; for small deformations)</li>
+                        <li>Shear modulus S = shear stress / shear strain; working formula: &Delta;x = F<sub>&parallel;</sub>L/(AS)</li>
+                        <li>Examples: glue joints, earthquake waves in rock, bolts in shear, book pages sliding</li>
+                        <li>Bulk modulus B = &minus;&Delta;p / (&Delta;V/V<sub>0</sub>); negative sign because compression (positive &Delta;p) reduces volume</li>
+                        <li>Why liquids and gases have bulk moduli but no shear moduli &mdash; they cannot resist shear</li>
+                        <li>Comparing B values: water (2.2 GPa) vs steel (160 GPa) vs air (~0.000142 GPa)</li>
+                    </ul>
+                    <p>Time: 9:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video 2 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: The Stress-Strain Curve and Engineering Failure</h3>
+                <div class="dp-panel-content">
+                    <h4>From Hooke's Law to Fracture</h4>
+                    <p>A material under increasing stress does not simply stretch proportionally forever. The stress-strain curve tells the complete story &mdash; from perfect elasticity through yield and plastic deformation to failure.</p>
+                    <ul>
+                        <li>The elastic region: Hooke's law holds, slope = Young's modulus, material returns to original shape on unloading</li>
+                        <li>The proportional limit: where the curve first deviates from linear</li>
+                        <li>The elastic limit: the maximum stress for which the material still returns to its original shape</li>
+                        <li>The yield point: where plastic (permanent) deformation begins; engineering yield strength</li>
+                        <li>The ultimate tensile strength: the maximum stress the material can sustain</li>
+                        <li>Fracture point: where the material fails completely</li>
+                        <li>Ductile vs brittle materials: very different curves, very different failure modes</li>
+                        <li>Engineering safety factors: why structures are designed to operate well below the yield point</li>
+                    </ul>
+                    <p>Time: 11:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 3 embed goes here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ADVANCED THEORY                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Deeper Look: Where Elasticity Comes From and How It Connects to Everything Else</h3>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 420px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">The Atomic Origin of Hooke's Law</h3>
+                <div class="dp-panel-content">
+                    <h4>Why F = kx Emerges from Interatomic Potential Wells</h4>
+                    <p>Hooke's law is not a fundamental law of nature &mdash; it is an approximation that works whenever atoms are displaced only slightly from their equilibrium positions. Here is why.</p>
+                    <p>The potential energy between two atoms looks like a Lennard-Jones well: steep repulsion at short range (nuclei fighting each other), attractive at medium range (bonding), and zero at large separation (atoms apart). Near the equilibrium separation r<sub>0</sub>, the potential U(r) is approximately parabolic:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        U(r) &asymp; U(r<sub>0</sub>) + &frac12;U''(r<sub>0</sub>)(r &minus; r<sub>0</sub>)²
+                    </div>
+                    <p>The force is F = &minus;dU/dr = &minus;U''(r<sub>0</sub>)(r &minus; r<sub>0</sub>), which is exactly F = &minus;k&Delta;r with k = U''(r<sub>0</sub>) &mdash; the curvature of the potential well at its minimum.</p>
+                    <p><strong>Key consequences:</strong></p>
+                    <ul>
+                        <li>Any smooth potential well looks parabolic near its minimum &mdash; so Hooke's law holds for <em>any</em> material as long as displacements are small. This is why it is so universal.</li>
+                        <li>The modulus (Y, S, or B) is proportional to k, which is the curvature of the interatomic potential. Stiffer bonds (deeper wells, sharper curvature) give higher moduli.</li>
+                        <li>When displacements are large, higher-order terms matter and the material becomes nonlinear &mdash; this is where yield and fracture begin.</li>
+                    </ul>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Connection to Simple Harmonic Motion</h5>
+                            <p>The same parabolic potential that gives Hooke's law for solids also gives simple harmonic motion for springs and pendulums (small angle). The SHM you study in the oscillations module is the same physics as elasticity, applied to different systems. F = &minus;kx is the universal signature of a parabolic potential well.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">The Relationship Between Y, S, and B</h3>
+                <div class="dp-panel-content">
+                    <h4>Three Moduli, One Material — Are They Independent?</h4>
+                    <p>For an isotropic material (properties the same in all directions), Y, S, and B are not independent. They are related through a single additional parameter called <strong>Poisson's ratio &nu;</strong>.</p>
+                    <p><strong>Poisson's ratio</strong> (&nu;) measures the lateral contraction that accompanies axial stretching. If you pull a rod along its length and it stretches by &Delta;L/L, its diameter contracts by &nu; times that fraction:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        &nu; = &minus;(lateral strain) / (axial strain) = &minus;(&Delta;d/d) / (&Delta;L/L)
+                    </div>
+                    <p>For most metals, &nu; &asymp; 0.25&ndash;0.35. For rubber, &nu; &asymp; 0.5 (nearly incompressible). A hypothetical material with &nu; = 0.5 exactly would have infinite bulk modulus &mdash; it would not change volume at all under any load.</p>
+                    <p>The three moduli are related by:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        S = Y / [2(1 + &nu;)] &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; B = Y / [3(1 &minus; 2&nu;)]
+                    </div>
+                    <p>So given any two of {Y, S, B, &nu;}, you can find the other two. A table of moduli is really a table of two independent numbers per material.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info" style="margin-top: 1em;">
+                        <div class="card-body">
+                            <h5 class="card-title">Why S &lt; Y Always</h5>
+                            <p>From S = Y/[2(1+&nu;)] and &nu; > 0, we get S &lt; Y/2 &lt; Y. Shear moduli are always less than Young's moduli for the same material. This means materials are always easier to shear than to stretch &mdash; which is why earthquake shear waves travel slower than compressional waves through the same rock.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Elasticity Meets Equilibrium: Internal Forces in Structures</h3>
+                <div class="dp-panel-content">
+                    <h4>Closing the Loop on Module 5</h4>
+                    <p>Static equilibrium (M5L4) told you the <em>forces</em> in a structure. Elasticity (this lesson) tells you what those forces <em>do</em> to the material. The two ideas always work together in real engineering.</p>
+                    <p><strong>Example: A steel cable supporting a load.</strong></p>
+                    <p>From M5L4 equilibrium, you find the cable tension T. From this lesson, you find how much the cable stretches:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        &Delta;L = TL<sub>0</sub> / (AY)
+                    </div>
+                    <p>The safety question has two parts:</p>
+                    <ol>
+                        <li><strong>Will it break?</strong> &mdash; Compare tensile stress T/A to the material's ultimate tensile strength. Use a safety factor of 3&ndash;10 depending on application.</li>
+                        <li><strong>Will it deform too much?</strong> &mdash; Calculate &Delta;L and check that it stays within geometric tolerances, even if it will not break.</li>
+                    </ol>
+                    <p><strong>Thermal stress:</strong> Temperature changes cause materials to expand or contract. If constrained from expanding, a thermal stress develops:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        thermal stress = Y &alpha; &Delta;T
+                    </div>
+                    <p>where &alpha; is the linear thermal expansion coefficient. For steel (&alpha; = 12 &times; 10<sup>&minus;6</sup> /°C, Y = 200 GPa), a 10°C temperature change produces a stress of 24 MPa &mdash; substantial in long bridge spans, which is why expansion joints exist.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info" style="margin-top: 1em;">
+                        <div class="card-body">
+                            <h5 class="card-title">The Tacoma Narrows Bridge</h5>
+                            <p>The 1940 Tacoma Narrows Bridge collapse was not a simple material failure &mdash; the steel was not overstressed in tension. It was a <em>resonance</em> failure: wind created oscillating aerodynamic forces that matched the bridge's natural frequency, causing ever-larger oscillations until the elastic limit was exceeded and the deck tore apart. The lesson: equilibrium and elasticity together are necessary but not sufficient for safety &mdash; dynamics matters too.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — CONCEPTUAL                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+
+                <!-- TAB 1: MATCH ITEMS — Moduli and their definitions -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Matching the Moduli</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-match-items" style="margin-bottom: 2em;" data-interactive-type="Match Items" data-interactive-title="Match Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-project-diagram"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match Each Term to Its Correct Definition</h4>
+                            <p>Drag each definition on the right to the matching term on the left.</p>
+                            <div class="dp-match-items-container">
+                                <div class="dp-match-items-column dp-match-left">
+                                    <div class="dp-match-item dp-match-term">Tensile stress</div>
+                                    <div class="dp-match-item dp-match-term">Tensile strain</div>
+                                    <div class="dp-match-item dp-match-term">Young's modulus</div>
+                                    <div class="dp-match-item dp-match-term">Shear modulus</div>
+                                    <div class="dp-match-item dp-match-term">Bulk modulus</div>
+                                    <div class="dp-match-item dp-match-term">Elastic limit</div>
+                                </div>
+                                <div class="dp-match-items-column dp-match-right">
+                                    <div class="dp-match-item dp-match-answer">Maximum stress a material can sustain and still return to its original shape when unloaded</div>
+                                    <div class="dp-match-item dp-match-answer">Ratio of pressure change to fractional volume change; describes resistance to uniform compression</div>
+                                    <div class="dp-match-item dp-match-answer">Perpendicular force per unit cross-sectional area; units of Pa</div>
+                                    <div class="dp-match-item dp-match-answer">Ratio of tensile stress to tensile strain; slope of the linear region of the stress-strain curve</div>
+                                    <div class="dp-match-item dp-match-answer">Fractional change in length: &Delta;L/L<sub>0</sub>; dimensionless</div>
+                                    <div class="dp-match-item dp-match-answer">Ratio of shear stress to shear strain; describes resistance to parallel-layer sliding</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SORT ITEMS — Which modulus applies? -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Which Modulus Applies?</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-th-large"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Each Scenario into the Correct Modulus Category</h4>
+                            <p>Each scenario describes a type of deformation. Identify which elastic modulus (Young's, shear, or bulk) is the appropriate one to use.</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Scenarios to Sort</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">A steel column in a building supports the weight of the floors above it</li>
+                                            <li class="dp-si-item-text">A submarine hull is compressed uniformly as it dives deeper</li>
+                                            <li class="dp-si-item-text">A rubber eraser is pushed sideways on a table while the bottom is held fixed</li>
+                                            <li class="dp-si-item-text">A cable car wire stretches as passengers board</li>
+                                            <li class="dp-si-item-text">A bolt holding two metal plates together is pulled in opposite directions along its axis</li>
+                                            <li class="dp-si-item-text">A cube of water is subjected to increased pressure from all sides in a hydraulic press</li>
+                                            <li class="dp-si-item-text">A bone is compressed along its length by body weight during standing</li>
+                                            <li class="dp-si-item-text">Two layers of adhesive slide past each other when the joint is loaded in the plane of the glue</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Young's Modulus (Y)</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Shear Modulus (S)</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Bulk Modulus (B)</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FLIP CARDS — Misconceptions about elasticity -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Common Misconceptions</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Think It Through — Then Flip</h4>
+                        <p>Each card states a common student belief about stress, strain, or elasticity. Decide whether it is correct or incorrect before flipping.</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"A thicker wire is stronger because it can withstand more force before breaking."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Partially Correct — But Strength Is a Stress, Not a Force</h5>
+                                                        <p>A thicker wire does survive a larger <em>force</em> before breaking &mdash; but that is because it has more cross-sectional area, not because the material itself is stronger. The <em>material strength</em> is the breaking stress (force per area), which is the same for both wires if they are made of the same material. Ultimate tensile strength is a material property measured in Pa, not N.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"Elastic means a material returns to its shape. So elastic materials are stretchy, like rubber."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Steel Is Elastic; Rubber Is Merely Compliant</h5>
+                                                        <p>In physics, <em>elastic</em> means returning to the original shape after the load is removed. Steel is highly elastic &mdash; stretch a steel cable within its elastic limit and it snaps back perfectly. Rubber is elastic too, but also very compliant (low Y). A material can be elastic and stiff (steel), elastic and compliant (rubber), or inelastic (clay, dough) &mdash; these are two independent properties.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"If a steel rod and an aluminum rod of the same dimensions carry the same load, they have the same stress."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Correct — Stress Depends Only on Force and Area</h5>
+                                                        <p>Stress = F/A. If F and A are the same for both rods, the stress is identical regardless of the material. However, the <em>strain</em> differs: &Delta;L/L = stress/Y, and Y<sub>steel</sub> (200 GPa) &gg; Y<sub>aluminum</sub> (70 GPa), so the aluminum rod stretches about 2.9&times; as much. Same stress, very different deformation. This is a key distinction for material selection in design.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"Liquids cannot be compressed because their bulk modulus is effectively infinite."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Liquids Compress, Just Very Little</h5>
+                                                        <p>Water's bulk modulus is 2.2 GPa &mdash; large but finite. A pressure increase of 1 atm (~100 kPa) compresses water by &Delta;V/V &asymp; 4.5 &times; 10<sup>&minus;5</sup> (0.0045%). That is tiny, so the &ldquo;incompressible&rdquo; approximation is excellent for most engineering problems. But in deep-sea contexts, submarine hulls, or hydraulic shock systems, the compressibility of fluids is engineered deliberately.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — COMPUTATIONAL                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Quick Reference: Elastic Moduli</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Tensile/compressive:</strong> &Delta;L = FL<sub>0</sub>/(AY)<br>
+                        <span style="font-size: 0.85em; color: #555;">F = normal force, A = cross-section, Y = Young's modulus</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Shear:</strong> &Delta;x = F<sub>&parallel;</sub>L/(AS)<br>
+                        <span style="font-size: 0.85em; color: #555;">F<sub>&parallel;</sub> = parallel force, L = layer thickness, S = shear modulus</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Bulk:</strong> &Delta;V = &minus;(&Delta;p/B)V<sub>0</sub><br>
+                        <span style="font-size: 0.85em; color: #555;">&Delta;p = pressure change, B = bulk modulus</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Key values (GPa):</strong><br>
+                        <span style="font-size: 0.85em; color: #555;">Steel: Y=200, S=82, B=160 &nbsp;|&nbsp; Bone: Y=15 &nbsp;|&nbsp; Water: B=2.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 1 — Stretching a Steel Cable</p>
+                <div class="dp-panel-content">
+                    <p><strong>A steel cable 20 m long with a circular cross-section of diameter 1.5 cm supports a load of 8000 N. (a) Find the tensile stress in the cable. (b) Find the strain. (c) Find the elongation. (d) Check whether the cable operates within the elastic limit (ultimate tensile strength of steel &asymp; 400 MPa; use a safety factor of 4).</strong></p>
+                    <p><strong>Cross-sectional area:</strong> A = &pi;(d/2)² = &pi;(0.0075)² = 1.767 &times; 10<sup>&minus;4</sup> m²</p>
+                    <p><strong>(a) Tensile stress:</strong></p>
+                    <p style="padding-left: 1.5em;">&sigma; = F/A = 8000 / (1.767 &times; 10<sup>&minus;4</sup>) = <strong>45.3 MPa</strong></p>
+                    <p><strong>(b) Strain:</strong></p>
+                    <p style="padding-left: 1.5em;">&epsilon; = &sigma;/Y = 45.3 &times; 10<sup>6</sup> / (200 &times; 10<sup>9</sup>) = <strong>2.27 &times; 10<sup>&minus;4</sup></strong> (dimensionless)</p>
+                    <p><strong>(c) Elongation:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;L = &epsilon; &times; L<sub>0</sub> = 2.27 &times; 10<sup>&minus;4</sup> &times; 20 = <strong>4.53 mm</strong></p>
+                    <p><strong>(d) Safety check:</strong></p>
+                    <p style="padding-left: 1.5em;">Allowable stress = UTS / safety factor = 400 MPa / 4 = 100 MPa</p>
+                    <p style="padding-left: 1.5em;">Actual stress = 45.3 MPa &lt; 100 MPa &nbsp; ✓ &nbsp; The cable operates safely within the elastic regime.</p>
+                    <p style="color: #555; font-style: italic;">Note the 4.53 mm elongation over 20 m &mdash; about 0.023%. This seems tiny but matters in precision applications like suspension bridge design, where cable elongation must be accounted for in deck geometry.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 2 — Bone Under Compression</p>
+                <div class="dp-panel-content">
+                    <p><strong>The femur (thigh bone) has a roughly cylindrical cross-section with an effective diameter of 2.5 cm and a length of 40 cm. Estimate the compressive stress and strain in the femur of a 75 kg person standing on one leg. (Y<sub>bone</sub> = 1.5 &times; 10<sup>10</sup> Pa; compressive strength of bone &asymp; 170 MPa)</strong></p>
+                    <p><strong>Force:</strong> The femur supports the full body weight on one leg: F = mg = (75)(9.8) = 735 N. (In reality, muscle forces increase this substantially &mdash; this is a lower bound.)</p>
+                    <p><strong>Area:</strong> A = &pi;(0.0125)² = 4.91 &times; 10<sup>&minus;4</sup> m²</p>
+                    <p><strong>Compressive stress:</strong></p>
+                    <p style="padding-left: 1.5em;">&sigma; = F/A = 735 / (4.91 &times; 10<sup>&minus;4</sup>) = <strong>1.50 MPa</strong></p>
+                    <p><strong>Compressive strain:</strong></p>
+                    <p style="padding-left: 1.5em;">&epsilon; = &sigma;/Y = 1.50 &times; 10<sup>6</sup> / (1.5 &times; 10<sup>10</sup>) = <strong>1.0 &times; 10<sup>&minus;4</sup></strong></p>
+                    <p><strong>Compression amount:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;L = &epsilon; &times; 0.40 m = <strong>0.040 mm</strong> (40 micrometers)</p>
+                    <p><strong>Safety margin:</strong> 1.50 MPa vs. 170 MPa compressive strength &rarr; safety factor of ~113. Bone has enormous strength reserve for normal standing, consistent with its design to handle impact forces many times body weight.</p>
+                    <p style="color: #555; font-style: italic;">During running or jumping, ground reaction forces can reach 5&ndash;8 times body weight, reducing the safety factor to 15&ndash;25. Still comfortable &mdash; but a stress fracture can occur when repetitive loading exceeds the bone's fatigue limit without adequate recovery time.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 3 — Shear Deformation in a Rubber Mount</p>
+                <div class="dp-panel-content">
+                    <p><strong>A rubber vibration isolator consists of a 5.0 cm &times; 5.0 cm square rubber pad, 2.0 cm thick. A horizontal force of 150 N is applied to the top face while the bottom is bonded to a rigid plate. (a) Find the shear stress. (b) Find the shear deformation &Delta;x. (c) Find the shear angle &phi;. (S<sub>rubber</sub> = 0.60 MPa)</strong></p>
+                    <p><strong>(a) Shear stress:</strong></p>
+                    <p style="padding-left: 1.5em;">A = (0.05)(0.05) = 2.5 &times; 10<sup>&minus;3</sup> m²</p>
+                    <p style="padding-left: 1.5em;">&tau; = F<sub>&parallel;</sub>/A = 150 / (2.5 &times; 10<sup>&minus;3</sup>) = <strong>60,000 Pa = 60 kPa</strong></p>
+                    <p><strong>(b) Shear deformation:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;x = F<sub>&parallel;</sub>L / (AS) = (150)(0.020) / [(2.5 &times; 10<sup>&minus;3</sup>)(0.60 &times; 10<sup>6</sup>)]</p>
+                    <p style="padding-left: 1.5em;">&Delta;x = 3.0 / 1500 = <strong>0.0020 m = 2.0 mm</strong></p>
+                    <p><strong>(c) Shear angle:</strong></p>
+                    <p style="padding-left: 1.5em;">tan&phi; = &Delta;x/L = 0.0020/0.020 = 0.10 &rArr; &phi; = arctan(0.10) &asymp; <strong>5.7°</strong></p>
+                    <p style="color: #555; font-style: italic;">This is why rubber mounts are used in machinery and vehicle suspensions: large shear deformation (here 10% of the pad thickness) allows significant vibration absorption without generating large restoring forces. The low shear modulus of rubber is the engineering feature, not a deficiency.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 4 — Bulk Compression of Water</p>
+                <div class="dp-panel-content">
+                    <p><strong>A hydraulic press subjects 2.0 liters of water to a pressure of 50 atm (5.065 MPa) above atmospheric. (a) Find the fractional volume change &Delta;V/V<sub>0</sub>. (b) Find the actual volume change in mL. (c) What pressure would be needed to compress the water by 1.0%? (B<sub>water</sub> = 2.2 &times; 10<sup>9</sup> Pa)</strong></p>
+                    <p><strong>(a) Fractional volume change:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;V/V<sub>0</sub> = &minus;&Delta;p/B = &minus;5.065 &times; 10<sup>6</sup> / (2.2 &times; 10<sup>9</sup>) = <strong>&minus;2.30 &times; 10<sup>&minus;3</sup></strong></p>
+                    <p style="padding-left: 1.5em;">The negative sign confirms compression (volume decreases). Fractional decrease = 0.230%.</p>
+                    <p><strong>(b) Actual volume change:</strong></p>
+                    <p style="padding-left: 1.5em;">|&Delta;V| = 2.30 &times; 10<sup>&minus;3</sup> &times; 2000 mL = <strong>4.6 mL</strong></p>
+                    <p style="padding-left: 1.5em;">At 50 atm overpressure, the water compresses by only 4.6 mL out of 2000 mL &mdash; confirming the &ldquo;practically incompressible&rdquo; approximation for most purposes.</p>
+                    <p><strong>(c) Pressure for 1.0% compression:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;p = B &times; (&Delta;V/V<sub>0</sub>) = (2.2 &times; 10<sup>9</sup>)(0.010) = <strong>22 MPa &asymp; 217 atm</strong></p>
+                    <p style="color: #555; font-style: italic;">Ocean pressure increases by ~1 atm per 10 m depth. To compress seawater by 1%, you would need to dive to ~2170 m. Deep-ocean water is in fact measurably denser than surface water due to bulk compression, which affects ocean circulation models.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 5 — Equilibrium + Elasticity: Cable Extension on a Beam</p>
+                <div class="dp-panel-content">
+                    <p><strong>A horizontal steel beam (length 3.0 m, mass 12 kg) is attached to a wall by a hinge at its left end. A steel cable (diameter 0.80 cm, length 2.0 m, Y = 200 GPa) connects the right end of the beam to the wall at a point directly above the hinge, making a 40° angle with the beam. A 60 kg sign hangs from the midpoint of the beam. (a) Use equilibrium to find the cable tension. (b) Find the elongation of the cable under this tension.</strong></p>
+                    <p><strong>This problem combines M5L4 and M5L5 directly.</strong></p>
+                    <p><strong>(a) Equilibrium — pivot at the hinge:</strong></p>
+                    <p style="padding-left: 1.5em;">Forces: beam weight W<sub>b</sub> = (12)(9.8) = 117.6 N at 1.5 m; sign weight W<sub>s</sub> = (60)(9.8) = 588 N at 1.5 m; cable tension T at 40° at 3.0 m.</p>
+                    <p style="padding-left: 1.5em;">&Sigma;&tau; = 0: T sin40° &times; 3.0 &minus; W<sub>b</sub> &times; 1.5 &minus; W<sub>s</sub> &times; 1.5 = 0</p>
+                    <p style="padding-left: 1.5em;">T(0.643)(3.0) = (117.6 + 588)(1.5) = 705.6 &times; 1.5 = 1058.4</p>
+                    <p style="padding-left: 1.5em;">1.929 T = 1058.4 &nbsp;&rArr;&nbsp; <strong>T = 548.7 N</strong></p>
+                    <p><strong>(b) Cable elongation:</strong></p>
+                    <p style="padding-left: 1.5em;">A = &pi;(0.004)² = 5.027 &times; 10<sup>&minus;5</sup> m²</p>
+                    <p style="padding-left: 1.5em;">&Delta;L = TL<sub>0</sub>/(AY) = (548.7)(2.0) / [(5.027 &times; 10<sup>&minus;5</sup>)(200 &times; 10<sup>9</sup>)]</p>
+                    <p style="padding-left: 1.5em;">&Delta;L = 1097.4 / (1.005 &times; 10<sup>7</sup>) = <strong>1.09 &times; 10<sup>&minus;4</sup> m &asymp; 0.109 mm</strong></p>
+                    <p><strong>Stress check:</strong> &sigma; = T/A = 548.7/(5.027 &times; 10<sup>&minus;5</sup>) = 10.9 MPa &mdash; well below the 400 MPa UTS of steel.</p>
+                    <p style="color: #555; font-style: italic;">The 0.109 mm elongation causes the right end of the beam to drop very slightly &mdash; the cable geometry changes negligibly. In this problem, the equilibrium and elasticity phases are fully decoupled: solve equilibrium first, then use the result as input to the elasticity calculation.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 6 — Choosing a Material: Engineering Design</p>
+                <div class="dp-panel-content">
+                    <p><strong>A tension rod in a machine must: (1) support a tensile load of 25,000 N, (2) have length 1.0 m, (3) elongate by no more than 0.50 mm under load, and (4) have a safety factor of at least 5 against breaking. Three candidate materials are given below. Determine which material(s) meet all four requirements, and for the one with the lowest mass, find the required diameter.</strong></p>
+                    <table style="width: 100%; border-collapse: collapse; margin: 1em 0;">
+                        <thead>
+                            <tr style="background: #1d2757; color: #fff;">
+                                <th style="padding: 0.6em;">Material</th>
+                                <th style="padding: 0.6em; text-align: center;">Y (GPa)</th>
+                                <th style="padding: 0.6em; text-align: center;">UTS (MPa)</th>
+                                <th style="padding: 0.6em; text-align: center;">Density (kg/m³)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Steel</td><td style="padding: 0.5em; text-align: center;">200</td><td style="padding: 0.5em; text-align: center;">400</td><td style="padding: 0.5em; text-align: center;">7850</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.5em;">Aluminum alloy</td><td style="padding: 0.5em; text-align: center;">70</td><td style="padding: 0.5em; text-align: center;">270</td><td style="padding: 0.5em; text-align: center;">2700</td></tr>
+                            <tr style="background: #f9f9f9;"><td style="padding: 0.5em;">Titanium alloy</td><td style="padding: 0.5em; text-align: center;">110</td><td style="padding: 0.5em; text-align: center;">900</td><td style="padding: 0.5em; text-align: center;">4430</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Constraint 3 (elongation &le; 0.50 mm) gives minimum area A<sub>min</sub> for each material:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;L = FL<sub>0</sub>/(AY) &rArr; A &ge; FL<sub>0</sub>/(Y &Delta;L<sub>max</sub>)</p>
+                    <p style="padding-left: 1.5em;">Steel: A &ge; (25000)(1.0)/[(200&times;10<sup>9</sup>)(5&times;10<sup>&minus;4</sup>)] = 25000/(10<sup>8</sup>) = 2.50&times;10<sup>&minus;4</sup> m²</p>
+                    <p style="padding-left: 1.5em;">Aluminum: A &ge; 25000/[(70&times;10<sup>9</sup>)(5&times;10<sup>&minus;4</sup>)] = 25000/(3.5&times;10<sup>7</sup>) = 7.14&times;10<sup>&minus;4</sup> m²</p>
+                    <p style="padding-left: 1.5em;">Titanium: A &ge; 25000/[(110&times;10<sup>9</sup>)(5&times;10<sup>&minus;4</sup>)] = 25000/(5.5&times;10<sup>7</sup>) = 4.55&times;10<sup>&minus;4</sup> m²</p>
+                    <p><strong>Constraint 4 (safety factor &ge; 5) gives maximum stress &sigma;<sub>max</sub> = UTS/5 and therefore minimum area:</strong></p>
+                    <p style="padding-left: 1.5em;">Steel: A &ge; F/(&sigma;<sub>max</sub>) = 25000/(400&times;10<sup>6</sup>/5) = 25000/80&times;10<sup>6</sup> = 3.13&times;10<sup>&minus;4</sup> m² &larr; governs</p>
+                    <p style="padding-left: 1.5em;">Aluminum: A &ge; 25000/(54&times;10<sup>6</sup>) = 4.63&times;10<sup>&minus;4</sup> m² &larr; elongation governs (7.14&times;10<sup>&minus;4</sup>)</p>
+                    <p style="padding-left: 1.5em;">Titanium: A &ge; 25000/(180&times;10<sup>6</sup>) = 1.39&times;10<sup>&minus;4</sup> m²; elongation governs (4.55&times;10<sup>&minus;4</sup>)</p>
+                    <p><strong>All three materials meet both constraints.</strong> Governing minimum areas: Steel 3.13&times;10<sup>&minus;4</sup> m², Aluminum 7.14&times;10<sup>&minus;4</sup> m², Titanium 4.55&times;10<sup>&minus;4</sup> m².</p>
+                    <p><strong>Mass comparison</strong> (mass = &rho;AL):</p>
+                    <p style="padding-left: 1.5em;">Steel: 7850 &times; 3.13&times;10<sup>&minus;4</sup> &times; 1.0 = <strong>2.46 kg</strong></p>
+                    <p style="padding-left: 1.5em;">Aluminum: 2700 &times; 7.14&times;10<sup>&minus;4</sup> &times; 1.0 = <strong>1.93 kg</strong></p>
+                    <p style="padding-left: 1.5em;">Titanium: 4430 &times; 4.55&times;10<sup>&minus;4</sup> &times; 1.0 = <strong>2.02 kg</strong></p>
+                    <p><strong>Aluminum is lightest.</strong> Required diameter: A = &pi;(d/2)² = 7.14&times;10<sup>&minus;4</sup> &rArr; d = 2&radic;(A/&pi;) = 2&radic;(7.14&times;10<sup>&minus;4</sup>/&pi;) = <strong>0.030 m = 30.1 mm</strong></p>
+                    <p style="color: #555; font-style: italic;">This is how real material selection works in mechanical engineering: multiple constraints are applied simultaneously, each one demanding a minimum cross-section, and the governing constraint (the one requiring the largest area) determines the actual design. Here aluminum wins on mass despite needing a much larger diameter, because its density advantage outweighs the area penalty from its lower stiffness.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MODULE SYNTHESIS                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_synthesis" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-check-circle" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Module 5 Complete &mdash; What You Have Built</h3>
+        <div style="background: #1d2757; border-radius: 8px; padding: 24px; color: #fff; max-width: 720px; margin: 1.5em auto;">
+            <h4 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-layer-group" style="margin-right: 0.5em;"></i>The Full Arc of Module 5</h4>
+            <p style="color: #ccd6f6; margin-bottom: 1.25em; text-align: center;">Each lesson added one layer. Together they form a complete framework for analyzing anything that rotates, balances, or deforms.</p>
+            <ol style="color: #fff; line-height: 2;">
+                <li><strong>M5L1 &mdash; Rotational Kinematics:</strong> How to describe rotation (angles, angular velocity, angular acceleration) as a direct analogy to linear kinematics.</li>
+                <li><strong>M5L2 &mdash; Torque and Rotational Dynamics:</strong> What causes rotation to change (&tau; = I&alpha;) and how mass distribution determines resistance to rotation.</li>
+                <li><strong>M5L3 &mdash; Rolling Motion and Angular Momentum:</strong> How translation and rotation combine in rolling, and why angular momentum is conserved when no external torque acts.</li>
+                <li><strong>M5L4 &mdash; Static Equilibrium:</strong> The two conditions (&Sigma;F = 0 and &Sigma;&tau; = 0) that must hold simultaneously for a structure to remain still, and the pivot-point strategy for solving them efficiently.</li>
+                <li><strong>M5L5 &mdash; Elasticity (this lesson):</strong> What the forces from M5L4 equilibrium analysis <em>do</em> to real materials &mdash; stress, strain, and the three moduli that quantify deformation.</li>
+            </ol>
+        </div>
+
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 640px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Module 5 Self-Check</h4>
+            <p>Before moving to Module 6, make sure you can answer all of these from memory:</p>
+            <ol>
+                <li>A steel rod (Y = 200 GPa) of diameter 1.0 cm and length 2.0 m is under 50 kN tension. What is the stress, the strain, and the elongation?</li>
+                <li>Explain in one sentence why the shear modulus of any material is always less than its Young's modulus.</li>
+                <li>A rubber pad (S = 0.5 MPa) measures 4 cm &times; 4 cm &times; 3 cm thick. A 200 N horizontal force is applied to the top face. Find &Delta;x.</li>
+                <li>On a stress-strain curve, label: proportional limit, elastic limit, yield point, ultimate tensile strength, fracture point. Identify which region represents elastic behavior.</li>
+                <li>A beam problem gives you a cable tension of 3200 N (from M5L4 equilibrium). The cable is aluminum (Y = 70 GPa), 1.5 m long, 6 mm diameter. How much does it elongate?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">Module 6 moves into oscillations &mdash; the spring constant you have been using throughout M5 will now appear in its dynamic context, driving simple harmonic motion. Everything connects.</p>
+        </div>
+    </section>
+
+</div>
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE  -->
+<!-- ============================================= -->
