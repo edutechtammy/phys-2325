@@ -1,0 +1,641 @@
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 5: Rotation and Equilibrium</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M5L4 Static Equilibrium</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- INTRODUCTION                                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The art of structure is where to put the holes."</em></span><br /><span>&mdash;&nbsp;Robert Le Ricolais, structural engineer</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">M5L1 through M5L3 were all about <em>motion</em> &mdash; things spinning, rolling, accelerating, conserving angular momentum. Now we arrive at the other half of the module title: <strong>Equilibrium</strong>. What conditions must hold for a structure to remain <em>perfectly still</em>? The answer turns out to require two independent equations, not one. A net force of zero prevents the object from translating. But a net force of zero is not enough &mdash; a pair of equal-and-opposite forces at different points can still produce a net torque that sets the object spinning. Equilibrium demands <em>both</em> &Sigma;F = 0 <em>and</em> &Sigma;&tau; = 0. This lesson is about learning to use both conditions simultaneously &mdash; and about the single most powerful exam skill in static equilibrium: <strong>choosing where to place your pivot point</strong>.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img style="height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Beam_balance_with_equal_masses.JPG/320px-Beam_balance_with_equal_masses.JPG" alt="A balanced beam scale with equal masses on both sides, demonstrating both force and torque equilibrium about the pivot point." width="100%" height="100%" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Balance requires &Sigma;F = 0 <em>and</em> &Sigma;&tau; = 0 &mdash; two independent conditions, not one.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TWO CONDITIONS FRAMEWORK BOX -->
+            <div style="margin-top: 1.5em; padding: 1.5em; background: #1d2757; border-radius: 8px; color: #fff;">
+                <h3 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-balance-scale" style="margin-right: 0.5em;"></i>The Two Conditions for Static Equilibrium</h3>
+                <p style="text-align: center; margin-bottom: 1em; color: #ccd6f6;">An object is in static equilibrium if and only if <em>both</em> of these are satisfied simultaneously:</p>
+                <div class="dp-column-container container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="background: rgba(255,255,255,0.1); border-radius: 6px; padding: 1.25em; height: 100%;">
+                                <h4 style="color: #fff; margin-top: 0; border-bottom: 2px solid #d13138; padding-bottom: 0.5em;">Condition 1: Translational Equilibrium</h4>
+                                <p style="text-align: center; font-size: 1.3em; font-family: monospace; margin: 0.75em 0;"><strong>&Sigma;F = 0</strong></p>
+                                <p style="color: #ccd6f6; margin-bottom: 0;">The vector sum of all external forces is zero. Separately: &Sigma;F<sub>x</sub> = 0 and &Sigma;F<sub>y</sub> = 0. This ensures the center of mass does not accelerate &mdash; the object does not slide or fall.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="background: rgba(255,255,255,0.1); border-radius: 6px; padding: 1.25em; height: 100%;">
+                                <h4 style="color: #fff; margin-top: 0; border-bottom: 2px solid #d13138; padding-bottom: 0.5em;">Condition 2: Rotational Equilibrium</h4>
+                                <p style="text-align: center; font-size: 1.3em; font-family: monospace; margin: 0.75em 0;"><strong>&Sigma;&tau; = 0</strong></p>
+                                <p style="color: #ccd6f6; margin-bottom: 0;">The sum of all torques about <em>any</em> chosen pivot point is zero. This ensures the object does not begin to rotate. The choice of pivot is yours &mdash; and choosing wisely eliminates unknowns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(209,49,56,0.25); border-radius: 6px; padding: 1em; margin-top: 1.25em; text-align: center;">
+                    <p style="margin: 0; color: #fff;"><strong><i class="fas fa-lightbulb" style="margin-right: 0.5em;"></i>The Pivot Strategy:</strong> Place your pivot at the location of an unknown force. That force produces <em>zero torque</em> about its own point of application (moment arm = 0), eliminating it from the &Sigma;&tau; = 0 equation entirely. This is the central exam skill of static equilibrium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEARNING OBJECTIVES                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC5.4 Apply the conditions of static equilibrium to analyze structures and extended bodies</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.4.1 State the two conditions for static equilibrium (&Sigma;F = 0 and &Sigma;&tau; = 0) and explain why both are necessary</p>
+                    <p style="padding-left: 40px;">★ LO5.4.2 Construct a free-body diagram for an extended object, identifying all forces and their points of application</p>
+                    <p style="padding-left: 40px;">★ LO5.4.3 Apply the pivot-point strategy: choose the pivot to eliminate an unknown force from the torque equation</p>
+                    <p style="padding-left: 40px;">★ LO5.4.4 Locate the center of gravity of a system of masses and explain its role in equilibrium analysis</p>
+                    <p style="padding-left: 40px;">★ LO5.4.5 Solve equilibrium problems involving beams, ladders, hinges, and cables</p>
+                    <p style="padding-left: 40px;">★ LO5.4.6 Identify the tipping condition: when an object's center of gravity moves outside its base of support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- REQUIRED READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Read these sections in order. Chapter 12.1 establishes the two conditions; 12.2 develops the problem-solving strategy including pivot selection; 12.3 applies both to a range of real structures.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/12-1-conditions-for-static-equilibrium" target="_blank" rel="noopener">12.1 Conditions for Static Equilibrium</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/12-2-examples-of-static-equilibrium" target="_blank" rel="noopener">12.2 Examples of Static Equilibrium</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus" target="_blank" rel="noopener">12.3 Stress, Strain, and Elastic Modulus</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OPTIONAL READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/vectors/Lesson-3/Equilibrium-and-Statics" target="_blank" rel="noopener">Physics Classroom: Equilibrium &amp; Statics</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/forces-newtons-laws/torque-tutorial/a/torque-and-equilibrium" target="_blank" rel="noopener">Khan Academy: Torque and Equilibrium</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/balancing-act" target="_blank" rel="noopener">PhET: Balancing Act Simulation</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener">PhET: Torque Simulation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEDIA                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Video 1 establishes the two conditions conceptually; Video 2 teaches the pivot-point strategy step by step with beam problems; Video 3 tackles ladder problems and distributed loads including center of gravity.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Two Conditions — Why One Is Not Enough</h3>
+                <div class="dp-panel-content">
+                    <h4>Both &Sigma;F = 0 and &Sigma;&tau; = 0 Are Required</h4>
+                    <p>It is entirely possible to have zero net force on an object but still have it start rotating. This video builds the intuition for why both conditions are independently necessary.</p>
+                    <ul>
+                        <li>A pair of equal-and-opposite forces applied at different points: zero net force, but nonzero torque &mdash; the object spins</li>
+                        <li>Translational equilibrium vs. rotational equilibrium: conceptual distinction</li>
+                        <li>Writing the two vector equations in component form for 2D problems</li>
+                        <li>Why the torque condition holds about <em>any</em> pivot point when an object is in equilibrium</li>
+                        <li>Setting up a systematic free-body diagram for an extended object: forces, positions, and directions all matter</li>
+                    </ul>
+                    <p>Time: 9:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 1 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: The Pivot-Point Strategy</h3>
+                <div class="dp-panel-content">
+                    <h4>Choose Your Pivot to Eliminate Unknowns</h4>
+                    <p>The single most powerful technique in static equilibrium problems: deliberately placing the pivot at a location that kills an unknown force and gives you a solvable equation immediately.</p>
+                    <ul>
+                        <li>Why any point can serve as the pivot when the body is in static equilibrium</li>
+                        <li>A force produces zero torque about a pivot placed at its own point of application (r = 0)</li>
+                        <li>Step-by-step: uniform beam supported at one end by a hinge, other end by a cable at angle &theta;</li>
+                        <li>Pivot at the hinge eliminates hinge forces entirely from the torque equation &mdash; solve for cable tension immediately</li>
+                        <li>Then use &Sigma;F = 0 to find the hinge reaction forces</li>
+                        <li>Non-uniform beam: locating the weight's effective point of application</li>
+                    </ul>
+                    <p>Time: 11:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video 2 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Ladders, Centers of Gravity, and Tipping</h3>
+                <div class="dp-panel-content">
+                    <h4>Real Structures with Distributed Mass and Multiple Contact Forces</h4>
+                    <p>Ladders leaning against walls are the classic multi-force equilibrium problem. This video also addresses how center of gravity differs from center of mass and introduces the tipping condition.</p>
+                    <ul>
+                        <li>Ladder against a frictionless wall: four forces, two equations, one clever pivot</li>
+                        <li>The role of static friction at the base &mdash; why a ladder slides when friction is insufficient</li>
+                        <li>Center of gravity: the single point where gravity's torque equals the distributed weight torque</li>
+                        <li>Center of gravity vs. center of mass: they coincide in uniform gravitational fields; differ when g varies (e.g., very tall structures)</li>
+                        <li>Tipping condition: the object tips when its center of gravity moves outside the base of support</li>
+                        <li>Why wide, low vehicles are stable; why tall, narrow objects are not</li>
+                    </ul>
+                    <p>Time: 12:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 3 embed goes here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ADVANCED THEORY                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Deeper Look: Equilibrium from First Principles</h3>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 420px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Why the Pivot Can Be Anywhere</h3>
+                <div class="dp-panel-content">
+                    <h4>The Pivot-Independence of Equilibrium</h4>
+                    <p>When an object is in static equilibrium, the torque condition &Sigma;&tau; = 0 holds about <em>every possible pivot point simultaneously</em>. This is not obvious &mdash; here is why it is true.</p>
+                    <p>Let point A and point B be two different pivot choices separated by displacement <strong>d</strong>. The torque of force <strong>F</strong> about A is <strong>r</strong><sub>A</sub> &times; <strong>F</strong>, and about B is <strong>r</strong><sub>B</sub> &times; <strong>F</strong> = (<strong>r</strong><sub>A</sub> + <strong>d</strong>) &times; <strong>F</strong>.</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace; text-align: center;">
+                        &Sigma;&tau;<sub>B</sub> = &Sigma;&tau;<sub>A</sub> + <strong>d</strong> &times; &Sigma;<strong>F</strong>
+                    </div>
+                    <p>If <em>both</em> equilibrium conditions hold (&Sigma;<strong>F</strong> = 0 and &Sigma;&tau;<sub>A</sub> = 0), then &Sigma;&tau;<sub>B</sub> = 0 + <strong>d</strong> &times; <strong>0</strong> = 0 as well. The torque condition is satisfied at every pivot.</p>
+                    <p><strong>Practical consequence:</strong> You are free to write the torque equation about <em>whatever</em> point is most convenient. The result will be correct regardless. Choosing the pivot at an unknown force's point of application is not a trick &mdash; it is a legitimate and rigorous choice.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">How Many Independent Equations?</h5>
+                            <p>In 2D, static equilibrium yields three independent scalar equations: &Sigma;F<sub>x</sub> = 0, &Sigma;F<sub>y</sub> = 0, and &Sigma;&tau; = 0. You can solve for at most three unknowns. Systems with more unknowns than equations are <em>statically indeterminate</em> &mdash; they require material deformation (elasticity) to solve. A table with four legs is statically indeterminate; a three-legged stool is not.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Stable, Unstable, and Neutral Equilibrium</h3>
+                <div class="dp-panel-content">
+                    <h4>Not All Equilibrium Is Equal</h4>
+                    <p>An object can satisfy &Sigma;F = 0 and &Sigma;&tau; = 0 and still be either safe or dangerous, depending on what happens when it is displaced slightly.</p>
+                    <table style="width: 100%; border-collapse: collapse; margin: 1em 0;">
+                        <thead>
+                            <tr style="background: #1d2757; color: #fff;">
+                                <th style="padding: 0.6em;">Type</th>
+                                <th style="padding: 0.6em;">What happens on small displacement</th>
+                                <th style="padding: 0.6em;">Physical criterion</th>
+                                <th style="padding: 0.6em;">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;">
+                                <td style="padding: 0.5em;"><strong>Stable</strong></td>
+                                <td style="padding: 0.5em;">Returns to original position</td>
+                                <td style="padding: 0.5em;">CG rises on displacement; potential energy is a minimum</td>
+                                <td style="padding: 0.5em;">Ball in a bowl; rocking chair on curved feet</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 0.5em;"><strong>Unstable</strong></td>
+                                <td style="padding: 0.5em;">Moves further from original position</td>
+                                <td style="padding: 0.5em;">CG falls on displacement; potential energy is a maximum</td>
+                                <td style="padding: 0.5em;">Pencil balanced on its tip; inverted pendulum</td>
+                            </tr>
+                            <tr style="background: #f9f9f9;">
+                                <td style="padding: 0.5em;"><strong>Neutral</strong></td>
+                                <td style="padding: 0.5em;">Stays in new position</td>
+                                <td style="padding: 0.5em;">CG height unchanged; potential energy is constant</td>
+                                <td style="padding: 0.5em;">Ball on a flat surface; cylinder rolling on a flat surface</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Key insight:</strong> For extended objects, stability is governed by the relationship between the center of gravity and the base of support. An object is stable as long as a vertical line through its CG falls <em>within</em> the base of support. When that line falls <em>outside</em> the base &mdash; even slightly &mdash; the gravitational torque tips the object over rather than restoring it.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info" style="margin-top: 1em;">
+                        <div class="card-body">
+                            <h5 class="card-title">Engineering Application</h5>
+                            <p>This is why cranes have massive counterweights, why sports cars have low centers of gravity, and why the Leaning Tower of Pisa (CG still above its base &mdash; barely) has not fallen. It is also why loaded 18-wheelers are restricted on curved on-ramps &mdash; lateral acceleration shifts the effective CG location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">The Human Body as a Lever System</h3>
+                <div class="dp-panel-content">
+                    <h4>Muscles, Bones, and Mechanical Advantage</h4>
+                    <p>The human musculoskeletal system is a collection of lever systems operating under static equilibrium conditions. Understanding them requires applying &Sigma;&tau; = 0 about joint pivot points.</p>
+                    <p><strong>The forearm as a third-class lever:</strong></p>
+                    <p>The elbow joint is the pivot. The bicep muscle attaches very close to the joint &mdash; typically about 5 cm from the elbow &mdash; while the hand holds a weight 35 cm from the elbow. Applying &Sigma;&tau; = 0 about the elbow:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; text-align: center; margin: 1em 0; font-family: monospace;">
+                        F<sub>muscle</sub> &times; 0.05 m = W<sub>load</sub> &times; 0.35 m<br>
+                        F<sub>muscle</sub> = 7 &times; W<sub>load</sub>
+                    </div>
+                    <p>The bicep must exert <strong>seven times</strong> the weight being held. Holding a 10 kg weight requires roughly 700 N of bicep force. This seems inefficient &mdash; and it is, from a force perspective &mdash; but the short moment arm also means the muscle needs to contract only a tiny amount to produce a large arc of motion at the hand. The body trades force for speed and range of motion.</p>
+                    <p><strong>Other body levers:</strong></p>
+                    <ul>
+                        <li><strong>Neck:</strong> The head (~5 kg) pivots at the atlanto-occipital joint; neck extensor muscles are close to the pivot, so they must exert very large forces to hold the head erect &mdash; a significant source of neck strain during forward head posture.</li>
+                        <li><strong>Foot/calf:</strong> Standing on tiptoe pivots at the ball of the foot; the Achilles tendon (close to the pivot) must support the entire body weight acting at the ankle.</li>
+                        <li><strong>Lower back:</strong> The spine pivots at the sacrum; back muscles attach very close to the pivot, so bending forward at 60° requires back muscles to generate forces up to 10 &times; body weight &mdash; a major source of disc compression injury.</li>
+                    </ul>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info" style="margin-top: 1em;">
+                        <div class="card-body">
+                            <h5 class="card-title">Why "Lift with Your Legs"</h5>
+                            <p>When lifting with a bent back, the torque about the lumbar spine from the load plus the upper body weight is enormous &mdash; and the short erector spinae moment arm means the muscle force required is extreme. Lifting with a straight back and bending at the knees moves the load closer to the spine's axis of rotation, dramatically reducing both the torque and the required muscle force.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — CONCEPTUAL                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+
+                <!-- TAB 1: ORDER ITEMS — Pivot-point strategy steps -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">The Pivot-Point Strategy</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-oi-order-pool dp-oi-order-type-text" style="margin-bottom: 2em;" data-interactive-type="Order Items" data-interactive-title="Order Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-list-ol"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Put the Static Equilibrium Solution Steps in Order</h4>
+                            <p>Arrange these steps into the correct sequence for solving a static equilibrium problem using the pivot strategy. Drag and drop to reorder.</p>
+                            <div class="dp-oi-order-content">
+                                <ul>
+                                    <li class="dp-oi-item-text">Draw a complete free-body diagram showing all forces and their exact points of application on the extended object</li>
+                                    <li class="dp-oi-item-text">Set up a coordinate system and establish a positive direction for torques (usually CCW = positive)</li>
+                                    <li class="dp-oi-item-text">Choose the pivot point at the location of an unknown force you want to eliminate from the torque equation</li>
+                                    <li class="dp-oi-item-text">Write &Sigma;&tau; = 0 about the chosen pivot, calculating the torque from each remaining force as &plusmn;r&perp;F</li>
+                                    <li class="dp-oi-item-text">Solve the torque equation for the first unknown (typically a cable tension or support force)</li>
+                                    <li class="dp-oi-item-text">Write &Sigma;F<sub>x</sub> = 0 and &Sigma;F<sub>y</sub> = 0 to solve for remaining unknown force components</li>
+                                    <li class="dp-oi-item-text">Check: verify that the torque condition is also satisfied about a different pivot point as a consistency check</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SORT ITEMS — Equilibrium classification -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Equilibrium or Not?</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-th-large"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort Each Situation into the Correct Category</h4>
+                            <p>Each scenario describes forces acting on an extended rigid body. Decide whether it is in translational equilibrium, rotational equilibrium, both, or neither. Sort into the correct bucket.</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Situations to Sort</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">Two equal forces pulling opposite ends of a rod in opposite directions along the rod's axis</li>
+                                            <li class="dp-si-item-text">A book sitting motionless on a table with gravity and normal force acting at the same point</li>
+                                            <li class="dp-si-item-text">A steering wheel with two hands applying equal forces on opposite sides, both pushing clockwise</li>
+                                            <li class="dp-si-item-text">A uniform beam balanced on a fulcrum at its center with equal weights at each end</li>
+                                            <li class="dp-si-item-text">A door being held open: the hinge pushes right, your hand pushes left at the outer edge with equal magnitude</li>
+                                            <li class="dp-si-item-text">A spinning top precessing at constant rate with gravity and the normal force acting at the tip</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Both &Sigma;F = 0 and &Sigma;&tau; = 0</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">&Sigma;F = 0 but &Sigma;&tau; &ne; 0</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">&Sigma;&tau; = 0 but &Sigma;F &ne; 0</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Neither condition satisfied</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FLIP CARDS — Common errors in pivot choice and equilibrium -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Common Errors in Equilibrium</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Think It Through — Then Flip</h4>
+                        <p>Each card presents a common student error or misconception about static equilibrium. Decide what is wrong before flipping to see the correction.</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"If &Sigma;F = 0, the object must be in equilibrium."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Translational Equilibrium Only</h5>
+                                                        <p>&Sigma;F = 0 prevents translation but says nothing about rotation. A couple &mdash; two equal-and-opposite forces applied at different points &mdash; has zero net force but produces a net torque. The object can begin to rotate even though its center of mass does not accelerate. Full equilibrium requires <em>both</em> conditions satisfied.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"You must place the pivot at the geometric center of the object."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — The Pivot Is Your Free Choice</h5>
+                                                        <p>When an object is in static equilibrium, &Sigma;&tau; = 0 holds about <em>every</em> point. You may place the pivot anywhere that is mathematically convenient &mdash; and the strategically smart choice is at the location of an unknown force you want to eliminate. Placing the pivot at the geometric center is usually the <em>worst</em> choice because it keeps all unknowns in the equation.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"For a uniform beam, I can place gravity's force anywhere along the beam."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Gravity Acts at the Center of Gravity</h5>
+                                                        <p>For torque calculations, the entire weight of a uniform beam acts as a single downward force at the beam's center of gravity &mdash; which coincides with the geometric center for a uniform beam. Placing W at the wrong position changes the torque calculation and gives a wrong answer. For non-uniform beams, you must locate the CG correctly first.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"A hinge always exerts only a vertical force on a beam."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — A Hinge Exerts Forces in Both Directions</h5>
+                                                        <p>A hinge is a pin joint that can exert a force in <em>any</em> direction &mdash; both horizontal and vertical components. This is why hinge problems have two unknown force components (F<sub>hx</sub> and F<sub>hy</sub>), not one. The pivot strategy is especially valuable here: placing the pivot <em>at</em> the hinge eliminates both unknown components from the torque equation in one move.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — COMPUTATIONAL                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Quick Reference: Static Equilibrium</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Condition 1:</strong> &Sigma;F<sub>x</sub> = 0 and &Sigma;F<sub>y</sub> = 0<br>
+                        <span style="font-size: 0.85em; color: #555;">prevents translation</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Condition 2:</strong> &Sigma;&tau; = 0 (any pivot)<br>
+                        <span style="font-size: 0.85em; color: #555;">prevents rotation</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Torque:</strong> &tau; = r&perp; &times; F = rF sin&theta;<br>
+                        <span style="font-size: 0.85em; color: #555;">r&perp; = perpendicular distance from pivot to line of action</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>CG location:</strong> x<sub>cg</sub> = &Sigma;(m<sub>i</sub>x<sub>i</sub>) / &Sigma;m<sub>i</sub><br>
+                        <span style="font-size: 0.85em; color: #555;">same as center of mass in uniform g</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 1 — Uniform Beam with a Cable</p>
+                <div class="dp-panel-content">
+                    <p><strong>A uniform beam of mass 20 kg and length 4.0 m is attached to a wall by a hinge at its left end. A cable attached to the right end makes an angle of 30° above the horizontal and supports the beam horizontally. Find (a) the tension in the cable and (b) the horizontal and vertical components of the hinge force.</strong></p>
+                    <p><strong>Setup:</strong> The beam is horizontal. Forces: weight W = mg = (20)(9.8) = 196 N downward at the center (x = 2.0 m from hinge); cable tension T upward-and-right at 30° at x = 4.0 m; hinge forces F<sub>hx</sub> and F<sub>hy</sub> at x = 0.</p>
+                    <p><strong>Pivot strategy:</strong> Place pivot at the hinge (x = 0). This eliminates F<sub>hx</sub> and F<sub>hy</sub> from the torque equation — both act at zero moment arm.</p>
+                    <p><strong>(a) &Sigma;&tau; = 0 about the hinge:</strong></p>
+                    <p style="padding-left: 1.5em;">CCW positive. T&middot;sin30° acts upward at x = 4.0 m (CCW torque). W acts downward at x = 2.0 m (CW torque).</p>
+                    <p style="padding-left: 1.5em;">T sin30° &times; 4.0 &minus; W &times; 2.0 = 0</p>
+                    <p style="padding-left: 1.5em;">T(0.500)(4.0) = 196 &times; 2.0</p>
+                    <p style="padding-left: 1.5em;">2.0T = 392 &nbsp;&rArr;&nbsp; <strong>T = 196 N</strong></p>
+                    <p><strong>(b) &Sigma;F<sub>x</sub> = 0:</strong></p>
+                    <p style="padding-left: 1.5em;">F<sub>hx</sub> + T cos30° = 0 &nbsp;&rArr;&nbsp; F<sub>hx</sub> = &minus;T cos30° = &minus;196(0.866) = <strong>&minus;170 N</strong> (hinge pulls beam toward wall)</p>
+                    <p><strong>&Sigma;F<sub>y</sub> = 0:</strong></p>
+                    <p style="padding-left: 1.5em;">F<sub>hy</sub> + T sin30° &minus; W = 0 &nbsp;&rArr;&nbsp; F<sub>hy</sub> = 196 &minus; 196(0.500) = 196 &minus; 98 = <strong>98 N upward</strong></p>
+                    <p style="color: #555; font-style: italic;">Notice the pivot strategy delivered T directly from one clean equation. If we had placed the pivot at the center, all three unknowns would have appeared simultaneously.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 2 — Non-Uniform Beam with Two Supports</p>
+                <div class="dp-panel-content">
+                    <p><strong>A non-uniform beam of mass 15 kg and length 5.0 m is supported at two points: support A at x = 0 and support B at x = 5.0 m. The beam's center of gravity is located 2.0 m from end A. A 40 kg crate sits 1.5 m from end A. Find the upward forces F<sub>A</sub> and F<sub>B</sub> exerted by each support.</strong></p>
+                    <p><strong>Identify all forces:</strong> F<sub>A</sub> up at x = 0; F<sub>B</sub> up at x = 5.0 m; beam weight W<sub>beam</sub> = 147 N down at x = 2.0 m; crate weight W<sub>crate</sub> = (40)(9.8) = 392 N down at x = 1.5 m.</p>
+                    <p><strong>Pivot at A (x = 0) to eliminate F<sub>A</sub>:</strong></p>
+                    <p style="padding-left: 1.5em;">&Sigma;&tau;<sub>A</sub> = 0:</p>
+                    <p style="padding-left: 1.5em;">F<sub>B</sub>(5.0) &minus; W<sub>beam</sub>(2.0) &minus; W<sub>crate</sub>(1.5) = 0</p>
+                    <p style="padding-left: 1.5em;">5.0 F<sub>B</sub> = 147(2.0) + 392(1.5) = 294 + 588 = 882</p>
+                    <p style="padding-left: 1.5em;"><strong>F<sub>B</sub> = 176.4 N</strong></p>
+                    <p><strong>&Sigma;F<sub>y</sub> = 0:</strong></p>
+                    <p style="padding-left: 1.5em;">F<sub>A</sub> + F<sub>B</sub> &minus; W<sub>beam</sub> &minus; W<sub>crate</sub> = 0</p>
+                    <p style="padding-left: 1.5em;">F<sub>A</sub> = 147 + 392 &minus; 176.4 = <strong>362.6 N</strong></p>
+                    <p><strong>Check by pivoting at B:</strong></p>
+                    <p style="padding-left: 1.5em;">F<sub>A</sub>(5.0) &minus; W<sub>beam</sub>(3.0) &minus; W<sub>crate</sub>(3.5) = 362.6(5.0) &minus; 147(3.0) &minus; 392(3.5) = 1813 &minus; 441 &minus; 1372 = 0 &nbsp; ✓</p>
+                    <p style="color: #555; font-style: italic;">The non-uniform beam's center of gravity is given explicitly here. In practice you would locate it by finding where the beam balances, or by calculating it from the mass distribution.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 3 — Ladder Against a Frictionless Wall</p>
+                <div class="dp-panel-content">
+                    <p><strong>A uniform 8.0 m ladder of mass 12 kg leans against a smooth (frictionless) vertical wall, making a 60° angle with the ground. The floor exerts both normal and friction forces on the base. Find the forces on the ladder and the minimum coefficient of static friction needed to prevent slipping.</strong></p>
+                    <p><strong>Forces:</strong> Normal from wall N<sub>w</sub> (horizontal, pointing away from wall) at the top; Normal from floor N<sub>f</sub> (upward) at the base; Friction from floor f (horizontal, toward wall) at the base; Weight W = (12)(9.8) = 117.6 N downward at the center (4.0 m along ladder from base).</p>
+                    <p><strong>Pivot at the base</strong> — eliminates N<sub>f</sub> and f (both act there):</p>
+                    <p style="padding-left: 1.5em;">&Sigma;&tau;<sub>base</sub> = 0:</p>
+                    <p style="padding-left: 1.5em;">N<sub>w</sub> acts at the top of the ladder. Its moment arm = 8.0 sin60° = 6.93 m (horizontal distance to base).</p>
+                    <p style="padding-left: 1.5em;">W acts downward at the ladder's midpoint. Its moment arm = 4.0 cos60° = 2.0 m (horizontal distance from base).</p>
+                    <p style="padding-left: 1.5em;">N<sub>w</sub>(6.93) &minus; W(2.0) = 0</p>
+                    <p style="padding-left: 1.5em;">N<sub>w</sub> = 117.6 &times; 2.0 / 6.93 = <strong>33.95 N</strong></p>
+                    <p><strong>&Sigma;F<sub>x</sub> = 0:</strong> f &minus; N<sub>w</sub> = 0 &nbsp;&rArr;&nbsp; f = N<sub>w</sub> = <strong>33.95 N</strong> (friction points toward wall)</p>
+                    <p><strong>&Sigma;F<sub>y</sub> = 0:</strong> N<sub>f</sub> &minus; W = 0 &nbsp;&rArr;&nbsp; N<sub>f</sub> = <strong>117.6 N</strong></p>
+                    <p><strong>Minimum coefficient of static friction:</strong></p>
+                    <p style="padding-left: 1.5em;">&mu;<sub>s,min</sub> = f / N<sub>f</sub> = 33.95 / 117.6 = <strong>0.289</strong></p>
+                    <p style="color: #555; font-style: italic;">If the floor's coefficient of static friction is less than 0.289, the ladder will slide. As the ladder angle decreases (becomes more horizontal), the moment arm of W increases while that of N<sub>w</sub> decreases — so a shallower ladder requires a larger friction force and is harder to keep in place.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 4 — Cantilever Bracket (Hinge + Horizontal Cable)</p>
+                <div class="dp-panel-content">
+                    <p><strong>A 3.0 m horizontal shelf bracket is attached to a wall by a hinge at its left end and a horizontal cable at 1.8 m from the wall (60% of its length). The bracket itself has mass 5.0 kg; a 25 kg load hangs from the free right end. Find the tension in the cable and the hinge reaction.</strong></p>
+                    <p><strong>Forces:</strong> Hinge at x = 0 (components F<sub>hx</sub>, F<sub>hy</sub>); horizontal cable tension T (pointing toward wall, so T acts in the &minus;x direction on the bracket) at x = 1.8 m — wait, a <em>horizontal</em> cable along a <em>horizontal</em> bracket would produce no vertical support. Let us re-specify: the cable is attached to the wall above the hinge and runs diagonally to the bracket at x = 1.8 m, making angle &theta; = 50° above horizontal.</p>
+                    <p><strong>Setup (cable at 50° at x = 1.8 m):</strong></p>
+                    <p style="padding-left: 1.5em;">Bracket weight: W<sub>b</sub> = 49 N at x = 1.5 m (center)</p>
+                    <p style="padding-left: 1.5em;">Load: W<sub>L</sub> = 245 N at x = 3.0 m</p>
+                    <p style="padding-left: 1.5em;">Cable tension T at 50° at x = 1.8 m; vertical component = T sin50°</p>
+                    <p><strong>Pivot at hinge (x = 0):</strong></p>
+                    <p style="padding-left: 1.5em;">&Sigma;&tau; = 0: T sin50°(1.8) &minus; W<sub>b</sub>(1.5) &minus; W<sub>L</sub>(3.0) = 0</p>
+                    <p style="padding-left: 1.5em;">T(0.766)(1.8) = 49(1.5) + 245(3.0) = 73.5 + 735 = 808.5</p>
+                    <p style="padding-left: 1.5em;">1.379 T = 808.5 &nbsp;&rArr;&nbsp; <strong>T = 586.3 N</strong></p>
+                    <p><strong>&Sigma;F<sub>x</sub> = 0:</strong> F<sub>hx</sub> &minus; T cos50° = 0 &nbsp;&rArr;&nbsp; F<sub>hx</sub> = 586.3(0.643) = <strong>377 N</strong> (hinge pulls bracket toward wall)</p>
+                    <p><strong>&Sigma;F<sub>y</sub> = 0:</strong> F<sub>hy</sub> + T sin50° &minus; W<sub>b</sub> &minus; W<sub>L</sub> = 0</p>
+                    <p style="padding-left: 1.5em;">F<sub>hy</sub> = 294 &minus; 586.3(0.766) = 294 &minus; 449.1 = <strong>&minus;155 N</strong> (hinge pushes bracket <em>downward</em>)</p>
+                    <p style="color: #555; font-style: italic;">The negative F<sub>hy</sub> tells us the hinge must actually push <em>down</em> on the bracket &mdash; the cable is pulling the right end of the bracket upward so strongly that the left end would lift off the hinge without a downward pin force. This kind of sign surprise is why solving formally and trusting the math matters.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 5 — Center of Gravity and Tipping</p>
+                <div class="dp-panel-content">
+                    <p><strong>A filing cabinet is 0.50 m wide and 1.30 m tall. It has mass 18 kg distributed uniformly. A fully loaded top drawer (6.0 kg) is pulled out 0.35 m, shifting its effective center of mass to 0.35 m in front of the cabinet's front face. (a) Find the combined center of gravity of the system. (b) Determine whether the cabinet will tip, assuming it rests on a flat floor with the base extending from x = 0 to x = 0.50 m. (c) What is the maximum drawer extension before tipping?</strong></p>
+                    <p><strong>Coordinate system:</strong> x = 0 at the back of the cabinet base; x = 0.50 m at the front face. Cabinet CG is at x = 0.25 m (geometric center). Drawer pulled 0.35 m out from the front face: drawer CG is at x = 0.50 + 0.35 = 0.85 m from the back.</p>
+                    <p><strong>(a) Combined CG:</strong></p>
+                    <p style="padding-left: 1.5em;">x<sub>cg</sub> = (m<sub>cab</sub>&middot;x<sub>cab</sub> + m<sub>drawer</sub>&middot;x<sub>drawer</sub>) / (m<sub>cab</sub> + m<sub>drawer</sub>)</p>
+                    <p style="padding-left: 1.5em;">x<sub>cg</sub> = (18 &times; 0.25 + 6.0 &times; 0.85) / (18 + 6.0)</p>
+                    <p style="padding-left: 1.5em;">x<sub>cg</sub> = (4.50 + 5.10) / 24.0 = 9.60 / 24.0 = <strong>0.40 m from back</strong></p>
+                    <p><strong>(b) Tipping check:</strong> The base extends from x = 0 to x = 0.50 m. The combined CG at x = 0.40 m lies <em>within</em> the base. <strong>The cabinet does not tip</strong> with this drawer extension.</p>
+                    <p><strong>(c) Maximum extension before tipping:</strong> Tipping begins when x<sub>cg</sub> = 0.50 m (CG over front edge).</p>
+                    <p style="padding-left: 1.5em;">(18 &times; 0.25 + 6.0 &times; x<sub>d</sub>) / 24.0 = 0.50</p>
+                    <p style="padding-left: 1.5em;">4.50 + 6.0 x<sub>d</sub> = 12.0</p>
+                    <p style="padding-left: 1.5em;">x<sub>d</sub> = 7.50 / 6.0 = 1.25 m from back of cabinet</p>
+                    <p style="padding-left: 1.5em;">Maximum extension from front face = 1.25 &minus; 0.50 = <strong>0.75 m</strong></p>
+                    <p style="color: #555; font-style: italic;">This is why filing cabinet instructions warn against opening multiple fully loaded drawers simultaneously &mdash; two drawers each pulled halfway can shift the CG outside the base just as easily as one drawer pulled all the way.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 6 — Human Forearm as a Lever</p>
+                <div class="dp-panel-content">
+                    <p><strong>A person holds a 5.0 kg textbook in their hand with the forearm horizontal. The bicep muscle attaches 4.0 cm from the elbow joint; the hand (with book) is 36 cm from the elbow. The forearm itself has mass 1.8 kg with its center of gravity 16 cm from the elbow. (a) Find the force exerted by the bicep muscle. (b) Find the reaction force at the elbow joint.</strong></p>
+                    <p><strong>System:</strong> Forearm + hand + book in static equilibrium. Pivot at elbow joint.</p>
+                    <p><strong>Forces:</strong></p>
+                    <ul>
+                        <li>Bicep force F<sub>B</sub> upward at d<sub>B</sub> = 0.040 m from elbow</li>
+                        <li>Forearm weight W<sub>fa</sub> = (1.8)(9.8) = 17.64 N down at d<sub>fa</sub> = 0.16 m from elbow</li>
+                        <li>Book weight W<sub>book</sub> = (5.0)(9.8) = 49.0 N down at d<sub>hand</sub> = 0.36 m from elbow</li>
+                        <li>Joint reaction force F<sub>J</sub> (upward or downward?) at elbow, moment arm = 0</li>
+                    </ul>
+                    <p><strong>(a) &Sigma;&tau; = 0 about elbow joint</strong> (F<sub>J</sub> has zero moment arm &mdash; eliminated):</p>
+                    <p style="padding-left: 1.5em;">F<sub>B</sub>(0.040) &minus; W<sub>fa</sub>(0.16) &minus; W<sub>book</sub>(0.36) = 0</p>
+                    <p style="padding-left: 1.5em;">0.040 F<sub>B</sub> = 17.64(0.16) + 49.0(0.36) = 2.822 + 17.64 = 20.46</p>
+                    <p style="padding-left: 1.5em;"><strong>F<sub>B</sub> = 511.5 N &asymp; 512 N</strong></p>
+                    <p style="padding-left: 1.5em;">For comparison, the 5 kg book weighs only 49 N &mdash; the bicep must exert about <strong>10.5&times;</strong> the book's weight.</p>
+                    <p><strong>(b) &Sigma;F<sub>y</sub> = 0:</strong></p>
+                    <p style="padding-left: 1.5em;">F<sub>B</sub> + F<sub>J</sub> &minus; W<sub>fa</sub> &minus; W<sub>book</sub> = 0</p>
+                    <p style="padding-left: 1.5em;">F<sub>J</sub> = W<sub>fa</sub> + W<sub>book</sub> &minus; F<sub>B</sub> = 17.64 + 49.0 &minus; 511.5 = <strong>&minus;444.9 N</strong></p>
+                    <p>The negative sign means the joint force acts <em>downward</em> on the forearm &mdash; the humerus is pulling the forearm <em>down</em> (compressing the elbow joint) while the bicep pulls it up. The joint must withstand a compressive force of about 445 N just to hold a 5 kg book.</p>
+                    <p style="color: #555; font-style: italic;">This is why elbow and shoulder injuries are so common in athletes: the forces in the joint itself are many times larger than the forces being exerted on external objects.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- READY TO MOVE ON                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_synthesis" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 640px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Self-Check Before M5L5</h4>
+            <p>M5L5 (Elasticity) builds directly on static equilibrium: when real materials deform under applied forces, the equilibrium equations still apply &mdash; but now you also relate force to deformation through material properties. Make sure you can do all of these before moving on:</p>
+            <ol>
+                <li>State both equilibrium conditions and identify a situation that satisfies one but not the other.</li>
+                <li>A uniform 6.0 m beam (30 kg) is hinged at the left end and supported by a vertical rope at the 4.0 m mark. A 50 kg sign hangs from the right end. Find the rope tension without using the hinge force at all.</li>
+                <li>Explain in one sentence why placing the pivot at a hinge is almost always the best first move in a beam problem.</li>
+                <li>A box is 0.60 m wide and has its CG at 0.25 m from its left base edge. Is it stable, at the tipping point, or already tipped? What if the CG were at 0.35 m?</li>
+                <li>Why does the bicep muscle need to exert forces much larger than the weight it supports? What does this trade-off gain for the body?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">In M5L5, you will extend equilibrium into the regime where materials stretch, compress, and shear under load. The same force analysis from this lesson provides the internal forces that produce the deformations you will quantify with Young's modulus, the shear modulus, and the bulk modulus.</p>
+        </div>
+    </section>
+
+</div>
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE  -->
+<!-- ============================================= -->
