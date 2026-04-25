@@ -1,21 +1,28 @@
 /**
- * Canvas Image Mapper
- * 
- * Automatically replaces Canvas file URLs with local file paths for offline viewing.
- * This script intercepts Canvas instructure.com image URLs and maps them to local files
- * using a JSON mapping file, enabling the course to function both in Canvas LMS and
- * offline environments (local development, GitHub Pages, etc.).
- * 
- * Usage: Include this script in your HTML pages after the DOM content.
- * The script will automatically run on page load.
+ * Canvas Image Mapper — PHYS-2325 University Physics I, TSTC Fall 2026
+ *
+ * Replaces CANVAS_IMAGE_URL placeholders and live Canvas instructure.com/
+ * canvas.tstc.edu image URLs with local file paths for offline/GitHub review.
+ *
+ * Two modes:
+ *   1. Placeholder mode — replaces src="CANVAS_IMAGE_URL" using data-local-src
+ *      attributes placed on <img> tags during local development.
+ *   2. Canvas URL mode — when viewing pages that have already been imported
+ *      into Canvas and carry live /files/{id} URLs, maps IDs → local paths
+ *      via canvas-file-mapping.json so the GitHub copy still shows images.
+ *
+ * Usage: Include in each lesson HTML before </body>:
+ *   <script src="../../../files/00-image-script/canvas-image-mapper.js"><\/script>
  */
 
 (function () {
     'use strict';
 
-    // Configuration
-    const MAPPING_FILE = '../Files/00_image_script/canvas-file-mapping.json';
-    const FILES_BASE_PATH = '../Files/';
+    // ── Configuration ────────────────────────────────────────────────────────
+    // Path to the JSON mapping file, relative to the lesson HTML files
+    // (lesson files sit 3 levels deep: module{N}/m{N}l{N}-{slug}/new-lesson-output/)
+    const MAPPING_FILE = '../../../files/00-image-script/canvas-file-mapping.json';
+    const FILES_BASE_PATH = '../../../files/';
 
     /**
      * Initialize the image mapper when DOM is ready
