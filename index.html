@@ -131,6 +131,56 @@
         .status-draft {
             color: #c47a00 !important;
         }
+        /* Lesson content notes */
+        .lesson-notes {
+            margin: 0;
+            padding: 0 1.5rem 0 4rem;
+            background: #f8f9fc;
+            border-top: 1px dashed #dde2f0;
+        }
+        .lesson-notes summary {
+            cursor: pointer;
+            padding: 0.45rem 0;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #1d2757;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4em;
+        }
+        .lesson-notes summary::-webkit-details-marker { display: none; }
+        .lesson-notes summary::before {
+            content: '▸';
+            font-size: 0.7rem;
+            transition: transform 0.15s;
+        }
+        .lesson-notes[open] summary::before {
+            content: '▾';
+        }
+        .lesson-notes-body {
+            padding: 0.6rem 0 0.9rem;
+            font-size: 0.82rem;
+            color: #444;
+            line-height: 1.6;
+        }
+        .lesson-notes-body ul {
+            margin: 0.35em 0 0.35em 1.1em;
+            padding: 0;
+        }
+        .lesson-notes-body ul li {
+            border: none;
+            padding: 0;
+        }
+        .lesson-notes-body ul li::before {
+            content: none;
+        }
+        .lesson-notes-body strong {
+            color: #1d2757;
+        }
         footer {
             text-align: center;
             padding: 2rem;
@@ -283,6 +333,20 @@
                     M5L1 · Rotational Kinematics
                     <span class="status-tag">✓ Built</span>
                 </a>
+                <details class="lesson-notes">
+                    <summary>Content Notes</summary>
+                    <div class="lesson-notes-body">
+                        <ul>
+                            <li><strong>Intro:</strong> Linear↔rotational analogy scaffold (dark-blue 2-column table: all 3 kinematic equations + bridge equations v=rω, a<sub>t</sub>=rα, a<sub>c</sub>=rω²). Central pedagogical spine carried forward through all M5 lessons.</li>
+                            <li><strong>LOs:</strong> CC5.1 / LO5.1.1–5.1.5 — angular position, velocity, acceleration; constant-α kinematics; bridge to linear.</li>
+                            <li><strong>Media:</strong> 3-tab vertical — angular quantities and the radian; constant-α equations and their linear analogs; bridge equations connecting rotation to linear motion at a point.</li>
+                            <li><strong>Advanced Theory:</strong> 3-tab — why radians are dimensionless (arc length derivation); right-hand rule for angular vectors; unit conversions (rpm, rev/s, rad/s) with engineering context.</li>
+                            <li><strong>Practice/Conceptual:</strong> dp-tabs-pills — Order Items (7 steps: solving constant-α problem); Sort Items (10 quantities → 3 buckets: angular only / linear only / both); Flip Cards (4 cards 2×2: radian definition, bridge equation direction, constant-α assumption, centripetal vs tangential).</li>
+                            <li><strong>Practice/Computational:</strong> 5 accordion problems — unit conversion (rpm→rad/s), spin-up (find α and θ), braking (α from ω and t), bridge equations (find v<sub>t</sub> and a<sub>c</sub> at rim), CD/DVD engineering problem (max ω from material stress).</li>
+                            <li><strong>Self-check:</strong> 5 questions bridging to M5L2 dynamics.</li>
+                        </ul>
+                    </div>
+                </details>
             </li>
             <li>
                 <a href="module5/m5l2-torque-and-rotational-dynamics/new-lesson-output/m5l2-torque-and-rotational-dynamics.html">
@@ -290,6 +354,20 @@
                     M5L2 · Torque and Rotational Dynamics
                     <span class="status-tag">✓ Built</span>
                 </a>
+                <details class="lesson-notes">
+                    <summary>Content Notes</summary>
+                    <div class="lesson-notes-body">
+                        <ul>
+                            <li><strong>Intro:</strong> Archimedes lever quote. Analogy scaffold extended (adds F→τ, m→I, F=ma→τ=Iα, W=FΔx→W=τΔθ). Builds directly on M5L1 table with dynamics layer added.</li>
+                            <li><strong>LOs:</strong> CC5.2 / LO5.2.1–5.2.6 — torque definition + cross product; moment of inertia as rotational mass; τ=Iα; parallel-axis theorem; rotational KE; rotational work-energy theorem.</li>
+                            <li><strong>Media:</strong> 3-tab vertical — torque as the cause of angular acceleration (door hinge intuition, moment arm, sign convention); moment of inertia and why mass distribution matters; τ=Iα in multi-body problems + rotational KE and power.</li>
+                            <li><strong>Advanced Theory:</strong> 3-tab — τ=r×F as a full cross product with right-hand rule + calculus connection (τ=dL/dt preview); deriving I=Σmr² from Newton's 2nd + parallel-axis theorem proof; moment of inertia reference table (7 objects) with cMR² shape-factor insight.</li>
+                            <li><strong>Practice/Conceptual:</strong> dp-tabs-pills — Match Items (6 pairs: torque anatomy terms to definitions); Sort Items (8 changes → increases I / decreases I); Flip Cards (4 misconception cards: force vs torque, fixed I, net torque vs rotation, mass vs distribution).</li>
+                            <li><strong>Practice/Computational:</strong> 6 accordion problems — wrench torque at 3 angles; disk α from τ=Iα + kinematic follow-through; solid disk vs hollow ring comparison (α ratio = 2:1); parallel-axis theorem verified two ways; flywheel KE + work-energy + average torque; Atwood machine with massive pulley (coupled linear+rotational).</li>
+                            <li><strong>Self-check:</strong> 5 questions bridging to M5L3 rolling motion.</li>
+                        </ul>
+                    </div>
+                </details>
             </li>
             <li>
                 <a href="module5/m5l3-rolling-motion-and-angular-momentum/new-lesson-output/m5l3-rolling-motion-and-angular-momentum.html">
@@ -297,6 +375,20 @@
                     M5L3 · Rolling Motion and Angular Momentum
                     <span class="status-tag">✓ Built</span>
                 </a>
+                <details class="lesson-notes">
+                    <summary>Content Notes</summary>
+                    <div class="lesson-notes-body">
+                        <ul>
+                            <li><strong>Intro:</strong> Two-part dark-blue framework box — Part 1: rolling constraint (v<sub>cm</sub>=Rω, total KE, static friction role, shape factor); Part 2: angular momentum (L=Iω, τ=dL/dt, conservation). Convergence lesson for all of M5.</li>
+                            <li><strong>LOs:</strong> CC5.3 / LO5.3.1–5.3.7 — rolling constraint; total KE of rolling object; energy conservation on incline; incline race prediction from shape factor; L=Iω definition; angular impulse-momentum; conservation of L.</li>
+                            <li><strong>Media:</strong> 3-tab vertical — rolling constraint and why contact point has zero velocity; incline race energy method and why shape beats mass; angular momentum definition, conservation, and applications.</li>
+                            <li><strong>Advanced Theory:</strong> 3-tab — full incline race derivation showing M and R cancel, with 4-row shape-factor table (solid sphere fastest → hollow ring slowest) + sliding block comparison; angular momentum as full vector L=r×p, gyroscope precession, bicycle stability, 3D conservation, Noether's theorem connection; rolling friction (static vs kinetic), why static friction does no work, tire deformation insight.</li>
+                            <li><strong>Practice/Conceptual:</strong> dp-tabs-pills — Order Items (7-step energy-method rolling procedure); Sort Items (6 skater actions → L same / increases / decreases, buckets empty); Flip Cards (4 cards: incline race winner + mass independence, skater ω increases but L conserved, KE partition for solid sphere, neutron star spin-up calculation).</li>
+                            <li><strong>Practice/Computational:</strong> 5 accordion problems — cylinder down incline (speed + ω + KE split); three-way race (sphere vs cylinder vs ring, all numbers); figure skater tuck-in (conservation + KE increase source); stool + bicycle wheel flip (angular momentum transfer, spacecraft reaction wheel connection); hollow vs solid sphere up a ramp (hollow goes higher at same v).</li>
+                            <li><strong>Self-check:</strong> 5 questions bridging to M5L4 static equilibrium.</li>
+                        </ul>
+                    </div>
+                </details>
             </li>
             <li class="built">
                 <a href="module5/m5l4-static-equilibrium/new-lesson-output/m5l4-static-equilibrium.html">
@@ -304,6 +396,20 @@
                     M5L4 · Static Equilibrium
                     <span class="status-tag">✓ Built</span>
                 </a>
+                <details class="lesson-notes">
+                    <summary>Content Notes</summary>
+                    <div class="lesson-notes-body">
+                        <ul>
+                            <li><strong>Intro:</strong> Le Ricolais quote. Dark-blue two-conditions framework box: ΣF=0 (translational) and Στ=0 (rotational) side by side, with pivot strategy callout box embedded — students see the central exam skill before they see a single equation.</li>
+                            <li><strong>LOs:</strong> CC5.4 / LO5.4.1–5.4.6 — both conditions and why each is necessary; FBD construction for extended objects; pivot-point strategy; center of gravity location and role; beam/ladder/hinge/cable problems; tipping condition.</li>
+                            <li><strong>Media:</strong> 3-tab vertical — why ΣF=0 alone is insufficient (couple example); pivot-point strategy step by step with beam+cable worked through (pivot at hinge eliminates both hinge components); ladders, center of gravity vs center of mass, and tipping condition.</li>
+                            <li><strong>Advanced Theory:</strong> 3-tab — mathematical proof that pivot can be anywhere (Στ<sub>B</sub> = Στ<sub>A</sub> + d×ΣF) + statically indeterminate systems (3-legged stool vs 4-legged table); stable/unstable/neutral equilibrium table with CG-above-base criterion + engineering applications (cranes, sports cars, Leaning Tower); human body as lever system (forearm ×7 force amplification, neck, lower back, and why you lift with your legs).</li>
+                            <li><strong>Practice/Conceptual:</strong> dp-tabs-pills — Order Items (7-step pivot strategy procedure); Sort Items (4-bucket: both conditions / ΣF=0 only / Στ=0 only / neither, buckets empty); Flip Cards (4 cards: ΣF=0 is sufficient misconception, pivot must be at center error, gravity anywhere on beam error, hinge exerts only vertical force error).</li>
+                            <li><strong>Practice/Computational:</strong> 6 accordion problems — uniform beam+cable at 30° (pivot at hinge, find T then hinge components); non-uniform beam on two supports (CG given explicitly, verified with second pivot); ladder against frictionless wall (pivot at base, find N<sub>w</sub> then μ<sub>s,min</sub>); cantilever bracket hinge+cable (negative F<sub>hy</sub> sign surprise explained); filing cabinet tipping (CG calculation, max drawer extension formula); human forearm holding textbook (bicep force ×10.5 the load, elbow joint compressive force).</li>
+                            <li><strong>Self-check:</strong> 5 questions bridging to M5L5 elasticity (internal forces from equilibrium analysis drive the stress/strain calculations).</li>
+                        </ul>
+                    </div>
+                </details>
             </li>
             <li class="pending">
                 <a href="#">
