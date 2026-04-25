@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L1 Rotational Kinematics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 5: Rotation and Equilibrium</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M5L1 Rotational Kinematics</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- INTRODUCTION                                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"The universe is under no obligation to make sense to you &mdash; but it is, remarkably, under an obligation to be consistent."</em></span><br /><span>&mdash;&nbsp;Physics principle on symmetry and analogy</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">Here is the most important idea in this entire module: <strong>you already know rotational kinematics.</strong> Every equation, every concept, every problem-solving strategy you learned in Module 1 has an exact rotational twin. Angular position mirrors linear position. Angular velocity mirrors linear velocity. Angular acceleration mirrors linear acceleration. The kinematic equations are identical in form &mdash; only the symbols change. This lesson is not about learning new physics; it is about recognizing the same physics wearing different clothes. Master the analogy scaffold presented here, and every rotational problem becomes a problem you have already solved.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img style="height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rotating_Disk_Analogy.svg/400px-Rotating_Disk_Analogy.svg.png" alt="A rotating disk showing angular position theta, with radius r and arc length s labeled, illustrating the relationship s = r*theta." width="100%" height="100%" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Arc length s = r&theta; connects the rotational and linear worlds.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE ANALOGY SCAFFOLD — central pedagogical tool for this lesson -->
+        <div style="margin-top: 1.5em; padding: 1.5em; background: #1d2757; border-radius: 8px; color: #fff;">
+            <h3 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-exchange-alt" style="margin-right: 0.5em;"></i>The Analogy Scaffold: Linear &harr; Rotational</h3>
+            <p style="text-align: center; margin-bottom: 1em; color: #ccd6f6;">Every rotational quantity is the angular twin of a linear quantity you already know. Return to this table whenever you are stuck.</p>
+            <div class="dp-column-container container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table style="width: 100%; border-collapse: collapse; color: #fff;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #d13138;">
+                                    <th style="padding: 0.5em; text-align: left;">Linear (from M1)</th>
+                                    <th style="padding: 0.5em; text-align: center;">Symbol</th>
+                                    <th style="padding: 0.5em; text-align: left;">Units</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Position</td><td style="padding: 0.4em; text-align: center;">x</td><td style="padding: 0.4em;">m</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Velocity</td><td style="padding: 0.4em; text-align: center;">v</td><td style="padding: 0.4em;">m/s</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Acceleration</td><td style="padding: 0.4em; text-align: center;">a</td><td style="padding: 0.4em;">m/s²</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">v = v₀ + at</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 1</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">x = x₀ + v₀t + &frac12;at²</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 2</td></tr>
+                                <tr><td style="padding: 0.4em;">v² = v₀² + 2a&Delta;x</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table style="width: 100%; border-collapse: collapse; color: #fff;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #d13138;">
+                                    <th style="padding: 0.5em; text-align: left;">Rotational (this lesson)</th>
+                                    <th style="padding: 0.5em; text-align: center;">Symbol</th>
+                                    <th style="padding: 0.5em; text-align: left;">Units</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Angular position</td><td style="padding: 0.4em; text-align: center;">&theta;</td><td style="padding: 0.4em;">rad</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Angular velocity</td><td style="padding: 0.4em; text-align: center;">&omega;</td><td style="padding: 0.4em;">rad/s</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Angular acceleration</td><td style="padding: 0.4em; text-align: center;">&alpha;</td><td style="padding: 0.4em;">rad/s²</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">&omega; = &omega;₀ + &alpha;t</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 1</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">&theta; = &theta;₀ + &omega;₀t + &frac12;&alpha;t²</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 2</td></tr>
+                                <tr><td style="padding: 0.4em;">&omega;² = &omega;₀² + 2&alpha;&Delta;&theta;</td><td style="padding: 0.4em; text-align: center;">&mdash;</td><td style="padding: 0.4em;">kinematics eq. 3</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 1em; color: #ccd6f6; font-style: italic; margin-bottom: 0;">Bridge equations connecting both worlds: &nbsp; s = r&theta; &nbsp;&bull;&nbsp; v = r&omega; &nbsp;&bull;&nbsp; a<sub>t</sub> = r&alpha;</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEARNING OBJECTIVES                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC5.1 Analyze rotational motion using angular kinematic quantities</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.1.1 Define angular position, angular velocity, and angular acceleration and state their SI units</p>
+                    <p style="padding-left: 40px;">★ LO5.1.2 Convert between degrees, revolutions, and radians</p>
+                    <p style="padding-left: 40px;">★ LO5.1.3 Apply the rotational kinematic equations to constant angular acceleration problems</p>
+                    <p style="padding-left: 40px;">★ LO5.1.4 Use the bridge equations (s = r&theta;, v = r&omega;, a<sub>t</sub> = r&alpha;) to connect rotational and linear quantities</p>
+                    <p style="padding-left: 40px;">★ LO5.1.5 Identify the analogy between linear and rotational kinematic quantities and equations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- REQUIRED READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Click the blue buttons to go to the OpenStax reading assignments. Read in order &mdash; each section builds directly on the previous one.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables" target="_blank" rel="noopener">10.1 Rotational Variables</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-2-rotation-with-constant-angular-acceleration" target="_blank" rel="noopener">10.2 Constant Angular Acceleration</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-3-relating-angular-and-translational-quantities" target="_blank" rel="noopener">10.3 Relating Angular and Translational Quantities</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OPTIONAL READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <p class="card-text">Want to go deeper into rotational kinematics? These resources offer different explanations and visualizations that may click differently than the textbook.</p>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/circles/Lesson-1/Rotational-Kinematics" target="_blank" rel="noopener">Physics Classroom: Rotational Kinematics</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/torque-angular-momentum/rotational-kinematics-tutorial/a/rotational-kinematics-article" target="_blank" rel="noopener">Khan Academy: Rotational Kinematics</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/rotation" target="_blank" rel="noopener">PhET: Rotation Simulation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEDIA                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Watch these videos in order. Video 1 builds the conceptual foundation; Video 2 shows the equations in use; Video 3 demonstrates the bridge to linear quantities with real-world examples.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Angular Position, Velocity, and Acceleration</h3>
+                <div class="dp-panel-content">
+                    <h4>What Are Angular Quantities?</h4>
+                    <p>This video introduces the three core rotational variables and explains <em>why</em> radians are the natural unit for angular measurement in physics.</p>
+                    <ul>
+                        <li>What angular position &theta; means geometrically</li>
+                        <li>Why the radian is defined as arc length / radius (s/r)</li>
+                        <li>Angular velocity &omega; as the rate of change of &theta;</li>
+                        <li>Angular acceleration &alpha; as the rate of change of &omega;</li>
+                        <li>Direction conventions: counterclockwise positive by default</li>
+                    </ul>
+                    <p>Time: 8:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 1 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Rotational Kinematic Equations</h3>
+                <div class="dp-panel-content">
+                    <h4>The Same Equations, New Symbols</h4>
+                    <p>Side-by-side comparison of linear and rotational kinematic equations, followed by worked examples using constant angular acceleration.</p>
+                    <ul>
+                        <li>Deriving &omega; = &omega;₀ + &alpha;t by direct analogy</li>
+                        <li>Using &theta; = &theta;₀ + &omega;₀t + &frac12;&alpha;t² to find angular displacement</li>
+                        <li>Applying &omega;² = &omega;₀² + 2&alpha;&Delta;&theta; to find angular velocity</li>
+                        <li>Worked example: a wheel spinning up from rest</li>
+                        <li>Worked example: a grinding wheel slowing to a stop</li>
+                    </ul>
+                    <p>Time: 10:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video 2 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Connecting Rotational and Linear Quantities</h3>
+                <div class="dp-panel-content">
+                    <h4>Bridge Equations: s = r&theta;, v = r&omega;, a<sub>t</sub> = r&alpha;</h4>
+                    <p>Any point on a rotating rigid body also has linear velocity and acceleration. This video shows how to move between the two descriptions.</p>
+                    <ul>
+                        <li>Why points at different radii on the same disk have different linear speeds</li>
+                        <li>Calculating tangential velocity v = r&omega;</li>
+                        <li>Tangential acceleration a<sub>t</sub> = r&alpha; vs centripetal acceleration a<sub>c</sub> = r&omega;²</li>
+                        <li>Real-world application: CD/DVD drive — why the disc spins faster when reading the inner track</li>
+                        <li>Gear and pulley systems as practical bridge equation applications</li>
+                    </ul>
+                    <p>Time: 9:15</p>
+                    <div class="dp-embed-wrapper"><!-- Video 3 embed goes here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ADVANCED THEORY                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Deeper Look: Why Radians and the Right-Hand Rule</h3>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 420px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Why Radians Are Not Optional</h3>
+                <div class="dp-panel-content">
+                    <h4>The Hidden Reason Radians Matter</h4>
+                    <p>You can compute angles in degrees for everyday geometry, but in physics, radians are the <em>only</em> unit that makes the bridge equations work without a conversion factor.</p>
+                    <p>Consider the arc length equation: <strong>s = r&theta;</strong></p>
+                    <ul>
+                        <li>In radians: s = r × &theta; &nbsp;✔ &nbsp;(no extra factor needed)</li>
+                        <li>In degrees: s = r × (&pi;/180) × &theta; &nbsp;✘ &nbsp;(requires correction every time)</li>
+                    </ul>
+                    <p>The same issue propagates into every bridge equation. Angular velocity in rad/s gives tangential velocity in m/s directly via v = r&omega;. In degrees/s it would not. Radians are not a preference &mdash; they are the unit in which the physics is written.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculus Insight</h5>
+                            <p>This is also why d(sin&theta;)/d&theta; = cos&theta; only when &theta; is in radians. In degrees, a factor of &pi;/180 appears. Radians are the natural unit because they make calculus clean.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">The Right-Hand Rule for Direction</h3>
+                <div class="dp-panel-content">
+                    <h4>Angular Velocity Is a Vector</h4>
+                    <p>Angular velocity &omega; is not just a scalar magnitude &mdash; it is a vector pointing along the axis of rotation. The right-hand rule tells you which direction:</p>
+                    <ol>
+                        <li>Curl the fingers of your right hand in the direction of rotation.</li>
+                        <li>Your extended thumb points in the direction of the angular velocity vector &omega;.</li>
+                    </ol>
+                    <p>Examples:</p>
+                    <ul>
+                        <li>A wheel rotating counterclockwise (viewed from the front): &omega; points <strong>toward you</strong> (out of the page).</li>
+                        <li>A wheel rotating clockwise (viewed from the front): &omega; points <strong>away from you</strong> (into the page).</li>
+                        <li>Earth rotating west-to-east: &omega; points toward the <strong>North Pole</strong>.</li>
+                    </ul>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Why It Matters Later</h5>
+                            <p>You will need this in M5L3 when angular momentum <strong>L</strong> = I<strong>&omega;</strong> is a vector, and in advanced courses when torque and angular momentum are related by <strong>&tau;</strong> = d<strong>L</strong>/dt. The right-hand rule is not optional at the university level.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Unit Conversions: Degrees, Revolutions, Radians</h3>
+                <div class="dp-panel-content">
+                    <h4>A Common Source of Errors</h4>
+                    <p>All three unit systems appear in real problems. Memorize one conversion chain and derive the rest:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; text-align: center; margin: 1em 0;">
+                        <strong>1 revolution = 360° = 2&pi; radians</strong>
+                    </div>
+                    <p>Derived from that single fact:</p>
+                    <ul>
+                        <li>1 rad = 360°/(2&pi;) &asymp; 57.3°</li>
+                        <li>1 rpm (rev/min) = 2&pi;/60 rad/s &asymp; 0.1047 rad/s</li>
+                        <li>1 Hz (rev/s) = 2&pi; rad/s</li>
+                    </ul>
+                    <p><strong>Angular frequency &omega; vs frequency f vs period T:</strong></p>
+                    <div style="background: #e8f4f8; padding: 1em; border-radius: 6px; text-align: center; margin: 1em 0;">
+                        &omega; = 2&pi;f = 2&pi;/T
+                    </div>
+                    <p>These relationships connect rotational kinematics to wave physics and circular motion &mdash; you will see the same &omega; appear in oscillations (M7) and waves (M8).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — CONCEPTUAL                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+
+                <!-- TAB 1: ORDER ITEMS — Problem-solving steps -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Problem-Solving Steps</h3>
+                    <div class="dp-panel-content ">
+                        <div class="dp-order-wrapper" style="margin-bottom: 2em;" data-interactive-type="Order Items" data-interactive-title="Order Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order the Steps for Solving a Rotational Kinematics Problem</h4>
+                            <p>Arrange these steps in the correct order. Notice how identical this procedure is to solving linear kinematics problems in Module 1.</p>
+                            <ol class="dp-order dp-order-text">
+                                <li class="">Identify the known quantities (&theta;, &omega;, &alpha;, t) and the unknown</li>
+                                <li class="">Convert all angles to radians and all speeds to rad/s if needed</li>
+                                <li class="">Select the rotational kinematic equation that contains your unknown and your knowns</li>
+                                <li class="">Substitute values with correct signs (CCW positive)</li>
+                                <li class="">Solve for the unknown algebraically, then substitute numbers</li>
+                                <li class="">Check units and verify the answer is physically reasonable</li>
+                                <li class="">If a linear quantity is needed, apply the appropriate bridge equation (s = r&theta;, v = r&omega;, or a<sub>t</sub> = r&alpha;)</li>
+                            </ol>
+                            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div><p>Excellent! This procedure is exactly parallel to Module 1 linear kinematics &mdash; that parallelism is the point.</p></div>
+                            </div>
+                            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div><p>Try again. Think about what you need to establish (knowns, unknowns, units) before you can choose an equation.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SORT ITEMS — Linear vs Rotational quantities -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Linear or Rotational?</h3>
+                    <div class="dp-panel-content ">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-exchange-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort These Quantities Into Their Categories</h4>
+                            <p>Drag each quantity into the correct column. Some quantities are purely rotational, some are purely linear, and some are bridge quantities that connect both.</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Quantities to Sort</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">Angular velocity &omega; (rad/s)</li>
+                                            <li class="dp-si-item-text">Linear speed v (m/s)</li>
+                                            <li class="dp-si-item-text">Arc length s (m)</li>
+                                            <li class="dp-si-item-text">Angular acceleration &alpha; (rad/s²)</li>
+                                            <li class="dp-si-item-text">Displacement x (m)</li>
+                                            <li class="dp-si-item-text">Tangential acceleration a<sub>t</sub> = r&alpha;</li>
+                                            <li class="dp-si-item-text">Period T (s)</li>
+                                            <li class="dp-si-item-text">Angular position &theta; (rad)</li>
+                                            <li class="dp-si-item-text">Radius r (m)</li>
+                                            <li class="dp-si-item-text">Linear acceleration a (m/s²)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Purely Rotational</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Purely Linear</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Bridge / Both Worlds</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FLIP CARDS — Analogy misconceptions and conceptual checkpoints -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading ">Conceptual Checkpoints</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Test the Analogy: Can You Predict the Rotational Answer?</h4>
+                        <p>Each card states a linear kinematics fact. Before flipping, try to state the rotational equivalent yourself &mdash; then check.</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">LINEAR: An object at rest has v = 0 but can have a &ne; 0. What is the rotational equivalent?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Rotational Equivalent</h5>
+                                                        <p>A non-spinning object has &omega; = 0 but can have &alpha; &ne; 0. A wheel that has just stopped spinning still has angular acceleration if a net torque acts on it &mdash; it will start spinning again.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">LINEAR: All points on a rigid rod moving linearly have the same velocity. Is the rotational equivalent true?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Important Difference!</h5>
+                                                        <p><strong>No &mdash; this is where the analogy breaks down.</strong> All points on a rigid rotating body share the same angular velocity &omega;, but their <em>linear</em> speeds differ: v = r&omega;. Points farther from the axis move faster. This is why the tip of a fan blade moves much faster than the hub.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">A car wheel makes 500 revolutions coming to a stop. Is that 500 rad of angular displacement?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Unit Conversion Answer</h5>
+                                                        <p><strong>No.</strong> &Delta;&theta; = 500 rev &times; 2&pi; rad/rev = <strong>3,142 rad</strong>. This is one of the most common errors in rotational kinematics. Always convert revolutions to radians before using the kinematic equations.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">A CD spins at 500 rpm. A point 3 cm from the center and a point 6 cm from the center: which has greater angular velocity?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Key Insight</h5>
+                                                        <p><strong>They have the same angular velocity</strong> &mdash; both 500 rpm = 52.4 rad/s. But their linear speeds differ: v₃ = (0.03)(52.4) = 1.57 m/s, v₆ = (0.06)(52.4) = 3.14 m/s. Same &omega;, very different v. This is the essence of v = r&omega;.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — COMPUTATIONAL                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Quick Reference: Rotational Kinematic Equations</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Eq. 1:</strong> &omega; = &omega;₀ + &alpha;t<br>
+                        <span style="font-size: 0.85em; color: #555;">(no &Delta;&theta;)</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Eq. 2:</strong> &Delta;&theta; = &omega;₀t + &frac12;&alpha;t²<br>
+                        <span style="font-size: 0.85em; color: #555;">(no &omega;)</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Eq. 3:</strong> &omega;² = &omega;₀² + 2&alpha;&Delta;&theta;<br>
+                        <span style="font-size: 0.85em; color: #555;">(no t)</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Bridge:</strong> s = r&theta; &nbsp; v = r&omega; &nbsp; a<sub>t</sub> = r&alpha;<br>
+                        <span style="font-size: 0.85em; color: #555;">(&theta; must be in radians!)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 1 — Unit Conversion Warm-Up</p>
+                <div class="dp-panel-content">
+                    <p><strong>A motor shaft rotates at 1800 rpm. Convert this to (a) rad/s and (b) Hz.</strong></p>
+                    <p><strong>(a) Convert to rad/s:</strong></p>
+                    <p style="padding-left: 1.5em;">1800 rev/min &times; (1 min / 60 s) &times; (2&pi; rad / 1 rev)</p>
+                    <p style="padding-left: 1.5em;">= 1800 &times; 2&pi; / 60 = <strong>60&pi; &asymp; 188.5 rad/s</strong></p>
+                    <p><strong>(b) Convert to Hz:</strong></p>
+                    <p style="padding-left: 1.5em;">1800 rev/min &times; (1 min / 60 s) = <strong>30 Hz</strong></p>
+                    <p style="color: #555; font-style: italic;">Engineering note: 1800 rpm motors are common in 60 Hz AC electrical systems because 60 Hz × 60 s/min × 1/2 pole-pairs = 1800 rpm. The analogy to wave physics (&omega; = 2&pi;f) is already at work.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 2 — Constant Angular Acceleration (Spin-Up)</p>
+                <div class="dp-panel-content">
+                    <p><strong>A flywheel starts from rest and reaches an angular velocity of 240 rpm in 8.0 seconds with constant angular acceleration. Find: (a) &alpha; in rad/s², (b) the angular displacement in radians, (c) the number of revolutions completed.</strong></p>
+                    <p><strong>Given:</strong> &omega;₀ = 0, &omega; = 240 rpm = 8&pi; rad/s, t = 8.0 s, &alpha; = constant</p>
+                    <p><strong>(a) Angular acceleration:</strong></p>
+                    <p style="padding-left: 1.5em;">Using &omega; = &omega;₀ + &alpha;t:</p>
+                    <p style="padding-left: 1.5em;">8&pi; = 0 + &alpha;(8.0)</p>
+                    <p style="padding-left: 1.5em;"><strong>&alpha; = &pi; &asymp; 3.14 rad/s²</strong></p>
+                    <p><strong>(b) Angular displacement:</strong></p>
+                    <p style="padding-left: 1.5em;">Using &Delta;&theta; = &omega;₀t + &frac12;&alpha;t²:</p>
+                    <p style="padding-left: 1.5em;">&Delta;&theta; = 0 + &frac12;(&pi;)(8.0)² = 32&pi; <strong>&asymp; 100.5 rad</strong></p>
+                    <p><strong>(c) Number of revolutions:</strong></p>
+                    <p style="padding-left: 1.5em;">32&pi; rad &times; (1 rev / 2&pi; rad) = <strong>16 revolutions</strong></p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 3 — Spin-Down (Braking)</p>
+                <div class="dp-panel-content">
+                    <p><strong>A grinder wheel rotating at 3600 rpm is switched off. It comes to rest in 40.0 seconds with constant deceleration. Find: (a) &alpha;, (b) total angular displacement, (c) angle traveled in the last 10 seconds.</strong></p>
+                    <p><strong>Given:</strong> &omega;₀ = 3600 rpm = 120&pi; rad/s, &omega; = 0, t<sub>total</sub> = 40.0 s</p>
+                    <p><strong>(a) Angular acceleration:</strong></p>
+                    <p style="padding-left: 1.5em;">&alpha; = (&omega; &minus; &omega;₀)/t = (0 &minus; 120&pi;)/40.0 = <strong>&minus;3&pi; &asymp; &minus;9.42 rad/s²</strong></p>
+                    <p><strong>(b) Total angular displacement:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;&theta; = &omega;₀t + &frac12;&alpha;t² = (120&pi;)(40) + &frac12;(&minus;3&pi;)(40)² = 4800&pi; &minus; 2400&pi; = <strong>2400&pi; &asymp; 7540 rad = 1200 rev</strong></p>
+                    <p><strong>(c) Angle in last 10 seconds (t = 30 s to t = 40 s):</strong></p>
+                    <p style="padding-left: 1.5em;">&omega; at t = 30 s: &omega; = 120&pi; + (&minus;3&pi;)(30) = 30&pi; rad/s</p>
+                    <p style="padding-left: 1.5em;">&Delta;&theta;<sub>last</sub> = (30&pi;)(10) + &frac12;(&minus;3&pi;)(10)² = 300&pi; &minus; 150&pi; = <strong>150&pi; &asymp; 471 rad = 75 rev</strong></p>
+                    <p style="color: #555; font-style: italic;">Notice the wheel covers far fewer revolutions in the last 10 seconds than in the first 10 &mdash; exactly as a decelerating car covers less distance per second near the stop.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 4 — Bridge Equations: From Rotation to Linear</p>
+                <div class="dp-panel-content">
+                    <p><strong>A bicycle wheel of radius 0.35 m accelerates uniformly from rest to 2.5 rev/s in 4.0 seconds. For a point on the rim, find: (a) the final tangential speed, (b) the tangential acceleration, (c) the total arc length traveled.</strong></p>
+                    <p><strong>Given:</strong> r = 0.35 m, &omega;₀ = 0, &omega; = 2.5 rev/s = 5&pi; rad/s, t = 4.0 s</p>
+                    <p><strong>Step 1 — Find &alpha;:</strong></p>
+                    <p style="padding-left: 1.5em;">&alpha; = (&omega; &minus; &omega;₀)/t = 5&pi;/4.0 = 5&pi;/4 rad/s²</p>
+                    <p><strong>(a) Final tangential speed:</strong></p>
+                    <p style="padding-left: 1.5em;">v = r&omega; = (0.35)(5&pi;) = <strong>1.75&pi; &asymp; 5.50 m/s</strong></p>
+                    <p><strong>(b) Tangential acceleration:</strong></p>
+                    <p style="padding-left: 1.5em;">a<sub>t</sub> = r&alpha; = (0.35)(5&pi;/4) = <strong>7&pi;/16 &asymp; 1.37 m/s²</strong></p>
+                    <p><strong>(c) Arc length traveled:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;&theta; = &omega;₀t + &frac12;&alpha;t² = 0 + &frac12;(5&pi;/4)(16) = 10&pi; rad</p>
+                    <p style="padding-left: 1.5em;">s = r&Delta;&theta; = (0.35)(10&pi;) = <strong>3.5&pi; &asymp; 11.0 m</strong></p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 5 — Engineering Application: CD/DVD Drive</p>
+                <div class="dp-panel-content">
+                    <p><strong>A CD-ROM drive reads data at a constant linear velocity (CLV) of 1.2 m/s. The disc has an inner track radius of 25 mm and an outer track radius of 58 mm. Find: (a) the angular velocity when reading the inner track, (b) the angular velocity when reading the outer track, (c) why the disc must change speed as the laser moves outward.</strong></p>
+                    <p><strong>(a) &omega; at inner track (r = 0.025 m):</strong></p>
+                    <p style="padding-left: 1.5em;">v = r&omega; &rArr; &omega; = v/r = 1.2/0.025 = <strong>48 rad/s &asymp; 459 rpm</strong></p>
+                    <p><strong>(b) &omega; at outer track (r = 0.058 m):</strong></p>
+                    <p style="padding-left: 1.5em;">&omega; = v/r = 1.2/0.058 = <strong>20.7 rad/s &asymp; 198 rpm</strong></p>
+                    <p><strong>(c) Why the disc slows down as the laser moves out:</strong></p>
+                    <p style="padding-left: 1.5em;">Data is stored at constant linear density (bits per meter of track). To read at a constant bit rate, the linear velocity v must stay constant. Since v = r&omega;, a larger radius r requires a smaller &omega;. The CD drive motor must continuously decrease its angular velocity as playback progresses from the inner to the outer track.</p>
+                    <p style="color: #555; font-style: italic;">This is a real engineering constraint in optical storage design &mdash; and a perfect demonstration that the same angular velocity does not mean the same linear speed.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- READY TO MOVE ON                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_synthesis" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 640px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Self-Check Before M5L2</h4>
+            <p>Before moving to torque and rotational dynamics, make sure you can answer all of these from memory or by reasoning:</p>
+            <ol>
+                <li>State the three rotational kinematic equations from memory. Which linear equation does each correspond to?</li>
+                <li>A wheel starts at 100 rpm and decelerates at 2 rad/s². How long before it stops? How many revolutions does it complete?</li>
+                <li>A point is 0.5 m from the axis of a rotating disk. The disk has &alpha; = 4 rad/s². What is the tangential acceleration of the point?</li>
+                <li>Why do all points on a rigid rotating body share the same &alpha; but not the same linear acceleration?</li>
+                <li>Using the right-hand rule: if a wheel rotates clockwise when viewed from the front, which direction does &omega; point?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">If any of these give you trouble, revisit the Analogy Scaffold table at the top of this lesson and the computational problems above. M5L2 (Torque and Rotational Dynamics) builds directly on every concept here.</p>
+        </div>
+    </section>
+
+</div>
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE  -->
+<!-- ============================================= -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+<!-- CidiLabs Scripts -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+</body>
+</html>
