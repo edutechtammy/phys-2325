@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L2 Torque and Rotational Dynamics</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 5: Rotation and Equilibrium</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M5L2 Torque and Rotational Dynamics</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- INTRODUCTION                                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"Give me a lever long enough and a fulcrum on which to place it, and I shall move the world."</em></span><br /><span>&mdash;&nbsp;Archimedes</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">In M5L1 you learned the <em>kinematics</em> of rotation &mdash; how to describe it. Now comes the <em>dynamics</em>: what <strong>causes</strong> rotation to change. The answer is torque (&tau;), the rotational analog of force. Just as Newton's Second Law says a net force produces linear acceleration (F = ma), the rotational version says a net torque produces angular acceleration (&tau; = I&alpha;). The proportionality constant I is the <strong>moment of inertia</strong> &mdash; the rotational analog of mass. But here is where the analogy gets interesting: unlike mass, which is a single number, moment of inertia depends on <em>how</em> that mass is distributed relative to the axis of rotation. A hollow cylinder and a solid cylinder of the same mass and radius spin very differently when the same torque is applied. Understanding why is the central insight of this lesson.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img style="height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Torque_animation.gif/240px-Torque_animation.gif" alt="Animation showing a force applied at a distance r from a pivot point, producing a torque that causes angular acceleration of the object." width="100%" height="100%" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">&tau; = r &times; F: torque depends on both force magnitude and perpendicular distance from the axis.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE ANALOGY SCAFFOLD — continued from M5L1 -->
+            <div style="margin-top: 1.5em; padding: 1.5em; background: #1d2757; border-radius: 8px; color: #fff;">
+                <h3 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-exchange-alt" style="margin-right: 0.5em;"></i>The Analogy Scaffold Extended: Dynamics Edition</h3>
+                <p style="text-align: center; margin-bottom: 1em; color: #ccd6f6;">Everything from M5L1 still applies. This lesson adds the <em>cause</em> layer: force &rarr; torque, mass &rarr; moment of inertia, F = ma &rarr; &tau; = I&alpha;.</p>
+                <div class="dp-column-container container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table style="width: 100%; border-collapse: collapse; color: #fff;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #d13138;">
+                                        <th style="padding: 0.5em; text-align: left;">Linear Dynamics (M2–M3)</th>
+                                        <th style="padding: 0.5em; text-align: center;">Symbol</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Force (cause of linear acceleration)</td><td style="padding: 0.4em; text-align: center;"><strong>F</strong></td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Mass (resistance to linear acceleration)</td><td style="padding: 0.4em; text-align: center;">m</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Newton's 2nd Law</td><td style="padding: 0.4em; text-align: center;">F<sub>net</sub> = ma</td></tr>
+                                    <tr><td style="padding: 0.4em;">Work done by force</td><td style="padding: 0.4em; text-align: center;">W = F&Delta;x</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table style="width: 100%; border-collapse: collapse; color: #fff;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #d13138;">
+                                        <th style="padding: 0.5em; text-align: left;">Rotational Dynamics (this lesson)</th>
+                                        <th style="padding: 0.5em; text-align: center;">Symbol</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Torque (cause of angular acceleration)</td><td style="padding: 0.4em; text-align: center;"><strong>&tau;</strong></td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Moment of inertia (resistance to &alpha;)</td><td style="padding: 0.4em; text-align: center;">I</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);"><td style="padding: 0.4em;">Rotational 2nd Law</td><td style="padding: 0.4em; text-align: center;">&tau;<sub>net</sub> = I&alpha;</td></tr>
+                                    <tr><td style="padding: 0.4em;">Work done by torque</td><td style="padding: 0.4em; text-align: center;">W = &tau;&Delta;&theta;</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1em; color: #ccd6f6; font-style: italic; margin-bottom: 0;">Torque definition: &nbsp; &tau; = rF sin&theta; &nbsp;&bull;&nbsp; or as a cross product: &nbsp; <strong>&tau;</strong> = <strong>r</strong> &times; <strong>F</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEARNING OBJECTIVES                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC5.2 Apply Newton's Second Law for Rotation to analyze rotational dynamics</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.2.1 Define torque and calculate it using &tau; = rF sin&theta; and the cross product <strong>r</strong> &times; <strong>F</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.2.2 Identify the moment of inertia as the rotational analog of mass and explain why it depends on mass distribution</p>
+                    <p style="padding-left: 40px;">★ LO5.2.3 Apply &tau;<sub>net</sub> = I&alpha; to solve for unknown torque, moment of inertia, or angular acceleration</p>
+                    <p style="padding-left: 40px;">★ LO5.2.4 Use the parallel-axis theorem to find the moment of inertia about an axis displaced from the center of mass</p>
+                    <p style="padding-left: 40px;">★ LO5.2.5 Calculate rotational kinetic energy using K<sub>rot</sub> = &frac12;I&omega;²</p>
+                    <p style="padding-left: 40px;">★ LO5.2.6 Apply the work-energy theorem to rotation: W<sub>net</sub> = &Delta;K<sub>rot</sub></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- REQUIRED READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Read these sections in order. Section 10.4 establishes torque; 10.5 derives &tau; = I&alpha;; 10.6 builds your moment of inertia toolkit; 10.7 brings in rotational energy.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy" target="_blank" rel="noopener">10.4 Moment of Inertia &amp; Rotational KE</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-5-calculating-moments-of-inertia" target="_blank" rel="noopener">10.5 Calculating Moments of Inertia</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-6-torque" target="_blank" rel="noopener">10.6 Torque</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-7-newtons-second-law-for-rotation" target="_blank" rel="noopener">10.7 Newton's Second Law for Rotation</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OPTIONAL READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/circles/Lesson-2/Torque" target="_blank" rel="noopener">Physics Classroom: Torque</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/torque-angular-momentum/torque-tutorial/a/torque" target="_blank" rel="noopener">Khan Academy: Torque</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener">PhET: Torque Simulation</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/torque-angular-momentum/rotational-inertia/a/rotational-inertia" target="_blank" rel="noopener">Khan Academy: Rotational Inertia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEDIA                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Video 1 establishes torque conceptually; Video 2 builds the moment of inertia toolkit; Video 3 applies &tau; = I&alpha; to multi-body problems and introduces rotational kinetic energy.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Torque — The Cause of Rotational Acceleration</h3>
+                <div class="dp-panel-content">
+                    <h4>What Makes Things Spin?</h4>
+                    <p>Torque is not just "twisting force" — it is force multiplied by its <em>perpendicular</em> distance from the axis. This video makes that geometric meaning precise.</p>
+                    <ul>
+                        <li>Why pushing a door near the hinge is harder than pushing near the edge</li>
+                        <li>Defining the moment arm (lever arm): perpendicular distance from axis to line of action</li>
+                        <li>&tau; = rF sin&theta; — what each factor means and when &theta; is 0°, 90°, or 180°</li>
+                        <li>Sign convention: CCW torques positive, CW torques negative</li>
+                        <li>Net torque: how multiple torques about the same axis combine algebraically</li>
+                    </ul>
+                    <p>Time: 9:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video 1 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Moment of Inertia — Resistance to Rotation</h3>
+                <div class="dp-panel-content">
+                    <h4>Why Mass Distribution Matters</h4>
+                    <p>Two objects with identical mass can have very different moments of inertia. This video explains why — and gives you the standard table of results you'll use throughout M5.</p>
+                    <ul>
+                        <li>I = &Sigma;mr² for a collection of point masses</li>
+                        <li>Intuition: why hollow cylinders have higher I than solid cylinders</li>
+                        <li>Standard results: solid disk (&frac12;MR²), hollow ring (MR²), solid sphere (&frac25;MR²), thin rod (&frac{1}{12}ML²)</li>
+                        <li>The parallel-axis theorem: I = I<sub>cm</sub> + Md²</li>
+                        <li>A spinning figure skater — why pulling in the arms increases &omega;</li>
+                    </ul>
+                    <p>Time: 11:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 2 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: &tau; = I&alpha; and Rotational Kinetic Energy</h3>
+                <div class="dp-panel-content">
+                    <h4>Newton's Second Law for Rotation in Action</h4>
+                    <p>Applying &tau;<sub>net</sub> = I&alpha; to real problems, including systems with both linear and rotational motion connected by a string or axle.</p>
+                    <ul>
+                        <li>Atwood machine with a massive pulley — the moment of inertia changes the answer</li>
+                        <li>Finding angular acceleration of a disk given applied torque and friction</li>
+                        <li>Rotational kinetic energy K<sub>rot</sub> = &frac12;I&omega;² alongside translational K = &frac12;mv²</li>
+                        <li>Work done by torque: W = &tau;&Delta;&theta; and the rotational work-energy theorem</li>
+                        <li>Power delivered by a torque: P = &tau;&omega;</li>
+                    </ul>
+                    <p>Time: 12:15</p>
+                    <div class="dp-embed-wrapper"><!-- Video 3 embed goes here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ADVANCED THEORY                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Deeper Look: Torque as a Cross Product and Rotational Kinetic Energy from First Principles</h3>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 420px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Torque as a Cross Product</h3>
+                <div class="dp-panel-content">
+                    <h4><strong>&tau;</strong> = <strong>r</strong> &times; <strong>F</strong> — The Full Vector Picture</h4>
+                    <p>In 2D problems, torque is just a signed scalar. In 3D, it is a full vector, and the cross product formulation is essential.</p>
+                    <p>The magnitude |<strong>&tau;</strong>| = rF sin&theta; where &theta; is the angle between <strong>r</strong> and <strong>F</strong>. The direction is given by the right-hand rule applied to <strong>r</strong> &times; <strong>F</strong>:</p>
+                    <ol>
+                        <li>Point fingers along <strong>r</strong> (from pivot to where force is applied)</li>
+                        <li>Curl them toward <strong>F</strong></li>
+                        <li>Thumb points in the direction of <strong>&tau;</strong></li>
+                    </ol>
+                    <p>Key cross product results for standard geometries:</p>
+                    <ul>
+                        <li>Force perpendicular to <strong>r</strong> (90°): |&tau;| = rF (maximum torque)</li>
+                        <li>Force along <strong>r</strong> (0° or 180°): |&tau;| = 0 (no torque — pushing directly toward or away from pivot)</li>
+                    </ul>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculus Connection</h5>
+                            <p>Newton's Second Law for rotation in its most general form is <strong>&tau;</strong><sub>net</sub> = d<strong>L</strong>/dt, where <strong>L</strong> = I<strong>&omega;</strong> is angular momentum. You will use this form in M5L3. For constant I, this reduces to <strong>&tau;</strong> = I<strong>&alpha;</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Deriving I = &Sigma;mr² and the Parallel-Axis Theorem</h3>
+                <div class="dp-panel-content">
+                    <h4>Where the Moment of Inertia Formulas Come From</h4>
+                    <p>Start from &tau;<sub>net</sub> = I&alpha; for a rigid body. Each mass element m<sub>i</sub> at radius r<sub>i</sub> contributes a tangential force F<sub>i</sub> = m<sub>i</sub>a<sub>t,i</sub> = m<sub>i</sub>r<sub>i</sub>&alpha;. The torque from that element is &tau;<sub>i</sub> = r<sub>i</sub>F<sub>i</sub> = m<sub>i</sub>r<sub>i</sub>²&alpha;. Summing over all elements:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; text-align: center; margin: 1em 0; font-family: monospace;">
+                        &tau;<sub>net</sub> = (&Sigma; m<sub>i</sub>r<sub>i</sub>²)&alpha; = I&alpha; &nbsp; &rArr; &nbsp; <strong>I = &Sigma; m<sub>i</sub>r<sub>i</sub>²</strong>
+                    </div>
+                    <p>For continuous bodies, the sum becomes an integral: I = &int; r² dm.</p>
+                    <p><strong>Parallel-Axis Theorem derivation intuition:</strong></p>
+                    <p>If you know I<sub>cm</sub> (moment of inertia about the center of mass), the moment of inertia about any parallel axis at distance d from the CM is:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; text-align: center; margin: 1em 0; font-family: monospace;">
+                        I = I<sub>cm</sub> + Md²
+                    </div>
+                    <p>Interpretation: moving the axis away from the CM always <em>increases</em> I. The CM axis is always the minimum moment of inertia for any axis in that direction.</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Moment of Inertia Reference Table</h3>
+                <div class="dp-panel-content">
+                    <h4>Standard Results to Know</h4>
+                    <p>These are derived from I = &int; r² dm. You should understand <em>why</em> the hollow objects have larger I than solid ones before memorizing the formulas.</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #1d2757; color: #fff;">
+                                <th style="padding: 0.6em;">Object</th>
+                                <th style="padding: 0.6em; text-align: center;">Axis</th>
+                                <th style="padding: 0.6em; text-align: center;">I</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Point mass</td><td style="padding: 0.5em; text-align: center;">At distance r</td><td style="padding: 0.5em; text-align: center;">mr²</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.5em;">Thin ring / hollow cylinder</td><td style="padding: 0.5em; text-align: center;">Central axis</td><td style="padding: 0.5em; text-align: center;">MR²</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Solid disk / solid cylinder</td><td style="padding: 0.5em; text-align: center;">Central axis</td><td style="padding: 0.5em; text-align: center;">&frac12;MR²</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.5em;">Solid sphere</td><td style="padding: 0.5em; text-align: center;">Through center</td><td style="padding: 0.5em; text-align: center;">&frac25;MR²</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Hollow sphere (thin shell)</td><td style="padding: 0.5em; text-align: center;">Through center</td><td style="padding: 0.5em; text-align: center;">&frac23;MR²</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.5em;">Thin rod</td><td style="padding: 0.5em; text-align: center;">About center</td><td style="padding: 0.5em; text-align: center;">&frac{1}{12}ML²</td></tr>
+                            <tr style="background: #f9f9f9;"><td style="padding: 0.5em;">Thin rod</td><td style="padding: 0.5em; text-align: center;">About one end</td><td style="padding: 0.5em; text-align: center;">&frac13;ML²</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info" style="margin-top: 1em;">
+                        <div class="card-body">
+                            <h5 class="card-title">Pattern to Remember</h5>
+                            <p>All standard I formulas have the form I = c&middot;MR² where c &le; 1. The coefficient c tells you <em>what fraction</em> of the mass is effectively at the full radius. Hollow objects (c closer to 1) "feel" larger than solid ones (c closer to &frac12; or &frac25;) because more mass is far from the axis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — CONCEPTUAL                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+
+                <!-- TAB 1: MATCH ITEMS — Torque concepts -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Torque Anatomy</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-match-items" style="margin-bottom: 2em;" data-interactive-type="Match Items" data-interactive-title="Match Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-project-diagram"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Match Each Torque Term to Its Meaning</h4>
+                            <p>Drag each definition on the right to the matching term on the left.</p>
+                            <div class="dp-match-items-container">
+                                <div class="dp-match-items-column dp-match-left">
+                                    <div class="dp-match-item dp-match-term">Moment arm (lever arm)</div>
+                                    <div class="dp-match-item dp-match-term">Maximum torque condition</div>
+                                    <div class="dp-match-item dp-match-term">Zero torque condition</div>
+                                    <div class="dp-match-item dp-match-term">Moment of inertia</div>
+                                    <div class="dp-match-item dp-match-term">Net torque</div>
+                                    <div class="dp-match-item dp-match-term">Rotational inertia of a hollow ring</div>
+                                </div>
+                                <div class="dp-match-items-column dp-match-right">
+                                    <div class="dp-match-item dp-match-answer">Sum of all torques about an axis, using sign convention</div>
+                                    <div class="dp-match-item dp-match-answer">Force is applied perpendicular to the position vector (sin90° = 1)</div>
+                                    <div class="dp-match-item dp-match-answer">MR² — all mass at maximum distance from axis</div>
+                                    <div class="dp-match-item dp-match-answer">Perpendicular distance from the axis of rotation to the line of action of the force</div>
+                                    <div class="dp-match-item dp-match-answer">Force is directed through the axis (sin0° = 0); no lever arm</div>
+                                    <div class="dp-match-item dp-match-answer">Rotational analog of mass; measures resistance to angular acceleration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SORT ITEMS — Increases or Decreases I -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">What Changes Moment of Inertia?</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-balance-scale"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort: Does This Change Increase or Decrease Moment of Inertia?</h4>
+                            <p>A solid disk is spinning about its central axis. Sort each change into the correct category. Assume the same axis of rotation unless otherwise stated.</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Changes to Sort</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">Double the total mass (same radius)</li>
+                                            <li class="dp-si-item-text">Replace solid disk with hollow ring of same mass and outer radius</li>
+                                            <li class="dp-si-item-text">Halve the radius (same mass)</li>
+                                            <li class="dp-si-item-text">Move the rotation axis from the center to the rim (parallel-axis theorem)</li>
+                                            <li class="dp-si-item-text">Replace with a solid sphere of same mass and radius</li>
+                                            <li class="dp-si-item-text">A figure skater extends their arms outward</li>
+                                            <li class="dp-si-item-text">A figure skater pulls their arms inward</li>
+                                            <li class="dp-si-item-text">Double the radius (same mass)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Increases Moment of Inertia</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-6">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">Decreases Moment of Inertia</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FLIP CARDS — Common misconceptions -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Common Misconceptions</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Think It Through — Then Flip</h4>
+                        <p>Each card states a common student belief about torque or moment of inertia. Decide whether it is correct or incorrect before flipping to see the explanation.</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"A larger force always produces a larger torque."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Moment Arm Matters Too</h5>
+                                                        <p>Torque = rF sin&theta;. A smaller force applied at a larger perpendicular distance can produce a <em>greater</em> torque than a large force applied near the axis or at a bad angle. This is why a long wrench is more effective than a short one &mdash; same force, larger r.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"The moment of inertia of an object is fixed — it cannot change."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — I Depends on Axis and Configuration</h5>
+                                                        <p>I depends on both the mass distribution <em>and</em> the choice of rotation axis. A figure skater changes their I by moving their arms. The same rod has I = &frac{1}{12}ML² about its center but I = &frac13;ML² about its end. I is a property of object + axis, not object alone.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"If a net torque acts on an object, it must be rotating."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Net Torque Causes &alpha;, Not &omega;</h5>
+                                                        <p>Net torque causes <em>angular acceleration</em>, not rotation per se. An object can have &tau;<sub>net</sub> &ne; 0 while momentarily at rest (&omega; = 0) &mdash; it will then begin to rotate. Conversely, a rotating object (&omega; &ne; 0) with zero net torque will continue rotating at constant &omega;. This is exactly analogous to F<sub>net</sub> causing a, not v.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">"A heavier object always has a greater moment of inertia than a lighter object."</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Incorrect — Distribution Beats Mass Alone</h5>
+                                                        <p>A 1 kg hollow ring (I = MR² = 1 &times; 0.5² = 0.25 kg&middot;m²) has a greater moment of inertia than a 2 kg solid disk of the same radius (I = &frac12;MR² = &frac12; &times; 2 &times; 0.5² = 0.25 kg&middot;m²). Wait — they're actually equal in this case! But extend the radius or use a very light ring vs heavy disk: distribution wins. It is always I = cMR² where c is the shape factor.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — COMPUTATIONAL                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Quick Reference: Torque and Rotational Dynamics</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Torque:</strong> &tau; = rF sin&theta;<br>
+                        <span style="font-size: 0.85em; color: #555;">r = moment arm, &theta; = angle between r and F</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Newton's 2nd (rotation):</strong> &tau;<sub>net</sub> = I&alpha;<br>
+                        <span style="font-size: 0.85em; color: #555;">I in kg&middot;m², &alpha; in rad/s²</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Rotational KE:</strong> K = &frac12;I&omega;²<br>
+                        <span style="font-size: 0.85em; color: #555;">Joules, exactly like &frac12;mv²</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Parallel-axis:</strong> I = I<sub>cm</sub> + Md²<br>
+                        <span style="font-size: 0.85em; color: #555;">d = distance from CM to new axis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 1 — Torque from a Wrench</p>
+                <div class="dp-panel-content">
+                    <p><strong>A mechanic applies a 45 N force to a wrench handle 0.30 m from the bolt. Find the torque if the force is applied (a) perpendicular to the handle, (b) at 60° to the handle, and (c) parallel to the handle.</strong></p>
+                    <p><strong>(a) Force perpendicular (&theta; = 90°):</strong></p>
+                    <p style="padding-left: 1.5em;">&tau; = rF sin90° = (0.30)(45)(1) = <strong>13.5 N&middot;m</strong> &nbsp; (maximum)</p>
+                    <p><strong>(b) Force at 60° to handle:</strong></p>
+                    <p style="padding-left: 1.5em;">&tau; = rF sin60° = (0.30)(45)(0.866) = <strong>11.7 N&middot;m</strong></p>
+                    <p><strong>(c) Force parallel (&theta; = 0°):</strong></p>
+                    <p style="padding-left: 1.5em;">&tau; = rF sin0° = (0.30)(45)(0) = <strong>0 N&middot;m</strong> &nbsp; (force directed toward bolt — no rotational effect)</p>
+                    <p style="color: #555; font-style: italic;">The 90° case is why proper wrench technique matters: pulling perpendicular gives maximum torque from the same effort.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 2 — Moment of Inertia and Angular Acceleration</p>
+                <div class="dp-panel-content">
+                    <p><strong>A solid disk of mass 4.0 kg and radius 0.20 m is free to rotate about its central axis. A net torque of 0.80 N&middot;m is applied. Find: (a) the moment of inertia, (b) the angular acceleration, (c) the angular velocity after 5.0 s (starting from rest).</strong></p>
+                    <p><strong>(a) Moment of inertia (solid disk):</strong></p>
+                    <p style="padding-left: 1.5em;">I = &frac12;MR² = &frac12;(4.0)(0.20)² = &frac12;(4.0)(0.04) = <strong>0.080 kg&middot;m²</strong></p>
+                    <p><strong>(b) Angular acceleration:</strong></p>
+                    <p style="padding-left: 1.5em;">&tau; = I&alpha; &rArr; &alpha; = &tau;/I = 0.80/0.080 = <strong>10 rad/s²</strong></p>
+                    <p><strong>(c) Angular velocity after 5.0 s:</strong></p>
+                    <p style="padding-left: 1.5em;">&omega; = &omega;₀ + &alpha;t = 0 + (10)(5.0) = <strong>50 rad/s</strong></p>
+                    <p style="color: #555; font-style: italic;">Notice how we used the rotational 2nd law to get &alpha;, then fed that result directly into the M5L1 kinematic equation. The two lessons always work together.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 3 — Comparing Solid Disk vs Hollow Ring</p>
+                <div class="dp-panel-content">
+                    <p><strong>A solid disk and a hollow ring each have mass M = 2.0 kg and radius R = 0.25 m. The same torque &tau; = 1.5 N&middot;m is applied to each. Compare their angular accelerations.</strong></p>
+                    <p><strong>Solid disk:</strong></p>
+                    <p style="padding-left: 1.5em;">I<sub>disk</sub> = &frac12;MR² = &frac12;(2.0)(0.0625) = 0.0625 kg&middot;m²</p>
+                    <p style="padding-left: 1.5em;">&alpha;<sub>disk</sub> = &tau;/I = 1.5/0.0625 = <strong>24 rad/s²</strong></p>
+                    <p><strong>Hollow ring:</strong></p>
+                    <p style="padding-left: 1.5em;">I<sub>ring</sub> = MR² = (2.0)(0.0625) = 0.125 kg&middot;m²</p>
+                    <p style="padding-left: 1.5em;">&alpha;<sub>ring</sub> = &tau;/I = 1.5/0.125 = <strong>12 rad/s²</strong></p>
+                    <p><strong>Conclusion:</strong> The solid disk accelerates <strong>twice as fast</strong> as the hollow ring under the same torque, because the ring has twice the moment of inertia. Same mass, same radius, very different rotational behavior &mdash; entirely due to mass distribution.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 4 — Parallel-Axis Theorem</p>
+                <div class="dp-panel-content">
+                    <p><strong>A thin rod of mass 0.60 kg and length 1.2 m is pivoted at one end. Find its moment of inertia about that end using the parallel-axis theorem, and confirm with the direct formula.</strong></p>
+                    <p><strong>Method 1 — Parallel-axis theorem:</strong></p>
+                    <p style="padding-left: 1.5em;">I<sub>cm</sub> (about center) = &frac{1}{12}ML² = &frac{1}{12}(0.60)(1.2)² = &frac{1}{12}(0.60)(1.44) = 0.072 kg&middot;m²</p>
+                    <p style="padding-left: 1.5em;">d = distance from CM to end = L/2 = 0.60 m</p>
+                    <p style="padding-left: 1.5em;">I<sub>end</sub> = I<sub>cm</sub> + Md² = 0.072 + (0.60)(0.60)² = 0.072 + 0.216 = <strong>0.288 kg&middot;m²</strong></p>
+                    <p><strong>Method 2 — Direct formula:</strong></p>
+                    <p style="padding-left: 1.5em;">I<sub>end</sub> = &frac13;ML² = &frac13;(0.60)(1.44) = <strong>0.288 kg&middot;m²</strong> &nbsp; ✓</p>
+                    <p style="color: #555; font-style: italic;">The parallel-axis theorem is most useful when you know I<sub>cm</sub> and need I about a different axis &mdash; you don't have to redo the integral from scratch.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 5 — Rotational Kinetic Energy and Work</p>
+                <div class="dp-panel-content">
+                    <p><strong>A flywheel (solid disk, M = 20 kg, R = 0.40 m) is accelerated from rest to 600 rpm by a motor. Find: (a) the rotational KE at 600 rpm, (b) the net work done by the motor, (c) the average torque if the wheel completes 50 revolutions during spin-up.</strong></p>
+                    <p><strong>Convert:</strong> &omega; = 600 rpm &times; 2&pi;/60 = 20&pi; rad/s</p>
+                    <p><strong>(a) Rotational KE:</strong></p>
+                    <p style="padding-left: 1.5em;">I = &frac12;MR² = &frac12;(20)(0.16) = 1.6 kg&middot;m²</p>
+                    <p style="padding-left: 1.5em;">K = &frac12;I&omega;² = &frac12;(1.6)(20&pi;)² = &frac12;(1.6)(400&pi;²) = 320&pi;² &asymp; <strong>3158 J</strong></p>
+                    <p><strong>(b) Net work done (work-energy theorem):</strong></p>
+                    <p style="padding-left: 1.5em;">W<sub>net</sub> = &Delta;K = K<sub>f</sub> &minus; K<sub>i</sub> = 3158 &minus; 0 = <strong>3158 J &asymp; 3.16 kJ</strong></p>
+                    <p><strong>(c) Average torque over 50 revolutions:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;&theta; = 50 rev &times; 2&pi; = 100&pi; rad</p>
+                    <p style="padding-left: 1.5em;">W = &tau;<sub>avg</sub>&Delta;&theta; &rArr; &tau;<sub>avg</sub> = W/&Delta;&theta; = 3158/(100&pi;) = <strong>10.05 N&middot;m</strong></p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 6 — Atwood Machine with Massive Pulley</p>
+                <div class="dp-panel-content">
+                    <p><strong>An Atwood machine has masses m₁ = 3.0 kg and m₂ = 5.0 kg connected by a massless string over a solid disk pulley of mass M = 2.0 kg and radius R = 0.15 m. Find the linear acceleration of the masses.</strong></p>
+                    <p>This is a coupled linear + rotational system. The string is inextensible, so a (linear) = R&alpha; (rotational).</p>
+                    <p><strong>Free body analysis — net force equation (taking m₂ side as positive):</strong></p>
+                    <p style="padding-left: 1.5em;">(m₂ &minus; m₁)g &minus; &tau;<sub>net on pulley</sub>/R = (m₁ + m₂)a &nbsp; ... need to include pulley inertia</p>
+                    <p><strong>Full system approach using Newton's 2nd for each part:</strong></p>
+                    <p style="padding-left: 1.5em;">m₂g &minus; T₂ = m₂a &nbsp; &hellip;(1)</p>
+                    <p style="padding-left: 1.5em;">T₁ &minus; m₁g = m₁a &nbsp; &hellip;(2)</p>
+                    <p style="padding-left: 1.5em;">(T₂ &minus; T₁)R = I<sub>pulley</sub>&alpha; = &frac12;MR²&middot;(a/R) = &frac12;MRa &nbsp; &hellip;(3)</p>
+                    <p><strong>Add (1) + (2) + (3)/R:</strong></p>
+                    <p style="padding-left: 1.5em;">(m₂ &minus; m₁)g = (m₁ + m₂ + &frac12;M)a</p>
+                    <p style="padding-left: 1.5em;">a = (m₂ &minus; m₁)g / (m₁ + m₂ + &frac12;M)</p>
+                    <p style="padding-left: 1.5em;">a = (5.0 &minus; 3.0)(9.8) / (3.0 + 5.0 + 1.0) = 19.6/9.0 = <strong>2.18 m/s²</strong></p>
+                    <p><strong>Compare to massless pulley:</strong> a = (2)(9.8)/(8.0) = 2.45 m/s² — the massive pulley slows the acceleration by ~11%, because the pulley's rotational inertia also needs to be accelerated.</p>
+                    <p style="color: #555; font-style: italic;">This is a direct example of why ignoring rotational inertia in engineering calculations can lead to significant errors.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- READY TO MOVE ON                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_synthesis" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 640px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Self-Check Before M5L3</h4>
+            <p>M5L3 (Rolling Motion and Angular Momentum) uses both M5L1 kinematics and M5L2 dynamics simultaneously. Make sure you can do all of these:</p>
+            <ol>
+                <li>Calculate the torque of a 30 N force applied at 45° at a distance of 0.4 m from the pivot.</li>
+                <li>A torque of 6 N&middot;m causes an angular acceleration of 3 rad/s² — what is the moment of inertia?</li>
+                <li>Without looking at the table, state whether a solid sphere or a hollow sphere has a greater I for the same M and R. Explain why.</li>
+                <li>A disk's rotation axis is moved from its center to its rim. Does I increase, decrease, or stay the same? By how much (in terms of MR²)?</li>
+                <li>A flywheel stores 500 J of rotational kinetic energy at &omega; = 100 rad/s. What is its moment of inertia?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">In M5L3, rolling without slipping will require you to apply &tau; = I&alpha; and a = r&alpha; simultaneously. If the Atwood machine problem (Problem 6 above) gave you trouble, revisit it before moving on.</p>
+        </div>
+    </section>
+
+</div>
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE  -->
+<!-- ============================================= -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+<!-- CidiLabs Scripts -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+</body>
+</html>
