@@ -201,6 +201,116 @@
 
 <main class="container py-4">
 
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- CME HANDOFF NOTE                                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div style="background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; overflow: hidden; border-left: 6px solid #d13138;">
+        <div style="background: #1d2757; color: #fff; padding: 0.85rem 1.5rem; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em; display: flex; align-items: center; gap: 0.75rem;">
+            <i class="fas fa-clipboard-list"></i> CME Handoff Notes — Course Development Status &amp; Design Guide
+            <span style="background: #d13138; color: #fff; font-size: 0.72rem; font-weight: 700; border-radius: 4px; padding: 2px 8px; margin-left: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Read First</span>
+        </div>
+        <div style="padding: 1.5rem; font-size: 0.92rem; line-height: 1.75; color: #333;">
+
+            <details open>
+                <summary style="cursor: pointer; font-weight: 700; color: #1d2757; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-info-circle"></i>&nbsp; What This Index Is</summary>
+                <p style="margin: 0 0 0.75em 1.5em;">This file is the development overview for PHYS-2325 University Physics I, Fall 2026. Each module card below links to every completed lesson and shows a collapsible content summary so you can review what is in each lesson without opening the file. It is also the navigation hub for the local build — open this file in a browser and every completed lesson is one click away.</p>
+                <p style="margin: 0 0 1em 1.5em;">The course uses <strong>OpenStax University Physics Volume 1</strong> (free, open-license). The Canvas implementation uses the <strong>CidiLabs Design Plus</strong> component library — all interactive activities (Sort Items, Order Items, Match Items, Flip Cards) are CidiLabs components that must be enabled in the Canvas course shell before the HTML pages are imported.</p>
+            </details>
+
+            <details style="margin-top: 1rem;">
+                <summary style="cursor: pointer; font-weight: 700; color: #1d2757; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-check-double"></i>&nbsp; What Is Complete</summary>
+                <ul style="margin: 0.5em 0 0.5em 1.5em; padding: 0; line-height: 2;">
+                    <li><strong>Module 1</strong> (6 lessons) — Measurements and Motion in 1D. M1L1 through M1L6 all built and linked.</li>
+                    <li><strong>Module 2</strong> (3 lessons) — Motion in 2D/3D, Newton's Laws. M2L1 Vectors, M2L2a Kinematics 2D/3D, M2L2b Projectile/Circular/Relative, M2L3 Newton's Laws and Forces.</li>
+                    <li><strong>Module 3</strong> (2 lessons) — Energy and Work. M3L1 Work and Kinetic Energy, M3L2 Potential Energy and Conservation.</li>
+                    <li><strong>Module 4</strong> (1 lesson) — Center of Mass and Linear Momentum. M4L1 Impulse, Momentum, and Center of Mass.</li>
+                    <li><strong>Module 5</strong> (5 lessons) — Rotation and Equilibrium. M5L1 Rotational Kinematics through M5L5 Elasticity. <em>This is the most recently built module and represents the highest-fidelity design.</em></li>
+                    <li><strong>Modules 6–8</strong> — Lesson structure not defined. Module titles in the cards below are placeholders only — confirm topics and lesson count with the department before building.</li>
+                </ul>
+            </details>
+
+            <details style="margin-top: 1rem;">
+                <summary style="cursor: pointer; font-weight: 700; color: #1d2757; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-layer-group"></i>&nbsp; Lesson Design: What a Full-Fidelity Lesson Contains</summary>
+                <p style="margin: 0.5em 0 0.5em 1.5em;"><strong>Module 5 is the design reference.</strong> Every lesson in Module 5 was built to the full pattern. Use any M5 lesson as the template for future work. Each full-fidelity lesson has these sections in order:</p>
+                <ol style="margin: 0.5em 0 0.75em 2em; line-height: 2;">
+                    <li><strong>Header</strong> — Module title and lesson title in the CidiLabs dp-header block.</li>
+                    <li><strong>Introduction</strong> — A relevant quote, a 2-column layout (text left, image right), and a <em>dark-blue framework box</em> that gives the student the central conceptual spine of the lesson visually before any equations appear.</li>
+                    <li><strong>Learning Objectives</strong> — Course Competency (CC) and numbered LOs in a collapsible accordion. A ★ marks LOs addressed on this page.</li>
+                    <li><strong>Required Reading</strong> — Direct OpenStax chapter links as dark-blue buttons.</li>
+                    <li><strong>Optional Reading</strong> — PhET simulations, Khan Academy, and other supplementary resources.</li>
+                    <li><strong>Media</strong> — 3-tab vertical (dp-next-prev-tabs dp-tabs-buttons-vertical, min-height 600px). Each tab has a title, explanatory bullets, a time estimate, and an embed placeholder. Videos are not embedded in the files — placeholders are left for the instructor to insert Canvas Media links.</li>
+                    <li><strong>Advanced Theory (Deeper Look)</strong> — A 3-tab vertical section for students who want to go deeper. Covers mathematical derivations, historical context, connections to other fields, and engineering applications not required for the standard LOs. This section did <em>not</em> exist in Modules 1–4 (see design gap notes below).</li>
+                    <li><strong>Practice and Apply — Conceptual</strong> — Three CidiLabs activities in dp-tabs-pills tabs: typically Order Items (procedural sequence), Sort Items (categorization), and Flip Cards (misconception cards). <strong>Critical bug rule:</strong> all Sort Items answer bucket &lt;ul&gt; elements must be empty. <strong>Critical bug rule:</strong> Flip Cards stacked vertically in the same column must have &lt;p&gt;&amp;nbsp;&lt;/p&gt; spacers between them.</li>
+                    <li><strong>Practice and Apply — Computational</strong> — 5–6 fully worked problems in a dp-accordion. Each problem states the scenario, works through the solution step by step with intermediate values shown, and ends with a note on the physical interpretation or engineering context.</li>
+                    <li><strong>Self-Check and Module Bridge</strong> — 5 questions the student should be able to answer from memory, plus an explicit bridge sentence connecting to the next lesson. This section did <em>not</em> exist in Modules 1–4 (see design gap notes below).</li>
+                </ol>
+            </details>
+
+            <details style="margin-top: 1rem;">
+                <summary style="cursor: pointer; font-weight: 700; color: #d13138; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-exclamation-triangle"></i>&nbsp; Design Gaps in Modules 1–4 (Enhancement Opportunities)</summary>
+                <p style="margin: 0.5em 0 0.5em 1.5em;">The lessons in Modules 1–4 are correct and functional. The design language matured during the build process; Module 5 represents the full-fidelity version. The following elements are present in every Module 5 lesson but absent from some or all of Modules 1–4:</p>
+                <table style="width: 100%; border-collapse: collapse; margin: 0.75em 0 0.75em 1.5em; font-size: 0.88rem;">
+                    <thead>
+                        <tr style="background: #1d2757; color: #fff;">
+                            <th style="padding: 0.5em 0.75em; text-align: left;">Missing Element</th>
+                            <th style="padding: 0.5em 0.75em; text-align: left;">Modules Affected</th>
+                            <th style="padding: 0.5em 0.75em; text-align: left;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.5em 0.75em;"><strong>Intro framework box</strong> (dark-blue conceptual spine)</td>
+                            <td style="padding: 0.5em 0.75em;">M1–M4, all lessons</td>
+                            <td style="padding: 0.5em 0.75em;">Each lesson has a quote + text intro, but no visual anchor for the central idea. M5 adds a dark-blue panel showing the key equation, analogy table, or framework before any prose.</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                            <td style="padding: 0.5em 0.75em;"><strong>Advanced Theory section</strong> (Deeper Look)</td>
+                            <td style="padding: 0.5em 0.75em;">M1–M4, all lessons</td>
+                            <td style="padding: 0.5em 0.75em;">No differentiated content for stronger students. High-value additions would include: the calculus derivation of the work-energy theorem (M3L1), the derivation of centripetal acceleration (M2L3), significant figures as propagation of uncertainty (M1L1).</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.5em 0.75em;"><strong>Self-check and module bridge</strong></td>
+                            <td style="padding: 0.5em 0.75em;">M1–M4, all lessons</td>
+                            <td style="padding: 0.5em 0.75em;">Lessons end after the computational problems. Adding 5 self-check questions and a bridge sentence is low effort and high pedagogical value — gives students a metacognitive checkpoint and connects lessons into a narrative arc.</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td style="padding: 0.5em 0.75em;"><strong>Conceptual activities not tabbed</strong></td>
+                            <td style="padding: 0.5em 0.75em;">M1L1–M1L5, M2, M3, M4</td>
+                            <td style="padding: 0.5em 0.75em;">Activities are stacked as standalone blocks. M5 wraps them in dp-tabs-pills which is visually cleaner and keeps the section compact. Structural change only — no content rewrite needed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin: 0 0 0.5em 1.5em; color: #d13138;"><strong>One hard bug to fix:</strong> <code>module1/m1l1-measurement/new-lesson-output/m1l1-measurement.html</code> had an incorrect <code>&lt;title&gt;</code> tag inherited from a chemistry course template (<em>"M5L1 Explore: Acid-Base Foundations"</em>). This has been corrected to <em>"PHYS-2325 M1L1 Measurement"</em> in the current commit.</p>
+            </details>
+
+            <details style="margin-top: 1rem;">
+                <summary style="cursor: pointer; font-weight: 700; color: #1d2757; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-code"></i>&nbsp; Critical Technical Rules for CidiLabs Components</summary>
+                <ul style="margin: 0.5em 0 0.75em 1.5em; line-height: 2;">
+                    <li><strong>Sort Items answer bucket &lt;ul&gt; must be empty.</strong> If items appear pre-filled inside an answer bucket, the activity will not function correctly in Canvas. The answer bank bucket should contain all draggable items; the destination buckets must have empty <code>&lt;ul&gt;&lt;/ul&gt;</code> tags.</li>
+                    <li><strong>Flip Cards stacked vertically need spacers.</strong> When two <code>dp-flip-card</code> divs appear in the same column one above the other, a <code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</code> element must appear between them or the cards will overlap on flip.</li>
+                    <li><strong>Tabs pattern for Media and Advanced Theory:</strong> <code>dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical</code> with <code>style="min-height: 600px;"</code>.</li>
+                    <li><strong>Tabs pattern for Conceptual activities:</strong> <code>dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary</code>.</li>
+                    <li><strong>Accordion pattern for LOs and Computational problems:</strong> <code>dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary</code> with panel headings using <code>&lt;p class="dp-panel-heading" style="color: white !important; background: #1D2757;"&gt;</code>.</li>
+                    <li><strong>CSS paths from lesson files</strong> (three directories deep): <code>../../../css/canvas-complete.css</code> and <code>../../../css/cidilabs-activities.css</code>.</li>
+                    <li><strong>Back button href:</strong> <code>../../../index.html</code>.</li>
+                    <li><strong>dp-wrapper boilerplate:</strong> <code>&lt;div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1"&gt;</code>.</li>
+                </ul>
+            </details>
+
+            <details style="margin-top: 1rem;">
+                <summary style="cursor: pointer; font-weight: 700; color: #1d2757; font-size: 1rem; margin-bottom: 0.75rem; list-style: none; display: flex; align-items: center; gap: 0.5em;"><i class="fas fa-git-alt"></i>&nbsp; Repository and File Structure</summary>
+                <ul style="margin: 0.5em 0 0.75em 1.5em; line-height: 2;">
+                    <li><strong>GitHub repo:</strong> <a href="https://github.com/edutechtammy/phys-2325" target="_blank" rel="noopener" style="color: #1d2757;">https://github.com/edutechtammy/phys-2325</a> — branch <code>main</code>.</li>
+                    <li><strong>Lesson file convention:</strong> <code>module{N}/m{N}l{N}-{slug}/new-lesson-output/m{N}l{N}-{slug}.html</code></li>
+                    <li><strong>Each lesson is a single self-contained HTML file</strong> — no JavaScript dependencies beyond what is in <code>js/canvas-complete.js</code> and <code>js/cidilabs-scripts.js</code>. Open any lesson directly in a browser for local review.</li>
+                    <li><strong>Images:</strong> All lesson images currently use <code>CANVAS_IMAGE_URL</code> as a placeholder. Replace with actual Canvas file URLs after importing lessons into the course shell. A mapping helper script is in <code>files/00-image-script/</code>.</li>
+                    <li><strong>Colors:</strong> Texas Blue <code>#1d2757</code> · Red <code>#d13138</code>. Do not substitute other blues or reds — these match the institutional palette.</li>
+                </ul>
+            </details>
+
+        </div>
+    </div>
+
     <!-- MODULE 1 -->
     <div class="module-card">
         <div class="module-header">
