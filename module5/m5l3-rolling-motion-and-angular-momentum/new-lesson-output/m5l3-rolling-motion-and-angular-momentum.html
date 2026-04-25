@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5L3 Rolling Motion and Angular Momentum</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Canvas Complete CSS -->
+    <link rel="stylesheet" href="../../../css/canvas-complete.css">
+
+    <!-- CidiLabs Activities CSS -->
+    <link rel="stylesheet" href="../../../css/cidilabs-activities.css">
+
+    <!-- Font Awesome 6.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<p>&nbsp;</p>
+
+<!-- Back Button -->
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="../../../index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left"></i> Back to Course Overview
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT BEGINS HERE -->
+<!-- ============================================= -->
+
+<div id="dp-wrapper" class="dp-wrapper dp-flat-sections variation-1">
+    <header class="dp-header dp-flat-sections">
+        <div class="dp-content-block kl_custom_block_1">
+            <p style="text-align: center;">Module 5: Rotation and Equilibrium</p>
+            <p class="dp-progress-placeholder dp-module-progress-completion" style="display: none;">Module Item Completion (built in browser, hidden in app)</p>
+            <p>&nbsp;</p>
+        </div>
+        <h2 class="dp-heading"><span class="dp-header-pre"><span class="dp-header-pre-1">PHYS-2325</span></span> <span class="dp-header-title">M5L3 Rolling Motion and Angular Momentum</span></h2>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- INTRODUCTION                                               -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <hr class="dp-hr-plain" />
+        <p class="dp-lead" style="text-align: center;"><span style="font-size: 24pt;"><em>"In the absence of external torques, the angular momentum of a system remains constant. The universe keeps its books very carefully."</em></span><br /><span>&mdash;&nbsp;paraphrase of a conservation law</span></p>
+        <hr class="dp-hr-plain" /><br />
+        <div class="dp-content-block kl_introduction">
+            <div class="dp-column-container container-fluid">
+                <div class="row dp-col-2-eq">
+                    <div class="col-lg-8 col-md-8 col-12">
+                        <p class="lead">This lesson is where everything in Module 5 converges. Rolling without slipping is not pure rotation and not pure translation &mdash; it is <em>both simultaneously</em>, linked by the constraint v<sub>cm</sub> = R&omega;. To analyze a rolling object on an incline you need M5L1 kinematics, M5L2 dynamics, and M3 energy conservation &mdash; all at once. Then the lesson extends the rotational framework to its most powerful conservation law: <strong>angular momentum L = I&omega; is conserved when net external torque is zero</strong>. This is why a gyroscope resists tipping, why a diver can control rotation speed in the air, and why neutron stars spin at extraordinary rates. Conservation of angular momentum is one of the deepest symmetries in physics, and it is accessible to you right now.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <figure class="dp-full-width dp-image-rounded-10 dp-image-padded dp-image-bordered dp-image-shadow" style="width: 100%;">
+                            <img style="height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Rolling_Constraint.svg/400px-Rolling_Constraint.svg.png" alt="Diagram of a disk rolling without slipping showing the velocity of the center of mass v_cm equals R omega, and the contact point has zero instantaneous velocity." width="100%" height="100%" />
+                            <figcaption style="margin-top: 1em; text-align: center; color: #888;">Rolling without slipping: v<sub>cm</sub> = R&omega; links the translational and rotational motions.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTRAL FRAMEWORK BOX -->
+            <div style="margin-top: 1.5em; padding: 1.5em; background: #1d2757; border-radius: 8px; color: #fff;">
+                <h3 style="color: #fff; margin-top: 0; text-align: center;"><i class="fas fa-layer-group" style="margin-right: 0.5em;"></i>Two Big Ideas in This Lesson</h3>
+                <div class="dp-column-container container-fluid">
+                    <div class="row">
+                        <div class="col-md-6" style="border-right: 1px solid rgba(255,255,255,0.3); padding-right: 1.5em;">
+                            <h4 style="color: #d13138; margin-top: 0.5em;">Part 1: Rolling Without Slipping</h4>
+                            <p style="margin-bottom: 0.5em;">The rolling constraint links every kinematic and dynamic quantity:</p>
+                            <ul style="margin-bottom: 0;">
+                                <li>v<sub>cm</sub> = R&omega; &nbsp;&bull;&nbsp; a<sub>cm</sub> = R&alpha;</li>
+                                <li>K<sub>total</sub> = &frac12;mv<sub>cm</sub>² + &frac12;I&omega;² (translational + rotational)</li>
+                                <li>Static friction enables rolling &mdash; it does no work</li>
+                                <li>Hollow vs solid objects race: shape factor c determines who wins</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 1.5em;">
+                            <h4 style="color: #d13138; margin-top: 0.5em;">Part 2: Angular Momentum</h4>
+                            <p style="margin-bottom: 0.5em;">The rotational analog of linear momentum:</p>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>L</strong> = I<strong>&omega;</strong> &nbsp; (vector, units: kg&middot;m²/s)</li>
+                                <li>&tau;<sub>net</sub> = dL/dt &nbsp; (most general form of Newton's 2nd)</li>
+                                <li>Conservation: if &tau;<sub>net</sub> = 0, then L = constant</li>
+                                <li>Applications: figure skaters, divers, gyroscopes, neutron stars</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- LEARNING OBJECTIVES                                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_objectives2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Course Competencies and Learning Objectives</h3>
+                <div class="dp-panel-content">
+                    <p style="text-align: center; border: 1px solid black; padding: 20px; border-radius: 10px; margin: 30px; background: #ededc2;">A ★ indicates that this page contains content related to that LO.</p>
+                    <p><strong>CC5.3 Analyze rolling motion and apply conservation of angular momentum</strong></p>
+                    <p style="padding-left: 40px;">★ LO5.3.1 Apply the rolling-without-slipping constraint (v<sub>cm</sub> = R&omega;, a<sub>cm</sub> = R&alpha;) to kinematic and dynamic problems</p>
+                    <p style="padding-left: 40px;">★ LO5.3.2 Calculate the total kinetic energy of a rolling object as the sum of translational and rotational kinetic energy</p>
+                    <p style="padding-left: 40px;">★ LO5.3.3 Use energy conservation to find the speed of a rolling object at the bottom of an incline</p>
+                    <p style="padding-left: 40px;">★ LO5.3.4 Predict which of two rolling objects reaches the bottom of an incline first based on their shape factors</p>
+                    <p style="padding-left: 40px;">★ LO5.3.5 Define angular momentum L = I&omega; and state its SI units</p>
+                    <p style="padding-left: 40px;">★ LO5.3.6 Apply the angular impulse-momentum theorem: &tau;<sub>net</sub>&Delta;t = &Delta;L</p>
+                    <p style="padding-left: 40px;">★ LO5.3.7 Apply conservation of angular momentum to solve problems involving changing moment of inertia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- REQUIRED READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Required Reading</h3>
+        <p>Section 10.8 covers rolling; Chapter 11 introduces angular momentum. Read all four sections — each one introduces a concept you will need in the computational problems.</p>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion" target="_blank" rel="noopener">10.8 Work and Power for Rotational Motion</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener">11.1 Rolling Motion</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener">11.2 Angular Momentum</a>
+            <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum" target="_blank" rel="noopener">11.3 Conservation of Angular Momentum</a>
+        </div>
+        <p>&nbsp;</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- OPTIONAL READING                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_readings2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-top-color: #1d2757;"><i class="fa-book fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Optional Reading</h3>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-title-bar">
+            <div class="card-body">
+                <h3 class="card-title">Explore More</h3>
+                <div style="display: flex; gap: 1em; flex-wrap: wrap; justify-content: center; margin: 1.5em 0;">
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.physicsclassroom.com/class/circles/Lesson-3/Angular-Momentum" target="_blank" rel="noopener">Physics Classroom: Angular Momentum</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/torque-angular-momentum/angular-momentum/a/angular-momentum-review" target="_blank" rel="noopener">Khan Academy: Angular Momentum</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://phet.colorado.edu/en/simulations/my-solar-system" target="_blank" rel="noopener">PhET: My Solar System (angular momentum)</a>
+                    <a style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; text-decoration: none;" href="https://www.khanacademy.org/science/physics/torque-angular-momentum/rolling-motion-tutorial/a/rolling-without-slipping-review" target="_blank" rel="noopener">Khan Academy: Rolling Without Slipping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- MEDIA                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_lectures2" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fa-play fas" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Media</h3>
+        <p style="text-align: center;">Video 1 establishes the rolling constraint and total kinetic energy; Video 2 applies energy conservation to the incline race; Video 3 introduces angular momentum and conservation.</p>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 600px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 1: Rolling Without Slipping — The Constraint</h3>
+                <div class="dp-panel-content">
+                    <h4>One Object, Two Kinds of Motion at Once</h4>
+                    <p>A rolling object is simultaneously translating (its center moves) and rotating (it spins). The rolling-without-slipping condition forces these two motions to be linked.</p>
+                    <ul>
+                        <li>Why the contact point has zero instantaneous velocity</li>
+                        <li>Deriving v<sub>cm</sub> = R&omega; from the no-slip condition</li>
+                        <li>Total KE = &frac12;mv<sub>cm</sub>² + &frac12;I<sub>cm</sub>&omega;²</li>
+                        <li>Expressing total KE in terms of v<sub>cm</sub> alone: K = &frac12;(m + I/R²)v<sub>cm</sub>²</li>
+                        <li>Why static friction enables rolling but does no work</li>
+                    </ul>
+                    <p>Time: 10:00</p>
+                    <div class="dp-embed-wrapper"><!-- Video 1 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 2: Rolling Down an Incline — The Race</h3>
+                <div class="dp-panel-content">
+                    <h4>Why Shape Beats Mass Every Time</h4>
+                    <p>Using energy conservation to find the speed at the bottom of an incline, and understanding why the shape factor c determines the outcome regardless of mass or radius.</p>
+                    <ul>
+                        <li>Energy conservation: mgh = &frac12;mv<sub>cm</sub>² + &frac12;I&omega;² = &frac12;(1 + c)mv<sub>cm</sub>²</li>
+                        <li>Solving for v<sub>cm</sub>: v = &radic;[2gh/(1+c)]</li>
+                        <li>Shape factor comparison: solid sphere (c=2/5) beats solid disk (c=1/2) beats hollow ring (c=1)</li>
+                        <li>The result is independent of mass and radius &mdash; only shape matters</li>
+                        <li>Rolling with slipping: what changes and why friction becomes kinetic</li>
+                    </ul>
+                    <p>Time: 9:45</p>
+                    <div class="dp-embed-wrapper"><!-- Video 2 embed goes here --></div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Video 3: Angular Momentum and Its Conservation</h3>
+                <div class="dp-panel-content">
+                    <h4>The Spinning Universe Keeps Its Books</h4>
+                    <p>Angular momentum <strong>L</strong> = I<strong>&omega;</strong> is the rotational analog of linear momentum. When no external torque acts, it is conserved — exactly as linear momentum is conserved when no external force acts.</p>
+                    <ul>
+                        <li>L = I&omega; — units, direction (right-hand rule), and magnitude</li>
+                        <li>&tau;<sub>net</sub> = dL/dt — the most general form of Newton's 2nd for rotation</li>
+                        <li>Angular impulse: &tau;&Delta;t = &Delta;L</li>
+                        <li>Conservation: I₁&omega;₁ = I₂&omega;₂ when &tau;<sub>ext</sub> = 0</li>
+                        <li>Figure skater, diver, collapsing star, spinning stool demonstrations</li>
+                    </ul>
+                    <p>Time: 11:30</p>
+                    <div class="dp-embed-wrapper"><!-- Video 3 embed goes here --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ADVANCED THEORY                                            -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_advanced_theory" style="background: #f8f9fa; margin-bottom: 1.5em; border-left: 4px solid #1d2757;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-atom" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Deeper Look: Where the Rolling Race Result Comes From, and Angular Momentum as a Vector</h3>
+        <div class="dp-panels-wrapper dp-panel-color-dp-primary dp-panel-active-color-dp-secondary dp-panel-hover-color-dp-secondary dp-next-prev-tabs dp-tabs-buttons-vertical" style="min-height: 480px;">
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Deriving the Incline Race Result</h3>
+                <div class="dp-panel-content">
+                    <h4>Why Only Shape Factor c Matters</h4>
+                    <p>Start from energy conservation for a rolling object descending height h:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace;">
+                        mgh = &frac12;mv<sub>cm</sub>² + &frac12;I<sub>cm</sub>&omega;²
+                    </div>
+                    <p>Substitute I<sub>cm</sub> = cMR² and &omega; = v<sub>cm</sub>/R:</p>
+                    <div style="background: #f0f0f0; padding: 1em; border-radius: 6px; margin: 1em 0; font-family: monospace;">
+                        mgh = &frac12;mv<sub>cm</sub>² + &frac12;(cMR²)(v<sub>cm</sub>/R)²<br>
+                        mgh = &frac12;mv<sub>cm</sub>²(1 + c)<br>
+                        v<sub>cm</sub> = &radic;[2gh / (1 + c)]
+                    </div>
+                    <p>The mass M and radius R <em>cancel entirely</em>. The final speed depends only on g, h, and the shape factor c. Therefore:</p>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1em;">
+                        <thead>
+                            <tr style="background: #1d2757; color: #fff;">
+                                <th style="padding: 0.5em;">Object</th>
+                                <th style="padding: 0.5em; text-align: center;">c</th>
+                                <th style="padding: 0.5em; text-align: center;">1 + c</th>
+                                <th style="padding: 0.5em; text-align: center;">Relative speed (lower c = faster)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Solid sphere</td><td style="padding: 0.5em; text-align: center;">2/5</td><td style="padding: 0.5em; text-align: center;">7/5</td><td style="padding: 0.5em; text-align: center; color: #28a745;"><strong>Fastest</strong></td></tr>
+                            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 0.5em;">Solid disk / cylinder</td><td style="padding: 0.5em; text-align: center;">1/2</td><td style="padding: 0.5em; text-align: center;">3/2</td><td style="padding: 0.5em; text-align: center;">2nd</td></tr>
+                            <tr style="border-bottom: 1px solid #ddd; background: #f9f9f9;"><td style="padding: 0.5em;">Hollow sphere</td><td style="padding: 0.5em; text-align: center;">2/3</td><td style="padding: 0.5em; text-align: center;">5/3</td><td style="padding: 0.5em; text-align: center;">3rd</td></tr>
+                            <tr style="background: #fff3cd;"><td style="padding: 0.5em;">Hollow ring / thin cylinder</td><td style="padding: 0.5em; text-align: center;">1</td><td style="padding: 0.5em; text-align: center;">2</td><td style="padding: 0.5em; text-align: center; color: #d13138;"><strong>Slowest</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 1em; font-style: italic; color: #555;">A sliding block (no rotation, c = 0) would be fastest of all: v = &radic;(2gh). Rolling always arrives later than sliding on a frictionless surface, because some potential energy goes into rotation.</p>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Angular Momentum as a Full Vector</h3>
+                <div class="dp-panel-content">
+                    <h4><strong>L</strong> = <strong>r</strong> &times; <strong>p</strong> — The General Definition</h4>
+                    <p>For a single particle: <strong>L</strong> = <strong>r</strong> &times; <strong>p</strong> = <strong>r</strong> &times; m<strong>v</strong></p>
+                    <p>For a rigid body rotating about a fixed axis: <strong>L</strong> = I<strong>&omega;</strong></p>
+                    <p>The direction of <strong>L</strong> is along the rotation axis, given by the right-hand rule (same as <strong>&omega;</strong>). This vector nature matters in three important contexts:</p>
+                    <ol>
+                        <li><strong>Gyroscope precession:</strong> Gravity applies a torque perpendicular to <strong>L</strong>, so <strong>L</strong> precesses (rotates) rather than tilting &mdash; the gyroscope resists falling over.</li>
+                        <li><strong>Bicycle stability:</strong> The spinning wheels have angular momentum along the axle. Any perturbation creates a torque perpendicular to <strong>L</strong>, causing precession that steers the wheel back upright.</li>
+                        <li><strong>Conservation in 3D:</strong> Each component of <strong>L</strong> is independently conserved if the corresponding torque component is zero. A system can have L<sub>z</sub> conserved even if L<sub>x</sub> and L<sub>y</sub> are not.</li>
+                    </ol>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-secondary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Connection to Noether's Theorem</h5>
+                            <p>Conservation of angular momentum is not an accident — it follows from the fact that the laws of physics are the same in all directions (rotational symmetry). Emmy Noether proved in 1915 that every continuous symmetry of a physical system corresponds to a conserved quantity. Rotational symmetry → angular momentum. Translational symmetry → linear momentum. Time symmetry → energy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dp-panel-group">
+                <h3 class="dp-panel-heading">Rolling Friction: Static vs Kinetic</h3>
+                <div class="dp-panel-content">
+                    <h4>Why Static Friction Does No Work in Rolling</h4>
+                    <p>This is a subtle point that confuses many students. Static friction acts at the contact point. In rolling without slipping, the contact point has <em>zero instantaneous velocity</em>. Since work = F &middot; displacement, and the displacement of the contact point is zero, static friction does zero work.</p>
+                    <p><strong>But friction is essential for rolling:</strong></p>
+                    <ul>
+                        <li>On an incline, gravity pulls the center of mass forward. Without friction, the contact point would slide &mdash; the object would slide, not roll.</li>
+                        <li>Static friction at the contact point provides the torque that causes angular acceleration. It is the mechanism by which the incline "grabs" the object and makes it spin up.</li>
+                        <li>No net work done by static friction, but it does transfer energy between translational and rotational modes.</li>
+                    </ul>
+                    <p><strong>When rolling slipping occurs:</strong> If the torque required exceeds &mu;<sub>s</sub>N, static friction cannot maintain the no-slip condition. The contact point slides, kinetic friction takes over, does negative work, and the object both rolls and slips simultaneously. This is a much more complex problem beyond this course.</p>
+                    <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Practical Consequence</h5>
+                            <p>This is why rolling resistance exists in real tires &mdash; the tire deforms at the contact patch, and energy is lost to deformation (internal friction), not to sliding friction. A perfectly rigid wheel rolling on a perfectly rigid surface would have zero rolling resistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — CONCEPTUAL                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_conceptual" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Conceptual</h3>
+        <div class="dp-content-block">
+            <div class="dp-panels-wrapper dp-tabs-pills dp-panel-active-color-dp-primary dp-panel-hover-color-dp-secondary">
+
+                <!-- TAB 1: ORDER ITEMS — Steps for rolling problem -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Solving a Rolling Problem</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-order-wrapper" style="margin-bottom: 2em;" data-interactive-type="Order Items" data-interactive-title="Order Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sort-amount-down-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Order the Steps: Rolling Object Down an Incline (Energy Method)</h4>
+                            <p>Arrange these steps in the correct order for solving a rolling-on-incline problem using energy conservation.</p>
+                            <ol class="dp-order dp-order-text">
+                                <li class="">Identify the object's shape and look up or derive the shape factor c (I<sub>cm</sub> = cMR²)</li>
+                                <li class="">Write the energy conservation equation: mgh = &frac12;mv<sub>cm</sub>² + &frac12;I<sub>cm</sub>&omega;²</li>
+                                <li class="">Apply the rolling constraint: substitute &omega; = v<sub>cm</sub>/R into the energy equation</li>
+                                <li class="">Factor out &frac12;mv<sub>cm</sub>² to get: mgh = &frac12;mv<sub>cm</sub>²(1 + c)</li>
+                                <li class="">Solve for v<sub>cm</sub>: v<sub>cm</sub> = &radic;[2gh/(1 + c)]</li>
+                                <li class="">Compare results for different shapes: smaller c means larger v<sub>cm</sub> (more concentrated mass wins)</li>
+                                <li class="">If angular velocity is needed, apply &omega; = v<sub>cm</sub>/R using the result from step 5</li>
+                            </ol>
+                            <div class="dp-si-feedback dp-si-correct" style="display: none;">
+                                <span class="dp-si-answer-type"><i class="fas fa-fw fa-check"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div><p>Correct! Notice that the mass and radius cancel in step 4 — the race result is entirely determined by shape.</p></div>
+                            </div>
+                            <div class="dp-si-feedback dp-si-incorrect" style="display: none;">
+                                <span class="dp-si-answer-type"><i class="fas fa-fw fa-times"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i></span>
+                                <div><p>Try again. You need to identify the shape factor before you can apply the energy equation.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: SORT ITEMS — Angular momentum increases/decreases -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Angular Momentum: Larger or Smaller?</h3>
+                    <div class="dp-panel-content">
+                        <div class="dp-si-sort-pool dp-si-sort-type-text" style="margin-bottom: 2em;" data-interactive-type="Sort Items" data-interactive-title="Sort Items 1">
+                            <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-balance-scale"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Sort: Does This Change Increase or Decrease Angular Momentum?</h4>
+                            <p>A figure skater is spinning with arms extended. No external torque acts. Sort each action into the correct category.</p>
+                            <div class="dp-si-sort-content">
+                                <div class="dp-si-sort-bucket dp-si-sort-answer-bank dp-si-sort-type-text">
+                                    <div class="dp-si-sort-bucket-content">
+                                        <h4 class="dp-si-sort-bucket-header">Actions to Sort</h4>
+                                        <ul>
+                                            <li class="dp-si-item-text">Skater pulls arms in tightly (no external torque)</li>
+                                            <li class="dp-si-item-text">A second skater pushes on the spinning skater (external torque applied)</li>
+                                            <li class="dp-si-item-text">Skater extends one leg outward (no external torque)</li>
+                                            <li class="dp-si-item-text">Ice surface exerts negligible friction (no external torque)</li>
+                                            <li class="dp-si-item-text">Skater catches a spinning ball thrown to them (adds angular momentum)</li>
+                                            <li class="dp-si-item-text">Skater drags one blade on the ice to slow down (friction torque applied)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="container-fluid pt-3 px-0">
+                                    <div class="row gy-3">
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">L Stays the Same</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">L Increases</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                        <div class="dp-si-sort-bucket dp-si-sort-type-text col-xs-12 col-md-4">
+                                            <div class="dp-si-sort-bucket-content">
+                                                <h4 class="dp-si-sort-bucket-header">L Decreases</h4>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: FLIP CARDS — Rolling and angular momentum misconceptions -->
+                <div class="dp-panel-group">
+                    <h3 class="dp-panel-heading">Conceptual Checkpoints</h3>
+                    <div class="dp-panel-content">
+                        <h4 class="dp-has-icon" style="background: #1d2757; color: #fff; padding: 0.75em 1.5em; border-radius: 4px; border: 5px solid #d13138; text-decoration: none;"><i class="fas fa-sync-alt"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Predict the Answer — Then Flip</h4>
+                        <p>Each card poses a question about rolling motion or angular momentum. Form your answer first, then check.</p>
+                        <div class="dp-column-container container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">A solid sphere and a hollow ring of the same mass and radius roll down the same incline from rest. Which reaches the bottom first? Does mass or radius matter?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Solid Sphere Wins — Shape Only</h5>
+                                                        <p>The sphere (c = 2/5) arrives before the ring (c = 1) because it stores less energy as rotation. Mass and radius cancel completely: v = &radic;[2gh/(1+c)]. A 10 kg sphere and a 0.1 kg sphere of any radius would tie each other.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">A figure skater pulls their arms in during a spin. Their angular velocity &omega; increases — does that mean angular momentum increased?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">No — L Is Conserved, &omega; Just Adjusts</h5>
+                                                        <p>With no external torque, L = I&omega; = constant. Pulling arms in decreases I. Since L is fixed, &omega; must increase to compensate: &omega;₂ = I₁&omega;₁/I₂. Angular momentum is conserved; angular velocity is not. The skater spins faster, but L is unchanged.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">A rolling ball at the bottom of a ramp has both translational and rotational KE. Which is larger for a solid sphere?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Translational KE is Always Larger</h5>
+                                                        <p>K<sub>trans</sub> = &frac12;mv² and K<sub>rot</sub> = &frac12;I&omega;² = &frac12;(cMR²)(v/R)² = &frac12;cmv². So K<sub>rot</sub>/K<sub>trans</sub> = c. For a solid sphere (c = 2/5), K<sub>rot</sub> = (2/5)K<sub>trans</sub> — rotational KE is 40% of translational KE. Total = (7/5)K<sub>trans</sub>.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="dp-flip-card dp-flip-card-fast dp-flip-card-show-both mx-auto d-block" style="margin-bottom: 1em;">
+                                        <div class="dp-flip-card-inner">
+                                            <div class="dp-front-card">
+                                                <div class="dp-card card h-100 cp-bg-dp-primary dp-shadow-r2">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title dp-ignore-theme text-center">Why do neutron stars spin so fast — some hundreds of times per second — when a normal star rotates only about once per month?</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dp-back-card">
+                                                <div class="dp-card card h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Conservation of Angular Momentum</h5>
+                                                        <p>When a massive star collapses into a neutron star, its radius shrinks from ~10⁶ km to ~10 km — a factor of ~10⁵. Since L = I&omega; = cMR²&omega; is conserved and R drops by 10⁵, &omega; must increase by ~(10⁵)² = 10¹⁰. A one-month rotation becomes milliseconds. The same physics as the figure skater, scaled to stellar dimensions.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- PRACTICE AND APPLY — COMPUTATIONAL                        -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_practice_computational" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;" aria-hidden="true"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Practice and Apply &mdash; Computational</h3>
+
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default dp-callout-color-dp-primary dp-callout-type-info">
+            <div class="dp-callout-side-emphasis"><i class="dp-icon fas fa-exclamation-circle dp-default-icon dp-i-size-large"></i></div>
+            <div class="card-body">
+                <h3 class="card-title">Quick Reference: Rolling Motion and Angular Momentum</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 0.5em;">
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Rolling constraint:</strong> v<sub>cm</sub> = R&omega; &nbsp; a<sub>cm</sub> = R&alpha;<br>
+                        <span style="font-size: 0.85em; color: #555;">Contact point velocity = zero</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Total rolling KE:</strong> K = &frac12;(1+c)mv<sub>cm</sub>²<br>
+                        <span style="font-size: 0.85em; color: #555;">c = I<sub>cm</sub>/(MR²)</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Incline speed:</strong> v = &radic;[2gh/(1+c)]<br>
+                        <span style="font-size: 0.85em; color: #555;">M and R cancel!</span>
+                    </div>
+                    <div style="background: #fff; padding: 0.75em; border-radius: 4px; font-family: monospace;">
+                        <strong>Angular momentum:</strong> L = I&omega;<br>
+                        <strong>Conservation:</strong> I₁&omega;₁ = I₂&omega;₂ (if &tau;<sub>ext</sub> = 0)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="dp-panels-wrapper dp-accordion-default dp-panel-active-color-dp-primary">
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 1 — Rolling Speed at Bottom of Incline</p>
+                <div class="dp-panel-content">
+                    <p><strong>A solid cylinder of mass 3.0 kg and radius 0.10 m rolls without slipping from rest down an incline of height 0.80 m. Find: (a) the speed of the center of mass at the bottom, (b) the angular velocity at the bottom, (c) the translational and rotational kinetic energies.</strong></p>
+                    <p><strong>Given:</strong> Solid cylinder → I<sub>cm</sub> = &frac12;MR², so c = 1/2. h = 0.80 m, starts from rest.</p>
+                    <p><strong>(a) Speed at bottom:</strong></p>
+                    <p style="padding-left: 1.5em;">v<sub>cm</sub> = &radic;[2gh/(1+c)] = &radic;[2(9.8)(0.80)/(1 + 0.5)] = &radic;[15.68/1.5] = &radic;10.45 = <strong>3.23 m/s</strong></p>
+                    <p><strong>(b) Angular velocity:</strong></p>
+                    <p style="padding-left: 1.5em;">&omega; = v<sub>cm</sub>/R = 3.23/0.10 = <strong>32.3 rad/s</strong></p>
+                    <p><strong>(c) Kinetic energies:</strong></p>
+                    <p style="padding-left: 1.5em;">K<sub>trans</sub> = &frac12;mv<sub>cm</sub>² = &frac12;(3.0)(3.23)² = &frac12;(3.0)(10.43) = <strong>15.65 J</strong></p>
+                    <p style="padding-left: 1.5em;">K<sub>rot</sub> = &frac12;I<sub>cm</sub>&omega;² = &frac12;(&frac12;)(3.0)(0.01)(32.3)² = &frac12;(0.015)(1043) = <strong>7.82 J</strong></p>
+                    <p style="padding-left: 1.5em;">Total = 23.47 J ≈ mgh = (3.0)(9.8)(0.80) = 23.52 J &nbsp; ✓ (rounding)</p>
+                    <p style="color: #555; font-style: italic;">Note: K<sub>rot</sub>/K<sub>trans</sub> = c = 1/2, as predicted. The cylinder puts half as much energy into spinning as into translating.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 2 — The Incline Race</p>
+                <div class="dp-panel-content">
+                    <p><strong>A solid sphere, a solid cylinder, and a hollow ring all have mass 1.5 kg and radius 0.12 m. They are released simultaneously from rest at the top of a 1.2 m high incline. Find the speed of each at the bottom and rank them.</strong></p>
+                    <p>Using v = &radic;[2gh/(1+c)] with g = 9.8 m/s², h = 1.2 m, so 2gh = 23.52 m²/s²:</p>
+                    <p><strong>Solid sphere (c = 2/5):</strong></p>
+                    <p style="padding-left: 1.5em;">v = &radic;[23.52/1.4] = &radic;16.80 = <strong>4.10 m/s</strong></p>
+                    <p><strong>Solid cylinder (c = 1/2):</strong></p>
+                    <p style="padding-left: 1.5em;">v = &radic;[23.52/1.5] = &radic;15.68 = <strong>3.96 m/s</strong></p>
+                    <p><strong>Hollow ring (c = 1):</strong></p>
+                    <p style="padding-left: 1.5em;">v = &radic;[23.52/2.0] = &radic;11.76 = <strong>3.43 m/s</strong></p>
+                    <p><strong>Ranking:</strong> Sphere (4.10) &gt; Cylinder (3.96) &gt; Ring (3.43)</p>
+                    <p><strong>Compare to frictionless sliding block (no rotation, c = 0):</strong></p>
+                    <p style="padding-left: 1.5em;">v = &radic;[23.52/1.0] = &radic;23.52 = <strong>4.85 m/s</strong> — faster than all rolling objects, as expected.</p>
+                    <p style="color: #555; font-style: italic;">The mass 1.5 kg and radius 0.12 m appeared nowhere in the final answers — they canceled. Replace with any values and the ranking is unchanged.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 3 — Figure Skater: Conservation of Angular Momentum</p>
+                <div class="dp-panel-content">
+                    <p><strong>A figure skater spinning at 2.0 rev/s has a moment of inertia of 4.0 kg&middot;m² with arms extended. She pulls her arms in, reducing her moment of inertia to 1.5 kg&middot;m². Find: (a) her new angular velocity, (b) her initial and final rotational KE, (c) where the extra KE comes from.</strong></p>
+                    <p><strong>Convert:</strong> &omega;₁ = 2.0 rev/s &times; 2&pi; = 4&pi; rad/s</p>
+                    <p><strong>(a) Conservation of angular momentum (&tau;<sub>ext</sub> = 0):</strong></p>
+                    <p style="padding-left: 1.5em;">I₁&omega;₁ = I₂&omega;₂</p>
+                    <p style="padding-left: 1.5em;">&omega;₂ = I₁&omega;₁/I₂ = (4.0)(4&pi;)/(1.5) = 16&pi;/1.5 = 32&pi;/3 &asymp; <strong>33.5 rad/s &asymp; 5.33 rev/s</strong></p>
+                    <p><strong>(b) Rotational kinetic energies:</strong></p>
+                    <p style="padding-left: 1.5em;">K₁ = &frac12;I₁&omega;₁² = &frac12;(4.0)(4&pi;)² = 2(16&pi;²) = 32&pi;² &asymp; <strong>316 J</strong></p>
+                    <p style="padding-left: 1.5em;">K₂ = &frac12;I₂&omega;₂² = &frac12;(1.5)(32&pi;/3)² = &frac12;(1.5)(1024&pi;²/9) = 85.3&pi;² &asymp; <strong>842 J</strong></p>
+                    <p><strong>(c) Source of extra kinetic energy:</strong></p>
+                    <p style="padding-left: 1.5em;">&Delta;K = 842 &minus; 316 = <strong>526 J</strong> came from the skater's muscles. She did work against the centrifugal tendency of her arms as she pulled them inward. Angular momentum was conserved; energy was not &mdash; it was added by biological work.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 4 — Stool + Person: Angular Momentum Transfer</p>
+                <div class="dp-panel-content">
+                    <p><strong>A student (I<sub>student</sub> = 3.0 kg&middot;m²) sits on a frictionless rotating stool (I<sub>stool</sub> = 0.50 kg&middot;m²) initially at rest. She is handed a spinning bicycle wheel (I<sub>wheel</sub> = 0.80 kg&middot;m², &omega;<sub>wheel</sub> = 20 rad/s) with its axle pointing upward. She then flips the wheel so its axle points downward. Find the angular velocity of the student + stool.</strong></p>
+                    <p><strong>Before flipping:</strong> Total angular momentum (upward positive):</p>
+                    <p style="padding-left: 1.5em;">L<sub>initial</sub> = I<sub>wheel</sub>&omega;<sub>wheel</sub> + 0 = (0.80)(20) = <strong>+16 kg&middot;m²/s</strong> (student + stool at rest)</p>
+                    <p><strong>After flipping:</strong> Wheel now spins at &minus;20 rad/s (same speed, opposite direction):</p>
+                    <p style="padding-left: 1.5em;">L<sub>wheel,final</sub> = (0.80)(&minus;20) = &minus;16 kg&middot;m²/s</p>
+                    <p><strong>Conservation (no external torque):</strong></p>
+                    <p style="padding-left: 1.5em;">L<sub>initial</sub> = L<sub>wheel,final</sub> + L<sub>student+stool</sub></p>
+                    <p style="padding-left: 1.5em;">+16 = &minus;16 + (I<sub>student</sub> + I<sub>stool</sub>)&omega;</p>
+                    <p style="padding-left: 1.5em;">32 = (3.0 + 0.50)&omega; = 3.5&omega;</p>
+                    <p style="padding-left: 1.5em;"><strong>&omega; = 32/3.5 &asymp; 9.14 rad/s</strong> (in the original wheel direction)</p>
+                    <p style="color: #555; font-style: italic;">The student begins to rotate to compensate for the reversal of the wheel's angular momentum. This is the operating principle of reaction wheels used to orient spacecraft without thrusters.</p>
+                </div>
+            </div>
+
+            <div class="dp-panel-group">
+                <p class="dp-panel-heading" style="color: white !important; background: #1D2757;">Problem 5 — Rolling with Energy Conservation: Up a Ramp</p>
+                <div class="dp-panel-content">
+                    <p><strong>A hollow sphere (I = &frac23;MR²) rolls without slipping on a flat surface at 4.0 m/s and then encounters a ramp. How high does it rise before momentarily stopping? Compare to a solid sphere at the same speed.</strong></p>
+                    <p><strong>Hollow sphere (c = 2/3):</strong></p>
+                    <p style="padding-left: 1.5em;">Total KE at bottom: K = &frac12;(1 + c)mv² = &frac12;(1 + 2/3)(m)(4.0)² = &frac12;(5/3)(m)(16) = (40m/3) J</p>
+                    <p style="padding-left: 1.5em;">At top: K = 0, PE = mgh</p>
+                    <p style="padding-left: 1.5em;">mgh = 40m/3 &rArr; h = 40/(3 &times; 9.8) = <strong>1.36 m</strong></p>
+                    <p><strong>Solid sphere (c = 2/5):</strong></p>
+                    <p style="padding-left: 1.5em;">K = &frac12;(1 + 2/5)(m)(16) = &frac12;(7/5)(m)(16) = (56m/5) J</p>
+                    <p style="padding-left: 1.5em;">h = 56/(5 &times; 9.8) = <strong>1.14 m</strong></p>
+                    <p><strong>Comparison:</strong> The hollow sphere rises <em>higher</em> (1.36 m vs 1.14 m) at the same v because it has more rotational KE stored. At the top, both translational and rotational KE must go to zero &mdash; but the hollow sphere had more total KE to begin with for the same v<sub>cm</sub>.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- READY TO MOVE ON                                           -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="dp-content-block kl_synthesis" style="background: #f5f5f5; margin-bottom: 1.5em;">
+        <h3 class="dp-has-icon" style="border-color: #1d2757;"><i class="fas fa-pencil-ruler" style="border-color: #1d2757;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Ready to Move On?</h3>
+        <div style="background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #ddd; max-width: 640px; margin: 1.5em auto;">
+            <h4 style="margin-top: 0;"><i class="fas fa-clipboard-check" style="color: #1d2757; margin-right: 0.5em;"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Self-Check Before M5L4</h4>
+            <p>M5L4 (Static Equilibrium) applies &Sigma;F = 0 and &Sigma;&tau; = 0 simultaneously. Make sure you can answer these before continuing:</p>
+            <ol>
+                <li>State the rolling-without-slipping constraint. What are the two equivalent ways to write it?</li>
+                <li>A solid disk and a hollow ring roll from the same height. Without calculating, which is faster at the bottom? Why?</li>
+                <li>A star collapses to &frac{1}{10} its original radius. By what factor does its angular velocity change? (Assume I &prop; MR².)</li>
+                <li>A skater with I = 5.0 kg&middot;m² spinning at 3.0 rad/s tucks in to reduce I to 2.0 kg&middot;m². What is the new &omega;? Did KE increase, decrease, or stay the same?</li>
+                <li>Why does a rolling object always arrive later than a sliding (frictionless) object at the bottom of an incline of the same height?</li>
+            </ol>
+            <p style="font-style: italic; color: #666; margin-bottom: 0;">M5L4 Static Equilibrium is the lesson where torque calculation becomes the central computational skill. The pivot-point strategy you will learn there relies on your fluency with &tau; = rF sin&theta; from M5L2.</p>
+        </div>
+    </section>
+
+</div>
+<!-- ============================================= -->
+<!-- COPY/PASTE TO CANVAS ENVIRONMENT ENDS HERE  -->
+<!-- ============================================= -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Canvas Complete JS -->
+<script src="../../../js/canvas-complete.js"></script>
+<!-- CidiLabs Scripts -->
+<script src="../../../js/cidilabs-scripts.js"></script>
+
+</body>
+</html>
